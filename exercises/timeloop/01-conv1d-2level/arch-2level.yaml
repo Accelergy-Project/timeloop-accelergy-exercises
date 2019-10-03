@@ -1,0 +1,26 @@
+arch:
+  version: 0.2
+  subtree:
+  - name: System
+    local:
+    - name: MainMemory
+      class: DRAM
+      attributes:
+        word-bits: 8
+        read-bandwidth: 0.5
+        write-bandwidth: 0.5
+        vector-access-energy: 32
+    subtree:
+    - name: PE
+      local:
+      - name: Buffer
+        class: SRAM
+        attributes:
+          entries: 32
+          instances: 1
+          word-bits: 8
+          vector-access-energy: 1.0
+      - name: MACC
+        class: intmac
+        attributes:
+          word-bits: 8
