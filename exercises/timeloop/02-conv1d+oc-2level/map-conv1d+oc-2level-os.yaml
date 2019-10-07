@@ -1,11 +1,11 @@
 mapping:
   - target: MainMemory
     type: temporal
-    factors: R3 P1
-    permutation: RP
+    factors: R1 P16 K32
+    permutation: PRK
     
   - target: Buffer
     type: temporal
-    factors: R1 P16
-    permutation: PR
+    factors: R3 P1 K1
+    permutation: RPK
     
