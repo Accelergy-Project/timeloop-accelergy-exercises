@@ -1,0 +1,41 @@
+arch:
+  version: 0.2
+  
+  subtree:
+  - name: System
+    
+    local:
+    - name: MainMemory
+      class: DRAM
+      attributes:
+        word-bits: 8
+        vector-access-energy: 32
+
+    subtree:
+    - name: Chip
+
+      local:
+      - name: GlobalBuffer
+        class: SRAM
+        attributes:
+          sizeKB: 256
+          instances: 1
+          word-bits: 8
+          vector-access-energy: 5
+        
+      subtree:
+      - name: PE
+      
+        local:
+        - name: RegisterFile
+          class: SRAM
+          attributes:
+            entries: 64
+            instances: 16
+            word-bits: 8
+            vector-access-energy: 1
+        - name: MACC
+          class: intmac
+          attributes:
+            instances: 16
+            word-bits: 8
