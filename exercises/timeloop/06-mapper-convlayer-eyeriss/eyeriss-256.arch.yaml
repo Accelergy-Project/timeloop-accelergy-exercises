@@ -1,4 +1,4 @@
-arch:
+architecture:
   storage:
   - instances: 256
     read_bandwidth: 2
