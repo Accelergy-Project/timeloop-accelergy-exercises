@@ -1,0 +1,108 @@
+ERT:
+  tables:
+    simple_primitive.GLB:
+      idle:
+        arguments: null
+        energy: 0.429
+      read:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.429
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 2.344
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.502
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 2.846
+      - arguments:
+          address_delta: 2
+          data_delta: 0
+        energy: 1.005
+      - arguments:
+          address_delta: 2
+          data_delta: 1
+        energy: 3.348
+      write:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.429
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 2.185
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.468
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 2.653
+      - arguments:
+          address_delta: 2
+          data_delta: 0
+        energy: 0.936
+      - arguments:
+          address_delta: 2
+          data_delta: 1
+        energy: 3.121
+    simple_primitive.PE.MAC:
+      idle:
+        arguments: null
+        energy: 0.007
+      mac_gated:
+        arguments: null
+        energy: 0.044
+      mac_random:
+        arguments: null
+        energy: 1.207
+      mac_reused:
+        arguments: null
+        energy: 1.032
+    simple_primitive.PE.buffer:
+      idle:
+        arguments: null
+        energy: 0.006
+      read:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.006
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 0.144
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.115
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 0.253
+      write:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.006
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 0.144
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.115
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 0.253
+  version: 0.2

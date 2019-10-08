@@ -1,0 +1,35 @@
+flattened_architecture:
+  components:
+    simple_primitive.GLB:
+      attributes:
+        depth: 1024
+        latency: 5ns
+        n_banks: 2
+        n_rd_ports: 0
+        n_rdwr_ports: 2
+        n_wr_ports: 0
+        technology: 40nm
+        voltage: 1V
+        width: 32
+      class: SRAM
+      name: simple_primitive.GLB
+    simple_primitive.PE.MAC:
+      attributes:
+        datawidth: 16
+        latency: 5ns
+        num_pipeline_stages: 1
+        technology: 40nm
+        voltage: 1V
+      class: intmac
+      name: simple_primitive.PE.MAC
+    simple_primitive.PE.buffer:
+      attributes:
+        datawidth: 16
+        depth: 24
+        latency: 5ns
+        technology: 40nm
+        voltage: 1V
+        width: 16
+      class: regfile
+      name: simple_primitive.PE.buffer
+  version: 0.2
