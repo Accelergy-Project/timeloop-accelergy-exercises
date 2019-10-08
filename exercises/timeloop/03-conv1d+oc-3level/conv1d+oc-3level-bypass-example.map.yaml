@@ -1,0 +1,33 @@
+mapping:
+  - target: MainMemory
+    type: temporal
+    factors: R1 P1 K1
+    permutation: PRK
+    
+  - target: GlobalBuffer
+    type: temporal
+    factors: R1 P16 K16
+    permutation: PRK
+    
+  - target: RegisterFile
+    type: temporal
+    factors: R3 P1 K2
+    permutation: RPK
+    
+    # Bypass
+
+  - target: GlobalBuffer
+    type: bypass
+    keep:
+    - Weights
+    - Inputs
+    bypass:
+    - Outputs
+
+  - target: RegisterFile
+    type: bypass
+    keep:
+    - Outputs
+    bypass:
+    - Weights
+    - Inputs
