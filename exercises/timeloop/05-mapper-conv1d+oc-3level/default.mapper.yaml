@@ -1,0 +1,3 @@
+mapper:
+  optimization-metric: [ delay, energy ]
+  num-threads: 1
