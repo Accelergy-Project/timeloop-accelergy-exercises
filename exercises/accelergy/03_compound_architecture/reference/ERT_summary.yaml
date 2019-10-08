@@ -1,0 +1,34 @@
+ERT_summary:
+  ERT summaries:
+    simple_compound.GLB:
+      idle:
+        energy: 0.457
+      read:
+        average energy: 1.407
+        max energy: 2.522
+        min energy: 0.521
+      write:
+        average energy: 1.7
+        max energy: 3.109
+        min energy: 0.521
+    simple_compound.PE[0..4].MAC:
+      idle:
+        energy: 0.019
+      mac_gated:
+        energy: 0.056
+      mac_random:
+        energy: 1.785
+      mac_reused:
+        energy: 1.61
+    simple_compound.PE[0..4].buffer:
+      idle:
+        energy: 0.029
+      read:
+        average energy: 2.306
+        max energy: 4.524
+        min energy: 0.087
+      write:
+        average energy: 2.306
+        max energy: 4.524
+        min energy: 0.087
+  version: 0.2

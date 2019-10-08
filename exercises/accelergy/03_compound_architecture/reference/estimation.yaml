@@ -1,0 +1,8 @@
+energy_estimation:
+  components:
+    simple_compound.GLB: 81.53
+    simple_compound.PE[0].MAC: 54.39
+    simple_compound.PE[0].buffer: 302.88
+    simple_compound.PE[1].MAC: 54.39
+    simple_compound.PE[1].buffer: 305.64
+  version: 0.2
