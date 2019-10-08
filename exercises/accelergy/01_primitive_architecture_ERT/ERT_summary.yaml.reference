@@ -2,15 +2,15 @@ ERT_summary:
   ERT summaries:
     simple_primitive.GLB:
       idle:
-        energy: 0.429
+        energy: 0.457
       read:
-        average energy: 1.746
-        max energy: 3.348
-        min energy: 0.429
+        average energy: 1.343
+        max energy: 2.458
+        min energy: 0.457
       write:
-        average energy: 1.632
-        max energy: 3.121
-        min energy: 0.429
+        average energy: 1.636
+        max energy: 3.045
+        min energy: 0.457
     simple_primitive.PE.MAC:
       idle:
         energy: 0.007

@@ -18,7 +18,7 @@ architecture:
             n_rd_ports: 0
             n_wr_ports: 0
             n_rdwr_ports: 2
-            n_banks: 2
+            n_banks: 1
       subtree:                   # abstract hierarchy in the architecture
         - name: PE
           attributes:

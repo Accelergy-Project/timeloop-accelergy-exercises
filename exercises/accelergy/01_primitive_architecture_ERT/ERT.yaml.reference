@@ -3,57 +3,41 @@ ERT:
     simple_primitive.GLB:
       idle:
         arguments: null
-        energy: 0.429
+        energy: 0.457
       read:
       - arguments:
           address_delta: 0
           data_delta: 0
-        energy: 0.429
+        energy: 0.457
       - arguments:
           address_delta: 0
           data_delta: 1
-        energy: 2.344
+        energy: 1.72
       - arguments:
           address_delta: 1
           data_delta: 0
-        energy: 0.502
+        energy: 0.737
       - arguments:
           address_delta: 1
           data_delta: 1
-        energy: 2.846
-      - arguments:
-          address_delta: 2
-          data_delta: 0
-        energy: 1.005
-      - arguments:
-          address_delta: 2
-          data_delta: 1
-        energy: 3.348
+        energy: 2.458
       write:
       - arguments:
           address_delta: 0
           data_delta: 0
-        energy: 0.429
+        energy: 0.457
       - arguments:
           address_delta: 0
           data_delta: 1
-        energy: 2.185
+        energy: 2.131
       - arguments:
           address_delta: 1
           data_delta: 0
-        energy: 0.468
+        energy: 0.913
       - arguments:
           address_delta: 1
           data_delta: 1
-        energy: 2.653
-      - arguments:
-          address_delta: 2
-          data_delta: 0
-        energy: 0.936
-      - arguments:
-          address_delta: 2
-          data_delta: 1
-        energy: 3.121
+        energy: 3.045
     simple_primitive.PE.MAC:
       idle:
         arguments: null

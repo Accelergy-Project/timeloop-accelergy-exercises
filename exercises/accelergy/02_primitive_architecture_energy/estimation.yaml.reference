@@ -1,0 +1,6 @@
+energy_estimation:
+  components:
+    simple_primitive.GLB: 79.61
+    simple_primitive.PE.MAC: 36.87
+    simple_primitive.PE.buffer: 10.81
+  version: 0.2

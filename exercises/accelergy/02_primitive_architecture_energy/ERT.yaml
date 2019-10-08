@@ -1,0 +1,92 @@
+ERT:
+  tables:
+    simple_primitive.GLB:
+      idle:
+        arguments: null
+        energy: 0.457
+      read:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.457
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 1.72
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.737
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 2.458
+      write:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.457
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 2.131
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.913
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 3.045
+    simple_primitive.PE.MAC:
+      idle:
+        arguments: null
+        energy: 0.007
+      mac_gated:
+        arguments: null
+        energy: 0.044
+      mac_random:
+        arguments: null
+        energy: 1.207
+      mac_reused:
+        arguments: null
+        energy: 1.032
+    simple_primitive.PE.buffer:
+      idle:
+        arguments: null
+        energy: 0.006
+      read:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.006
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 0.144
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.115
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 0.253
+      write:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.006
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 0.144
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.115
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 0.253
+  version: 0.2
