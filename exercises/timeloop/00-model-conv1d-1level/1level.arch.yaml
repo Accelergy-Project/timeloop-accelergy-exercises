@@ -1,0 +1,17 @@
+architecture:
+  version: 0.2
+  
+  subtree:
+  - name: PE  
+    local:
+    - name: Buffer
+      class: SRAM
+      attributes:
+        entries: 64
+        instances: 1
+        word-bits: 8
+        vector-access-energy: 1
+    - name: MACC
+      class: intmac
+      attributes:
+        word-bits: 8
