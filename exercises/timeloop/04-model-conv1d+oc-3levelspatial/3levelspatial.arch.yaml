@@ -9,33 +9,35 @@ architecture:
       class: DRAM
       attributes:
         word-bits: 8
-        vector-access-energy: 32
+        n_words: 32
+        width: 256
 
     subtree:
     - name: Chip
+      attributes:
+        technology: 40nm
 
       local:
       - name: GlobalBuffer
         class: SRAM
         attributes:
-          sizeKB: 256
+          depth: 8192
+          width: 256
           instances: 1
           word-bits: 8
-          vector-access-energy: 5
+          n_words: 32
         
       subtree:
       - name: PE
       
         local:
-        - name: RegisterFile
+        - name: RegisterFile[0..15]
           class: SRAM
           attributes:
-            entries: 64
-            instances: 16
+            depth: 64
             word-bits: 8
             vector-access-energy: 1
-        - name: MACC
+        - name: MACC[0..15]
           class: intmac
           attributes:
-            instances: 16
             word-bits: 8

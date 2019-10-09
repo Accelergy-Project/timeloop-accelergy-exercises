@@ -3,26 +3,31 @@ architecture:
   
   subtree:
   - name: System
-    
+    attributes:
+      technology: 40nm
+
     local:
     - name: MainMemory
-      class: DRAM
+      class: SRAM
       attributes:
+        depth: 32768
         word-bits: 8
-        vector-access-energy: 32
+        n_words: 8
+        width: 64
         
     subtree:
     - name: PE
       
       local:
       - name: Buffer
-        class: SRAM
+        class: regfile
         attributes:
-          entries: 64
+          depth: 64
           instances: 1
           word-bits: 8
-          vector-access-energy: 1
+          width: 8
+
       - name: MACC
         class: intmac
         attributes:
-          word-bits: 8
+          datawidth: 8
