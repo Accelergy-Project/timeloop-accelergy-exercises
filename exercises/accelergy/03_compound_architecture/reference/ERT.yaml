@@ -12,11 +12,11 @@ ERT:
       - arguments:
           address_delta: 0
           data_delta: 1
-        energy: 1.784
+        energy: 1.922
       - arguments:
           address_delta: 1
           data_delta: 0
-        energy: 0.801
+        energy: 1.121
       - arguments:
           address_delta: 1
           data_delta: 1
@@ -29,11 +29,11 @@ ERT:
       - arguments:
           address_delta: 0
           data_delta: 1
-        energy: 2.195
+        energy: 2.332
       - arguments:
           address_delta: 1
           data_delta: 0
-        energy: 0.977
+        energy: 1.297
       - arguments:
           address_delta: 1
           data_delta: 1

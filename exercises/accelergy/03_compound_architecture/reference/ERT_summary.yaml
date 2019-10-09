@@ -4,11 +4,11 @@ ERT_summary:
       idle:
         energy: 0.457
       read:
-        average energy: 1.407
+        average energy: 1.522
         max energy: 2.522
         min energy: 0.521
       write:
-        average energy: 1.7
+        average energy: 1.815
         max energy: 3.109
         min energy: 0.521
     simple_compound.PE[0..4].MAC:

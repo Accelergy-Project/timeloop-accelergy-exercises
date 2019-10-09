@@ -4,11 +4,11 @@ ERT_summary:
       idle:
         energy: 0.457
       read:
-        average energy: 1.343
+        average energy: 1.458
         max energy: 2.458
         min energy: 0.457
       write:
-        average energy: 1.636
+        average energy: 1.751
         max energy: 3.045
         min energy: 0.457
     simple_primitive.PE.MAC:
