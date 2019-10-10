@@ -11,9 +11,9 @@ architecture:
       class: SRAM
       attributes:
         depth: 32768
-        word-bits: 8
-        n_words: 8
         width: 64
+        block-size: 8
+        word-bits: 8
         
     subtree:
     - name: PE
@@ -23,9 +23,9 @@ architecture:
         class: regfile
         attributes:
           depth: 8
-          instances: 1
-          word-bits: 8
           width: 8
+          block-size: 1
+          word-bits: 8
 
       - name: MACC
         class: intmac

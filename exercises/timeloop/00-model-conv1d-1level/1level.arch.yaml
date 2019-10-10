@@ -12,8 +12,9 @@ architecture:
       attributes:
         depth: 64
         width: 8
-        instances: 1
+        block-size: 1
         word-bits: 8
+
     - name: MACC
       class: intmac
       attributes:

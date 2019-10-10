@@ -8,9 +8,9 @@ architecture:
     - name: MainMemory
       class: DRAM
       attributes:
-        word-bits: 8
-        n_words: 32
         width: 256
+        block-size: 32
+        word-bits: 8
 
     subtree:
     - name: Chip
@@ -23,21 +23,21 @@ architecture:
         attributes:
           depth: 8192
           width: 256
-          instances: 1
+          block-size: 32
           word-bits: 8
-          n_words: 32
         
       subtree:
       - name: PE
       
         local:
         - name: RegisterFile[0..15]
-          class: SRAM
+          class: regfile
           attributes:
             depth: 64
+            width: 8
+            block-size: 8
             word-bits: 8
-            vector-access-energy: 1
         - name: MACC[0..15]
           class: intmac
           attributes:
-            word-bits: 8
+            datawidth: 8
