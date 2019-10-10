@@ -50,17 +50,14 @@ architecture:
             class: smartbuffer_RF
             attributes:
               memory_depth: 12
-              buffet_manager_depth: 0
           - name: weights_spad
             class: smartbuffer_SRAM
             attributes:
               memory_depth: 224
-              buffet_manager_depth: 0
           - name: psum_spad
             class: smartbuffer_RF
             attributes:
               memory_depth: 24
-              buffet_manager_depth: 24
               update_fifo_depth: 2
           - name: mac
             class: intmac
