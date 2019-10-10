@@ -34,10 +34,11 @@ problem:
       - [ [P] ]
       read-write: True
 
-  C: 256
-  K: 512
-  R: 3
-  S: 3
-  P: 56
-  Q: 56
-  N: 16
+  instance:
+    C: 256
+    K: 512
+    R: 3
+    S: 3
+    P: 56
+    Q: 56
+    N: 16
