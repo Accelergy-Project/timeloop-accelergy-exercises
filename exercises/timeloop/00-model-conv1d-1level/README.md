@@ -12,10 +12,10 @@ To run the exercise, we need to provide 3 inputs to the Timeloop model:
 - A problem.
 - A mapping.
 
-We have provided a separate `.yaml` file for each of these inputs. To run the exercise, type:
+We have provided a separate `.yaml` file for each of these inputs arranged into different sub-directories. To run the exercise, type:
 
 ```
-    timeloop-model *.yaml
+    timeloop-model arch/* prob/* map/*
 ```
 
 This generates the following outputs:
