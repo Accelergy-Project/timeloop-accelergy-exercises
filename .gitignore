@@ -1,0 +1,11 @@
+# Ignore emacs backup files
+
+*~
+\#*\#
+
+# Ignore .nfs temp file
+
+.nfs*
+
+# Application-specific ignores
+
