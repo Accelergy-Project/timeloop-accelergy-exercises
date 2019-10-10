@@ -38,34 +38,34 @@ mapspace:
     permutation: NPQR SCK
     type: spatial
     target: DummyBuffer
-    factors: N1 P1 Q1 R1 S0
+    factors: N=1 P=1 Q=1 R=1 S=0
   - split: 7
     permutation: NCPRS QK
     type: spatial
     target: GlobalBuffer
-    factors: N1 C1 P1 R1 S1
+    factors: N=1 C=1 P=1 R=1 S=1
   - permutation: NCPQRS K
     type: temporal
     target: PsumRegFile
-    factors: N1 C1 P1 Q1 R1 S1
+    factors: N=1 C=1 P=1 Q=1 R=1 S=1
   - permutation: NKPQS CR
     type: temporal
     target: WeightRegFile
-    factors: N1 K1 P1 Q1 S1 R0
+    factors: N=1 K=1 P=1 Q=1 S=1 R=0
   - permutation: NKCPQRS
     type: temporal
     target: InputRegFile
-    factors: N1 K1 C1 P1 Q1 R1 S1
+    factors: N=1 K=1 C=1 P=1 Q=1 R=1 S=1
   - permutation: NKCPQRS
     type: temporal
     target: DummyBuffer
-    factors: N1 K1 C1 P1 Q1 R1 S1
+    factors: N=1 K=1 C=1 P=1 Q=1 R=1 S=1
   - permutation: QRSC PNK
     type: temporal
     target: GlobalBuffer
-    factors: Q1 R1 S1 C1 P0
+    factors: Q=1 R=1 S=1 C=1 P=0
   - permutation: RSP CKNQ
     type: temporal
     target: DRAM
-    factors: R1 S1 P1
+    factors: R=1 S=1 P=1
   constraints: rowstationary
