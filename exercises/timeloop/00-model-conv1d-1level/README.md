@@ -31,5 +31,6 @@ This generates the following outputs:
   - Some statistics are separated out into sub-sections for each data-space (such as Weights, Inputs, etc.)
   - By convention, statistics for a network connecting an outer storage level to an inner storage level are reported as part of the outer level's statistics.
   - In these exercises, some statistics are reported as 0 because we are using a simple technology model for the tutorial.
+  - At the tail-end of the file are some aggregate statistics representing net performance and energy-efficiency. In many studies, we simply `tail` the stats file to obtain these summary statistics.
 - The only storage level is `Buffer`, which both acts as the backing store for all operand and result data-spaces, as well as the sole operand source and result destination for each arithmetic operation.
 - Note that tiles of "Outputs" are actually partial sums. Accesses to partial sums inside buffers are Read-Modify-Update operations. Look at the number of reads and updates of Outputs at the Buffer. Are they equal?
