@@ -65,7 +65,7 @@ architecture:
                 attributes:
                   word_width: 16
                   memory_depth: 16
-                  buffet_manager_depth: 16
+                  scoreboard_depth: 16
                   update_fifo_depth: 2
                   meshX: 16
                   read_bandwidth: 2
@@ -75,7 +75,7 @@ architecture:
                 attributes:
                   word_width: 16
                   memory_depth: 192
-                  buffet_manager_depth: 0
+                  scoreboard_depth: 0
                   meshX: 16
                   read_bandwidth: 2
                   write_bandwidth: 2
@@ -84,7 +84,7 @@ architecture:
                 attributes:
                   word_width: 16
                   memory_depth: 12
-                  buffet_manager_depth: 0
+                  scoreboard_depth: 0
                   meshX: 16
                   read_bandwidth: 2
                   write_bandwidth: 2
