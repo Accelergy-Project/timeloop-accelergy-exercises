@@ -67,4 +67,3 @@ mapspace_constraints:
     type: temporal
     target: DRAM
     factors: R=1 S=1 P=1
-  constraints: rowstationary
