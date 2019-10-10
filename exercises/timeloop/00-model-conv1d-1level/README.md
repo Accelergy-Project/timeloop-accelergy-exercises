@@ -1,5 +1,5 @@
-Exercise 00
-===========
+Exercise 0
+==========
 
 ## Overview
 
