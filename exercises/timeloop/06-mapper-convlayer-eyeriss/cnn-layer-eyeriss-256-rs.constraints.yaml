@@ -1,5 +1,4 @@
-mapspace:
-  constraints:
+mapspace_constraints:
   - type: datatype
     target: PsumRegFile
     bypass:
