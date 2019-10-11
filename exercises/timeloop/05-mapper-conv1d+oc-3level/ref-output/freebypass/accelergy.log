@@ -3,16 +3,16 @@
 #=========================== Running Accelergy =====================================#
 #===================================================================================#
 
+Warn: File contains unrecognized information: ../../constraints/conv1d+oc-3level-freebypass.constraints.yaml mapspace_constraints 
+ Accelergy only recognizes the following keys 
+['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
+
 Info: architecture related info found in ../../arch/3level.arch.yaml 
 Warn: File contains unrecognized information: ../../prob/conv1d+oc.prob.yaml problem 
  Accelergy only recognizes the following keys 
 ['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
 
 Warn: File contains unrecognized information: ../../mapper/exhaustive.mapper.yaml mapper 
- Accelergy only recognizes the following keys 
-['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
-
-Warn: File contains unrecognized information: ../../constraints/conv1d+oc-3level-nobypass.constraints.yaml mapspace_constraints 
  Accelergy only recognizes the following keys 
 ['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
 
@@ -52,4 +52,4 @@ Info: System.MainMemory  ---> Generating new ERT
 Info: System.MainMemory  ---> New ERT generated 
 Info: ERT summary saved to  .//ERT_summary.yaml 
 ---> Finished: ERT generation finished, ERT saved to:
- /home/poant/symphony/timeloop-accelergy-exercises/exercises/timeloop/05-mapper-conv1d+oc-3level/ref-output/nobypass
+ /home/poant/symphony/timeloop-accelergy-exercises/exercises/timeloop/05-mapper-conv1d+oc-3level/ref-output/freebypass

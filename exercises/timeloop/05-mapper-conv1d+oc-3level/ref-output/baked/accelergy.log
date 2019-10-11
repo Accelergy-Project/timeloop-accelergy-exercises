@@ -4,15 +4,15 @@
 #===================================================================================#
 
 Info: architecture related info found in ../../arch/3level.arch.yaml 
+Warn: File contains unrecognized information: ../../constraints/conv1d+oc-3level-baked.constraints.yaml mapspace_constraints 
+ Accelergy only recognizes the following keys 
+['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
+
 Warn: File contains unrecognized information: ../../prob/conv1d+oc.prob.yaml problem 
  Accelergy only recognizes the following keys 
 ['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
 
 Warn: File contains unrecognized information: ../../mapper/exhaustive.mapper.yaml mapper 
- Accelergy only recognizes the following keys 
-['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
-
-Warn: File contains unrecognized information: ../../constraints/conv1d+oc-3level-baked.constraints.yaml mapspace_constraints 
  Accelergy only recognizes the following keys 
 ['architecture', 'compound_components', 'action_counts', 'ERT', 'flattened_architecture']
 
