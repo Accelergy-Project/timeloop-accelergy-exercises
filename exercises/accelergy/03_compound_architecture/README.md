@@ -38,7 +38,7 @@ the architecture is saved to `flattened_architectue.yaml`.
 
 
 ## Takeaways
-- We can define our own compound components and use them to define the architecture
+- We can define our own compound components and use them to define the architecture.
 - Modeling the design using compound components 
   - Reduces the architecture description and action counts complexity 
   - Makes architecture redesigns much faster as no new action counts need to be 
