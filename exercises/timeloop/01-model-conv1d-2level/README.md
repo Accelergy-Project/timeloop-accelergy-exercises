@@ -1,4 +1,4 @@
-Exercise 0
+Exercise 1
 ==========
 
 ## Overview
@@ -31,4 +31,10 @@ Compare the statistics from the two runs. Do you see a difference? Why or why no
 
 Now let's try something interesting. Edit the `prob/conv1d.prob.yaml` file and change the problem size from `P:16` to `P:1920`. Next, edit both mappings to reflect this change: a mapping _must_ cover the complete iteration space of the original problem, otherwise it is illegal (Timeloop will complain).
 
-Now try running both mappings as before. Hmmmm... what do you think happened here? Can you change any of the _architecture_ specs to make the mappings work? Does this tell you anything about the relative pros and cons of these two mappings?
+Now try running both mappings as before. Hmmmm... what do you think happened here? Can you change any of the _architecture_ specs to make the mappings work?
+
+If you decide to increase the sizes of any storage structures, **pay attention to their `class`**, which represents the underlying design used to implement the structure. Different implementations have different sweet-spots in terms of energy efficiency. Try changing the class (look for hints elsewhere in the same YAML file) if you find energy costs to be scaling in undesirable ways.
+
+> Sidenote: you will learn more about these classes in the **Accelergy** section of the tutorial.
+
+Does this exercise you anything about the relative pros and cons of these two mappings?
