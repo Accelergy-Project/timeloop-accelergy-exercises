@@ -1,0 +1,122 @@
+flattened_architecture:
+  components:
+    eyeriss_like.PE[0..167].ifmap_spad:
+      attributes:
+        technology: 40nm
+        memory_depth: 12
+        memory_width: 16
+        n_rdwr_ports: 2
+        n_banks: 1
+        n_buffets: 1
+        scoreboard_depth: 12.0
+        update_fifo_depth: 0
+      class: smartbuffer_RF
+      name: eyeriss_like.PE[167].ifmap_spad
+    eyeriss_like.PE[0..167].mac:
+      attributes:
+        datawidth: 16
+        latency: 5ns
+        memory_width: 16
+        num_pipeline_stages: 2
+        technology: 40nm
+      class: intmac
+      name: eyeriss_like.PE[167].mac
+    eyeriss_like.PE[0..167].psum_spad:
+      attributes:
+        technology: 40nm
+        memory_depth: 24
+        memory_width: 16
+        n_rdwr_ports: 2
+        n_banks: 1
+        n_buffets: 1
+        scoreboard_depth: 24.0
+        update_fifo_depth: 2
+      class: smartbuffer_RF
+      name: eyeriss_like.PE[167].psum_spad
+    eyeriss_like.PE[0..167].weights_spad:
+      attributes:
+        technology: 40nm
+        memory_depth: 224
+        memory_width: 16
+        n_rdwr_ports: 2
+        n_banks: 1
+        n_buffets: 1
+        scoreboard_depth: 224.0
+        update_fifo_depth: 0
+      class: smartbuffer_SRAM
+      name: eyeriss_like.PE[167].weights_spad
+    eyeriss_like.ifmap_NoC:
+      attributes:
+        technology: 40nm
+        Y_comparator_width: 4
+        X_comparator_width: 4
+        n_PE_rows: 12
+        n_PE_cols: 14
+        total_PEs: 168
+        datawidth: 16
+        Y_X_wire_avg_length: 2mm
+        col_id_width: 5
+      class: XY_NoC
+      name: eyeriss_like.ifmap_NoC
+    eyeriss_like.psum_read_NoC:
+      attributes:
+        technology: 40nm
+        Y_comparator_width: 4
+        X_comparator_width: 4
+        n_PE_rows: 12
+        n_PE_cols: 14
+        total_PEs: 168
+        datawidth: 64
+        Y_X_wire_avg_length: 4mm
+      class: XY_NoC
+      name: eyeriss_like.psum_read_NoC
+    eyeriss_like.psum_write_NoC:
+      attributes:
+        technology: 40nm
+        Y_comparator_width: 4
+        X_comparator_width: 4
+        n_PE_rows: 12
+        n_PE_cols: 14
+        total_PEs: 168
+        datawidth: 64
+        Y_X_wire_avg_length: 2mm
+      class: XY_NoC
+      name: eyeriss_like.psum_write_NoC
+    eyeriss_like.shared_glb:
+      attributes:
+        technology: 40nm
+        memory_depth: 12800
+        memory_width: 64
+        n_rdwr_ports: 2
+        n_banks: 25
+        n_buffets: 2
+        scoreboard_depth: 512.0
+        update_fifo_depth: 2
+        bank_depth: 512
+      class: smartbuffer_SRAM
+      name: eyeriss_like.shared_glb
+    eyeriss_like.weights_NoC:
+      attributes:
+        technology: 40nm
+        Y_comparator_width: 4
+        X_comparator_width: 4
+        n_PE_rows: 12
+        n_PE_cols: 14
+        total_PEs: 168
+        datawidth: 64
+        Y_X_wire_avg_length: 2mm
+      class: XY_NoC
+      name: eyeriss_like.weights_NoC
+    eyeriss_like.weights_glb:
+      attributes:
+        technology: 40nm
+        memory_depth: 1024
+        memory_width: 64
+        n_rdwr_ports: 2
+        n_banks: 2
+        n_buffets: 1
+        scoreboard_depth: 512.0
+        update_fifo_depth: 0
+      class: smartbuffer_SRAM
+      name: eyeriss_like.weights_glb
+  version: 0.2
