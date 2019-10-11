@@ -47,6 +47,5 @@ We have provided 3 alternative sets of constraints for this exercise.
 
 > For each of these runs, be sure to look at the generated `timeloop-mapper.map.txt`. This is the optimal mapping found by the mapper shown in a nice, readable loop-nest format.
 
-Takeaways
-=========
+## Takeaways
 While we used constraints to understand the mapper's behavior in this exercise, in practice constraints are used to represent hardware capabilities (or rather, incapabilities). Many hardware accelerators aren't designed to be flexible enough to execute any pattern of data-movement loop nests that a mapper can throw at them. They are restricted (with good reason) to execute a limited set of alternative shapes of mappings, or _dataflows_. This simplifies the hardware design of networks and internal state machines. Timeloop's constraints language is intended to capture these hardware characteristics. In the next exercise, we will work with a detailed specification of the Eyeriss architecture, which includes both an architecture spec as well as a comprehensive set of constraints, including directives to model the _Row Stationary_ dataflow.
