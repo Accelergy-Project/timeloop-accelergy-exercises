@@ -3,7 +3,7 @@ Exercise 2
 
 ## Overview
 
-In this exercise, we continue to use the 2-level architecture from the previous exercise, but introduce a new dimension to the problem shape -- **Output Channels** (represented by the dimension `K`). As a result, the space of interesting mappings becomes richer. We also explore **tiling** the `K` dimension.
+In this exercise, we continue to use the 2-level architecture from the previous exercise, but introduce a new dimension to the problem shape: **Output Channels** (represented by the dimension `K`). As a result, the space of interesting mappings becomes richer. We also explore **tiling** the `K` dimension.
 
 ## Steps and Observations
 
