@@ -23,3 +23,12 @@ However, unlike the model, the mapper does not need an explicit mapping (it find
       > Be careful about how Bypass directives are treated by the model vs. the mapper. If you don't specify any bypass directives in a mapping, the model assumes they are set to `keep` (i.e., do not bypass). Remember that a mapping cannot have any non-determinism. However, the mapper treats anything left un-specified in the constraints as options to explore in the mapspace. If you want to lock down a specific bypass strategy, you need to create an explicit constraint to restrict the mapper.
    3. `constraints/null.constraints.yaml`: In this example, we remove all constraints and let the mapper explore the complete mapspace.
 
+3. Look at the `mapper/exhaustive.mapper.yaml` file. The directives here instruct the mapper to exhaustively explore the complete mapspace. Observe:
+   1. The `optimization-metric` gives the mapper a prioritized list of metrics to compare mappings. In this example, `delay` is the highest priority. If two mappings have the same delay, they will be compared based on `energy`. The set of metrics supported today include `energy`, `delay`, `edp` (energy-delay product), and `last-level-accesses`, but this list can be trivially expanded to _any_ metric that the model generates (as in `stats.txt`) with just a few lines of code.
+   2. The mapper can launch multiple threads to speed up the search. It will divide up the mapspace among all threads. If the `num-threads` directive isn't specified, the mapper will query the underlying host for the number of available CPU contexts and use that many threads.
+
+
+
+Takeaways
+=========
+While we used constraints to understand the mapper's behavior in this exercise, in practice constraints are used to represent hardware capabilities (or rather, incapabilities). Many hardware accelerators aren't designed to be flexible enough to execute any pattern of data-movement loop nests that a mapper can throw at them. They are restricted (with good reason) to execute a limited set of alternative shapes of mappings, or _dataflows_. This simplifies the hardware design of networks and internal state machines. Timeloop's constraints language is intended to capture these hardware characteristics. In the next exercise, we will work with a detailed specification of the Eyeriss architecture, which includes both an architecture spec as well as a comprehensive set of constraints, including directives to model the _Row Stationary_ dataflow.
