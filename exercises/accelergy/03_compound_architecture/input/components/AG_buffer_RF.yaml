@@ -1,0 +1,64 @@
+name: AG_buffer_RF
+attributes:
+  technology: 40nm
+  buffer_depth: 512
+  buffer_width: 32
+  buffer_n_ports: 2
+  address_width: log(buffer_depth)
+subcomponents:
+  - name: address_generators[0..1]
+    class: counter
+    attributes:
+      technology: technology
+      width: address_width
+  - name: buffer
+    class: regfile
+    attributes:
+      technology: technology
+      width: buffer_width
+      depth: buffer_depth
+      n_ports: buffer_n_ports
+actions:
+  - name: read
+    arguments:
+      data_delta: 0..1
+      address_delta: 0..1
+    subcomponents:
+      - name: address_generators[0]
+        actions:
+          - name: count
+      - name: buffer
+        actions:
+          - name: read
+            arguments:
+              data_delta: data_delta
+              address_delta: address_delta
+  - name: write
+    arguments:
+      data_delta: 0..1
+      address_delta: 0..1
+    subcomponents:
+      - name: address_generators[1]
+        actions:
+          - name: count
+      - name: buffer
+        actions:
+          - name: read
+            arguments:
+              data_delta: data_delta
+              address_delta: address_delta
+  - name: idle
+    subcomponents:
+      - name: address_generators[0..1]
+        actions:
+          - name: idle
+      - name: buffer
+        actions:
+          - name: idle
+
+
+
+
+
+
+
