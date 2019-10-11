@@ -12,13 +12,13 @@ To combine them, we will provide detailed design descriptions for the system and
 ## Evaluate a complex DNN accelerator running a CNN layer
 The following command uses Timeloop to find a good mapping to run on an Eyeriss-like architecture:
 
-    ```
-    timeloop-mapper arch/eyeriss-192-int16.arch.yaml \
-                    arch/components/*.yaml \
-                    prob/cnn-layer.prob.yaml \
-                    mapper/apper.yaml \
-                    constraints/cnn-layer-eyeriss-192-rs.constraints.yaml
-    ```
+```
+timeloop-mapper arch/eyeriss-192-int16.arch.yaml \
+                arch/components/*.yaml \
+                prob/cnn-layer.prob.yaml \
+                mapper/apper.yaml \
+                constraints/cnn-layer-eyeriss-192-rs.constraints.yaml
+```
 
 Take a look at `timeloop-model.stats.txt` output file. What's the energy breakdown and system utilization?
 
@@ -26,7 +26,8 @@ Take a look at `timeloop-model.stats.txt` output file. What's the energy breakdo
 Using those provided files, there are many interesting experiments we can explore.
 
 1. An Eyeriss-like architecture for floating-point data:
-Data type and precision are critical to DNN accelerators. What if we want to build an accelerator operate on different data types? The following command evaluate running an Eyeriss-like architecture with floating-point input, weights, and output:
+
+    Data type and precision are critical to DNN accelerators. What if we want to build an accelerator operate on different data types? The following command evaluate running an Eyeriss-like architecture with floating-point input, weights, and output:
 
     ```
     timeloop-mapper arch/eyeriss-192-fp32.arch.yaml \
@@ -43,8 +44,9 @@ Data type and precision are critical to DNN accelerators. What if we want to bui
     Now, you can imagine doing a small research project with this framework: Implemente a MAC unit for a new data type (e.g., 8-bit FP), provide the energy consumption in Accelergy, and then use timeloop to evaluate how this new data type improves overall performance and energy efficiency.
 
 2. Using different DRAM type:
-Main memory is often the bottleneck of performance and energy efficiency. Architects might want to improve performance and energy efficiency of their accelerators by using an advanced DRAM technology that has lower energy consumption. You can do that easily here by modifying the type in DRAM to other types (e.g., "HBM2") and rerun timeloop. Observe how the DRAM energy changes.
 
-You can also imagine that if Accelergy can use plug-ins for other memory technologies, we can quickly evaluate how Eyeriss performs with new technologies.
+    Main memory is often the bottleneck of performance and energy efficiency. Architects might want to improve performance and energy efficiency of their accelerators by using an advanced DRAM technology that has lower energy consumption. You can do that easily here by modifying the type in DRAM to other types (e.g., "HBM2") and rerun timeloop. Observe how the DRAM energy changes.
 
-## There are many more interesting research questions regarding DNN accelerators. Timeloop+Accelergy is a great framework to help researchers answer those questions. The only limit is your imagination! 
+    You can also imagine that if Accelergy can use plug-ins for other memory technologies, we can quickly evaluate how Eyeriss performs with new technologies.
+
+There are many more interesting research questions regarding DNN accelerators. Timeloop+Accelergy is a great framework to help researchers answer those questions. The only limit is your imagination! 
