@@ -36,4 +36,4 @@ In this exercise, we continue to use the 1D convolution problem, but we upgrade 
 
       > Sidenote: you will learn more about these classes in the **Accelergy** section of the tutorial.
 
-Does this exercise you anything about the relative pros and cons of these two mappings?
+Does this exercise tell you anything about the relative pros and cons of these two mappings?
