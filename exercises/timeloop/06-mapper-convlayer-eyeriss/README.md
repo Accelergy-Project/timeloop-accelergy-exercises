@@ -9,7 +9,10 @@ In this exercise, we present a set of detailed architecture and constraints spec
 
 Take a look at the YAML files describing the problem, architecture, mapspace constraints and mapper configuration.
 * The problem should be fairly straightforward to understand, but note the use of a new directive called `coefficients`, which are used to set up the _stride_ and _dilation_ parameters used in index calculation.
-* The architecture spec is more complex, but the hierarchical structure is just a logical extension of the topologies we have looked at in prior examples.
+* The architecture is similar to that from exercise 4, with the following differences:
+  * There are 256 PEs instead of 16.
+  * Inside each PE is a set of 3 register files, one each for Weights, Inputs and Outputs. Bypass directives in the constraints are used to force each data-space into its designated register file.
+  * There is a `DummyBuffer` level between the GlobalBuffer and PEs. This is fake buffer with 0 size that bypasses all data. It is a simulation hack used to work around a temporary spatial-mapping limitation.
 * The mapspace constraints may look daunting, but they follow the same rules as the constraints in the previous exercise and set up factor, permutation and bypass constraints for each temporal and spatial tiling level in the architecture.
 * The mapper configuration contains a new flag called `live-status`. This triggers an ncurses-based UI screen that allows you to track the activity of all mapper threads.
 
