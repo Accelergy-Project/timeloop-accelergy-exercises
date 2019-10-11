@@ -31,10 +31,11 @@ We have provided 3 alternative sets of constraints for this exercise.
 
 3. Run all 3 experiments.
    1. Type:
-      ```timeloop-mapper arch/3level.arch.yaml         \
-                         prob/conv1d+oc.prob.yaml      \
-                         mapper/exhaustive.mapper.yaml \
-                         constraints/conv1d+oc-3level-baked.constraints.yaml
+      ```
+      timeloop-mapper arch/3level.arch.yaml         \
+                      prob/conv1d+oc.prob.yaml      \
+                      mapper/exhaustive.mapper.yaml \
+                      constraints/conv1d+oc-3level-baked.constraints.yaml
       ```
       1. Observe the output log. Timeloop prints out the size of the mapspace in each dimension. The total size of the mapspace is the product of all these mapspace dimensions. Everything is 1 in this example because the mapspace is completely locked down.
       2. Compare the results with the default mapping provided in Exercise 3. The numbers should be identical.
