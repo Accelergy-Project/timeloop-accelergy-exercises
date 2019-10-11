@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="15">
+<engine class_id="0" tracking_level="0" version="0">
+	<topology_ class_id="1" tracking_level="0" version="0">
+		<levels_ class_id="2" tracking_level="0" version="0">
+			<count>2</count>
+			<item_version>1</item_version>
+			<item class_id="3" tracking_level="0" version="1">
+				<px class_id="4" class_name="model::ArithmeticUnits" tracking_level="1" version="0" object_id="_0">
+					<Level class_id="5" tracking_level="0" version="0"></Level>
+					<specs_ class_id="6" tracking_level="0" version="0">
+						<LevelSpecs class_id="7" tracking_level="0" version="0">
+							<level_name>MACC</level_name>
+						</LevelSpecs>
+						<instances class_id="8" tracking_level="0" version="0">
+							<t_>1</t_>
+						</instances>
+						<mesh_x></mesh_x>
+						<mesh_y></mesh_y>
+						<word_bits>
+							<t_>8</t_>
+						</word_bits>
+					</specs_>
+					<energy_>2.89439999999999991e+01</energy_>
+					<area_>0.00000000000000000e+00</area_>
+					<cycles_>48</cycles_>
+					<utilized_instances_>1</utilized_instances_>
+					<maccs_>48</maccs_>
+				</px>
+			</item>
+			<item>
+				<px class_id="9" class_name="model::BufferLevel" tracking_level="1" version="0" object_id="_1">
+					<Level></Level>
+					<subnest_ class_id="10" tracking_level="0" version="0">
+						<count>2</count>
+						<item_version>0</item_version>
+						<item class_id="11" tracking_level="0" version="0">
+							<dimension>0</dimension>
+							<start>0</start>
+							<end>3</end>
+							<stride>1</stride>
+							<spacetime_dimension>0</spacetime_dimension>
+						</item>
+						<item>
+							<dimension>1</dimension>
+							<start>0</start>
+							<end>16</end>
+							<stride>1</stride>
+							<spacetime_dimension>0</spacetime_dimension>
+						</item>
+					</subnest_>
+					<specs_ class_id="12" tracking_level="0" version="0">
+						<LevelSpecs>
+							<level_name>Buffer</level_name>
+						</LevelSpecs>
+						<name class_id="13" tracking_level="0" version="0">
+							<shared class_id="14" tracking_level="0" version="0">
+								<t_>Buffer</t_>
+							</shared>
+						</name>
+						<technology class_id="15" tracking_level="0" version="0">
+							<shared class_id="16" tracking_level="0" version="0">
+								<t_>0</t_>
+							</shared>
+						</technology>
+						<size class_id="17" tracking_level="0" version="0">
+							<shared>
+								<t_>64</t_>
+							</shared>
+						</size>
+						<word_bits>
+							<shared>
+								<t_>8</t_>
+							</shared>
+						</word_bits>
+						<addr_gen_bits>
+							<shared>
+								<t_>6</t_>
+							</shared>
+						</addr_gen_bits>
+						<block_size>
+							<shared>
+								<t_>1</t_>
+							</shared>
+						</block_size>
+						<cluster_size>
+							<shared>
+								<t_>1</t_>
+							</shared>
+						</cluster_size>
+						<instances>
+							<shared>
+								<t_>1</t_>
+							</shared>
+						</instances>
+						<meshX>
+							<shared>
+								<t_>1</t_>
+							</shared>
+						</meshX>
+						<meshY>
+							<shared>
+								<t_>1</t_>
+							</shared>
+						</meshY>
+						<read_bandwidth class_id="18" tracking_level="0" version="0">
+							<shared class_id="19" tracking_level="0" version="0">
+								<t_>2.66666666666666652e+00</t_>
+							</shared>
+						</read_bandwidth>
+						<write_bandwidth>
+							<shared>
+								<t_>1.00000000000000000e+00</t_>
+							</shared>
+						</write_bandwidth>
+						<multiple_buffering>
+							<shared>
+								<t_>1.00000000000000000e+00</t_>
+							</shared>
+						</multiple_buffering>
+						<network class_id="20" tracking_level="0" version="0">
+							<type class_id="21" tracking_level="0" version="0">
+								<shared class_id="22" tracking_level="0" version="0"></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>8</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</network>
+						<min_utilization>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</min_utilization>
+						<vector_access_energy>
+							<shared>
+								<t_>4.19999999999999984e-01</t_>
+							</shared>
+						</vector_access_energy>
+						<storage_area>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</storage_area>
+						<num_ports>
+							<shared>
+								<t_>2</t_>
+							</shared>
+						</num_ports>
+						<num_banks>
+							<shared>
+								<t_>2</t_>
+							</shared>
+						</num_banks>
+					</specs_>
+					<stats_ class_id="23" tracking_level="0" version="0">
+						<keep class_id="24" tracking_level="0" version="0">
+							<PerDataSpace>
+								<item>1</item>
+								<item>1</item>
+								<item>1</item>
+							</PerDataSpace>
+						</keep>
+						<partition_size class_id="25" tracking_level="0" version="0">
+							<PerDataSpace>
+								<item>3</item>
+								<item>18</item>
+								<item>16</item>
+							</PerDataSpace>
+						</partition_size>
+						<utilized_capacity>
+							<PerDataSpace>
+								<item>3</item>
+								<item>18</item>
+								<item>16</item>
+							</PerDataSpace>
+						</utilized_capacity>
+						<utilized_instances>
+							<PerDataSpace>
+								<item>1</item>
+								<item>1</item>
+								<item>1</item>
+							</PerDataSpace>
+						</utilized_instances>
+						<utilized_clusters>
+							<PerDataSpace>
+								<item>1</item>
+								<item>1</item>
+								<item>1</item>
+							</PerDataSpace>
+						</utilized_clusters>
+						<reads>
+							<PerDataSpace>
+								<item>48</item>
+								<item>48</item>
+								<item>32</item>
+							</PerDataSpace>
+						</reads>
+						<updates>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>48</item>
+							</PerDataSpace>
+						</updates>
+						<fills>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</fills>
+						<address_generations>
+							<PerDataSpace>
+								<item>48</item>
+								<item>48</item>
+								<item>48</item>
+							</PerDataSpace>
+						</address_generations>
+						<temporal_reductions>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>32</item>
+							</PerDataSpace>
+						</temporal_reductions>
+						<read_bandwidth class_id="26" tracking_level="0" version="0">
+							<PerDataSpace>
+								<item>1.00000000000000000e+00</item>
+								<item>1.00000000000000000e+00</item>
+								<item>6.66666666666666630e-01</item>
+							</PerDataSpace>
+						</read_bandwidth>
+						<write_bandwidth>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>1.00000000000000000e+00</item>
+							</PerDataSpace>
+						</write_bandwidth>
+						<energy_per_access>
+							<PerDataSpace>
+								<item>4.19999999999999984e-01</item>
+								<item>4.19999999999999984e-01</item>
+								<item>4.20000000000000040e-01</item>
+							</PerDataSpace>
+						</energy_per_access>
+						<energy>
+							<PerDataSpace>
+								<item>2.01600000000000001e+01</item>
+								<item>2.01600000000000001e+01</item>
+								<item>3.36000000000000014e+01</item>
+							</PerDataSpace>
+						</energy>
+						<temporal_reduction_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</temporal_reduction_energy>
+						<addr_gen_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</addr_gen_energy>
+						<area class_id="27" tracking_level="0" version="0">
+							<shared>0.00000000000000000e+00</shared>
+						</area>
+						<cycles>48</cycles>
+						<slowdown>1.00000000000000000e+00</slowdown>
+						<network class_id="28" tracking_level="0" version="0">
+							<fanout>
+								<PerDataSpace>
+									<item>1</item>
+									<item>1</item>
+									<item>1</item>
+								</PerDataSpace>
+							</fanout>
+							<distributed_fanout>
+								<PerDataSpace>
+									<item>0</item>
+									<item>0</item>
+									<item>0</item>
+								</PerDataSpace>
+							</distributed_fanout>
+							<multicast_factor>
+								<PerDataSpace>
+									<item>1</item>
+									<item>1</item>
+									<item>1</item>
+								</PerDataSpace>
+							</multicast_factor>
+							<ingresses class_id="29" tracking_level="0" version="0">
+								<PerDataSpace>
+									<item>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item>48</item>
+									</item>
+									<item>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item>48</item>
+									</item>
+									<item>
+										<count>1</count>
+										<item_version>0</item_version>
+										<item>48</item>
+									</item>
+								</PerDataSpace>
+							</ingresses>
+							<distributed_multicast>
+								<PerDataSpace>
+									<item>0</item>
+									<item>0</item>
+									<item>0</item>
+								</PerDataSpace>
+							</distributed_multicast>
+							<link_transfers>
+								<PerDataSpace>
+									<item>0</item>
+									<item>0</item>
+									<item>0</item>
+								</PerDataSpace>
+							</link_transfers>
+							<spatial_reductions>
+								<PerDataSpace>
+									<item>0</item>
+									<item>0</item>
+									<item>0</item>
+								</PerDataSpace>
+							</spatial_reductions>
+							<link_transfer_energy>
+								<PerDataSpace>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+								</PerDataSpace>
+							</link_transfer_energy>
+							<num_hops>
+								<PerDataSpace>
+									<item>5.00000000000000000e-01</item>
+									<item>5.00000000000000000e-01</item>
+									<item>5.00000000000000000e-01</item>
+								</PerDataSpace>
+							</num_hops>
+							<energy_per_hop>
+								<PerDataSpace>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+								</PerDataSpace>
+							</energy_per_hop>
+							<energy>
+								<PerDataSpace>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+								</PerDataSpace>
+							</energy>
+							<spatial_reduction_energy>
+								<PerDataSpace>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+								</PerDataSpace>
+							</spatial_reduction_energy>
+						</network>
+					</stats_>
+				</px>
+			</item>
+		</levels_>
+	</topology_>
+</engine>
+<mapping class_id="31" tracking_level="0" version="0">
+	<datatype_bypass_nest>
+		<item class_id="32" tracking_level="0" version="0">
+			<bits>0000000000000001</bits>
+		</item>
+		<item>
+			<bits>0000000000000001</bits>
+		</item>
+		<item>
+			<bits>0000000000000001</bits>
+		</item>
+	</datatype_bypass_nest>
+</mapping>
+<a class_id="33" tracking_level="1" version="0" object_id="_2">
+	<workload_ class_id="34" tracking_level="0" version="0">
+		<bounds_ class_id="35" tracking_level="0" version="0">
+			<count>2</count>
+			<item_version>0</item_version>
+			<item class_id="36" tracking_level="0" version="0">
+				<first>0</first>
+				<second>3</second>
+			</item>
+			<item>
+				<first>1</first>
+				<second>16</second>
+			</item>
+		</bounds_>
+		<coefficients_>
+			<count>0</count>
+			<item_version>0</item_version>
+		</coefficients_>
+		<densities_ class_id="37" tracking_level="0" version="0">
+			<count>3</count>
+			<item_version>0</item_version>
+			<item class_id="38" tracking_level="0" version="0">
+				<first>0</first>
+				<second>1.00000000000000000e+00</second>
+			</item>
+			<item>
+				<first>1</first>
+				<second>1.00000000000000000e+00</second>
+			</item>
+			<item>
+				<first>2</first>
+				<second>1.00000000000000000e+00</second>
+			</item>
+		</densities_>
+	</workload_>
+</a>
+</boost_serialization>
+

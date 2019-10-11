@@ -1,0 +1,41 @@
+ERT_summary:
+  ERT summaries:
+    System.Chip.GlobalBuffer:
+      idle:
+        energy: 0.028
+      read:
+        average energy: 51.447
+        max energy: 102.865
+        min energy: 0.028
+      write:
+        average energy: 48.165
+        max energy: 96.301
+        min energy: 0.028
+    System.Chip.PE.MACC[0..15]:
+      idle:
+        energy: 0.003
+      mac_gated:
+        energy: 0.022
+      mac_random:
+        energy: 0.603
+      mac_reused:
+        energy: 0.516
+    System.Chip.PE.RegisterFile[0..15]:
+      idle:
+        energy: 0.004
+      read:
+        average energy: 0.212
+        max energy: 0.42
+        min energy: 0.004
+      write:
+        average energy: 0.212
+        max energy: 0.42
+        min energy: 0.004
+    System.MainMemory:
+      idle:
+        energy: 0
+      read:
+        energy: 2048
+      write:
+        energy: 2048
+  version: null

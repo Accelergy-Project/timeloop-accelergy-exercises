@@ -1,0 +1,9 @@
+
+MainMemory [ Weights:3 Inputs:18 Outputs:16 ] 
+---------------------------------------------
+| for R in [0:3)
+
+Buffer [ Weights:1 Inputs:16 Outputs:16 ] 
+-----------------------------------------
+|   for P in [0:16)
+
