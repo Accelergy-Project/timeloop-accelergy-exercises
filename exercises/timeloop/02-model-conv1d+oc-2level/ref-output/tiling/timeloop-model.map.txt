@@ -1,0 +1,11 @@
+
+MainMemory [ Weights:96 Inputs:18 Outputs:512 ] 
+-----------------------------------------------
+| for K in [0:16)
+|   for P in [0:16)
+
+Buffer [ Weights:6 Inputs:3 Outputs:2 ] 
+---------------------------------------
+|     for K in [0:2)
+|       for R in [0:3)
+

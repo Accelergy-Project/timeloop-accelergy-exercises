@@ -1,0 +1,102 @@
+ERT:
+  tables:
+    System.Chip.GlobalBuffer:
+      idle:
+        arguments: null
+        energy: 0.028
+      read:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.028
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 72.014
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 30.879
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 102.865
+      write:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.028
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 67.419
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 28.91
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 96.301
+    System.Chip.PE.MACC:
+      idle:
+        arguments: null
+        energy: 0.003
+      mac_gated:
+        arguments: null
+        energy: 0.022
+      mac_random:
+        arguments: null
+        energy: 0.603
+      mac_reused:
+        arguments: null
+        energy: 0.516
+    System.Chip.PE.RegisterFile:
+      idle:
+        arguments: null
+        energy: 0.004
+      read:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.004
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 0.073
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.351
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 0.42
+      write:
+      - arguments:
+          address_delta: 0
+          data_delta: 0
+        energy: 0.004
+      - arguments:
+          address_delta: 0
+          data_delta: 1
+        energy: 0.073
+      - arguments:
+          address_delta: 1
+          data_delta: 0
+        energy: 0.351
+      - arguments:
+          address_delta: 1
+          data_delta: 1
+        energy: 0.42
+    System.MainMemory:
+      idle:
+        arguments: null
+        energy: 0
+      read:
+        arguments: null
+        energy: 2048
+      write:
+        arguments: null
+        energy: 2048
+  version: 0.2

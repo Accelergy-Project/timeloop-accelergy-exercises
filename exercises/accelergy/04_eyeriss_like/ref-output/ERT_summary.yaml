@@ -1,0 +1,131 @@
+ERT_summary:
+  ERT summaries:
+    eyeriss_like.PE[0..167].ifmap_spad:
+      fill:
+        average energy: 0.358
+        max energy: 0.631
+        min energy: 0.085
+      idle:
+        energy: 0.028
+      read:
+        average energy: 0.411
+        max energy: 0.684
+        min energy: 0.138
+      update:
+        average energy: 0.358
+        max energy: 0.631
+        min energy: 0.085
+    eyeriss_like.PE[0..167].mac:
+      idle:
+        energy: 0.007
+      mac_gated:
+        energy: 0.044
+      mac_random:
+        energy: 1.207
+      mac_reused:
+        energy: 1.032
+    eyeriss_like.PE[0..167].psum_spad:
+      fill:
+        average energy: 0.471
+        max energy: 0.785
+        min energy: 0.156
+      idle:
+        energy: 0.031
+      read:
+        average energy: 0.589
+        max energy: 0.903
+        min energy: 0.274
+      update:
+        average energy: 0.471
+        max energy: 0.785
+        min energy: 0.156
+    eyeriss_like.PE[0..167].weights_spad:
+      fill:
+        average energy: 2.357
+        max energy: 3.028
+        min energy: 1.686
+      idle:
+        energy: 0.034
+      read:
+        average energy: 3.823
+        max energy: 4.326
+        min energy: 3.32
+      update:
+        average energy: 2.357
+        max energy: 3.028
+        min energy: 1.686
+    eyeriss_like.ifmap_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+    eyeriss_like.psum_read_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+    eyeriss_like.psum_write_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+    eyeriss_like.shared_glb:
+      fill:
+        average energy: 33.318
+        max energy: 62.352
+        min energy: 4.284
+      idle:
+        energy: 0.217
+      read:
+        average energy: 37.193
+        max energy: 65.915
+        min energy: 8.471
+      update:
+        average energy: 33.318
+        max energy: 62.352
+        min energy: 4.284
+    eyeriss_like.weights_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+    eyeriss_like.weights_glb:
+      fill:
+        average energy: 9.486
+        max energy: 14.782
+        min energy: 4.251
+      idle:
+        energy: 0.102
+      read:
+        average energy: 13.262
+        max energy: 18.147
+        min energy: 8.438
+      update:
+        average energy: 9.486
+        max energy: 14.782
+        min energy: 4.251
+  version: 0.2
