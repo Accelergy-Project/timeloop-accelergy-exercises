@@ -1,0 +1,134 @@
+ERT_summary:
+  ERT summaries:
+    system.DRAM:
+      idle:
+        energy: 0
+      read:
+        energy: 512
+      write:
+        energy: 512
+    system.eyeriss.DummyBuffer[0..15]:
+      idle:
+        energy: 0.006
+      read:
+        average energy: 0.104
+        max energy: 0.202
+        min energy: 0.006
+      write:
+        average energy: 0.104
+        max energy: 0.202
+        min energy: 0.006
+    system.eyeriss.PE[0..191].ifmap_spad:
+      fill:
+        average energy: 0.358
+        max energy: 0.631
+        min energy: 0.085
+      idle:
+        energy: 0.028
+      read:
+        average energy: 0.411
+        max energy: 0.684
+        min energy: 0.138
+      update:
+        average energy: 0.358
+        max energy: 0.631
+        min energy: 0.085
+    system.eyeriss.PE[0..191].mac:
+      idle:
+        energy: 0.007
+      mac_gated:
+        energy: 0.044
+      mac_random:
+        energy: 1.207
+      mac_reused:
+        energy: 1.032
+    system.eyeriss.PE[0..191].psum_spad:
+      fill:
+        average energy: 0.379
+        max energy: 0.659
+        min energy: 0.099
+      idle:
+        energy: 0.028
+      read:
+        average energy: 0.446
+        max energy: 0.726
+        min energy: 0.166
+      update:
+        average energy: 0.379
+        max energy: 0.659
+        min energy: 0.099
+    system.eyeriss.PE[0..191].weights_spad:
+      fill:
+        average energy: 2.087
+        max energy: 2.72
+        min energy: 1.454
+      idle:
+        energy: 0.033
+      read:
+        average energy: 3.346
+        max energy: 3.835
+        min energy: 2.856
+      update:
+        average energy: 2.087
+        max energy: 2.72
+        min energy: 1.454
+    system.eyeriss.ifmap_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+    system.eyeriss.psum_read_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+    system.eyeriss.psum_write_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+    system.eyeriss.shared_glb:
+      fill:
+        average energy: 35.974
+        max energy: 67.67
+        min energy: 4.286
+      idle:
+        energy: 0.219
+      read:
+        average energy: 39.75
+        max energy: 71.035
+        min energy: 8.473
+      update:
+        average energy: 35.974
+        max energy: 67.67
+        min energy: 4.286
+    system.eyeriss.weights_NoC:
+      idle:
+        energy: 0.0
+      transfer_random:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+      transfer_repeated:
+        average energy: 0.168
+        max energy: 0.672
+        min energy: 0.0
+  version: 0.2
