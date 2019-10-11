@@ -30,6 +30,6 @@ Consider the following question:
 > What is the performance and energy-efficiency of a given problem on a given architecture?
 
 We hope the exercises so far have shown that:
-a. the question is only meaningful if you are also provided a specific mapping
-b. for meaningfully complex problems and architectures, the space of mappings is often too large to reason about manually.
+1. the question is only meaningful if you are also provided a specific mapping
+2. for meaningfully complex problems and architectures, the space of mappings is often too large to reason about manually.
 To that end, we now proceed to examples that use Timeloop's **mapper** to automatically build and explore the space of mappings.
