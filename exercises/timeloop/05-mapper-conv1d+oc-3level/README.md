@@ -26,8 +26,8 @@ Study the three alternative constraints files in `constraints`:
 Can you mentally calculate the size of the mapspace for each of these?
 
 Next, look at the `mapper/exhaustive.mapper.yaml` file. The directives here instruct the mapper to exhaustively explore the complete mapspace. Observe:
-   1. The `optimization-metric` gives the mapper a prioritized list of metrics to compare mappings. In this example, `delay` is the highest priority. If two mappings have the same delay, they will be compared based on `energy`. The set of metrics supported today include `energy`, `delay`, `edp` (energy-delay product), and `last-level-accesses`, but this list can be trivially expanded to _any_ metric that the model generates (as in `stats.txt`) with just a few lines of code.
-   2. The mapper can launch multiple threads to speed up the search. It will divide up the mapspace among all threads. If the `num-threads` directive isn't specified, the mapper will query the underlying host for the number of available CPU contexts and use that many threads.
+* The `optimization-metric` gives the mapper a prioritized list of metrics to compare mappings. In this example, `delay` is the highest priority. If two mappings have the same delay, they will be compared based on `energy`. The set of metrics supported today include `energy`, `delay`, `edp` (energy-delay product), and `last-level-accesses`, but this list can be trivially expanded to _any_ metric that the model generates (as in `stats.txt`) with just a few lines of code.
+* The mapper can launch multiple threads to speed up the search. It will divide up the mapspace among all threads. If the `num-threads` directive isn't specified, the mapper will query the underlying host for the number of available CPU contexts and use that many threads.
 
 Next, we will run the mapper, once on each of the constraints files. It is useful to envision what is going to happen:
 * The mapper will construct a mapspace based on the architecture and problem specifications.
@@ -38,8 +38,8 @@ Next, we will run the mapper, once on each of the constraints files. It is usefu
 
 ## Steps and Observations
 
-3. Run all 3 experiments.
-   1. Type:
+Run all 3 experiments.
+1. Type:
       ```
       timeloop-mapper arch/3level.arch.yaml         \
                       prob/conv1d+oc.prob.yaml      \
@@ -48,10 +48,10 @@ Next, we will run the mapper, once on each of the constraints files. It is usefu
       ```
       1. Observe the output log. Timeloop prints out the size of the mapspace in each dimension. The total size of the mapspace is the product of all these mapspace dimensions. Everything is 1 in this example because the mapspace is completely locked down.
       2. Compare the results with the default mapping provided in Exercise 3. The numbers should be identical.
-   2. Now run the mapper with `conv1d+oc-3level-nobypass.constraints.yaml`. Recall that our objective here is to let the mapper find the best bypassing strategy for a given set of factorization and permutations.
+2. Now run the mapper with `conv1d+oc-3level-nobypass.constraints.yaml`. Recall that our objective here is to let the mapper find the best bypassing strategy for a given set of factorization and permutations.
       1. Observe from the log that all mapspace sizes are 1 _except_ for the `DatatypeBypass` subspace.
       2. Compare the results with what you obtained in Exercise 3. Were you able to find this mapping?
-   3. Now run the mapper with `null.constraints.yaml`. This may take a few seconds. If you wish, you can comment out the `num-threads` directive in `mapper/exhaustive.mapper.yaml`. You can also hit Ctrl+C to interrupt the search. It will terminate graceully and emit the optimal mapping it found so far.
+3. Now run the mapper with `null.constraints.yaml`. This may take a few seconds. If you wish, you can comment out the `num-threads` directive in `mapper/exhaustive.mapper.yaml`. You can also hit Ctrl+C to interrupt the search. It will terminate graceully and emit the optimal mapping it found so far.
       1. Did it find an even better mapping?
 
 > For each of these runs, be sure to look at the generated `timeloop-mapper.map.txt`. This is the optimal mapping found by the mapper shown in a loop-nest format.
