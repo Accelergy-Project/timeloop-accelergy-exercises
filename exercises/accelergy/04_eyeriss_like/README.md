@@ -1,9 +1,9 @@
-Exercise 3
+Exercise 4
 ==========
 
 ## Overview
 
-This exercise runs a energy estimation on an architecture
+This exercise runs a energy estimation on an eyeriss-like architecture
 that is described with user-defined compound components.
 ## Steps
 
@@ -30,11 +30,13 @@ the architecture is saved to `flattened_architectue.yaml`.
 
 ## Observations
 
+- Note that the `input/architecture.yaml` is much more complicated than the previous examples. The architecture contains three main parts, 2 global buffers, 4 NoCs for different data types, and the 168 PEs, each contain 3 local buffers and a MAC unit.
 - Note that the `input/compound_component.yaml` contains an `includedir` keyword that indcludes all the files in the `component` subfolder.
-- The compound components can be specified separately to avoid long and tedious compound component descriptions. Examine the files, what are the subcomponents of the compound components? How are the compound actions defined?
-- Are the components in the architecture description compound components or primitive components?
-- Are the actions counts in terms of compound action or primitive components? If we change the definitions of the compound components in the compound component description files, do we need to generate a new set of action counts?
-- According to the compound description, try describe the architecture with primitive components, would it be tedious? If we change add a fifo to store the output data from a local buffer, what do we need to change in the architecture description? What do we need to change in the action counts file?
+- The compound components can be specified separately to avoid long and tedious compound component descriptions. Examine the files, what is the relationship between different compound components? Are they dependent or independent? 
+- What will the architecture description look like if we use primitive components to describe the architecture?
+- Examine the `input/action_counts.yaml`, which action is specific to zero-gating? Can you tell which PE processes the most sparse data? 
+- What will the action_counts look like if we use record the runtime activity of each ptimitive component in the design?
+- Examine the `output/estimation.yaml`, do you see the PE processing the most sparse data have the least energy consumption? Can you tell which components are most relevent to the zero-gating optimization?
 
 
 ## Takeaways
@@ -43,3 +45,4 @@ the architecture is saved to `flattened_architectue.yaml`.
   - Reduces the architecture description and action counts complexity 
   - Makes architecture redesigns much faster as no new action counts need to be 
     generated. 
+- Design-specific optimizations can be very well reflected using the fine-grained action types.
