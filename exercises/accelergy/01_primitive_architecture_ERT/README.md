@@ -15,7 +15,7 @@ To run the exercise, we need to provide 1 input to the Accelergy:
 We have provided the `.yaml` file in the input folder. To run this exercise, type: 
 
 ```
-    accelergy arch/*.yaml -o output/ --enable_flattened_arch 1
+    accelergy input/*.yaml -o output/ --enable_flattened_arch 1
 ```
 
 This generates the following output in folder `output/`

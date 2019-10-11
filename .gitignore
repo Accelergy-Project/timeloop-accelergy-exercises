@@ -8,4 +8,7 @@
 .nfs*
 
 # Application-specific ignores
+## accelergy
+!/**/.gitkeep
+
 
