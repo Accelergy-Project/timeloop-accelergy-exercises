@@ -13,7 +13,7 @@ To run the exercise, we need to provide 3 inputs to the Accelergy:
 - A flattened architecture (optional input).
 
 
-We have provided the `.yaml` file in the input folder. To run this exercise, type: 
+We have provided the `.yaml` files in the input folder. To run this exercise, type: 
 
 ```
     accelergy input/*.yaml -o output/ --enable_flattened_arch 1
@@ -21,7 +21,7 @@ We have provided the `.yaml` file in the input folder. To run this exercise, typ
 
 This generates the following output in folder `output/`
 - The received input files and the important evaluation progress are reported on `stdout`.
-- the estimation (pJ) for the primitive components in the design are saved in `estimation.yaml`.
+- The estimation (pJ) for the primitive components in the design are saved in `estimation.yaml`.
 
 
 ## Observations
@@ -29,7 +29,8 @@ This generates the following output in folder `output/`
 - The `input/ERT.yaml` file contains a top-level key `ERT` that is important 
   for Accelergy to identify the file content.
 - The `input/flattened_architecture.yaml` file contains a top-level key `flattened_architecture` that is important 
-  for Accelergy to identify the file content. 
+  for Accelergy to identify the file content. Try to change the component names in the action counts and rerun,
+  does Accelergy complain? Why is this check can sometimes be useful?
   This file is optional and is used to check if the component names in the action counts are legal.
 - The `output/estimation.yaml` file contains the energy estimations of all components specified in the action counts.
 - Is this step faster than the energy reference table (ERT) generation step? Will this step be even faster if the design 
