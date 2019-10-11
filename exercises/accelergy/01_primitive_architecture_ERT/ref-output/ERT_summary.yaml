@@ -1,0 +1,34 @@
+ERT_summary:
+  ERT summaries:
+    simple_primitive.GLB:
+      idle:
+        energy: 0.0
+      read:
+        average energy: 1.959
+        max energy: 3.918
+        min energy: 0.0
+      write:
+        average energy: 1.803
+        max energy: 3.605
+        min energy: 0.0
+    simple_primitive.PE.MAC:
+      idle:
+        energy: 0.007
+      mac_gated:
+        energy: 0.044
+      mac_random:
+        energy: 1.207
+      mac_reused:
+        energy: 1.032
+    simple_primitive.PE.buffer:
+      idle:
+        energy: 0.006
+      read:
+        average energy: 0.13
+        max energy: 0.253
+        min energy: 0.006
+      write:
+        average energy: 0.13
+        max energy: 0.253
+        min energy: 0.006
+  version: null

@@ -1,0 +1,23 @@
+ERT_summary:
+  ERT summaries:
+    PE.Buffer:
+      idle:
+        energy: 0.004
+      read:
+        average energy: 0.212
+        max energy: 0.42
+        min energy: 0.004
+      write:
+        average energy: 0.212
+        max energy: 0.42
+        min energy: 0.004
+    PE.MACC:
+      idle:
+        energy: 0.003
+      mac_gated:
+        energy: 0.022
+      mac_random:
+        energy: 0.603
+      mac_reused:
+        energy: 0.516
+  version: null
