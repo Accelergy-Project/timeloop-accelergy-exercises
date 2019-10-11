@@ -27,11 +27,16 @@ timeloop-mapper prob/cnn-layer.prob.yaml    \
 The status screen shows the following per-thread statistics:
 * Total mappings visited.
 * Invalid mappings rejected (because of capacity violations or spatial fanout violations).
-* Valid mappings modeled.
+* Valid mappings evaluated.
 * Consecutive invalid mappings rejected.
 * Sub-optimal valid mappings evaluated since the last update of the optimal mapping.
 * Stats for the optimal mapping seen thus far.
 
-As usual, you can use Ctrl+C to gracefully terminate the mapper.
+The mapper terminates gracefully when any of the following conditions are met:
+* Every mapping in the mapspace has been visited.
+* Number of valid mappings evaluated >= `search-size`.
+* Consecutive invalid mappings rejected >= `timeout`.
+* Consecutive sub-optimal valid mappings evaluated >= `victory-condition`.
+* SIGINT (Ctrl+C) is detected.
 
-There are no suggested incremental steps or expected observations for this exercise at this time. We will have a combined Timeloop+Accelergy lab exercise based on this architecture after the Accelergy presentation.
+Please experiment with the configuration files to get comfortable with the tool. We will have a combined Timeloop+Accelergy lab exercise based on this architecture after the Accelergy presentation.
