@@ -112,9 +112,155 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network class_id="20" tracking_level="0" version="0">
-							<type class_id="21" tracking_level="0" version="0">
-								<shared class_id="22" tracking_level="0" version="0"></shared>
+						<min_utilization>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</min_utilization>
+						<vector_access_energy>
+							<shared>
+								<t_>7.25999999999999979e-01</t_>
+							</shared>
+						</vector_access_energy>
+						<storage_area>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</storage_area>
+						<num_ports>
+							<shared>
+								<t_>2</t_>
+							</shared>
+						</num_ports>
+						<num_banks>
+							<shared>
+								<t_>2</t_>
+							</shared>
+						</num_banks>
+					</specs_>
+					<stats_ class_id="20" tracking_level="0" version="0">
+						<keep class_id="21" tracking_level="0" version="0">
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>1</item>
+							</PerDataSpace>
+						</keep>
+						<partition_size class_id="22" tracking_level="0" version="0">
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>1605632</item>
+							</PerDataSpace>
+						</partition_size>
+						<utilized_capacity>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>16</item>
+							</PerDataSpace>
+						</utilized_capacity>
+						<utilized_instances>
+							<PerDataSpace>
+								<item>192</item>
+								<item>192</item>
+								<item>192</item>
+							</PerDataSpace>
+						</utilized_instances>
+						<utilized_clusters>
+							<PerDataSpace>
+								<item>192</item>
+								<item>192</item>
+								<item>192</item>
+							</PerDataSpace>
+						</utilized_clusters>
+						<reads>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>306675712</item>
+							</PerDataSpace>
+						</reads>
+						<updates>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>308281344</item>
+							</PerDataSpace>
+						</updates>
+						<fills>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>25690112</item>
+							</PerDataSpace>
+						</fills>
+						<address_generations>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>333971456</item>
+							</PerDataSpace>
+						</address_generations>
+						<temporal_reductions>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>306675712</item>
+							</PerDataSpace>
+						</temporal_reductions>
+						<read_bandwidth class_id="23" tracking_level="0" version="0">
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>1.83653846153846168e+00</item>
+							</PerDataSpace>
+						</read_bandwidth>
+						<write_bandwidth>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>2.00000000000000000e+00</item>
+							</PerDataSpace>
+						</write_bandwidth>
+						<energy_per_access>
+							<PerDataSpace>
+								<item>-nan</item>
+								<item>-nan</item>
+								<item>7.25999999999999979e-01</item>
+							</PerDataSpace>
+						</energy_per_access>
+						<energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>4.65109843967999995e+08</item>
+							</PerDataSpace>
+						</energy>
+						<temporal_reduction_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</temporal_reduction_energy>
+						<addr_gen_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</addr_gen_energy>
+						<area class_id="24" tracking_level="0" version="0">
+							<shared>0.00000000000000000e+00</shared>
+						</area>
+						<cycles>333971456</cycles>
+						<slowdown>9.23076923076923128e-01</slowdown>
+					</stats_>
+					<network_ class_id="25" tracking_level="0" version="0">
+						<specs_ class_id="26" tracking_level="0" version="0">
+							<type class_id="27" tracking_level="0" version="0">
+								<shared class_id="28" tracking_level="0" version="0"></shared>
 							</type>
 							<word_bits>
 								<shared>
@@ -146,152 +292,8 @@
 									<t_>0.00000000000000000e+00</t_>
 								</shared>
 							</wireEnergy>
-						</network>
-						<min_utilization>
-							<shared>
-								<t_>0.00000000000000000e+00</t_>
-							</shared>
-						</min_utilization>
-						<vector_access_energy>
-							<shared>
-								<t_>7.25999999999999979e-01</t_>
-							</shared>
-						</vector_access_energy>
-						<storage_area>
-							<shared>
-								<t_>0.00000000000000000e+00</t_>
-							</shared>
-						</storage_area>
-						<num_ports>
-							<shared>
-								<t_>2</t_>
-							</shared>
-						</num_ports>
-						<num_banks>
-							<shared>
-								<t_>2</t_>
-							</shared>
-						</num_banks>
-					</specs_>
-					<stats_ class_id="23" tracking_level="0" version="0">
-						<keep class_id="24" tracking_level="0" version="0">
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>1</item>
-							</PerDataSpace>
-						</keep>
-						<partition_size class_id="25" tracking_level="0" version="0">
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>19712000</item>
-							</PerDataSpace>
-						</partition_size>
-						<utilized_capacity>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>16</item>
-							</PerDataSpace>
-						</utilized_capacity>
-						<utilized_instances>
-							<PerDataSpace>
-								<item>192</item>
-								<item>192</item>
-								<item>192</item>
-							</PerDataSpace>
-						</utilized_instances>
-						<utilized_clusters>
-							<PerDataSpace>
-								<item>192</item>
-								<item>192</item>
-								<item>192</item>
-							</PerDataSpace>
-						</utilized_clusters>
-						<reads>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>288569344</item>
-							</PerDataSpace>
-						</reads>
-						<updates>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>308281344</item>
-							</PerDataSpace>
-						</updates>
-						<fills>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>25690112</item>
-							</PerDataSpace>
-						</fills>
-						<address_generations>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>333971456</item>
-							</PerDataSpace>
-						</address_generations>
-						<temporal_reductions>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>308281328</item>
-							</PerDataSpace>
-						</temporal_reductions>
-						<read_bandwidth class_id="26" tracking_level="0" version="0">
-							<PerDataSpace>
-								<item>0.00000000000000000e+00</item>
-								<item>0.00000000000000000e+00</item>
-								<item>1.72810782967032983e+00</item>
-							</PerDataSpace>
-						</read_bandwidth>
-						<write_bandwidth>
-							<PerDataSpace>
-								<item>0.00000000000000000e+00</item>
-								<item>0.00000000000000000e+00</item>
-								<item>2.00000000000000000e+00</item>
-							</PerDataSpace>
-						</write_bandwidth>
-						<energy_per_access>
-							<PerDataSpace>
-								<item>-nan</item>
-								<item>-nan</item>
-								<item>7.25999999999999979e-01</item>
-							</PerDataSpace>
-						</energy_per_access>
-						<energy>
-							<PerDataSpace>
-								<item>0.00000000000000000e+00</item>
-								<item>0.00000000000000000e+00</item>
-								<item>4.51964620800000012e+08</item>
-							</PerDataSpace>
-						</energy>
-						<temporal_reduction_energy>
-							<PerDataSpace>
-								<item>0.00000000000000000e+00</item>
-								<item>0.00000000000000000e+00</item>
-								<item>0.00000000000000000e+00</item>
-							</PerDataSpace>
-						</temporal_reduction_energy>
-						<addr_gen_energy>
-							<PerDataSpace>
-								<item>0.00000000000000000e+00</item>
-								<item>0.00000000000000000e+00</item>
-								<item>0.00000000000000000e+00</item>
-							</PerDataSpace>
-						</addr_gen_energy>
-						<area class_id="27" tracking_level="0" version="0">
-							<shared>0.00000000000000000e+00</shared>
-						</area>
-						<cycles>333971456</cycles>
-						<slowdown>9.23076923076923128e-01</slowdown>
-						<network class_id="28" tracking_level="0" version="0">
+						</specs_>
+						<stats_ class_id="29" tracking_level="0" version="0">
 							<fanout>
 								<PerDataSpace>
 									<item>1</item>
@@ -313,7 +315,7 @@
 									<item>1</item>
 								</PerDataSpace>
 							</multicast_factor>
-							<ingresses class_id="29" tracking_level="0" version="0">
+							<ingresses class_id="30" tracking_level="0" version="0">
 								<PerDataSpace>
 									<item>
 										<count>1</count>
@@ -388,8 +390,8 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 			<item>
@@ -482,41 +484,6 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network>
-							<type>
-								<shared></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>16</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</network>
 						<min_utilization>
 							<shared>
 								<t_>0.00000000000000000e+00</t_>
@@ -553,7 +520,7 @@
 						</keep>
 						<partition_size>
 							<PerDataSpace>
-								<item>292800</item>
+								<item>24576</item>
 								<item>0</item>
 								<item>0</item>
 							</PerDataSpace>
@@ -661,7 +628,44 @@
 						</area>
 						<cycles>308281344</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
-						<network>
+					</stats_>
+					<network_>
+						<specs_>
+							<type>
+								<shared></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>16</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</specs_>
+						<stats_>
 							<fanout>
 								<PerDataSpace>
 									<item>1</item>
@@ -758,8 +762,8 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 			<item>
@@ -845,41 +849,6 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network>
-							<type>
-								<shared></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>16</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</network>
 						<min_utilization>
 							<shared>
 								<t_>0.00000000000000000e+00</t_>
@@ -917,7 +886,7 @@
 						<partition_size>
 							<PerDataSpace>
 								<item>0</item>
-								<item>12453760</item>
+								<item>574122</item>
 								<item>0</item>
 							</PerDataSpace>
 						</partition_size>
@@ -959,14 +928,14 @@
 						<fills>
 							<PerDataSpace>
 								<item>0</item>
-								<item>6881280</item>
+								<item>6651904</item>
 								<item>0</item>
 							</PerDataSpace>
 						</fills>
 						<address_generations>
 							<PerDataSpace>
 								<item>0</item>
-								<item>315162624</item>
+								<item>314933248</item>
 								<item>0</item>
 							</PerDataSpace>
 						</address_generations>
@@ -987,7 +956,7 @@
 						<write_bandwidth>
 							<PerDataSpace>
 								<item>0.00000000000000000e+00</item>
-								<item>4.46428571428571438e-02</item>
+								<item>4.31547619047619041e-02</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</write_bandwidth>
@@ -1001,7 +970,7 @@
 						<energy>
 							<PerDataSpace>
 								<item>0.00000000000000000e+00</item>
-								<item>2.15571234816000015e+08</item>
+								<item>2.15414341632000029e+08</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy>
@@ -1024,7 +993,44 @@
 						</area>
 						<cycles>308281344</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
-						<network>
+					</stats_>
+					<network_>
+						<specs_>
+							<type>
+								<shared></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>16</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</specs_>
+						<stats_>
 							<fanout>
 								<PerDataSpace>
 									<item>1</item>
@@ -1121,8 +1127,8 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 			<item>
@@ -1222,41 +1228,6 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network>
-							<type>
-								<shared></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>16</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>12</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>12</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</network>
 						<min_utilization>
 							<shared>
 								<t_>0.00000000000000000e+00</t_>
@@ -1401,7 +1372,44 @@
 						</area>
 						<cycles>308281344</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
-						<network>
+					</stats_>
+					<network_>
+						<specs_>
+							<type>
+								<shared></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>16</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>12</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>12</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</specs_>
+						<stats_>
 							<fanout>
 								<PerDataSpace>
 									<item>12</item>
@@ -1444,7 +1452,7 @@
 									<item>
 										<count>12</count>
 										<item_version>0</item_version>
-										<item>82575360</item>
+										<item>79822848</item>
 										<item>0</item>
 										<item>0</item>
 										<item>0</item>
@@ -1531,8 +1539,8 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 			<item>
@@ -1544,14 +1552,14 @@
 						<item>
 							<dimension>6</dimension>
 							<start>0</start>
-							<end>2</end>
+							<end>4</end>
 							<stride>1</stride>
 							<spacetime_dimension>1</spacetime_dimension>
 						</item>
 						<item>
 							<dimension>1</dimension>
 							<start>0</start>
-							<end>8</end>
+							<end>4</end>
 							<stride>1</stride>
 							<spacetime_dimension>1</spacetime_dimension>
 						</item>
@@ -1639,41 +1647,6 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network>
-							<type>
-								<shared></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>16</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>16</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>16</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</network>
 						<min_utilization>
 							<shared>
 								<t_>0.00000000000000000e+00</t_>
@@ -1718,7 +1691,7 @@
 						<utilized_capacity>
 							<PerDataSpace>
 								<item>0</item>
-								<item>7424</item>
+								<item>11136</item>
 								<item>28672</item>
 							</PerDataSpace>
 						</utilized_capacity>
@@ -1739,7 +1712,7 @@
 						<reads>
 							<PerDataSpace>
 								<item>0</item>
-								<item>165150720</item>
+								<item>319291392</item>
 								<item>385351680</item>
 							</PerDataSpace>
 						</reads>
@@ -1753,14 +1726,14 @@
 						<fills>
 							<PerDataSpace>
 								<item>0</item>
-								<item>106430464</item>
+								<item>159645696</item>
 								<item>25690112</item>
 							</PerDataSpace>
 						</fills>
 						<address_generations>
 							<PerDataSpace>
 								<item>0</item>
-								<item>271581184</item>
+								<item>478937088</item>
 								<item>436731904</item>
 							</PerDataSpace>
 						</address_generations>
@@ -1768,20 +1741,20 @@
 							<PerDataSpace>
 								<item>0</item>
 								<item>0</item>
-								<item>411013120</item>
+								<item>385351680</item>
 							</PerDataSpace>
 						</temporal_reductions>
 						<read_bandwidth>
 							<PerDataSpace>
 								<item>0.00000000000000000e+00</item>
-								<item>1.07142857142857140e+00</item>
+								<item>2.07142857142857162e+00</item>
 								<item>2.50000000000000000e+00</item>
 							</PerDataSpace>
 						</read_bandwidth>
 						<write_bandwidth>
 							<PerDataSpace>
 								<item>0.00000000000000000e+00</item>
-								<item>6.90476190476190466e-01</item>
+								<item>1.03571428571428581e+00</item>
 								<item>2.83333333333333348e+00</item>
 							</PerDataSpace>
 						</write_bandwidth>
@@ -1795,7 +1768,7 @@
 						<energy>
 							<PerDataSpace>
 								<item>0.00000000000000000e+00</item>
-								<item>4.82294235135999966e+09</item>
+								<item>8.50532401151999950e+09</item>
 								<item>1.45991768473599987e+10</item>
 							</PerDataSpace>
 						</energy>
@@ -1818,7 +1791,44 @@
 						</area>
 						<cycles>308281344</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
-						<network>
+					</stats_>
+					<network_>
+						<specs_>
+							<type>
+								<shared></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>16</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>16</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>16</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</specs_>
+						<stats_>
 							<fanout>
 								<PerDataSpace>
 									<item>16</item>
@@ -1835,8 +1845,8 @@
 							</distributed_fanout>
 							<multicast_factor>
 								<PerDataSpace>
-									<item>2</item>
-									<item>8</item>
+									<item>4</item>
+									<item>4</item>
 									<item>1</item>
 								</PerDataSpace>
 							</multicast_factor>
@@ -1846,9 +1856,9 @@
 										<count>16</count>
 										<item_version>0</item_version>
 										<item>0</item>
-										<item>264241152</item>
 										<item>0</item>
 										<item>0</item>
+										<item>132120576</item>
 										<item>0</item>
 										<item>0</item>
 										<item>0</item>
@@ -1868,11 +1878,11 @@
 										<item>0</item>
 										<item>0</item>
 										<item>0</item>
+										<item>319291392</item>
 										<item>0</item>
 										<item>0</item>
 										<item>0</item>
 										<item>0</item>
-										<item>165150720</item>
 										<item>0</item>
 										<item>0</item>
 										<item>0</item>
@@ -1934,8 +1944,8 @@
 							</link_transfer_energy>
 							<num_hops>
 								<PerDataSpace>
-									<item>4.62132034355964372e+00</item>
-									<item>1.09852813742385713e+01</item>
+									<item>7.50000000000000000e+00</item>
+									<item>7.50000000000000000e+00</item>
 									<item>2.00000000000000000e+00</item>
 								</PerDataSpace>
 							</num_hops>
@@ -1960,8 +1970,8 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 			<item>
@@ -1980,7 +1990,7 @@
 						<item>
 							<dimension>1</dimension>
 							<start>0</start>
-							<end>4</end>
+							<end>8</end>
 							<stride>1</stride>
 							<spacetime_dimension>0</spacetime_dimension>
 						</item>
@@ -1994,7 +2004,7 @@
 						<item>
 							<dimension>6</dimension>
 							<start>0</start>
-							<end>28</end>
+							<end>14</end>
 							<stride>1</stride>
 							<spacetime_dimension>0</spacetime_dimension>
 						</item>
@@ -2055,7 +2065,7 @@
 						</meshY>
 						<read_bandwidth>
 							<shared>
-								<t_>2.40476190476190466e+00</t_>
+								<t_>1.89285714285714279e+00</t_>
 							</shared>
 						</read_bandwidth>
 						<write_bandwidth>
@@ -2068,41 +2078,6 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network>
-							<type>
-								<shared></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>16</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</network>
 						<min_utilization>
 							<shared>
 								<t_>0.00000000000000000e+00</t_>
@@ -2167,8 +2142,8 @@
 						</utilized_clusters>
 						<reads>
 							<PerDataSpace>
-								<item>264241152</item>
-								<item>106430464</item>
+								<item>132120576</item>
+								<item>159645696</item>
 								<item>0</item>
 							</PerDataSpace>
 						</reads>
@@ -2188,8 +2163,8 @@
 						</fills>
 						<address_generations>
 							<PerDataSpace>
-								<item>264241152</item>
-								<item>106430464</item>
+								<item>132120576</item>
+								<item>159645696</item>
 								<item>25690112</item>
 							</PerDataSpace>
 						</address_generations>
@@ -2202,8 +2177,8 @@
 						</temporal_reductions>
 						<read_bandwidth>
 							<PerDataSpace>
-								<item>1.71428571428571419e+00</item>
-								<item>6.90476190476190466e-01</item>
+								<item>8.57142857142857095e-01</item>
+								<item>1.03571428571428581e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</read_bandwidth>
@@ -2223,8 +2198,8 @@
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>3.38228674560000000e+10</item>
-								<item>1.36230993920000000e+10</item>
+								<item>1.69114337280000000e+10</item>
+								<item>2.04346490880000000e+10</item>
 								<item>3.28833433600000000e+09</item>
 							</PerDataSpace>
 						</energy>
@@ -2247,7 +2222,44 @@
 						</area>
 						<cycles>308281344</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
-						<network>
+					</stats_>
+					<network_>
+						<specs_>
+							<type>
+								<shared></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>16</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</specs_>
+						<stats_>
 							<fanout>
 								<PerDataSpace>
 									<item>1</item>
@@ -2274,12 +2286,12 @@
 									<item>
 										<count>1</count>
 										<item_version>0</item_version>
-										<item>264241152</item>
+										<item>132120576</item>
 									</item>
 									<item>
 										<count>1</count>
 										<item_version>0</item_version>
-										<item>106430464</item>
+										<item>159645696</item>
 									</item>
 									<item>
 										<count>1</count>
@@ -2344,16 +2356,16 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 		</levels_>
 	</topology_>
 </best_mapped_engine>
-<best_mapping class_id="31" tracking_level="0" version="0">
+<best_mapping class_id="32" tracking_level="0" version="0">
 	<datatype_bypass_nest>
-		<item class_id="32" tracking_level="0" version="0">
+		<item class_id="33" tracking_level="0" version="0">
 			<bits>0000000000100010</bits>
 		</item>
 		<item>
@@ -2364,12 +2376,12 @@
 		</item>
 	</datatype_bypass_nest>
 </best_mapping>
-<a class_id="33" tracking_level="1" version="0" object_id="_7">
-	<workload_ class_id="34" tracking_level="0" version="0">
-		<bounds_ class_id="35" tracking_level="0" version="0">
+<a class_id="34" tracking_level="1" version="0" object_id="_7">
+	<workload_ class_id="35" tracking_level="0" version="0">
+		<bounds_ class_id="36" tracking_level="0" version="0">
 			<count>7</count>
 			<item_version>0</item_version>
-			<item class_id="36" tracking_level="0" version="0">
+			<item class_id="37" tracking_level="0" version="0">
 				<first>0</first>
 				<second>256</second>
 			</item>
@@ -2418,10 +2430,10 @@
 				<second>1</second>
 			</item>
 		</coefficients_>
-		<densities_ class_id="37" tracking_level="0" version="0">
+		<densities_ class_id="38" tracking_level="0" version="0">
 			<count>3</count>
 			<item_version>0</item_version>
-			<item class_id="38" tracking_level="0" version="0">
+			<item class_id="39" tracking_level="0" version="0">
 				<first>0</first>
 				<second>1.00000000000000000e+00</second>
 			</item>

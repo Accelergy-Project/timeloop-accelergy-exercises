@@ -112,41 +112,6 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network class_id="20" tracking_level="0" version="0">
-							<type class_id="21" tracking_level="0" version="0">
-								<shared class_id="22" tracking_level="0" version="0"></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>8</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</network>
 						<min_utilization>
 							<shared>
 								<t_>0.00000000000000000e+00</t_>
@@ -173,15 +138,15 @@
 							</shared>
 						</num_banks>
 					</specs_>
-					<stats_ class_id="23" tracking_level="0" version="0">
-						<keep class_id="24" tracking_level="0" version="0">
+					<stats_ class_id="20" tracking_level="0" version="0">
+						<keep class_id="21" tracking_level="0" version="0">
 							<PerDataSpace>
 								<item>1</item>
 								<item>1</item>
 								<item>1</item>
 							</PerDataSpace>
 						</keep>
-						<partition_size class_id="25" tracking_level="0" version="0">
+						<partition_size class_id="22" tracking_level="0" version="0">
 							<PerDataSpace>
 								<item>3</item>
 								<item>18</item>
@@ -241,10 +206,10 @@
 							<PerDataSpace>
 								<item>0</item>
 								<item>0</item>
-								<item>47</item>
+								<item>32</item>
 							</PerDataSpace>
 						</temporal_reductions>
-						<read_bandwidth class_id="26" tracking_level="0" version="0">
+						<read_bandwidth class_id="23" tracking_level="0" version="0">
 							<PerDataSpace>
 								<item>1.00000000000000000e+00</item>
 								<item>1.00000000000000000e+00</item>
@@ -286,12 +251,49 @@
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</addr_gen_energy>
-						<area class_id="27" tracking_level="0" version="0">
+						<area class_id="24" tracking_level="0" version="0">
 							<shared>0.00000000000000000e+00</shared>
 						</area>
 						<cycles>48</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
-						<network class_id="28" tracking_level="0" version="0">
+					</stats_>
+					<network_ class_id="25" tracking_level="0" version="0">
+						<specs_ class_id="26" tracking_level="0" version="0">
+							<type class_id="27" tracking_level="0" version="0">
+								<shared class_id="28" tracking_level="0" version="0"></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>8</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</specs_>
+						<stats_ class_id="29" tracking_level="0" version="0">
 							<fanout>
 								<PerDataSpace>
 									<item>1</item>
@@ -313,7 +315,7 @@
 									<item>1</item>
 								</PerDataSpace>
 							</multicast_factor>
-							<ingresses class_id="29" tracking_level="0" version="0">
+							<ingresses class_id="30" tracking_level="0" version="0">
 								<PerDataSpace>
 									<item>
 										<count>1</count>
@@ -388,8 +390,8 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 			<item>
@@ -475,41 +477,6 @@
 								<t_>1.00000000000000000e+00</t_>
 							</shared>
 						</multiple_buffering>
-						<network>
-							<type>
-								<shared></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>8</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</network>
 						<min_utilization>
 							<shared>
 								<t_>0.00000000000000000e+00</t_>
@@ -654,7 +621,44 @@
 						</area>
 						<cycles>48</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
-						<network>
+					</stats_>
+					<network_>
+						<specs_>
+							<type>
+								<shared></shared>
+							</type>
+							<word_bits>
+								<shared>
+									<t_>8</t_>
+								</shared>
+							</word_bits>
+							<fanout>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanout>
+							<fanoutX>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutX>
+							<fanoutY>
+								<shared>
+									<t_>1</t_>
+								</shared>
+							</fanoutY>
+							<routerEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</routerEnergy>
+							<wireEnergy>
+								<shared>
+									<t_>0.00000000000000000e+00</t_>
+								</shared>
+							</wireEnergy>
+						</specs_>
+						<stats_>
 							<fanout>
 								<PerDataSpace>
 									<item>1</item>
@@ -751,16 +755,16 @@
 									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</spatial_reduction_energy>
-						</network>
-					</stats_>
+						</stats_>
+					</network_>
 				</px>
 			</item>
 		</levels_>
 	</topology_>
 </engine>
-<mapping class_id="31" tracking_level="0" version="0">
+<mapping class_id="32" tracking_level="0" version="0">
 	<datatype_bypass_nest>
-		<item class_id="32" tracking_level="0" version="0">
+		<item class_id="33" tracking_level="0" version="0">
 			<bits>0000000000000011</bits>
 		</item>
 		<item>
@@ -771,12 +775,12 @@
 		</item>
 	</datatype_bypass_nest>
 </mapping>
-<a class_id="33" tracking_level="1" version="0" object_id="_3">
-	<workload_ class_id="34" tracking_level="0" version="0">
-		<bounds_ class_id="35" tracking_level="0" version="0">
+<a class_id="34" tracking_level="1" version="0" object_id="_3">
+	<workload_ class_id="35" tracking_level="0" version="0">
+		<bounds_ class_id="36" tracking_level="0" version="0">
 			<count>2</count>
 			<item_version>0</item_version>
-			<item class_id="36" tracking_level="0" version="0">
+			<item class_id="37" tracking_level="0" version="0">
 				<first>0</first>
 				<second>3</second>
 			</item>
@@ -789,10 +793,10 @@
 			<count>0</count>
 			<item_version>0</item_version>
 		</coefficients_>
-		<densities_ class_id="37" tracking_level="0" version="0">
+		<densities_ class_id="38" tracking_level="0" version="0">
 			<count>3</count>
 			<item_version>0</item_version>
-			<item class_id="38" tracking_level="0" version="0">
+			<item class_id="39" tracking_level="0" version="0">
 				<first>0</first>
 				<second>1.00000000000000000e+00</second>
 			</item>

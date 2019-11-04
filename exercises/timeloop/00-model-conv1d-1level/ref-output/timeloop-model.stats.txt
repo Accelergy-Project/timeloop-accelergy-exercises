@@ -30,7 +30,6 @@ Level 1
         Block size           : 1
         Cluster size         : 1
         Instances            : 1 (1*1)
-        Fanout               : 1 (1*1)
         Read bandwidth       : 2.67
         Write bandwidth      : 1.00
         Multiple buffering   : 1.00
@@ -38,6 +37,11 @@ Level 1
         Min utilization      : 0.00
         Vector access energy : 0.42 pJ
         Area                 : 0.00 um^2
+
+    NETWORK SPECS
+    -------------
+    Shared:
+        Fanout               : 1 (1*1)
 
     MAPPING
     -------
@@ -50,6 +54,7 @@ Level 1
     Cycles               : 48
     Bandwidth throttling : 1.00
     Weights:
+        Partition size                           : 3
         Utilized capacity                        : 3
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
@@ -70,6 +75,7 @@ Level 1
         Write Bandwidth (per-instance)           : 0.00 bytes/cycle
         Write Bandwidth (total)                  : 0.00 bytes/cycle
     Inputs:
+        Partition size                           : 18
         Utilized capacity                        : 18
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
@@ -90,6 +96,7 @@ Level 1
         Write Bandwidth (per-instance)           : 0.00 bytes/cycle
         Write Bandwidth (total)                  : 0.00 bytes/cycle
     Outputs:
+        Partition size                           : 16
         Utilized capacity                        : 16
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
