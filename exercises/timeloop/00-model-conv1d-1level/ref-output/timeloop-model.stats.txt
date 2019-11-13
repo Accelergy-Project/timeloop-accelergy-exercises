@@ -1,5 +1,5 @@
-Topology
---------
+Buffer and Arithmetic Levels
+----------------------------
 Level 0
 -------
 === MACC ===
@@ -7,7 +7,7 @@ Level 0
     SPECS
     -----
     Word bits            : 8
-    Instances            : 1 (-*-)
+    Instances            : 1 (1*1)
     Energy-per-op        : 0.60 pJ
 
     STATS
@@ -37,11 +37,6 @@ Level 1
         Min utilization      : 0.00
         Vector access energy : 0.42 pJ
         Area                 : 0.00 um^2
-
-    NETWORK SPECS
-    -------------
-    Shared:
-        Fanout               : 1 (1*1)
 
     MAPPING
     -------
@@ -119,6 +114,16 @@ Level 1
     Shared:
         Area (per-instance)                      : 0.00 um2
 
+Networks
+--------
+Network 0
+---------
+Buffer <==> MACC
+
+    NETWORK SPECS
+    -------------
+    Shared:
+
     NETWORK STATS
     -------------
     Weights:
@@ -174,8 +179,8 @@ Total topology energy: 102.86 pJ
 Total topology area: 0.00 um^2
 Max topology cycles: 48
 
-Engine Stats
-------------
+Summary Stats
+-------------
 Utilization: 1.00
 Cycles: 48
 Energy: 0.00 uJ

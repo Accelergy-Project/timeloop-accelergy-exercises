@@ -1,5 +1,5 @@
-Topology
---------
+Buffer and Arithmetic Levels
+----------------------------
 Level 0
 -------
 === MACC ===
@@ -7,7 +7,7 @@ Level 0
     SPECS
     -----
     Word bits            : 8
-    Instances            : 1 (-*-)
+    Instances            : 1 (1*1)
     Energy-per-op        : 0.60 pJ
 
     STATS
@@ -37,11 +37,6 @@ Level 1
         Min utilization      : 0.00
         Vector access energy : 0.42 pJ
         Area                 : 0.00 um^2
-
-    NETWORK SPECS
-    -------------
-    Shared:
-        Fanout               : 1 (1*1)
 
     MAPPING
     -------
@@ -119,57 +114,6 @@ Level 1
     Shared:
         Area (per-instance)                      : 0.00 um2
 
-    NETWORK STATS
-    -------------
-    Weights:
-        Fanout                                  : 1
-        Fanout (distributed)                    : 0
-        Multicast factor                        : 1
-        Ingresses                               : 1536
-            @multicast 1: 1536
-        Link transfers                          : 0
-        Spatial reductions                      : 0
-        Average number of hops                  : 0.50
-        Energy (per-hop)                        : 0.00 fJ
-        Energy (per-instance)                   : 0.00 pJ
-        Energy (total)                          : 0.00 pJ
-        Link transfer energy (per-instance)     : 0.00 pJ
-        Link transfer energy (total)            : 0.00 pJ
-        Spatial Reduction Energy (per-instance) : 0.00 pJ
-        Spatial Reduction Energy (total)        : 0.00 pJ
-    Inputs:
-        Fanout                                  : 1
-        Fanout (distributed)                    : 0
-        Multicast factor                        : 1
-        Ingresses                               : 1536
-            @multicast 1: 1536
-        Link transfers                          : 0
-        Spatial reductions                      : 0
-        Average number of hops                  : 0.50
-        Energy (per-hop)                        : 0.00 fJ
-        Energy (per-instance)                   : 0.00 pJ
-        Energy (total)                          : 0.00 pJ
-        Link transfer energy (per-instance)     : 0.00 pJ
-        Link transfer energy (total)            : 0.00 pJ
-        Spatial Reduction Energy (per-instance) : 0.00 pJ
-        Spatial Reduction Energy (total)        : 0.00 pJ
-    Outputs:
-        Fanout                                  : 1
-        Fanout (distributed)                    : 0
-        Multicast factor                        : 1
-        Ingresses                               : 1536
-            @multicast 1: 1536
-        Link transfers                          : 0
-        Spatial reductions                      : 0
-        Average number of hops                  : 0.50
-        Energy (per-hop)                        : 0.00 fJ
-        Energy (per-instance)                   : 0.00 pJ
-        Energy (total)                          : 0.00 pJ
-        Link transfer energy (per-instance)     : 0.00 pJ
-        Link transfer energy (total)            : 0.00 pJ
-        Spatial Reduction Energy (per-instance) : 0.00 pJ
-        Spatial Reduction Energy (total)        : 0.00 pJ
-
 Level 2
 -------
 === GlobalBuffer ===
@@ -191,11 +135,6 @@ Level 2
         Vector access energy : 102.86 pJ
         Area                 : 0.00 um^2
 
-    NETWORK SPECS
-    -------------
-    Shared:
-        Fanout               : 1 (1*1)
-
     MAPPING
     -------
     Loop nest:
@@ -207,57 +146,6 @@ Level 2
     Bandwidth throttling : 1.00
     Shared:
         Area (per-instance)                      : 0.00 um2
-
-    NETWORK STATS
-    -------------
-    Weights:
-        Fanout                                  : 1
-        Fanout (distributed)                    : 0
-        Multicast factor                        : 1
-        Ingresses                               : 96
-            @multicast 1: 96
-        Link transfers                          : 0
-        Spatial reductions                      : 0
-        Average number of hops                  : 0.50
-        Energy (per-hop)                        : 0.00 fJ
-        Energy (per-instance)                   : 0.00 pJ
-        Energy (total)                          : 0.00 pJ
-        Link transfer energy (per-instance)     : 0.00 pJ
-        Link transfer energy (total)            : 0.00 pJ
-        Spatial Reduction Energy (per-instance) : 0.00 pJ
-        Spatial Reduction Energy (total)        : 0.00 pJ
-    Inputs:
-        Fanout                                  : 1
-        Fanout (distributed)                    : 0
-        Multicast factor                        : 1
-        Ingresses                               : 18
-            @multicast 1: 18
-        Link transfers                          : 0
-        Spatial reductions                      : 0
-        Average number of hops                  : 0.50
-        Energy (per-hop)                        : 0.00 fJ
-        Energy (per-instance)                   : 0.00 pJ
-        Energy (total)                          : 0.00 pJ
-        Link transfer energy (per-instance)     : 0.00 pJ
-        Link transfer energy (total)            : 0.00 pJ
-        Spatial Reduction Energy (per-instance) : 0.00 pJ
-        Spatial Reduction Energy (total)        : 0.00 pJ
-    Outputs:
-        Fanout                                  : 1
-        Fanout (distributed)                    : 0
-        Multicast factor                        : 1
-        Ingresses                               : 512
-            @multicast 1: 512
-        Link transfers                          : 0
-        Spatial reductions                      : 0
-        Average number of hops                  : 0.50
-        Energy (per-hop)                        : 0.00 fJ
-        Energy (per-instance)                   : 0.00 pJ
-        Energy (total)                          : 0.00 pJ
-        Link transfer energy (per-instance)     : 0.00 pJ
-        Link transfer energy (total)            : 0.00 pJ
-        Spatial Reduction Energy (per-instance) : 0.00 pJ
-        Spatial Reduction Energy (total)        : 0.00 pJ
 
 Level 3
 -------
@@ -279,11 +167,6 @@ Level 3
         Min utilization      : 0.00
         Vector access energy : 2048.00 pJ
         Area                 : 0.00 um^2
-
-    NETWORK SPECS
-    -------------
-    Shared:
-        Fanout               : 1 (1*1)
 
     MAPPING
     -------
@@ -359,6 +242,134 @@ Level 3
     Shared:
         Area (per-instance)                      : 0.00 um2
 
+Networks
+--------
+Network 0
+---------
+RegisterFile <==> MACC
+
+    NETWORK SPECS
+    -------------
+    Shared:
+
+    NETWORK STATS
+    -------------
+    Weights:
+        Fanout                                  : 1
+        Fanout (distributed)                    : 0
+        Multicast factor                        : 1
+        Ingresses                               : 1536
+            @multicast 1: 1536
+        Link transfers                          : 0
+        Spatial reductions                      : 0
+        Average number of hops                  : 0.50
+        Energy (per-hop)                        : 0.00 fJ
+        Energy (per-instance)                   : 0.00 pJ
+        Energy (total)                          : 0.00 pJ
+        Link transfer energy (per-instance)     : 0.00 pJ
+        Link transfer energy (total)            : 0.00 pJ
+        Spatial Reduction Energy (per-instance) : 0.00 pJ
+        Spatial Reduction Energy (total)        : 0.00 pJ
+    Inputs:
+        Fanout                                  : 1
+        Fanout (distributed)                    : 0
+        Multicast factor                        : 1
+        Ingresses                               : 1536
+            @multicast 1: 1536
+        Link transfers                          : 0
+        Spatial reductions                      : 0
+        Average number of hops                  : 0.50
+        Energy (per-hop)                        : 0.00 fJ
+        Energy (per-instance)                   : 0.00 pJ
+        Energy (total)                          : 0.00 pJ
+        Link transfer energy (per-instance)     : 0.00 pJ
+        Link transfer energy (total)            : 0.00 pJ
+        Spatial Reduction Energy (per-instance) : 0.00 pJ
+        Spatial Reduction Energy (total)        : 0.00 pJ
+    Outputs:
+        Fanout                                  : 1
+        Fanout (distributed)                    : 0
+        Multicast factor                        : 1
+        Ingresses                               : 1536
+            @multicast 1: 1536
+        Link transfers                          : 0
+        Spatial reductions                      : 0
+        Average number of hops                  : 0.50
+        Energy (per-hop)                        : 0.00 fJ
+        Energy (per-instance)                   : 0.00 pJ
+        Energy (total)                          : 0.00 pJ
+        Link transfer energy (per-instance)     : 0.00 pJ
+        Link transfer energy (total)            : 0.00 pJ
+        Spatial Reduction Energy (per-instance) : 0.00 pJ
+        Spatial Reduction Energy (total)        : 0.00 pJ
+
+Network 1
+---------
+GlobalBuffer <==> RegisterFile
+
+    NETWORK SPECS
+    -------------
+    Shared:
+
+    NETWORK STATS
+    -------------
+    Weights:
+        Fanout                                  : 1
+        Fanout (distributed)                    : 0
+        Multicast factor                        : 1
+        Ingresses                               : 96
+            @multicast 1: 96
+        Link transfers                          : 0
+        Spatial reductions                      : 0
+        Average number of hops                  : 0.50
+        Energy (per-hop)                        : 0.00 fJ
+        Energy (per-instance)                   : 0.00 pJ
+        Energy (total)                          : 0.00 pJ
+        Link transfer energy (per-instance)     : 0.00 pJ
+        Link transfer energy (total)            : 0.00 pJ
+        Spatial Reduction Energy (per-instance) : 0.00 pJ
+        Spatial Reduction Energy (total)        : 0.00 pJ
+    Inputs:
+        Fanout                                  : 1
+        Fanout (distributed)                    : 0
+        Multicast factor                        : 1
+        Ingresses                               : 18
+            @multicast 1: 18
+        Link transfers                          : 0
+        Spatial reductions                      : 0
+        Average number of hops                  : 0.50
+        Energy (per-hop)                        : 0.00 fJ
+        Energy (per-instance)                   : 0.00 pJ
+        Energy (total)                          : 0.00 pJ
+        Link transfer energy (per-instance)     : 0.00 pJ
+        Link transfer energy (total)            : 0.00 pJ
+        Spatial Reduction Energy (per-instance) : 0.00 pJ
+        Spatial Reduction Energy (total)        : 0.00 pJ
+    Outputs:
+        Fanout                                  : 1
+        Fanout (distributed)                    : 0
+        Multicast factor                        : 1
+        Ingresses                               : 512
+            @multicast 1: 512
+        Link transfers                          : 0
+        Spatial reductions                      : 0
+        Average number of hops                  : 0.50
+        Energy (per-hop)                        : 0.00 fJ
+        Energy (per-instance)                   : 0.00 pJ
+        Energy (total)                          : 0.00 pJ
+        Link transfer energy (per-instance)     : 0.00 pJ
+        Link transfer energy (total)            : 0.00 pJ
+        Spatial Reduction Energy (per-instance) : 0.00 pJ
+        Spatial Reduction Energy (total)        : 0.00 pJ
+
+Network 2
+---------
+MainMemory <==> GlobalBuffer
+
+    NETWORK SPECS
+    -------------
+    Shared:
+
     NETWORK STATS
     -------------
     Weights:
@@ -414,8 +425,8 @@ Total topology energy: 44514.57 pJ
 Total topology area: 0.00 um^2
 Max topology cycles: 1536
 
-Engine Stats
-------------
+Summary Stats
+-------------
 Utilization: 1.00
 Cycles: 1536
 Energy: 0.04 uJ

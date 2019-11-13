@@ -16,8 +16,12 @@
 						<instances class_id="8" tracking_level="0" version="0">
 							<t_>1</t_>
 						</instances>
-						<mesh_x></mesh_x>
-						<mesh_y></mesh_y>
+						<mesh_x>
+							<t_>1</t_>
+						</mesh_x>
+						<mesh_y>
+							<t_>1</t_>
+						</mesh_y>
 						<word_bits>
 							<t_>8</t_>
 						</word_bits>
@@ -257,141 +261,6 @@
 						<cycles>48</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
 					</stats_>
-					<network_ class_id="25" tracking_level="0" version="0">
-						<specs_ class_id="26" tracking_level="0" version="0">
-							<type class_id="27" tracking_level="0" version="0">
-								<shared class_id="28" tracking_level="0" version="0"></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>8</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</specs_>
-						<stats_ class_id="29" tracking_level="0" version="0">
-							<fanout>
-								<PerDataSpace>
-									<item>1</item>
-									<item>1</item>
-									<item>1</item>
-								</PerDataSpace>
-							</fanout>
-							<distributed_fanout>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</distributed_fanout>
-							<multicast_factor>
-								<PerDataSpace>
-									<item>1</item>
-									<item>1</item>
-									<item>1</item>
-								</PerDataSpace>
-							</multicast_factor>
-							<ingresses class_id="30" tracking_level="0" version="0">
-								<PerDataSpace>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>48</item>
-									</item>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>48</item>
-									</item>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>48</item>
-									</item>
-								</PerDataSpace>
-							</ingresses>
-							<distributed_multicast>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</distributed_multicast>
-							<link_transfers>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</link_transfers>
-							<spatial_reductions>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</spatial_reductions>
-							<link_transfer_energy>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</link_transfer_energy>
-							<num_hops>
-								<PerDataSpace>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
-								</PerDataSpace>
-							</num_hops>
-							<energy_per_hop>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</energy_per_hop>
-							<energy>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</energy>
-							<spatial_reduction_energy>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</spatial_reduction_energy>
-						</stats_>
-					</network_>
 				</px>
 			</item>
 			<item>
@@ -622,149 +491,262 @@
 						<cycles>48</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
 					</stats_>
-					<network_>
-						<specs_>
-							<type>
-								<shared></shared>
-							</type>
-							<word_bits>
-								<shared>
-									<t_>8</t_>
-								</shared>
-							</word_bits>
-							<fanout>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanout>
-							<fanoutX>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutX>
-							<fanoutY>
-								<shared>
-									<t_>1</t_>
-								</shared>
-							</fanoutY>
-							<routerEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</routerEnergy>
-							<wireEnergy>
-								<shared>
-									<t_>0.00000000000000000e+00</t_>
-								</shared>
-							</wireEnergy>
-						</specs_>
-						<stats_>
-							<fanout>
-								<PerDataSpace>
-									<item>1</item>
-									<item>1</item>
-									<item>1</item>
-								</PerDataSpace>
-							</fanout>
-							<distributed_fanout>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</distributed_fanout>
-							<multicast_factor>
-								<PerDataSpace>
-									<item>1</item>
-									<item>1</item>
-									<item>1</item>
-								</PerDataSpace>
-							</multicast_factor>
-							<ingresses>
-								<PerDataSpace>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>3</item>
-									</item>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>18</item>
-									</item>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>16</item>
-									</item>
-								</PerDataSpace>
-							</ingresses>
-							<distributed_multicast>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</distributed_multicast>
-							<link_transfers>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</link_transfers>
-							<spatial_reductions>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</spatial_reductions>
-							<link_transfer_energy>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</link_transfer_energy>
-							<num_hops>
-								<PerDataSpace>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
-								</PerDataSpace>
-							</num_hops>
-							<energy_per_hop>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</energy_per_hop>
-							<energy>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</energy>
-							<spatial_reduction_energy>
-								<PerDataSpace>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-									<item>0.00000000000000000e+00</item>
-								</PerDataSpace>
-							</spatial_reduction_energy>
-						</stats_>
-					</network_>
 				</px>
 			</item>
 		</levels_>
+		<networks_ class_id="25" tracking_level="0" version="0">
+			<count>2</count>
+			<item_version>1</item_version>
+			<item class_id="26" tracking_level="0" version="1">
+				<px class_id="27" tracking_level="1" version="0" object_id="_3">
+					<specs_ class_id="28" tracking_level="0" version="0">
+						<type class_id="29" tracking_level="0" version="0">
+							<shared class_id="30" tracking_level="0" version="0"></shared>
+						</type>
+						<word_bits>
+							<shared>
+								<t_>8</t_>
+							</shared>
+						</word_bits>
+						<routerEnergy>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</routerEnergy>
+						<wireEnergy>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</wireEnergy>
+					</specs_>
+					<stats_ class_id="31" tracking_level="0" version="0">
+						<fanout>
+							<PerDataSpace>
+								<item>1</item>
+								<item>1</item>
+								<item>1</item>
+							</PerDataSpace>
+						</fanout>
+						<distributed_fanout>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</distributed_fanout>
+						<multicast_factor>
+							<PerDataSpace>
+								<item>1</item>
+								<item>1</item>
+								<item>1</item>
+							</PerDataSpace>
+						</multicast_factor>
+						<ingresses class_id="32" tracking_level="0" version="0">
+							<PerDataSpace>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>48</item>
+								</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>48</item>
+								</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>48</item>
+								</item>
+							</PerDataSpace>
+						</ingresses>
+						<distributed_multicast>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</distributed_multicast>
+						<link_transfers>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</link_transfers>
+						<spatial_reductions>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</spatial_reductions>
+						<link_transfer_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</link_transfer_energy>
+						<num_hops>
+							<PerDataSpace>
+								<item>5.00000000000000000e-01</item>
+								<item>5.00000000000000000e-01</item>
+								<item>5.00000000000000000e-01</item>
+							</PerDataSpace>
+						</num_hops>
+						<energy_per_hop>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</energy_per_hop>
+						<energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</energy>
+						<spatial_reduction_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</spatial_reduction_energy>
+					</stats_>
+				</px>
+			</item>
+			<item>
+				<px class_id_reference="27" object_id="_4">
+					<specs_>
+						<type>
+							<shared></shared>
+						</type>
+						<word_bits>
+							<shared>
+								<t_>8</t_>
+							</shared>
+						</word_bits>
+						<routerEnergy>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</routerEnergy>
+						<wireEnergy>
+							<shared>
+								<t_>0.00000000000000000e+00</t_>
+							</shared>
+						</wireEnergy>
+					</specs_>
+					<stats_>
+						<fanout>
+							<PerDataSpace>
+								<item>1</item>
+								<item>1</item>
+								<item>1</item>
+							</PerDataSpace>
+						</fanout>
+						<distributed_fanout>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</distributed_fanout>
+						<multicast_factor>
+							<PerDataSpace>
+								<item>1</item>
+								<item>1</item>
+								<item>1</item>
+							</PerDataSpace>
+						</multicast_factor>
+						<ingresses>
+							<PerDataSpace>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>3</item>
+								</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>18</item>
+								</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>16</item>
+								</item>
+							</PerDataSpace>
+						</ingresses>
+						<distributed_multicast>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</distributed_multicast>
+						<link_transfers>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</link_transfers>
+						<spatial_reductions>
+							<PerDataSpace>
+								<item>0</item>
+								<item>0</item>
+								<item>0</item>
+							</PerDataSpace>
+						</spatial_reductions>
+						<link_transfer_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</link_transfer_energy>
+						<num_hops>
+							<PerDataSpace>
+								<item>5.00000000000000000e-01</item>
+								<item>5.00000000000000000e-01</item>
+								<item>5.00000000000000000e-01</item>
+							</PerDataSpace>
+						</num_hops>
+						<energy_per_hop>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</energy_per_hop>
+						<energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</energy>
+						<spatial_reduction_energy>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</spatial_reduction_energy>
+					</stats_>
+				</px>
+			</item>
+		</networks_>
 	</topology_>
 </engine>
-<mapping class_id="32" tracking_level="0" version="0">
+<mapping class_id="34" tracking_level="0" version="0">
 	<datatype_bypass_nest>
-		<item class_id="33" tracking_level="0" version="0">
+		<item class_id="35" tracking_level="0" version="0">
 			<bits>0000000000000011</bits>
 		</item>
 		<item>
@@ -775,12 +757,12 @@
 		</item>
 	</datatype_bypass_nest>
 </mapping>
-<a class_id="34" tracking_level="1" version="0" object_id="_3">
-	<workload_ class_id="35" tracking_level="0" version="0">
-		<bounds_ class_id="36" tracking_level="0" version="0">
+<a class_id="36" tracking_level="1" version="0" object_id="_5">
+	<workload_ class_id="37" tracking_level="0" version="0">
+		<bounds_ class_id="38" tracking_level="0" version="0">
 			<count>2</count>
 			<item_version>0</item_version>
-			<item class_id="37" tracking_level="0" version="0">
+			<item class_id="39" tracking_level="0" version="0">
 				<first>0</first>
 				<second>3</second>
 			</item>
@@ -793,10 +775,10 @@
 			<count>0</count>
 			<item_version>0</item_version>
 		</coefficients_>
-		<densities_ class_id="38" tracking_level="0" version="0">
+		<densities_ class_id="40" tracking_level="0" version="0">
 			<count>3</count>
 			<item_version>0</item_version>
-			<item class_id="39" tracking_level="0" version="0">
+			<item class_id="41" tracking_level="0" version="0">
 				<first>0</first>
 				<second>1.00000000000000000e+00</second>
 			</item>
