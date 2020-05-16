@@ -16,7 +16,7 @@ The following command uses Timeloop to find a good mapping to run on an Eyeriss-
 timeloop-mapper arch/eyeriss-192-int16.arch.yaml \
                 arch/components/*.yaml \
                 prob/cnn-layer.prob.yaml \
-                mapper/apper.yaml \
+                mapper/mapper.yaml \
                 constraints/cnn-layer-eyeriss-192-rs.constraints.yaml
 ```
 
@@ -33,7 +33,7 @@ Using those provided files, there are many interesting experiments we can explor
     timeloop-mapper arch/eyeriss-192-fp32.arch.yaml \
                     arch/components/*.yaml \
                     prob/cnn-layer.prob.yaml \
-                    mapper/apper.yaml \
+                    mapper/mapper.yaml \
                     constraints/cnn-layer-eyeriss-192-rs.constraints.yaml
     ```
 
