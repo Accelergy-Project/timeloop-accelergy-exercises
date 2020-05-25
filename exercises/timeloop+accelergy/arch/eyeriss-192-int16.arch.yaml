@@ -69,7 +69,7 @@ architecture:
                   read_bandwidth: 2
                   write_bandwidth: 2
               - name: weights_spad
-                class: smartbuffer_SRAM
+                class: smartbuffer_RF
                 attributes:
                   memory_depth: 192
                   memory_width: 16
