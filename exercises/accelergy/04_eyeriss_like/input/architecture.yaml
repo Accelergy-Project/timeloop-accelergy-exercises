@@ -42,24 +42,25 @@ architecture:
             datawidth: 64
             Y_X_wire_avg_length: 4mm
       subtree:
-      - name: PE[0..167]
-        attributes:
-          memory_width: 16
-        local:
-          - name: ifmap_spad
-            class: smartbuffer_RF
-            attributes:
-              memory_depth: 12
-          - name: weights_spad
-            class: smartbuffer_SRAM
-            attributes:
-              memory_depth: 224
-          - name: psum_spad
-            class: smartbuffer_RF
-            attributes:
-              memory_depth: 24
-              update_fifo_depth: 2
-          - name: mac
-            class: intmac
-            attributes:
-              datawidth: 16
+        - name: PE[0..167]
+          local:
+            - name: ifmap_spad
+              class: smartbuffer_RF
+              attributes:
+                memory_depth: 12
+                memory_width: 16
+            - name: weights_spad
+              class: smartbuffer_RF
+              attributes:
+                memory_depth: 192
+                memory_width: 16
+            - name: psum_spad
+              class: smartbuffer_RF
+              attributes:
+                memory_depth: 16
+                memory_width: 16
+            - name: mac
+              class: intmac
+              attributes:
+                datawidth: 16
+                meshX : 14

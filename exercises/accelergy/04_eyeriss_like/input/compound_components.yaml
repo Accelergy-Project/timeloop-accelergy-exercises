@@ -1,4 +1,0 @@
-compound_components:
-# compound components description collects information from other files in component folder
-  version: 0.2
-  classes: !includedir components

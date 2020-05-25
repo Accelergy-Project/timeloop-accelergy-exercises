@@ -16,7 +16,7 @@ To run the exercise, we need to provide 3 inputs to the Accelergy:
 We have provided the `.yaml` files in the input folder. To run this exercise, type: 
 
 ```
-    accelergy input/*.yaml -o output/ --enable_flattened_arch 1
+    accelergy input/*.yaml -o output/ 
 ```
 
 This generates the following output in folder `output/`
@@ -31,7 +31,6 @@ the architecture is saved to `flattened_architectue.yaml`.
 ## Observations
 
 - Note that the `input/architecture.yaml` is much more complicated than the previous examples. The architecture contains three main parts, 2 global buffers, 4 NoCs for different data types, and the 168 PEs, each contain 3 local buffers and a MAC unit.
-- Note that the `input/compound_component.yaml` contains an `includedir` keyword that indcludes all the files in the `component` subfolder.
 - The compound components can be specified separately to avoid long and tedious compound component descriptions. Examine the files, what is the relationship between different compound components? Are they dependent or independent? 
 - What will the architecture description look like if we use primitive components to describe the architecture?
 - Examine the `input/action_counts.yaml`, which action is specific to zero-gating? Can you tell which PE processes the most sparse data? 
