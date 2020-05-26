@@ -1,0 +1,108 @@
+architecture:
+  version: 0.3
+  subtree:
+  - name: System
+    attributes:
+      datawidth: 8
+      technology: 45nm
+      word-bits: 8
+    local:
+    - name: DRAM
+      class: DRAM
+      attributes:
+        block-size: 4
+        datawidth: 8
+        technology: 45nm
+        type: LPDDR4
+        width: 64
+        word-bits: 16
+    subtree:
+    - name: ws
+      local:
+      - name: GlobalBuffer
+        class: storage
+        subclass: smartbuffer_SRAM
+        attributes:
+          block-size: 32
+          datawidth: 8
+          depth: 2048
+          memory_depth: 12
+          memory_width: 16
+          meshX: 1
+          n_banks: 1
+          n_buffets: 1
+          n_rdwr_ports: 2
+          nbanks: 4
+          nports: 2
+          technology: 45nm
+          word-bits: 8
+      subtree:
+      - name: PE[0..15]
+        local:
+        - name: PEInputBuffer
+          class: storage
+          subclass: smartbuffer_RF
+          attributes:
+            block-size: 8
+            datawidth: 8
+            depth: 8192
+            memory_depth: 12
+            memory_width: 16
+            meshX: 16
+            n_banks: 1
+            n_buffets: 1
+            n_rdwr_ports: 2
+            technology: 45nm
+            width: 64
+            word-bits: 8
+        - name: PEWeightBuffer[0..3]
+          class: storage
+          subclass: smartbuffer_RF
+          attributes:
+            block-size: 8
+            datawidth: 8
+            depth: 4096
+            memory_depth: 12
+            memory_width: 16
+            meshX: 16
+            n_banks: 1
+            n_buffets: 1
+            n_rdwr_ports: 2
+            nbanks: 8
+            technology: 45nm
+            word-bits: 8
+        - name: PEAccuBuffer[0..3]
+          class: storage
+          subclass: smartbuffer_RF
+          attributes:
+            datawidth: 24
+            depth: 128
+            memory_depth: 12
+            memory_width: 16
+            meshX: 16
+            n_banks: 1
+            n_buffets: 1
+            n_rdwr_ports: 2
+            technology: 45nm
+            word-bits: 24
+        - name: PEWeightRegs[0..15]
+          class: storage
+          subclass: reg_storage
+          attributes:
+            cluster-size: 64
+            datawidth: 8
+            depth: 1
+            latency: 1ns
+            meshX: 16
+            num-ports: 2
+            technology: 45nm
+            width: 16
+            word-bits: 8
+        - name: LMAC[0..15]
+          class: compute
+          subclass: lmac
+          attributes:
+            datawidth: 16
+            meshX: 16
+            technology: 45nm
+            word-bits: 8

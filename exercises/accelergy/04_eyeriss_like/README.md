@@ -16,16 +16,18 @@ To run the exercise, we need to provide 3 inputs to the Accelergy:
 We have provided the `.yaml` files in the input folder. To run this exercise, type: 
 
 ```
-    accelergy input/*.yaml -o output/ 
+    accelergy input/ -o output/ 
 ```
 
 This generates the following output in folder `output/`
 - The received input files and the important evaluation progress are reported on `stdout`.
 - The energy reference tables (ERTs) (pJ/action) for the components in the architecture `ERT.yaml`.
 - The energy reference table summary for the components in the architecture `ERT_summary.yaml`.
+- The area reference tables (ERTs) (umm^2/component) for the components in the architecture `ART.yaml`(note that the DRAM area is a place holder as it is not on-chip).
+- The area reference table summary for the components in the architecture `ART_summary.yaml`.
 - The flattened architecture that describes the class and attributes of the components in
 the architecture is saved to `flattened_architectue.yaml`.
-- The estimation (pJ) for the primitive components in the design are saved in `estimation.yaml`.
+- The estimation (pJ) for the primitive components in the design are saved in `energy_stimation.yaml`.
 
 
 ## Observations

@@ -1,0 +1,27 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: memcell_compute
+      attributes:
+        cell_technology: memristor
+        cmos_technology: 32nm
+        cell_datawidth: 2
+        DAC_datawidth: 1
+        datawidth: 16
+        nCells: datawidth/cell_datawidth
+        nCycles: datawidth/DAC_datawidth
+        compute_latency: 100ns
+      subcomponents:
+        - name: cell[0..nCells-1]
+          class: ReRAMcell_compute
+          attributes:
+            technology: cell_technology
+            cellwidth: cell_datawidth
+            latency: 100ns
+      actions:
+        - name: compute
+          subcomponents:
+            - name: cell[0..nCells-1] # spatial
+              actions:
+                - name: compute
+                  action_share: nCycles # temporal: compute 1 bit input at a time

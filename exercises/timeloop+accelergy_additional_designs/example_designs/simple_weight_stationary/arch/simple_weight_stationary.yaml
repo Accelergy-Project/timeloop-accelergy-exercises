@@ -1,0 +1,65 @@
+architecture:
+  # ============================================================
+  # Architecture Description
+  # ============================================================
+  version: 0.3
+  subtree:
+    - name: system
+      local:
+        - name: DRAM
+          class: DRAM
+          attributes:
+            type: LPDDR4
+            width: 64
+            block-size: 4
+            word-bits: 16
+      subtree:
+        - name: simple_ws
+          attributes:
+            technology: 45nm
+          local:
+            - name: shared_glb
+              class: smartbuffer_SRAM
+              attributes:
+                memory_depth: 16384
+                memory_width: 64
+                n_banks: 32
+                block-size: 4
+                word-bits: 16
+                read_bandwidth: 16
+                write_bandwidth: 16
+          subtree:
+          - name: PE[0..255]
+            local:
+              - name: pe_spad
+                class: smartbuffer_RF
+                attributes:
+                  memory_depth: 192
+                  memory_width: 16
+                  block-size: 1
+                  word-bits: 16
+                  meshX: 16
+              - name: mac
+                class: intmac
+                attributes:
+                  datawidth: 16
+                  meshX : 16
+              # input and output registers for the mac unit
+              - name: weight_reg
+                class: reg_storage
+                attributes:
+                  depth: 1
+                  width: 16           # width in bits
+                  meshX: 16
+              - name: input_activation_reg
+                class: reg_storage
+                attributes:
+                  depth: 1
+                  width: 16           # width in bits
+                  meshX: 16
+              - name: output_activation_reg
+                class: reg_storage
+                attributes:
+                  depth: 1
+                  width: 16           # width in bits
+                  meshX: 16

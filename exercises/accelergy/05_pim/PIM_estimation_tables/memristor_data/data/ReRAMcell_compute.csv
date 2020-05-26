@@ -1,0 +1,5 @@
+technology,cellwidth,action,energy,area,comment
+memristor,2,compute,1.83E-03,0.001525879,energy in pJ;  area in um^2
+memristor,2,idle,0.00E+00,0.001525879,
+memristor,1,compute,3.45E-03,7.63E-04,
+memristor,1,idle,0.00E+00,0.001525879,

@@ -1,0 +1,42 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: A2D_conversion_system
+      attributes:  # default attributes that can be overridden
+        technology: 32nm
+        latency: 1ns
+        datawidth: 16
+        cell_datawidth: 2
+        n_DAC_cycles: 16
+        ADC_datawidth: 8
+        n_PE_cols: 8
+        # derived parameters (automatically derived, but can be overridden from high-level)
+        nCells: datawidth/cell_datawidth
+        SH_datawidth: ADC_datawidth
+        total_SHs: nCells * n_PE_cols # each physical column has a sample and hold
+        ADC_converts_per_psum: nCells * n_DAC_cycles # temporal: n_DAC_cycles times for each column of cells
+      subcomponents:
+        - name: SH[0..total_SHs-1] # this is all SHs in the system
+          class: sample_and_hold
+          attributes:
+            technology: technology
+            latency: latency
+            datawidth: SH_datawidth
+        - name: ADC #  assume this ADC is fast enough to convert the output of the SHs in one cycle
+          class: ADC
+          attributes:
+            technology: technology
+            latency: latency
+            type: SAR
+            datawidth: ADC_datawidth
+      actions:
+        - name: convert
+          subcomponents:
+            - name: SH[0..nCells-1]
+              actions:
+                - name: sample_and_hold
+                  action_share: n_DAC_cycles  # number of times the action need to be performed
+            - name: ADC
+              actions:
+                - name: convert
+                  action_share: ADC_converts_per_psum # number of times the action need to be performed

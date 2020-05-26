@@ -1,0 +1,4 @@
+technology,width,action,energy,area,comment
+32nm,256,read,5.81E+01,83000,energy in pJ;  area in um^2
+32nm,256,write,5.81E+01,83000,
+32nm,256,idle,0,83000,

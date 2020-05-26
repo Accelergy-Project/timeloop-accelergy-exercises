@@ -1,0 +1,70 @@
+[  7] Utilization = 0.19 | pJ/MACC =   95.478
+[  7] Utilization = 0.19 | pJ/MACC =   90.104
+[  0] Utilization = 0.19 | pJ/MACC =   97.620
+[  0] Utilization = 0.19 | pJ/MACC =   95.683
+[  0] Utilization = 0.19 | pJ/MACC =   91.037
+[  0] Utilization = 0.19 | pJ/MACC =   89.100
+[  3] Utilization = 0.19 | pJ/MACC =   97.620
+[  6] Utilization = 0.19 | pJ/MACC =   97.620
+[  6] Utilization = 0.19 | pJ/MACC =   95.877
+[  3] Utilization = 0.19 | pJ/MACC =   95.877
+[  6] Utilization = 0.19 | pJ/MACC =   91.520
+[  3] Utilization = 0.19 | pJ/MACC =   91.279
+[  6] Utilization = 0.19 | pJ/MACC =   89.778
+[  3] Utilization = 0.19 | pJ/MACC =   89.536
+[  7] Utilization = 0.19 | pJ/MACC =   89.933
+[  6] Utilization = 0.19 | pJ/MACC =   89.584
+[  3] Utilization = 0.19 | pJ/MACC =   89.342
+[  2] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  5] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  4] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  1] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  7] Utilization = 0.19 | pJ/MACC =   89.758
+[  0] Utilization = 0.19 | pJ/MACC =   88.853
+[  7] Utilization = 0.19 | pJ/MACC =   88.853
+[  6] Utilization = 0.19 | pJ/MACC =   88.853
+[  3] Utilization = 0.19 | pJ/MACC =   88.853
+[  0] Utilization = 0.19 | pJ/MACC =   88.754
+[  7] Utilization = 0.19 | pJ/MACC =   12.235
+[  0] Utilization = 0.19 | pJ/MACC =   14.549
+[  0] Utilization = 0.19 | pJ/MACC =   12.612
+[  0] Utilization = 0.19 | pJ/MACC =   12.235
+[  7] Utilization = 0.19 | pJ/MACC =    8.853
+[  7] Utilization = 0.19 | pJ/MACC =    7.529
+[  7] Utilization = 0.19 | pJ/MACC =    7.101
+[  0] Utilization = 0.19 | pJ/MACC =   10.068
+[  0] Utilization = 0.19 | pJ/MACC =    9.776
+[  7] Utilization = 0.19 | pJ/MACC =    6.862
+[  7] Utilization = 0.19 | pJ/MACC =    6.681
+[  0] Utilization = 0.19 | pJ/MACC =    7.512
+[  0] Utilization = 0.19 | pJ/MACC =    6.681
+[  0] Utilization = 0.19 | pJ/MACC =    5.827
+[  3] Utilization = 0.19 | pJ/MACC =   14.549
+[  3] Utilization = 0.19 | pJ/MACC =   12.612
+[  6] Utilization = 0.19 | pJ/MACC =   14.549
+[  6] Utilization = 0.19 | pJ/MACC =   12.612
+[  3] Utilization = 0.19 | pJ/MACC =   12.235
+[  6] Utilization = 0.19 | pJ/MACC =   12.235
+[  3] Utilization = 0.19 | pJ/MACC =   10.543
+[  6] Utilization = 0.19 | pJ/MACC =   10.825
+[  3] Utilization = 0.19 | pJ/MACC =   10.058
+[  6] Utilization = 0.19 | pJ/MACC =   10.339
+[  0] Utilization = 0.19 | pJ/MACC =    5.797
+[  7] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
+[  3] Utilization = 0.19 | pJ/MACC =    8.677
+[  6] Utilization = 0.19 | pJ/MACC =    8.677
+[  3] Utilization = 0.19 | pJ/MACC =    7.754
+[  6] Utilization = 0.19 | pJ/MACC =    7.996
+[  3] Utilization = 0.19 | pJ/MACC =    6.922
+[  3] Utilization = 0.19 | pJ/MACC =    6.069
+[  6] Utilization = 0.19 | pJ/MACC =    7.164
+[  6] Utilization = 0.19 | pJ/MACC =    6.310
+[  0] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
+[  3] Utilization = 0.19 | pJ/MACC =    6.013
+[  3] Utilization = 0.19 | pJ/MACC =    5.881
+[  6] Utilization = 0.19 | pJ/MACC =    6.228
+[  6] Utilization = 0.19 | pJ/MACC =    6.096
+[  3] Utilization = 0.19 | pJ/MACC =    5.797
+[  6] Utilization = 0.19 | pJ/MACC =    5.797
+[  3] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
+[  6] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.

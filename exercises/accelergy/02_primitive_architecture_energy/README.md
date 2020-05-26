@@ -10,18 +10,18 @@ This exercise runs a energy estimation on a simple architecture using the provid
 To run the exercise, we need to provide 3 inputs to the Accelergy:
 - An ERT.
 - Action counts.
-- A flattened architecture (optional input).
+- A flattened architecture/ the original hierarchical architecture.
 
 
 We have provided the `.yaml` files in the input folder. To run this exercise, type: 
 
 ```
-    accelergy input/*.yaml -o output/ --enable_flattened_arch 1
+    accelergy input/ -o output/ -f energy_estimation
 ```
 
 This generates the following output in folder `output/`
 - The received input files and the important evaluation progress are reported on `stdout`.
-- The estimation (pJ) for the primitive components in the design are saved in `estimation.yaml`.
+- The estimation (pJ) for the primitive components in the design are saved in `energy_estimation.yaml`.
 
 
 ## Observations

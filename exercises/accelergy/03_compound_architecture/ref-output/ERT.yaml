@@ -1,92 +1,107 @@
 ERT:
+  version: 0.3
   tables:
-    simple_compound.GLB:
-      idle:
-        arguments: null
-        energy: 0.0
-      read:
-      - arguments:
-          address_delta: 0
-          data_delta: 0
-        energy: 0.064
-      - arguments:
-          address_delta: 0
-          data_delta: 1
-        energy: 2.807
-      - arguments:
-          address_delta: 1
-          data_delta: 0
-        energy: 1.24
-      - arguments:
-          address_delta: 1
-          data_delta: 1
-        energy: 3.982
-      write:
-      - arguments:
-          address_delta: 0
-          data_delta: 0
-        energy: 0.064
-      - arguments:
-          address_delta: 0
-          data_delta: 1
-        energy: 2.588
-      - arguments:
-          address_delta: 1
-          data_delta: 0
-        energy: 1.146
-      - arguments:
-          address_delta: 1
-          data_delta: 1
-        energy: 3.669
-    simple_compound.PE.MAC:
-      idle:
-        arguments: null
-        energy: 0.019
-      mac_gated:
-        arguments: null
-        energy: 0.056
-      mac_random:
-        arguments: null
-        energy: 1.785
-      mac_reused:
-        arguments: null
-        energy: 1.61
-    simple_compound.PE.buffer:
-      idle:
-        arguments: null
-        energy: 0.029
-      read:
-      - arguments:
-          address_delta: 0
-          data_delta: 0
-        energy: 0.087
-      - arguments:
-          address_delta: 0
-          data_delta: 1
-        energy: 0.363
-      - arguments:
-          address_delta: 1
-          data_delta: 0
-        energy: 4.248
-      - arguments:
-          address_delta: 1
-          data_delta: 1
-        energy: 4.524
-      write:
-      - arguments:
-          address_delta: 0
-          data_delta: 0
-        energy: 0.087
-      - arguments:
-          address_delta: 0
-          data_delta: 1
-        energy: 0.363
-      - arguments:
-          address_delta: 1
-          data_delta: 0
-        energy: 4.248
-      - arguments:
-          address_delta: 1
-          data_delta: 1
-        energy: 4.524
-  version: 0.2
+  - name: simple_compound.PE[0..4].MAC
+    actions:
+    - name: mac_random
+      arguments: null
+      energy: 2.778
+    - name: mac_reused
+      arguments: null
+      energy: 2.455
+    - name: mac_gated
+      arguments: null
+      energy: 0.115
+    - name: idle
+      arguments: null
+      energy: 0.078
+  - name: simple_compound.PE[0..4].buffer
+    actions:
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.087
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.363
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 4.248
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 4.524
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.087
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.363
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 4.248
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 4.524
+    - name: idle
+      arguments: null
+      energy: 0.029
+  - name: simple_compound.GLB
+    actions:
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.064
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 2.807
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 1.24
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 3.982
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.064
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 2.588
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 1.146
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 3.669
+    - name: idle
+      arguments: null
+      energy: 0.0

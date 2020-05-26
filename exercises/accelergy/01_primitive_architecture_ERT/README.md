@@ -15,13 +15,15 @@ To run the exercise, we need to provide 1 input to the Accelergy:
 We have provided the `.yaml` file in the input folder. To run this exercise, type: 
 
 ```
-    accelergy input/*.yaml -o output/ --enable_flattened_arch 1
+    accelergy input/ -o output/ 
 ```
 
 This generates the following output in folder `output/`
 - The received input files and the important generation progress are reported on `stdout`.
 - the ERTs (pJ/action) for the primitive components in the design are saved in `ERT.yaml`.
 - A summary of the ERTs are saved in `ERT_summary.yaml`.
+- The area reference tables (ERTs) (umm^2/component) for the components in the architecture `ART.yaml`(note that the DRAM area is a place holder as it is not on-chip).
+- The area reference table summary for the components in the architecture `ART_summary.yaml`.
 - A summary of the parsed architecture is saved in `flattened_arch.yaml`.
 
 ## Observations

@@ -1,0 +1,82 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: SRAM_storage
+      attributes:
+        technology: 16nm
+        latency: 1ns
+        depth: 1024
+        width: 16
+        datawidth: 16
+        nports: 1
+        nbanks: 1
+      subcomponents:
+        - name: storage
+          class: SRAM
+          attributes:
+            technology: technology
+            latency: latency
+            depth: depth
+            width: width
+            datawidth: datawidth
+            n_rdwr_ports: nports
+            n_banks: nbanks
+      actions:
+        - name: read
+          subcomponents:
+            - name: storage
+              actions:
+                - name: read
+                  arguments:
+                    address_delta: 1
+                    data_delta: 1
+        - name: write
+          subcomponents:
+            - name: storage
+              actions:
+                - name: write
+                  arguments:
+                    address_delta: 1
+                    data_delta: 1
+
+
+    - name: memcell_storage
+      attributes:
+        cmos_technology: 32nm
+        cell_technology: memristor
+        depth: 256
+        width: 16
+        cell_datawidth: 2
+      subcomponents:
+        - name: storage
+          class: ReRAMcell_storage
+          attributes:
+            technology: cell_technology
+            latency: latency
+            cellwidth: cell_datawidth
+      actions:
+        - name: read
+          subcomponents:
+            - name: storage
+              actions:
+                - name: idle
+
+    - name: dummy_storage
+      attributes:
+        depth: 0
+        width: 0
+      subcomponents:
+        - name: storage
+          class: SRAM
+          attributes:
+            depth: 0
+            width: 0
+            datawidth: 0
+            n_rdwr_ports: 0
+      actions:
+        - name: access
+          subcomponents:
+            - name: storage
+              actions:
+                - name: idle
+

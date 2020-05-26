@@ -1,39 +1,36 @@
-flattened_architecture:
-  components:
-    simple_compound.GLB:
-      attributes:
-        technology: 40nm
-        buffer_depth: 1024
-        buffer_width: 32
-        buffer_n_rdwr_ports: 2
-        buffer_n_banks: 1
-        address_width: 10
-        voltage: 1V
-        latency: 5ns
-      class: AG_buffer_SRAM
-      name: simple_compound.GLB
-    simple_compound.PE[0..4].MAC:
-      attributes:
-        technology: 40nm
-        datawidth: 16
-        fifo_depth: 2
-        num_pipeline_stages: 1
-        voltage: 1V
-        latency: 5ns
-      class: mac_fifo
-      name: simple_compound.PE[4].MAC
-    simple_compound.PE[0..4].buffer:
-      attributes:
-        technology: 40nm
-        buffer_depth: 512
-        buffer_width: 32
-        buffer_n_ports: 2
-        address_width: 9
-        width: 16
-        depth: 24
-        voltage: 1V
-        latency: 5ns
-        datawidth: 16
-      class: AG_buffer_RF
-      name: simple_compound.PE[4].buffer
-  version: 0.2
+architecture:
+  version: 0.3
+  local:
+  - name: simple_compound.PE[0..4].MAC
+    class: mac_fifo
+    attributes:
+      datawidth: 16
+      fifo_depth: 2
+      latency: 5ns
+      num_pipeline_stages: 1
+      technology: 40nm
+      voltage: 1V
+  - name: simple_compound.PE[0..4].buffer
+    class: AG_buffer_RF
+    attributes:
+      address_width: 9
+      buffer_depth: 512
+      buffer_n_ports: 2
+      buffer_width: 32
+      datawidth: 16
+      depth: 24
+      latency: 5ns
+      technology: 40nm
+      voltage: 1V
+      width: 16
+  - name: simple_compound.GLB
+    class: AG_buffer_SRAM
+    attributes:
+      address_width: 10
+      buffer_depth: 1024
+      buffer_n_banks: 1
+      buffer_n_rdwr_ports: 2
+      buffer_width: 32
+      latency: 5ns
+      technology: 40nm
+      voltage: 1V
