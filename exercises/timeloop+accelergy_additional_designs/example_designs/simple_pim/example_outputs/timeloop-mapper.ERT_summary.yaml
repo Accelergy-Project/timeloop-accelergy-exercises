@@ -1,0 +1,78 @@
+ERT_summary:
+  version: 0.3
+  table_summary:
+  - name: system_arch.DRAM
+    actions:
+    - name: read
+      energy: 512
+    - name: write
+      energy: 512
+    - name: idle
+      energy: 0
+    primitive_estimation(s):
+    - name: system_arch.DRAM
+      estimator: Cacti
+  - name: system_arch.chip.PE[0..16383].scratchpad
+    actions:
+    - name: read
+      energy: 0.0
+    primitive_estimation(s):
+    - name: storage
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.PE[0..16383].mac
+    actions:
+    - name: compute
+      energy: 0.256
+    primitive_estimation(s):
+    - name: cell[0..7]
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.shared_glb
+    actions:
+    - name: write
+      average_energy: 21.359
+      max_energy: 42.209
+      min_energy: 0.509
+    - name: read
+      average_energy: 21.106
+      max_energy: 41.702
+      min_energy: 0.509
+    - name: idle
+      energy: 0.009
+    primitive_estimation(s):
+    - name: storage
+      estimator: Cacti
+    - name: address_generators[0]
+      estimator: table-based-plug-ins
+    - name: address_generators[1]
+      estimator: table-based-plug-ins
+    - name: address_generators[0..1]
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.dummy_buffer
+    actions:
+    - name: access
+      energy: 0
+    primitive_estimation(s):
+    - name: storage
+      estimator: dummy_table
+  - name: system_arch.chip.D2A_NoC
+    actions:
+    - name: transfer_Inputs
+      average_energy: 0.384
+      max_energy: 0.384
+      min_energy: 0.384
+    primitive_estimation(s):
+    - name: D2A_converter.DAC[0..7]
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.A2D_NoC
+    actions:
+    - name: transfer_Outputs
+      energy: 223.232
+    primitive_estimation(s):
+    - name: A2D_converter.SH[0..7]
+      estimator: table-based-plug-ins
+    - name: A2D_converter.ADC
+      estimator: table-based-plug-ins
+    - name: digital_accumulator.S_A
+      estimator: table-based-plug-ins
+    - name: digital_accumulator.outputBuffer
+      estimator: table-based-plug-ins

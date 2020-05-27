@@ -1,0 +1,4 @@
+name:  memristor_tables
+technology: memristor
+accuracy: 100
+path_to_data_dir: ./data # this is my own path

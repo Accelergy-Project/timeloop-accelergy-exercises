@@ -1,0 +1,96 @@
+architecture:
+  version: 0.3
+  local:
+  - name: system_arch.chip.PE[0..16383].scratchpad
+    class: memcell_storage
+    attributes:
+      cell_datawidth: 2
+      cell_technology: memristor
+      cmos_technology: 32nm
+      depth: 1
+      latency: 1ns
+      meshX: 128
+      meshY: 128
+      technology: 32nm
+      width: 16
+  - name: system_arch.chip.PE[0..16383].mac
+    class: memcell_compute
+    attributes:
+      DAC_datawidth: 1
+      cell_datawidth: 2
+      cell_technology: memristor
+      cmos_technology: 32nm
+      compute_latency: 100ns
+      datawidth: 16
+      latency: 1ns
+      meshX: 128
+      meshY: 128
+      nCells: 8.0
+      nCycles: 16.0
+      technology: 32nm
+  - name: system_arch.chip.shared_glb
+    class: smartbuffer_SRAM
+    attributes:
+      block-size: 4
+      latency: 1ns
+      memory_depth: 16384
+      memory_width: 64
+      n_banks: 32
+      n_buffets: 1
+      n_rdwr_ports: 2
+      network_read: D2A_NoC
+      network_update: A2D_NoC
+      read_bandwidth: 16
+      technology: 32nm
+      word-bits: 16
+      write_bandwidth: 16
+  - name: system_arch.chip.dummy_buffer
+    class: dummy_storage
+    attributes:
+      depth: 0
+      latency: 1ns
+      network_drain: A2D_NoC
+      network_fill: D2A_NoC
+      technology: 32nm
+      width: 16
+  - name: system_arch.chip.D2A_NoC
+    class: SimpleMulticast
+    subclass: DAC_SimpleMulticast
+    attributes:
+      DAC_datawidth: 1
+      action_name: transfer
+      cell_datawidth: 2
+      datawidth: 16
+      latency: 1ns
+      multicast_factor_argument: num_destinations
+      n_DAC_cycles: 16
+      n_PE_cols: 16
+      n_PE_rows: 16
+      num_converts: 16.0
+      per_datatype_ERT: true
+      technology: 32nm
+  - name: system_arch.chip.A2D_NoC
+    class: SimpleMulticast
+    subclass: ADC_SimpleMulticast
+    attributes:
+      A2D_convert_width: 16
+      ADC_datawidth: 8
+      action_name: transfer
+      cell_datawidth: 2
+      datawidth: 16
+      latency: 1ns
+      multicast_factor_argument: num_destinations
+      n_DAC_cycles: 16
+      n_PE_cols: 128
+      n_PE_rows: 128
+      per_datatype_ERT: true
+      technology: 32nm
+  - name: system_arch.DRAM
+    class: DRAM
+    attributes:
+      block-size: 4
+      datawidth: 16
+      latency: 1ns
+      technology: 32nm
+      type: LPDDR4
+      width: 64

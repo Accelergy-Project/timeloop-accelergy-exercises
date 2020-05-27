@@ -1,0 +1,41 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: ADC_SimpleMulticast
+      attributes:
+        technology: 45nm
+        latency: 1ns
+        datawidth: 16
+        A2D_convert_width: 16
+        ADC_datawidth: 8
+        cell_datawidth: 2
+        n_DAC_cycles: 16
+      subcomponents:
+        - name: A2D_converter
+          class: A2D_conversion_system
+          attributes:
+            technology: technology
+            latency: latency
+            datawidth: datawidth
+            ADC_datawidth: ADC_datawidth
+            cell_datawidth: cell_datawidth
+            n_DAC_cycles: n_DAC_cycles
+        - name: digital_accumulator
+          class: digital_accumulation_system
+          attributes:
+            technology: technology
+            latency: latency
+            datawidth: datawidth
+            cell_datawidth: cell_datawidth
+            n_DAC_cycles: n_DAC_cycles
+      actions:
+        - name: transfer_Outputs
+          arguments:
+            num_destinations: 1..1 # digital partial sums are only sent to global buffer
+          subcomponents:
+            - name: A2D_converter
+              actions:
+                - name: convert
+            - name: digital_accumulator
+              actions:
+                - name: accumulate

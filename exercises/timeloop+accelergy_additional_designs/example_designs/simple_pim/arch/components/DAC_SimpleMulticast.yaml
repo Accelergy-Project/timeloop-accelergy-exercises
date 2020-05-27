@@ -1,0 +1,29 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: DAC_SimpleMulticast
+      attributes:
+        technology: 45nm
+        latency: 1ns
+        datawidth: 16
+        DAC_datawidth: 1
+        cell_datawidth: 2
+        num_converts: datawidth/DAC_datawidth
+      subcomponents:
+        - name: D2A_converter
+          class: D2A_conversion_system
+          attributes:
+            technology: technology
+            latency: latency
+            datawidth: datawidth
+            DAC_datawidth: DAC_datawidth
+            cell_datawidth: cell_datawidth
+      actions:
+        - name: transfer_Inputs
+          arguments:
+            num_destinations: 1..n_PE_cols
+          subcomponents:
+            - name: D2A_converter
+              actions:
+                - name: convert
+                  action_share: n_PE_cols

@@ -1,0 +1,3 @@
+technology,datawidth,action,energy,area,comment
+32nm,1,convert,0.0033,1.66E-01,energy in pJ;  area in um^2
+32nm,1,idle,0,1.66E-01,

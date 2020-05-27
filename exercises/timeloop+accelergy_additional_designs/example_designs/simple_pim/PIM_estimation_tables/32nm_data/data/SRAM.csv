@@ -1,0 +1,7 @@
+technology,datawidth,width,depth,latency,action,address_delta,data_delta,energy,area,comment
+32nm,16,16,1152,1ns,read,1,1,1.23E+00,2870,energy in pJ;  area in um^2
+32nm,16,16,1152,1ns,write,1,1,1.23E+00,2870,
+32nm,16,16,1024,1ns,read,1,1,1.03E+00,2100,
+32nm,16,16,1024,1ns,write,1,1,1.03E+00,2100,
+32nm,16,16,128,1ns,read,1,1,1.92E-01,770,
+32nm,16,16,128,1ns,write,1,1,1.92E-01,770,

@@ -1,0 +1,7 @@
+technology,cellwidth,action,power(W),frequency,energy,area,comment
+memristor,2,read,0.00E+00,1.20E+09,0.00E+00,0,"energy in pJ;  area in mm^2, power"
+memristor,2,write,0.00E+00,1.20E+09,0.00E+00,0,
+memristor,2,idle,0.00E+00,1.20E+09,0.00E+00,0,
+memristor,1,read,0.00E+00,1.20E+09,0.00E+00,0,
+memristor,1,write,0.00E+00,1.20E+09,0.00E+00,0,
+memristor,1,idle,0.00E+00,1.20E+09,0.00E+00,0,

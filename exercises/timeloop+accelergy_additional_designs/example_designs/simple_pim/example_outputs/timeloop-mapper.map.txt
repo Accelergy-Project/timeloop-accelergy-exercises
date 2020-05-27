@@ -1,0 +1,22 @@
+
+DRAM [ Inputs:153228 Outputs:3211264 ] 
+--------------------------------------
+| for P in [0:56)
+
+shared_glb [ Inputs:4068 Outputs:57344 ] 
+----------------------------------------
+|   for Q in [0:8)
+
+dummy_buffer [ ] 
+----------------
+|     for Q in [0:7)
+|       for P in [0:4)
+|         for M in [0:64) (Spatial-Y)
+|           for C in [0:3) (Spatial-X)
+|             for S in [0:3) (Spatial-X)
+|               for R in [0:3) (Spatial-X)
+
+scratchpad [ Weights:1 ] 
+------------------------
+|                 for Q in [0:4)
+

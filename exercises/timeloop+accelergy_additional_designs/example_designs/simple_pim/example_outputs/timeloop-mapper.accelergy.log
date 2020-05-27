@@ -1,0 +1,48 @@
+    _                _                      
+   / \   ___ ___ ___| | ___ _ __ __ _ _   _ 
+  / _ \ / __/ __/ _ \ |/ _ \ '__/ _` | | | |
+ / ___ \ (_| (_|  __/ |  __/ | | (_| | |_| |
+/_/   \_\___\___\___|_|\___|_|  \__, |\__, |
+                                |___/ |___/ 
+
+Info: generating outputs according to the following specified output flags... 
+ Please use the -f flag to update the preference (default to all output files) 
+{'ERT': 1, 'ERT_summary': 1, 'ART': 1, 'ART_summary': 1, 'energy_estimation': 1, 'flattened_arch': 1}
+Info: Parsing file arch/system_PIM.yaml for architecture info 
+Info: Parsing file arch/components/A2D_conversion_system.yaml for compound_components info 
+Info: Parsing file arch/components/ADC_SimpleMulticast.yaml for compound_components info 
+Info: Parsing file arch/components/D2A_conversion_system.yaml for compound_components info 
+Info: Parsing file arch/components/DAC_SimpleMulticast.yaml for compound_components info 
+Info: Parsing file arch/components/digital_accumulation_system.yaml for compound_components info 
+Info: Parsing file arch/components/memcell_compute.yaml for compound_components info 
+Info: Parsing file arch/components/smartbuffer_SRAM.yaml for compound_components info 
+Info: Parsing file arch/components/storage.yaml for compound_components info 
+Warn: Cannot recognize the top key "problem" in file example_layer.yaml 
+Warn: Cannot recognize the top key "mapspace" in file constraints/constraints.yaml 
+Warn: Cannot recognize the top key "mapper" in file mapper/mapper.yaml 
+Info: config file located: /homes/nelliewu/.config/accelergy/accelergy_config.yaml 
+config file content: 
+ {'estimator_plug_ins': ['/homes/nelliewu/.local/share/accelergy/estimation_plug_ins/', '/u/eems/workspace8/nellie/research/accelergy_project/accelergy/share/estimation_plug_ins/', '/u/eems/workspace8/nellie/research/accelergy_project/PIM/PIM_plug_ins/ADC_plug_in', '/homes/nelliewu/anaconda3/share/accelergy/estimation_plug_ins/'], 'primitive_components': ['/u/eems/workspace8/nellie/research/accelergy_project/PIM/primitive_lib_files', '/u/eems/workspace8/nellie/research/accelergy_project/accelergy/share/primitive_component_libs/gem5_primitives.lib.yaml'], 'table_plug_ins': {'roots': ['/homes/nelliewu/.local/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/set_of_table_templates', '/u/eems/workspace8/nellie/research/accelergy_project/tutorial_related/timeloop-accelergy-exercises/exercises/accelergy/05_pim/PIM_estimation_tables', '/u/eems/workspace8/nellie/research/accelergy_project/cacti']}, 'version': 0.3}
+Info: primitive component file parsed:  /u/eems/workspace8/nellie/research/accelergy_project/PIM/primitive_lib_files/primitive_component.lib.yaml 
+Info: primitive component file parsed:  /u/eems/workspace8/nellie/research/accelergy_project/PIM/primitive_lib_files/isaac_specific.lib.yaml 
+Info: primitive component file parsed:  /u/eems/workspace8/nellie/research/accelergy_project/PIM/primitive_lib_files/memristor_related_primitive_component.lib.yaml 
+Info: primitive component file parsed:  /u/eems/workspace8/nellie/research/accelergy_project/accelergy/share/primitive_component_libs/gem5_primitives.lib.yaml 
+Info: estimator plug-in identified by:  /u/eems/workspace8/nellie/research/accelergy_project/accelergy/share/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
+Info: estimator plug-in identified by:  /u/eems/workspace8/nellie/research/accelergy_project/PIM/PIM_plug_ins/ADC_plug_in/ADC.estimator.yaml 
+Info: estimator plug-in identified by:  /homes/nelliewu/anaconda3/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml 
+Info: estimator plug-in identified by:  /homes/nelliewu/anaconda3/share/accelergy/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin.estimator.yaml 
+Info: estimator plug-in identified by:  /homes/nelliewu/anaconda3/share/accelergy/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
+Info: estimator plug-in identified by:  /homes/nelliewu/anaconda3/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/table.estimator.yaml 
+table-based-plug-ins Identifies a set of tables named:  32nm_tables
+table-based-plug-ins Identifies a set of tables named:  memristor_tables
+Info: CACTI plug-in... Querying CACTI for request:
+ {'class_name': 'SRAM', 'attributes': OrderedDict([('technology', '32nm'), ('width', 64), ('depth', 16384), ('n_rdwr_ports', 2), ('n_banks', 32), ('n_rd_ports', 0), ('n_wr_ports', 0), ('latency', '5ns')]), 'action_name': 'write', 'arguments': {'data_delta': 0, 'address_delta': 0}}
+ADC estimation: voltage not matched 1V
+Warn: No action counts are specified as yaml input 
+ADC estimation: voltage not matched 1V
+Info: flattened architecture is saved to: ./timeloop-mapper.flattened_architecture.yaml 
+Info: energy reference table is saved to: ./timeloop-mapper.ERT.yaml 
+Info: energy reference table summary is saved to: ./timeloop-mapper.ERT_summary.yaml 
+Warn: no runtime energy estimations are generated... not generating energy_estimation.yaml 
+Info: area reference table is saved to: ./timeloop-mapper.ART.yaml 
+Info: area reference table summary is saved to: ./timeloop-mapper.ART_summary.yaml 

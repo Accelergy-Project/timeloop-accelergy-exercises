@@ -1,0 +1,3 @@
+technology,datawidth,action,energy,area,comment
+32nm,16,shift_and_add,4.18E-02,60,energy in pJ;  area in um^2
+32nm,16,idle,0.00E+00,60,

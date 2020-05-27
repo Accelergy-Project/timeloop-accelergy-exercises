@@ -1,0 +1,4 @@
+name: 32nm_tables
+technology: 32nm
+accuracy: 100
+path_to_data_dir: ./data # this is my own path

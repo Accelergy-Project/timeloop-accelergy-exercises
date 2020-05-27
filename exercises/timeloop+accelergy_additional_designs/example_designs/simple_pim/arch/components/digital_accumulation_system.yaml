@@ -1,0 +1,53 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: digital_accumulation_system
+      attributes:
+        technology: 32nm
+        latency: 1ns
+        datawidth: 16
+        meshX: 128
+        meshY: 128
+        cell_datawidth: 2
+        n_DAC_cycles: 16
+        # derived parameters (automatically derived, but can be overridden from high-level)
+        nCells: datawidth/cell_datawidth
+        nArrays: nCells
+        total_S_As: nArrays  # each array share a shift and add
+        S_A_datawidth: datawidth
+        S_As_per_psum: nCells * n_DAC_cycles # temporal S_A computations
+        buffer_per_psum: n_DAC_cycles -2 # the first and last partial sums are not written into into this buffer
+      subcomponents:
+        - name: S_A
+          class: shift_and_add
+          attributes:
+            technology: technology
+            latency: latency
+            datawidth: S_A_datawidth
+        - name: outputBuffer
+          class: SRAM
+          attributes:
+            technology: technology
+            latency: latency
+            width: 16
+            depth: 128
+            datawidth: 16
+      actions:
+        - name: accumulate
+          subcomponents:
+            - name: S_A # assume this S_A is fast enough to do the computations needed in one cycle
+              actions:
+                - name: shift_and_add
+                  action_share: S_As_per_psum
+            - name: outputBuffer
+              actions:
+                - name: read
+                  arguments:
+                    address_delta: 1
+                    data_delta: 1
+                  action_share: buffer_per_psum
+                - name: write
+                  arguments:
+                    address_delta: 1
+                    data_delta: 1
+                  action_share: buffer_per_psum

@@ -1,0 +1,44 @@
+ART_summary:
+  version: 0.3
+  table_summary:
+  - name: system_arch.DRAM
+    area: 1
+    primitive_estimations: dummy_table
+  - name: system_arch.chip.PE[0..16383].scratchpad
+    area: 0.0
+    primitive_estimations:
+    - name: storage
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.PE[0..16383].mac
+    area: 0.016
+    primitive_estimations:
+    - name: cell[0..7]
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.shared_glb
+    area: 592148.0
+    primitive_estimations:
+    - name: storage
+      estimator: Cacti
+    - name: address_generators[0..1]
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.dummy_buffer
+    area: 1
+    primitive_estimations:
+    - name: storage
+      estimator: dummy_table
+  - name: system_arch.chip.D2A_NoC
+    area: 169.984
+    primitive_estimations:
+    - name: D2A_converter.DAC[0..1023]
+      estimator: table-based-plug-ins
+  - name: system_arch.chip.A2D_NoC
+    area: 2032.496
+    primitive_estimations:
+    - name: A2D_converter.SH[0..63]
+      estimator: table-based-plug-ins
+    - name: A2D_converter.ADC
+      estimator: table-based-plug-ins
+    - name: digital_accumulator.S_A
+      estimator: table-based-plug-ins
+    - name: digital_accumulator.outputBuffer
+      estimator: table-based-plug-ins

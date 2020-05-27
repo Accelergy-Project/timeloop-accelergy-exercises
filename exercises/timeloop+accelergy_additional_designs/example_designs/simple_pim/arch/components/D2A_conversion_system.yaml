@@ -1,0 +1,33 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: D2A_conversion_system
+      attributes:
+        technology: 32nm
+        latency: 1ns
+        datawidth: 16
+        meshX: 128
+        meshY: 128
+        DAC_datawidth: 1
+        cell_datawidth: 2
+        # derived parameters (automatically derived, but can be overridden from high-level)
+        nCells: datawidth/cell_datawidth
+        nArrays: nCells
+        nCycles: datawidth/DAC_datawidth
+        total_DACs: nArrays * meshY # each array has meshY number of DACs
+        DAC_converts_per_psum: nCycles
+      subcomponents:
+        - name: DAC[0..total_DACs-1]
+          class: DAC
+          attributes:
+            technology: technology
+            latency: latency
+            datawidth: DAC_datawidth
+      actions:
+        - name: convert
+          subcomponents:
+            # each row in an array of LMACs need one DAC
+            - name: DAC[0..nArrays-1]
+              actions:
+                - name: convert
+                  action_share: nCycles

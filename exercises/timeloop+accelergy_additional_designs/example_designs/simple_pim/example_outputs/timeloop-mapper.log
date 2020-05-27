@@ -1,0 +1,26 @@
+[  7] Utilization = 0.01 | pJ/MACC =   14.462
+[  0] Utilization = 0.01 | pJ/MACC =   14.468
+[  3] Utilization = 0.01 | pJ/MACC =   14.468
+[  6] Utilization = 0.01 | pJ/MACC =   14.462
+[  5] Utilization = 0.01 | pJ/MACC =   14.462
+[  2] Utilization = 0.01 | pJ/MACC =   14.468
+[  1] Utilization = 0.01 | pJ/MACC =   14.468
+[  4] Utilization = 0.01 | pJ/MACC =   14.464
+[  1] Utilization = 0.01 | pJ/MACC =   14.464
+[  0] Utilization = 0.01 | pJ/MACC =   14.464
+[  2] Utilization = 0.01 | pJ/MACC =   14.464
+[  3] Utilization = 0.01 | pJ/MACC =   14.464
+[  2] Utilization = 0.01 | pJ/MACC =   14.462
+[  1] Utilization = 0.01 | pJ/MACC =   14.462
+[  0] Utilization = 0.01 | pJ/MACC =   14.462
+[  4] Utilization = 0.01 | pJ/MACC =   14.462
+[  3] Utilization = 0.01 | pJ/MACC =   14.462
+Interrupt caught. Mapper threads will terminate after completing any ongoing evaluations.
+[  0] STATEMENT: global termination flag activated, terminating search.
+[  5] STATEMENT: global termination flag activated, terminating search.
+[  6] STATEMENT: global termination flag activated, terminating search.
+[  4] STATEMENT: global termination flag activated, terminating search.
+[  1] STATEMENT: global termination flag activated, terminating search.
+[  3] STATEMENT: global termination flag activated, terminating search.
+[  7] STATEMENT: global termination flag activated, terminating search.
+[  2] STATEMENT: global termination flag activated, terminating search.
