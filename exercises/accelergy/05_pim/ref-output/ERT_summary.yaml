@@ -15,10 +15,10 @@ ERT_summary:
   - name: system_arch.chip.PE[0..16383].scratchpad
     actions:
     - name: read
-      energy: 0
+      energy: 0.0
     primitive_estimation(s):
     - name: storage
-      estimator: dummy_table
+      estimator: table-based-plug-ins
   - name: system_arch.chip.PE[0..16383].mac
     actions:
     - name: compute
@@ -66,12 +66,12 @@ ERT_summary:
   - name: system_arch.chip.A2D_NoC
     actions:
     - name: transfer_Outputs
-      energy: 138.752
+      energy: 223.232
     primitive_estimation(s):
     - name: A2D_converter.SH[0..7]
       estimator: table-based-plug-ins
     - name: A2D_converter.ADC
-      estimator: dummy_table
+      estimator: table-based-plug-ins
     - name: digital_accumulator.S_A
       estimator: table-based-plug-ins
     - name: digital_accumulator.outputBuffer

@@ -59,7 +59,7 @@ architecture:
     subclass: ADC_SimpleMulticast
     attributes:
       A2D_convert_width: 16
-      ADC_datawidth: 9
+      ADC_datawidth: 8
       cell_datawidth: 2
       datawidth: 16
       latency: 1ns

@@ -16,7 +16,7 @@ ERT:
     actions:
     - name: read
       arguments: null
-      energy: 0
+      energy: 0.0
   - name: system_arch.chip.PE[0..16383].mac
     actions:
     - name: compute
@@ -763,4 +763,4 @@ ERT:
     - name: transfer_Outputs
       arguments:
         num_destinations: 1
-      energy: 138.752
+      energy: 223.232

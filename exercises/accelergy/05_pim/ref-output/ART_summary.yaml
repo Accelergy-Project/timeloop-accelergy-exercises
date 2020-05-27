@@ -5,10 +5,10 @@ ART_summary:
     area: 1
     primitive_estimations: dummy_table
   - name: system_arch.chip.PE[0..16383].scratchpad
-    area: 1
+    area: 0.0
     primitive_estimations:
     - name: storage
-      estimator: dummy_table
+      estimator: table-based-plug-ins
   - name: system_arch.chip.PE[0..16383].mac
     area: 0.016
     primitive_estimations:
@@ -32,12 +32,12 @@ ART_summary:
     - name: D2A_converter.DAC[0..1023]
       estimator: table-based-plug-ins
   - name: system_arch.chip.A2D_NoC
-    area: 833.496
+    area: 2032.496
     primitive_estimations:
     - name: A2D_converter.SH[0..63]
       estimator: table-based-plug-ins
     - name: A2D_converter.ADC
-      estimator: dummy_table
+      estimator: table-based-plug-ins
     - name: digital_accumulator.S_A
       estimator: table-based-plug-ins
     - name: digital_accumulator.outputBuffer

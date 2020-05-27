@@ -41,7 +41,7 @@ architecture:
               subclass: ADC_SimpleMulticast  # accelergy class
               attributes:
                 datawidth: 16
-                ADC_datawidth: 9
+                ADC_datawidth: 8
                 cell_datawidth: 2
                 n_DAC_cycles: 16    # number of cycles needed for a DAC to convert a datawidth-bit data = datawidth/DAC_datawidth
                 n_PE_cols: 128
