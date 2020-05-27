@@ -1,0 +1,25 @@
+ART:
+  version: 0.3
+  tables:
+  - name: system.eyeriss.PE[0..191].mac
+    area: 1239.5
+  - name: system.eyeriss.DummyBuffer[0..15]
+    area: 235.68
+  - name: system.DRAM
+    area: 1
+  - name: system.eyeriss.PE[0..191].ifmap_spad
+    area: 379.68
+  - name: system.eyeriss.PE[0..191].weights_spad
+    area: 3634.68
+  - name: system.eyeriss.PE[0..191].psum_spad
+    area: 414.68
+  - name: system.eyeriss.shared_glb
+    area: 918862.0
+  - name: system.eyeriss.ifmap_NoC
+    area: 1575.0
+  - name: system.eyeriss.weights_NoC
+    area: 1575.0
+  - name: system.eyeriss.psum_write_NoC
+    area: 1575.0
+  - name: system.eyeriss.psum_read_NoC
+    area: 1575.0
