@@ -22,7 +22,7 @@ Study the three alternative constraints files in `constraints`:
    1. `conv1d+oc-3level-1mapping.constraints.yaml`. In this example, we have abused the constraints system to completely "bake" every single variable of the mapspace to reduce it down to a size of 1. In fact, this single remaining mapping is identical to the mapping we used in Exercise 3 (`map/conv1d+oc-3level.map.yaml`). The syntax is nearly identical, but the semantics are subtly different. You can express inequalities in constraints (e.g., `K<=16`), and permutations can be partially constrained.
    2. `conv1d+oc-3level-freebypass.constraints.yaml`: In this example, we lock down all factorizations and permutations in the mapping, but leave bypassing un-specified. This allows the mapper to explore all bypassing options.
       > Be careful about how Bypass directives are treated by the model vs. the mapper. If you don't specify any bypass directives in a mapping, the model assumes they are set to `keep` (i.e., do not bypass). Remember that a mapping cannot have any non-determinism. However, the mapper treats anything left un-specified in the constraints as options to explore in the mapspace. If you want to lock down a specific bypass strategy, you need to create an explicit constraint to restrict the mapper.
-   3. `constraints/null.constraints.yaml`: In this example, we remove all constraints and let the mapper explore the complete mapspace.
+   3. `null.constraints.yaml`: In this example, we remove all constraints and let the mapper explore the complete mapspace.
 
 Can you mentally calculate the size of the mapspace for each of these?
 
