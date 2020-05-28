@@ -26,10 +26,9 @@ This generates the following outputs:
 ## Observations
 
 - Look at the structure of the `timeloop-model.stats.txt` file.
-  - It is divided into sections, one for each Arithmetic and Storage level in the hardware topology.
+  - It is divided into two main sections, one for Storage and Arithmetic levels, and the other for Networks connecting those levels. The Storage and Arithmetic section is itself divided into subsections, one for each Arithmetic and Storage level in the hardware topology.
   - Each section reports the level's specs (which may be user-defined, derived or default), followed by statistics from the model's execution of the mapping.
   - Some statistics are separated out into sub-sections for each data-space (such as Weights, Inputs, etc.)
-  - By convention, statistics for a network connecting an outer storage level to an inner storage level are reported as part of the outer level's statistics.
   - In these exercises, some statistics are reported as 0 because we are using a simple technology model plugin for Accelergy for this tutorial.
   - At the tail-end of the file are some aggregate statistics representing net performance and energy-efficiency. In many studies, we simply `tail` the stats file to obtain these summary statistics.
 - The only storage level is `Buffer`, which both acts as the backing store for all operand and result data-spaces, as well as the sole operand source and result destination for each arithmetic operation.
