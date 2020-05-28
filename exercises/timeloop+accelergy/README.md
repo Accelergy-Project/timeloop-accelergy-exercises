@@ -13,11 +13,11 @@ To combine them, we will provide detailed design descriptions for the system and
 The following command uses Timeloop to find a good mapping to run on an Eyeriss-like architecture:
 
 ```
-timeloop-mapper arch/eyeriss-192-int16.arch.yaml \
+timeloop-mapper arch/eyeriss_like-int16.arch.yaml \
                 arch/components/*.yaml \
-                prob/cnn-layer.prob.yaml \
+                prob/prob.yaml \
                 mapper/mapper.yaml \
-                constraints/cnn-layer-eyeriss-192-rs.constraints.yaml
+                constraints/*.yaml
 ```
 
 Take a look at `timeloop-model.stats.txt` output file. What's the energy breakdown and system utilization?
@@ -30,11 +30,12 @@ Using those provided files, there are many interesting experiments we can explor
     Data type and precision are critical to DNN accelerators. What if we want to build an accelerator operate on different data types? The following command evaluate running an Eyeriss-like architecture with floating-point input, weights, and output:
 
     ```
-    timeloop-mapper arch/eyeriss-192-fp32.arch.yaml \
-                    arch/components/*.yaml \
-                    prob/cnn-layer.prob.yaml \
-                    mapper/mapper.yaml \
-                    constraints/cnn-layer-eyeriss-192-rs.constraints.yaml
+    timeloop-mapper arch/eyeriss_like-float32.arch.yaml \
+                arch/components/*.yaml \
+                prob/prob.yaml \
+                mapper/mapper.yaml \
+                constraints/*.yaml
+
     ```
 
     As before, Timeloop produces a `timeloop-model.stats.txt` file with detailed execution statistics. You should see MAC energy increases significantly, showing the cost of operating on floating-point data. Compare two arch.yaml and see how they are different from each other. What if we use the same bandwidth for the floating-point design at the PE level?
