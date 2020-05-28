@@ -9,16 +9,16 @@ ART_summary:
     - name: output_fifo
       estimator: Aladdin_table
   - name: simple_compound.PE[0..4].buffer
-    area: 10412.266
+    area: 537.18
     primitive_estimations:
-    - name: address_generators[0..1]
+    - name: storage
       estimator: Aladdin_table
-    - name: buffer
+    - name: address_generators[0..1]
       estimator: Aladdin_table
   - name: simple_compound.GLB
-    area: 23183.962
+    area: 39629.0
     primitive_estimations:
+    - name: storage
+      estimator: Cacti
     - name: address_generators[0..1]
       estimator: Aladdin_table
-    - name: buffer
-      estimator: Cacti

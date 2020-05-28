@@ -18,20 +18,20 @@ ERT_summary:
       estimator: Aladdin_table
   - name: simple_compound.PE[0..4].buffer
     actions:
-    - name: read
-      average_energy: 2.306
-      max_energy: 4.524
-      min_energy: 0.087
     - name: write
-      average_energy: 2.306
-      max_energy: 4.524
-      min_energy: 0.087
+      average_energy: 0.178
+      max_energy: 0.302
+      min_energy: 0.055
+    - name: read
+      average_energy: 0.178
+      max_energy: 0.302
+      min_energy: 0.055
     - name: idle
-      energy: 0.029
+      energy: 0.018
     primitive_estimation(s):
-    - name: address_generators[0]
+    - name: storage
       estimator: Aladdin_table
-    - name: buffer
+    - name: address_generators[0]
       estimator: Aladdin_table
     - name: address_generators[1]
       estimator: Aladdin_table
@@ -39,21 +39,21 @@ ERT_summary:
       estimator: Aladdin_table
   - name: simple_compound.GLB
     actions:
-    - name: read
-      average_energy: 2.023
-      max_energy: 3.982
-      min_energy: 0.064
     - name: write
-      average_energy: 1.867
-      max_energy: 3.669
-      min_energy: 0.064
+      average_energy: 3.427
+      max_energy: 6.804
+      min_energy: 0.049
+    - name: read
+      average_energy: 2.944
+      max_energy: 5.839
+      min_energy: 0.049
     - name: idle
-      energy: 0.0
+      energy: 0.012
     primitive_estimation(s):
+    - name: storage
+      estimator: Cacti
     - name: address_generators[0]
       estimator: Aladdin_table
-    - name: buffer
-      estimator: Cacti
     - name: address_generators[1]
       estimator: Aladdin_table
     - name: address_generators[0..1]

@@ -8,29 +8,28 @@ architecture:
       fifo_depth: 2
       latency: 5ns
       num_pipeline_stages: 1
-      technology: 40nm
+      technology: 45nm
       voltage: 1V
   - name: simple_compound.PE[0..4].buffer
-    class: AG_buffer_RF
+    class: smartbuffer_RF
     attributes:
-      address_width: 9
-      buffer_depth: 512
-      buffer_n_ports: 2
-      buffer_width: 32
       datawidth: 16
-      depth: 24
       latency: 5ns
-      technology: 40nm
+      memory_depth: 24
+      memory_width: 16
+      n_banks: 1
+      n_buffets: 1
+      n_rdwr_ports: 2
+      technology: 45nm
       voltage: 1V
-      width: 16
   - name: simple_compound.GLB
-    class: AG_buffer_SRAM
+    class: smartbuffer_SRAM
     attributes:
-      address_width: 10
-      buffer_depth: 1024
-      buffer_n_banks: 1
-      buffer_n_rdwr_ports: 2
-      buffer_width: 32
       latency: 5ns
-      technology: 40nm
+      memory_depth: 1024
+      memory_width: 32
+      n_banks: 4
+      n_buffets: 1
+      n_rdwr_ports: 2
+      technology: 45nm
       voltage: 1V
