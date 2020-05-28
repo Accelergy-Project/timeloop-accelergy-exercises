@@ -1,3 +1,0 @@
-mapper:
-  optimization-metric: [ delay, energy ]
-  live-status: True
