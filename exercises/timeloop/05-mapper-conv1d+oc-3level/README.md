@@ -45,11 +45,11 @@ Run all 3 experiments.
       timeloop-mapper arch/3level.arch.yaml         \
                       prob/conv1d+oc.prob.yaml      \
                       mapper/exhaustive.mapper.yaml \
-                      constraints/conv1d+oc-3level-baked.constraints.yaml
+                      constraints/conv1d+oc-3level-1mapping.constraints.yaml
       ```
       1. Observe the output log. Timeloop prints out the size of the mapspace in each dimension. The total size of the mapspace is the product of all these mapspace dimensions. Everything is 1 in this example because the mapspace is completely locked down.
       2. Compare the results with the default mapping provided in Exercise 3. The numbers should be identical.
-2. Now run the mapper with `conv1d+oc-3level-nobypass.constraints.yaml`. Recall that our objective here is to let the mapper find the best bypassing strategy for a given set of factorization and permutations.
+2. Now run the mapper with `conv1d+oc-3level-freebypass.constraints.yaml`. Recall that our objective here is to let the mapper find the best bypassing strategy for a given set of factorization and permutations.
       1. Observe from the log that all mapspace sizes are 1 _except_ for the `DatatypeBypass` subspace.
       2. Compare the results with what you obtained in Exercise 3. Were you able to find this mapping?
 3. Now run the mapper with `null.constraints.yaml`. This may take a few seconds. If you wish, you can comment out the `num-threads` directive in `mapper/exhaustive.mapper.yaml`. You can also hit Ctrl+C to interrupt the search. It will terminate graceully and emit the optimal mapping it found so far.
