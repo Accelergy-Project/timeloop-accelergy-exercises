@@ -8,13 +8,13 @@ Level 0
     -----
     Word bits            : 8
     Instances            : 1 (1*1)
-    Energy-per-op        : 0.60 pJ
+    Energy-per-op        : 0.56 pJ
 
     STATS
     -----
     Utilized instances   : 1
     Cycles               : 48
-    Energy (total)       : 28.94 pJ
+    Energy (total)       : 26.93 pJ
     Area (total)         : 0.00 um^2
 
 Level 1
@@ -23,15 +23,14 @@ Level 1
 
     SPECS
     -----
-    Shared:
         Technology           : SRAM
         Size                 : 64
         Word bits            : 8
         Block size           : 1
         Cluster size         : 1
         Instances            : 1 (1*1)
-        Read bandwidth       : 2.67
-        Write bandwidth      : 1.77
+        Read bandwidth       : -
+        Write bandwidth      : -
         Multiple buffering   : 1.00
         Effective size       : 64
         Min utilization      : 0.00
@@ -64,10 +63,10 @@ Level 1
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
-        Read Bandwidth (per-instance)            : 1.00 bytes/cycle
-        Read Bandwidth (total)                   : 1.00 bytes/cycle
-        Write Bandwidth (per-instance)           : 0.06 bytes/cycle
-        Write Bandwidth (total)                  : 0.06 bytes/cycle
+        Read Bandwidth (per-instance)            : 1.00 words/cycle
+        Read Bandwidth (total)                   : 1.00 words/cycle
+        Write Bandwidth (per-instance)           : 0.06 words/cycle
+        Write Bandwidth (total)                  : 0.06 words/cycle
     Inputs:
         Partition size                           : 18
         Utilized capacity                        : 16
@@ -85,10 +84,10 @@ Level 1
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
-        Read Bandwidth (per-instance)            : 1.00 bytes/cycle
-        Read Bandwidth (total)                   : 1.00 bytes/cycle
-        Write Bandwidth (per-instance)           : 0.38 bytes/cycle
-        Write Bandwidth (total)                  : 0.38 bytes/cycle
+        Read Bandwidth (per-instance)            : 1.00 words/cycle
+        Read Bandwidth (total)                   : 1.00 words/cycle
+        Write Bandwidth (per-instance)           : 0.38 words/cycle
+        Write Bandwidth (total)                  : 0.38 words/cycle
     Outputs:
         Partition size                           : 16
         Utilized capacity                        : 16
@@ -106,12 +105,10 @@ Level 1
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
-        Read Bandwidth (per-instance)            : 0.67 bytes/cycle
-        Read Bandwidth (total)                   : 0.67 bytes/cycle
-        Write Bandwidth (per-instance)           : 1.33 bytes/cycle
-        Write Bandwidth (total)                  : 1.33 bytes/cycle
-    Shared:
-        Area (per-instance)                      : 0.00 um2
+        Read Bandwidth (per-instance)            : 0.67 words/cycle
+        Read Bandwidth (total)                   : 0.67 words/cycle
+        Write Bandwidth (per-instance)           : 1.33 words/cycle
+        Write Bandwidth (total)                  : 1.33 words/cycle
 
 Level 2
 -------
@@ -119,15 +116,14 @@ Level 2
 
     SPECS
     -----
-    Shared:
         Technology           : SRAM
         Size                 : 262144
         Word bits            : 8
         Block size           : 8
         Cluster size         : 1
         Instances            : 1 (1*1)
-        Read bandwidth       : 0.44
-        Write bandwidth      : 0.33
+        Read bandwidth       : -
+        Write bandwidth      : -
         Multiple buffering   : 1.00
         Effective size       : 262144
         Min utilization      : 0.00
@@ -160,10 +156,10 @@ Level 2
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
-        Read Bandwidth (per-instance)            : 0.06 bytes/cycle
-        Read Bandwidth (total)                   : 0.06 bytes/cycle
-        Write Bandwidth (per-instance)           : 0.00 bytes/cycle
-        Write Bandwidth (total)                  : 0.00 bytes/cycle
+        Read Bandwidth (per-instance)            : 0.06 words/cycle
+        Read Bandwidth (total)                   : 0.06 words/cycle
+        Write Bandwidth (per-instance)           : 0.00 words/cycle
+        Write Bandwidth (total)                  : 0.00 words/cycle
     Inputs:
         Partition size                           : 18
         Utilized capacity                        : 18
@@ -181,10 +177,10 @@ Level 2
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
-        Read Bandwidth (per-instance)            : 0.38 bytes/cycle
-        Read Bandwidth (total)                   : 0.38 bytes/cycle
-        Write Bandwidth (per-instance)           : 0.00 bytes/cycle
-        Write Bandwidth (total)                  : 0.00 bytes/cycle
+        Read Bandwidth (per-instance)            : 0.38 words/cycle
+        Read Bandwidth (total)                   : 0.38 words/cycle
+        Write Bandwidth (per-instance)           : 0.00 words/cycle
+        Write Bandwidth (total)                  : 0.00 words/cycle
     Outputs:
         Partition size                           : 16
         Utilized capacity                        : 16
@@ -202,12 +198,10 @@ Level 2
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
-        Read Bandwidth (per-instance)            : 0.00 bytes/cycle
-        Read Bandwidth (total)                   : 0.00 bytes/cycle
-        Write Bandwidth (per-instance)           : 0.33 bytes/cycle
-        Write Bandwidth (total)                  : 0.33 bytes/cycle
-    Shared:
-        Area (per-instance)                      : 0.00 um2
+        Read Bandwidth (per-instance)            : 0.00 words/cycle
+        Read Bandwidth (total)                   : 0.00 words/cycle
+        Write Bandwidth (per-instance)           : 0.33 words/cycle
+        Write Bandwidth (total)                  : 0.33 words/cycle
 
 Networks
 --------
@@ -215,12 +209,17 @@ Network 0
 ---------
 Buffer <==> MACC
 
-    NETWORK SPECS
-    -------------
-    Shared:
+    SPECS
+    -----
+        Type            : Legacy
+        Legacy sub-type : 
+        ConnectionType  : 3
+        Word bits       : 8
+        Router energy   : - pJ
+        Wire energy     : - pJ/b/mm
 
-    NETWORK STATS
-    -------------
+    STATS
+    -----
     Weights:
         Fanout                                  : 1
         Fanout (distributed)                    : 0
@@ -274,12 +273,17 @@ Network 1
 ---------
 MainMemory <==> Buffer
 
-    NETWORK SPECS
-    -------------
-    Shared:
+    SPECS
+    -----
+        Type            : Legacy
+        Legacy sub-type : 
+        ConnectionType  : 3
+        Word bits       : 8
+        Router energy   : - pJ
+        Wire energy     : - pJ/b/mm
 
-    NETWORK STATS
-    -------------
+    STATS
+    -----
     Weights:
         Fanout                                  : 1
         Fanout (distributed)                    : 0
@@ -329,7 +333,7 @@ MainMemory <==> Buffer
         Spatial Reduction Energy (per-instance) : 0.00 pJ
         Spatial Reduction Energy (total)        : 0.00 pJ
 
-Total topology energy: 357.67 pJ
+Total topology energy: 355.66 pJ
 Total topology area: 0.00 um^2
 Max topology cycles: 48
 
@@ -342,8 +346,10 @@ Area: 0.00 mm^2
 
 MACCs = 48
 pJ/MACC
-    MACC                    = 0.60
-    Buffer                  = 1.86
-    MainMemory              = 4.98
-    Total                   = 7.45
+    MACC                   = 0.56
+    Buffer                 = 1.86
+    MainMemory             = 4.98
+    Buffer <==> MACC       = 0.00
+    MainMemory <==> Buffer = 0.00
+    Total                  = 7.41
 

@@ -1,0 +1,15 @@
+ART_summary:
+  version: 0.3
+  table_summary:
+  - name: System.Chip.PE.RegisterFile
+    area: 887.84
+    primitive_estimations: Aladdin_table
+  - name: System.Chip.PE.MACC
+    area: 332.25
+    primitive_estimations: Aladdin_table
+  - name: System.Chip.GlobalBuffer
+    area: 679274.0
+    primitive_estimations: Cacti
+  - name: System.MainMemory
+    area: 1
+    primitive_estimations: dummy_table

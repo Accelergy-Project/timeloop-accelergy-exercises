@@ -1,0 +1,41 @@
+architecture:
+  version: 0.3
+  local:
+  - name: System.Chip.PE.RegisterFile[0..15]
+    class: regfile
+    attributes:
+      block-size: 1
+      depth: 64
+      latency: 5ns
+      n_ports: 2
+      technology: 40nm
+      width: 8
+      word-bits: 8
+  - name: System.Chip.PE.MACC[0..15]
+    class: intmac
+    attributes:
+      datawidth: 8
+      latency: 5ns
+      num_pipeline_stages: 2
+      technology: 40nm
+  - name: System.Chip.GlobalBuffer
+    class: SRAM
+    attributes:
+      block-size: 32
+      depth: 8192
+      latency: 5ns
+      n_banks: 1
+      n_rd_ports: 0
+      n_rdwr_ports: 1
+      n_wr_ports: 0
+      technology: 40nm
+      width: 256
+      word-bits: 8
+  - name: System.MainMemory
+    class: DRAM
+    attributes:
+      block-size: 32
+      technology: 65nm
+      type: LPDDR4
+      width: 256
+      word-bits: 8
