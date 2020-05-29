@@ -1,0 +1,55 @@
+#
+# The following constraints are limitations of the hardware architecture and dataflow
+#
+
+architecture_constraints:
+  targets:
+  # certain buffer only stores certain datatypes
+  - target: psum_spad
+    type: bypass
+    bypass: [Inputs, Weights]
+    keep: [Outputs]
+  - target: weights_spad
+    type: bypass
+    bypass: [Inputs, Outputs]
+    keep: [Weights]
+  - target: ifmap_spad
+    type: bypass
+    bypass: [Weights, Outputs]
+    keep: [Inputs]
+  - target: DummyBuffer
+    type: bypass
+    bypass: [Inputs, Outputs, Weights]
+  - target: shared_glb
+    type: bypass
+    bypass: [Weights]
+    keep: [Inputs, Outputs]
+  - target: DummyBuffer
+    type: spatial
+    split: 4
+    permutation: NPQR SCM
+    factors: N=1 P=1 Q=1 R=1 S=0
+  # only allow fanout of M, Q out from glb
+  - target: shared_glb
+    type: spatial
+    split: 7
+    permutation: NCPRSQM
+    factors: N=1 C=1 P=1 R=1 S=1
+  # one ofmap position but of different output channels
+  - target: psum_spad
+    type: temporal
+    permutation: NCPQRS M
+    factors: N=1 C=1 R=1 S=1 P=1 Q=1
+  # row stationary -> 1 row at a time
+  - target: weights_spad
+    type: temporal
+    permutation: NMPQS CR
+    factors: N=1 M=1 P=1 Q=1 S=1 R=0
+  - target: ifmap_spad
+    type: temporal
+    permutation: NMCPQRS
+    factors: N=1 M=1 C=1 P=1 Q=1 R=1 S=1
+  # enforce the hardware limit of the bypassing everything
+  - target: DummyBuffer
+    type: temporal
+    factors: N=1 M=1 C=1 P=1 Q=1 R=1 S=1

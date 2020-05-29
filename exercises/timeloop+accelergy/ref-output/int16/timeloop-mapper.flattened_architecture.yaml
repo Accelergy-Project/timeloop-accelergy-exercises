@@ -1,0 +1,86 @@
+architecture:
+  version: 0.3
+  local:
+  - name: system.eyeriss.PE[0..167].ifmap_spad
+    class: smartbuffer_RF
+    attributes:
+      block-size: 1
+      memory_depth: 12
+      memory_width: 16
+      meshX: 14
+      n_banks: 1
+      n_buffets: 1
+      n_rdwr_ports: 2
+      read_bandwidth: 2
+      technology: 45nm
+      word-bits: 16
+      write_bandwidth: 2
+  - name: system.eyeriss.PE[0..167].weights_spad
+    class: smartbuffer_RF
+    attributes:
+      block-size: 1
+      memory_depth: 192
+      memory_width: 16
+      meshX: 14
+      n_banks: 1
+      n_buffets: 1
+      n_rdwr_ports: 2
+      read_bandwidth: 2
+      technology: 45nm
+      word-bits: 16
+      write_bandwidth: 2
+  - name: system.eyeriss.PE[0..167].psum_spad
+    class: smartbuffer_RF
+    attributes:
+      block-size: 1
+      memory_depth: 16
+      memory_width: 16
+      meshX: 14
+      n_banks: 1
+      n_buffets: 1
+      n_rdwr_ports: 2
+      read_bandwidth: 2
+      technology: 45nm
+      update_fifo_depth: 2
+      word-bits: 16
+      write_bandwidth: 2
+  - name: system.eyeriss.PE[0..167].mac
+    class: intmac
+    attributes:
+      datawidth: 16
+      latency: 5ns
+      meshX: 14
+      num_pipeline_stages: 2
+      technology: 45nm
+  - name: system.eyeriss.shared_glb
+    class: smartbuffer_SRAM
+    attributes:
+      block-size: 4
+      memory_depth: 16384
+      memory_width: 64
+      n_banks: 32
+      n_buffets: 1
+      n_rdwr_ports: 2
+      read_bandwidth: 16
+      technology: 45nm
+      word-bits: 16
+      write_bandwidth: 16
+  - name: system.eyeriss.DummyBuffer[0..13]
+    class: regfile
+    attributes:
+      block-size: 1
+      depth: 16
+      latency: 5ns
+      meshX: 14
+      n_ports: 2
+      technology: 45nm
+      width: 16
+      word-bits: 16
+  - name: system.DRAM
+    class: DRAM
+    attributes:
+      block-size: 4
+      technology: 65nm
+      type: LPDDR4
+      width: 64
+      word-bits: 16
