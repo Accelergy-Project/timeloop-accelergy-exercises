@@ -20,7 +20,7 @@ timeloop-mapper arch/eyeriss_like-int16.arch.yaml \
                 constraints/*.yaml
 ```
 
-Take a look at `timeloop-model.stats.txt` output file. What's the energy breakdown and system utilization?
+Take a look at `timeloop-mapper.stats.txt` output file. What's the energy breakdown and system utilization?
 
 ## Example experiments
 Using those provided files, there are many interesting experiments we can explore.
@@ -31,14 +31,13 @@ Using those provided files, there are many interesting experiments we can explor
 
     ```
     timeloop-mapper arch/eyeriss_like-float32.arch.yaml \
-                arch/components/*.yaml \
-                prob/prob.yaml \
-                mapper/mapper.yaml \
-                constraints/*.yaml
-
+                    arch/components/*.yaml \
+                    prob/prob.yaml \
+                    mapper/mapper.yaml \
+                    constraints/*.yaml
     ```
 
-    As before, Timeloop produces a `timeloop-model.stats.txt` file with detailed execution statistics. You should see MAC energy increases significantly, showing the cost of operating on floating-point data. Compare two arch.yaml and see how they are different from each other. What if we use the same bandwidth for the floating-point design at the PE level?
+    As before, Timeloop produces a `timeloop-mapper.stats.txt` file with detailed execution statistics. You should see MAC energy increases significantly, showing the cost of operating on floating-point data. Compare two arch.yaml and see how they are different from each other. What if we use the same bandwidth for the floating-point design at the PE level?
 
     > Note: Search for `Bandwidth throttling` to see how memory hierarchy bandwidth becomes a bottle neck when using the same bandwidth.
 
@@ -50,4 +49,4 @@ Using those provided files, there are many interesting experiments we can explor
 
     You can also imagine that if Accelergy can use plug-ins for other memory technologies, we can quickly evaluate how Eyeriss performs with new technologies.
 
-There are many more interesting research questions regarding DNN accelerators. Timeloop+Accelergy is a great framework to help researchers answer those questions. The only limit is your imagination! 
+There are many more interesting research questions regarding DNN accelerators. Timeloop+Accelergy is a great framework to help researchers answer those questions. 
