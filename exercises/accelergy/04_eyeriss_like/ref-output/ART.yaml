@@ -10,9 +10,9 @@ ART:
   - name: eyeriss_like.PE[0..167].psum_spad
     area: 414.68
   - name: eyeriss_like.weights_glb
-    area: 60965.6
+    area: 77093.2
   - name: eyeriss_like.shared_glb
-    area: 774388.0
+    area: 979377.0
   - name: eyeriss_like.ifmap_NoC
     area: 1575.0
   - name: eyeriss_like.weights_NoC

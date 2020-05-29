@@ -6,7 +6,7 @@ architecture:
   subtree:
     - name: simple_primitive    # top-level name key has the value as your design name, there can be only one component is the top level list, whic is the design
       attributes:               # shared attributes for all subcomponents in design
-        technology: 40nm
+        technology: 45nm
         voltage: 1V
         latency: 5ns
       local:                     # list of components in the design

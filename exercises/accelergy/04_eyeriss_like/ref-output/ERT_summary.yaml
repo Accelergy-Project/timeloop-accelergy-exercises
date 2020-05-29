@@ -80,12 +80,12 @@ ERT_summary:
   - name: eyeriss_like.weights_glb
     actions:
     - name: write
-      average_energy: 4.647
-      max_energy: 9.244
+      average_energy: 5.695
+      max_energy: 11.34
       min_energy: 0.049
     - name: read
-      average_energy: 4.236
-      max_energy: 8.422
+      average_energy: 5.159
+      max_energy: 10.269
       min_energy: 0.049
     - name: idle
       energy: 0.012
@@ -101,15 +101,15 @@ ERT_summary:
   - name: eyeriss_like.shared_glb
     actions:
     - name: write
-      average_energy: 28.386
-      max_energy: 56.716
-      min_energy: 0.056
+      average_energy: 34.403
+      max_energy: 68.751
+      min_energy: 0.054
     - name: read
-      average_energy: 28.074
-      max_energy: 56.092
-      min_energy: 0.056
+      average_energy: 33.996
+      max_energy: 67.938
+      min_energy: 0.054
     - name: idle
-      energy: 0.019
+      energy: 0.017
     primitive_estimation(s):
     - name: storage
       estimator: Cacti

@@ -7,7 +7,7 @@ architecture:
       datawidth: 16
       latency: 5ns
       num_pipeline_stages: 1
-      technology: 40nm
+      technology: 45nm
       voltage: 1V
   - name: simple_primitive.PE.buffer
     class: regfile
@@ -16,7 +16,7 @@ architecture:
       depth: 24
       latency: 5ns
       n_ports: 2
-      technology: 40nm
+      technology: 45nm
       voltage: 1V
       width: 16
   - name: simple_primitive.GLB
@@ -28,6 +28,6 @@ architecture:
       n_rd_ports: 0
       n_rdwr_ports: 2
       n_wr_ports: 0
-      technology: 40nm
+      technology: 45nm
       voltage: 1V
       width: 32

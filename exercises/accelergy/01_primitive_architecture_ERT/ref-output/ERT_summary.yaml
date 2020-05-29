@@ -32,12 +32,12 @@ ERT_summary:
   - name: simple_primitive.GLB
     actions:
     - name: read
-      average_energy: 1.959
-      max_energy: 3.918
+      average_energy: 2.41
+      max_energy: 4.82
       min_energy: 0.0
     - name: write
-      average_energy: 1.803
-      max_energy: 3.605
+      average_energy: 2.247
+      max_energy: 4.494
       min_energy: 0.0
     - name: idle
       energy: 0.0

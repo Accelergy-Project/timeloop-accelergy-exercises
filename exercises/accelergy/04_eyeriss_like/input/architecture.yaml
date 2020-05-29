@@ -6,7 +6,7 @@ architecture:
   subtree:
     - name: eyeriss_like
       attributes:
-        technology: 40nm
+        technology: 45nm
       local:
         - name: weights_glb
           class: smartbuffer_SRAM

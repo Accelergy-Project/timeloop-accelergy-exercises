@@ -26,14 +26,14 @@ ART_summary:
     - name: address_generators[0..1]
       estimator: Aladdin_table
   - name: eyeriss_like.weights_glb
-    area: 60965.6
+    area: 77093.2
     primitive_estimations:
     - name: storage
       estimator: Cacti
     - name: address_generators[0..1]
       estimator: Aladdin_table
   - name: eyeriss_like.shared_glb
-    area: 774388.0
+    area: 979377.0
     primitive_estimations:
     - name: storage
       estimator: Cacti

@@ -71,17 +71,17 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 2.743
+      energy: 3.374
     - name: read
       arguments:
         address_delta: 1
         data_delta: 0
-      energy: 1.176
+      energy: 1.446
     - name: read
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 3.918
+      energy: 4.82
     - name: write
       arguments:
         address_delta: 0
@@ -91,17 +91,17 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 2.524
+      energy: 3.146
     - name: write
       arguments:
         address_delta: 1
         data_delta: 0
-      energy: 1.082
+      energy: 1.348
     - name: write
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 3.605
+      energy: 4.494
     - name: idle
       arguments: null
       energy: 0.0

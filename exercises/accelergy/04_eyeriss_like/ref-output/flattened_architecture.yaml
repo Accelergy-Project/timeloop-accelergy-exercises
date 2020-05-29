@@ -9,7 +9,7 @@ architecture:
       n_banks: 1
       n_buffets: 1
       n_rdwr_ports: 2
-      technology: 40nm
+      technology: 45nm
   - name: eyeriss_like.PE[0..167].weights_spad
     class: smartbuffer_RF
     attributes:
@@ -18,7 +18,7 @@ architecture:
       n_banks: 1
       n_buffets: 1
       n_rdwr_ports: 2
-      technology: 40nm
+      technology: 45nm
   - name: eyeriss_like.PE[0..167].psum_spad
     class: smartbuffer_RF
     attributes:
@@ -27,7 +27,7 @@ architecture:
       n_banks: 1
       n_buffets: 1
       n_rdwr_ports: 2
-      technology: 40nm
+      technology: 45nm
   - name: eyeriss_like.PE[0..167].mac
     class: intmac
     attributes:
@@ -35,7 +35,7 @@ architecture:
       latency: 5ns
       meshX: 14
       num_pipeline_stages: 2
-      technology: 40nm
+      technology: 45nm
   - name: eyeriss_like.weights_glb
     class: smartbuffer_SRAM
     attributes:
@@ -44,7 +44,7 @@ architecture:
       n_banks: 2
       n_buffets: 1
       n_rdwr_ports: 2
-      technology: 40nm
+      technology: 45nm
   - name: eyeriss_like.shared_glb
     class: smartbuffer_SRAM
     attributes:
@@ -54,7 +54,7 @@ architecture:
       n_banks: 25
       n_buffets: 2
       n_rdwr_ports: 2
-      technology: 40nm
+      technology: 45nm
       update_fifo_depth: 2
   - name: eyeriss_like.ifmap_NoC
     class: XY_NoC
@@ -66,7 +66,7 @@ architecture:
       datawidth: 16
       n_PE_cols: 14
       n_PE_rows: 12
-      technology: 40nm
+      technology: 45nm
       total_PEs: 168
   - name: eyeriss_like.weights_NoC
     class: XY_NoC
@@ -77,7 +77,7 @@ architecture:
       datawidth: 64
       n_PE_cols: 14
       n_PE_rows: 12
-      technology: 40nm
+      technology: 45nm
       total_PEs: 168
   - name: eyeriss_like.psum_write_NoC
     class: XY_NoC
@@ -88,7 +88,7 @@ architecture:
       datawidth: 64
       n_PE_cols: 14
       n_PE_rows: 12
-      technology: 40nm
+      technology: 45nm
       total_PEs: 168
   - name: eyeriss_like.psum_read_NoC
     class: XY_NoC
@@ -99,5 +99,5 @@ architecture:
       datawidth: 64
       n_PE_cols: 14
       n_PE_rows: 12
-      technology: 40nm
+      technology: 45nm
       total_PEs: 168

@@ -2,9 +2,9 @@ energy_estimation:
   version: 0.3
   components:
   - name: eyeriss_like.weights_glb
-    energy: 11097.954
+    energy: 13516.240000000002
   - name: eyeriss_like.shared_glb
-    energy: 1893402.975
+    energy: 2294332.0770000005
   - name: eyeriss_like.weights_NoC
     energy: 64.512
   - name: eyeriss_like.ifmap_NoC
