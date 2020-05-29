@@ -18,10 +18,11 @@ Take a look at the YAML files describing the problem, architecture, mapspace con
 
 To run the exercise, type:
 ```
-timeloop-mapper prob/cnn-layer.prob.yaml    \
-                arch/eyeriss-256-arch.yaml  \
-                mapper/mapper.yaml          \
-                constraints/cnn-layer-eyeriss-256-rs.constraints.yaml
+timeloop-mapper prob/VGG02_layer5.yaml \
+                arch/components/*.yaml \
+                arch/eyeriss_like.yaml \
+                constraints/*.yaml     \
+                mapper/mapper.yaml 
 ```
 
 The status screen shows the following per-thread statistics:
