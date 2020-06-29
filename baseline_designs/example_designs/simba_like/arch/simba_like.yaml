@@ -12,8 +12,8 @@ architecture:
           attributes:
             type: LPDDR4
             width: 64
-            block-size: 4
-            word-bits: 16
+            block-size: 8
+            word-bits: 8
       subtree:
         - name: ws
           local:
@@ -69,5 +69,5 @@ architecture:
                   class: compute
                   subclass: lmac
                   attributes:
-                    datawidth: 16
+                    datawidth: 8
                     meshX: 16
