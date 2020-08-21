@@ -11,3 +11,4 @@ energy_estimation:
     energy: 15.620000000000001
   - name: simple_compound.PE[1].MAC
     energy: 85.065
+  Total: 343.55

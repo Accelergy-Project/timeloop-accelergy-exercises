@@ -31,7 +31,7 @@ ART_summary:
     - name: storage
       estimator: Aladdin_table
   - name: System.ws.PE[0..15].LMAC[0..15]
-    area: 1239.5
+    area: 332.25
     primitive_estimations:
     - name: intmac
       estimator: Aladdin_table

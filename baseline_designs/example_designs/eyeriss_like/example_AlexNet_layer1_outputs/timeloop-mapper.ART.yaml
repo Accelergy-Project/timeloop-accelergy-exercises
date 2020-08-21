@@ -1,9 +1,9 @@
 ART:
   version: 0.3
   tables:
-  - name: system.eyeriss.PE.mac
+  - name: system.eyeriss.PE[0..167].mac
     area: 1239.5
-  - name: system.eyeriss.DummyBuffer
+  - name: system.eyeriss.DummyBuffer[0..13]
     area: 235.68
   - name: system.DRAM
     area: 1

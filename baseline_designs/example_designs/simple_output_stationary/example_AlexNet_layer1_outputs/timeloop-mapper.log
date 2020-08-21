@@ -1,47 +1,44 @@
-[  0] Utilization = 0.19 | pJ/MACC =   15.106
-[  0] Utilization = 0.19 | pJ/MACC =   13.169
-[  0] Utilization = 0.19 | pJ/MACC =    8.523
-[  0] Utilization = 0.19 | pJ/MACC =    6.586
-[  7] Utilization = 0.19 | pJ/MACC =   15.106
-[  7] Utilization = 0.19 | pJ/MACC =   13.169
-[  7] Utilization = 0.19 | pJ/MACC =    8.563
-[  7] Utilization = 0.19 | pJ/MACC =    6.626
-[  2] Utilization = 0.19 | pJ/MACC =   15.106
-[  2] Utilization = 0.19 | pJ/MACC =   13.363
-[  2] Utilization = 0.19 | pJ/MACC =    8.765
-[  3] Utilization = 0.19 | pJ/MACC =   15.106
-[  2] Utilization = 0.19 | pJ/MACC =    7.022
-[  3] Utilization = 0.19 | pJ/MACC =   13.363
-[  3] Utilization = 0.19 | pJ/MACC =    8.765
-[  3] Utilization = 0.19 | pJ/MACC =    7.022
-[  5] Utilization = 0.19 | pJ/MACC =   15.106
-[  6] Utilization = 0.19 | pJ/MACC =   15.106
-[  5] Utilization = 0.19 | pJ/MACC =   13.169
-[  6] Utilization = 0.19 | pJ/MACC =   13.363
-[  5] Utilization = 0.19 | pJ/MACC =    8.563
-[  6] Utilization = 0.19 | pJ/MACC =    9.007
-[  5] Utilization = 0.19 | pJ/MACC =    6.626
-[  6] Utilization = 0.19 | pJ/MACC =    7.264
-[  7] Utilization = 0.19 | pJ/MACC =    6.586
-[  5] Utilization = 0.19 | pJ/MACC =    6.586
-[  2] Utilization = 0.19 | pJ/MACC =    6.828
-[  3] Utilization = 0.19 | pJ/MACC =    6.828
-[  6] Utilization = 0.19 | pJ/MACC =    7.070
-[  4] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  0] Utilization = 0.19 | pJ/MACC =   15.106 | L5[WIO] Q5 P11 - L4[] M6 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  0] Utilization = 0.19 | pJ/MACC =   13.169 | L5[WIO] Q5 P11 - L4[W] M6 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  0] Utilization = 0.19 | pJ/MACC =    8.523 | L5[WIO] Q5 P11 - L4[I] M6 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  0] Utilization = 0.19 | pJ/MACC =    6.586 | L5[WIO] Q5 P11 - L4[WI] M6 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  7] Utilization = 0.19 | pJ/MACC =   15.106 | L5[WIO] P11 Q5 - L4[] M3 M16Y C3X - L3[O] M2 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  7] Utilization = 0.19 | pJ/MACC =   13.169 | L5[WIO] P11 Q5 - L4[W] M3 M16Y C3X - L3[O] M2 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  6] Utilization = 0.19 | pJ/MACC =   15.106 | L5[WIO] Q5 M3 P11 - L4[] M2 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  2] Utilization = 0.19 | pJ/MACC =   15.106 | L5[WIO] Q5 M2 P11 - L4[] Q1 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  2] Utilization = 0.19 | pJ/MACC =   13.363 | L5[WIO] Q5 M2 P11 - L4[W] Q1 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  2] Utilization = 0.19 | pJ/MACC =    8.765 | L5[WIO] Q5 M2 P11 - L4[I] Q1 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  2] Utilization = 0.19 | pJ/MACC =    7.022 | L5[WIO] Q5 M2 P11 - L4[WI] Q1 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  3] Utilization = 0.19 | pJ/MACC =   15.106 | L5[WIO] Q5 M2 P11 - L4[] M3 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  6] Utilization = 0.19 | pJ/MACC =   13.363 | L5[WIO] Q5 M3 P11 - L4[W] M2 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  6] Utilization = 0.19 | pJ/MACC =    9.007 | L5[WIO] Q5 M3 P11 - L4[I] M2 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  3] Utilization = 0.19 | pJ/MACC =   13.363 | L5[WIO] Q5 M2 P11 - L4[W] M3 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  3] Utilization = 0.19 | pJ/MACC =    8.765 | L5[WIO] Q5 M2 P11 - L4[I] M3 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  5] Utilization = 0.19 | pJ/MACC =   15.106 | L5[WIO] P11 Q5 - L4[] M2 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  5] Utilization = 0.19 | pJ/MACC =   13.169 | L5[WIO] P11 Q5 - L4[W] M2 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  5] Utilization = 0.19 | pJ/MACC =    8.563 | L5[WIO] P11 Q5 - L4[I] M2 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  5] Utilization = 0.19 | pJ/MACC =    6.626 | L5[WIO] P11 Q5 - L4[WI] M2 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  6] Utilization = 0.19 | pJ/MACC =    7.264 | L5[WIO] Q5 M3 P11 - L4[WI] M2 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  3] Utilization = 0.19 | pJ/MACC =    7.022 | L5[WIO] Q5 M2 P11 - L4[WI] M3 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  7] Utilization = 0.19 | pJ/MACC =    8.563 | L5[WIO] P11 Q5 - L4[I] M3 M16Y C3X - L3[O] M2 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  7] Utilization = 0.19 | pJ/MACC =    6.626 | L5[WIO] P11 Q5 - L4[WI] M3 M16Y C3X - L3[O] M2 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  5] Utilization = 0.19 | pJ/MACC =    6.586 | L5[WIO] Q5 P11 - L4[WI] M2 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  7] Utilization = 0.19 | pJ/MACC =    6.586 | L5[WIO] Q5 P11 - L4[WI] M3 M16Y C3X - L3[O] M2 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  3] Utilization = 0.19 | pJ/MACC =    6.828 | L5[WIO] M2 Q5 P11 - L4[WI] M3 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  6] Utilization = 0.19 | pJ/MACC =    7.070 | L5[WIO] M3 Q5 P11 - L4[WI] M2 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  2] Utilization = 0.19 | pJ/MACC =    6.828 | L5[WIO] M2 Q5 P11 - L4[WI] Q1 M16Y C3X - L3[O] M3 S11 R11 - L2[W] Q11 P5 - L1[I] Q1 - L0[O] Q1 
+[  0] Utilization = 0.19 | pJ/MACC =    6.560 | L5[WIO] Q11 - L4[WI] M6 Q5 M16Y C3X - L3[O] S11 R11 - L2[W] P55 - L1[I] Q1 - L0[O] Q1 
+[  2] Utilization = 0.19 | pJ/MACC =    6.775 | L5[WIO] M2 Q11 - L4[WI] Q5 M16Y C3X - L3[O] M3 S11 R11 - L2[W] P55 - L1[I] Q1 - L0[O] Q1 
 [  1] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
-[  0] Utilization = 0.19 | pJ/MACC =    6.560
-[  2] Utilization = 0.19 | pJ/MACC =    6.775
-[  6] Utilization = 0.19 | pJ/MACC =    7.045
-[  6] Utilization = 0.19 | pJ/MACC =    6.990
-[  3] Utilization = 0.19 | pJ/MACC =    6.775
-[  0] Utilization = 0.19 | pJ/MACC =    6.400
-[  7] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  2] Utilization = 0.19 | pJ/MACC =    6.754
-[  6] Utilization = 0.19 | pJ/MACC =    6.883
-[  0] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  3] Utilization = 0.19 | pJ/MACC =    6.641
-[  5] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  6] Utilization = 0.19 | pJ/MACC =    6.754
-[  2] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  3] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  6] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
+[  4] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  6] Utilization = 0.19 | pJ/MACC =    7.045 | L5[WIO] Q11 M3 - L4[WI] M2 Q5 M16Y C3X - L3[O] S11 R11 - L2[W] P55 - L1[I] Q1 - L0[O] Q1 
+[  6] Utilization = 0.19 | pJ/MACC =    6.990 | L5[WIO] M3 Q11 - L4[WI] Q5 M2 M16Y C3X - L3[O] S11 R11 - L2[W] P55 - L1[I] Q1 - L0[O] Q1 
+[  3] Utilization = 0.19 | pJ/MACC =    6.775 | L5[WIO] M2 Q11 - L4[WI] M3 Q5 M16Y C3X - L3[O] S11 R11 - L2[W] P55 - L1[I] Q1 - L0[O] Q1 
+[  0] Utilization = 0.19 | pJ/MACC =    6.400 | L5[WIO] Q5 P5 - L4[WI] M6 M16Y C3X - L3[O] S11 R11 - L2[W] Q11 P11 - L1[I] Q1 - L0[O] Q1 
+Interrupt caught. Mapper threads will terminate after completing any ongoing evaluations.
+[  3] STATEMENT: global termination flag activated, terminating search.
+[  7] STATEMENT: global termination flag activated, terminating search.
+[  0] STATEMENT: global termination flag activated, terminating search.
+[  5] STATEMENT: global termination flag activated, terminating search.
+[  2] STATEMENT: global termination flag activated, terminating search.
+[  6] STATEMENT: global termination flag activated, terminating search.

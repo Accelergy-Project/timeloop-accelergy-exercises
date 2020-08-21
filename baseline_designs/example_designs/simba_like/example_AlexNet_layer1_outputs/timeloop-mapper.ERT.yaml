@@ -156,7 +156,7 @@ ERT:
     actions:
     - name: compute
       arguments: null
-      energy: 2.2
+      energy: 0.561
   - name: System.ws.GlobalBuffer
     actions:
     - name: write

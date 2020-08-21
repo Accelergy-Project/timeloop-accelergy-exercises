@@ -10,7 +10,7 @@ ART:
   - name: system_arch.chip.shared_glb
     area: 592148.0
   - name: system_arch.chip.dummy_buffer
-    area: 1
+    area: 0
   - name: system_arch.chip.D2A_NoC
     area: 169.984
   - name: system_arch.chip.A2D_NoC

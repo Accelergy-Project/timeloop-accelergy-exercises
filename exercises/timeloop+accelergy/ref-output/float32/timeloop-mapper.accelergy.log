@@ -8,12 +8,11 @@
 Info: generating outputs according to the following specified output flags... 
  Please use the -f flag to update the preference (default to all output files) 
 {'ERT': 1, 'ERT_summary': 1, 'ART': 1, 'ART_summary': 1, 'energy_estimation': 1, 'flattened_arch': 1}
+Warn: Cannot recognize the top key "problem" in file prob/prob.yaml 
 Warn: Cannot recognize the top key "mapper" in file mapper/mapper.yaml 
-Warn: Cannot recognize the top key "architecture_constraints" in file constraints/simple_output_stationary_arch_constraints.yaml 
-Warn: Cannot recognize the top key "mapspace_constraints" in file constraints/simple_output_stationary_map_constraints.yaml 
-Warn: Cannot recognize the top key "problem" in file ../../layer_shapes/AlexNet/AlexNet_layer1.yaml 
-Info: Parsing file arch/simple_output_stationary.yaml for architecture info 
-Info: Parsing file arch/components/reg_storage.yaml for compound_components info 
+Warn: Cannot recognize the top key "architecture_constraints" in file constraints/eyeriss_like_arch_constraints.yaml 
+Warn: Cannot recognize the top key "mapspace_constraints" in file constraints/eyeriss_like_map_constraints.yaml 
+Info: Parsing file arch/eyeriss_like-float32.yaml for architecture info 
 Info: Parsing file arch/components/smartbuffer_RF.yaml for compound_components info 
 Info: Parsing file arch/components/smartbuffer_SRAM.yaml for compound_components info 
 Info: config file located: /home/workspace/.config/accelergy/accelergy_config.yaml 
@@ -29,8 +28,6 @@ table-based-plug-ins Identifies a set of tables named:  test_tables
 table-based-plug-ins Identifies a set of tables named:  32nm_tables
 table-based-plug-ins Identifies a set of tables named:  memristor_tables
 Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
-Info: CACTI plug-in... Querying CACTI for request:
- {'class_name': 'SRAM', 'attributes': OrderedDict([('technology', '45nm'), ('width', 16), ('depth', 192), ('n_rdwr_ports', 2), ('n_banks', 1), ('n_rd_ports', 0), ('n_wr_ports', 0), ('latency', '5ns')]), 'action_name': 'write', 'arguments': {'data_delta': 0, 'address_delta': 0}}
 Info: CACTI plug-in... Querying CACTI for request:
  {'class_name': 'SRAM', 'attributes': OrderedDict([('technology', '45nm'), ('width', 64), ('depth', 16384), ('n_rdwr_ports', 2), ('n_banks', 32), ('n_rd_ports', 0), ('n_wr_ports', 0), ('latency', '5ns')]), 'action_name': 'write', 'arguments': {'data_delta': 0, 'address_delta': 0}}
 Warn: No action counts are specified as yaml input 

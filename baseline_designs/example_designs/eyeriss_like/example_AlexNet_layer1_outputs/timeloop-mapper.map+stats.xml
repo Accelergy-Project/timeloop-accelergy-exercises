@@ -27,7 +27,7 @@
 						</word_bits>
 					</specs_>
 					<energy_>2.31913440000000030e+08</energy_>
-					<area_>0.00000000000000000e+00</area_>
+					<area_>1.23950000000000000e+03</area_>
 					<cycles_>798600</cycles_>
 					<utilized_instances_>132</utilized_instances_>
 					<maccs_>105415200</maccs_>
@@ -1197,7 +1197,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>1.45539109037816661e+03</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1317,7 +1317,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>7.52897065805956487e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1467,7 +1467,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>7.27245482922816535e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1587,7 +1587,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>3.52065334845678919e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1707,7 +1707,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>2.61262624568808235e+02</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1860,7 +1860,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>4.06716116311584273e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>

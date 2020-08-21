@@ -85,7 +85,7 @@ ERT_summary:
   - name: System.ws.PE[0..15].LMAC[0..15]
     actions:
     - name: compute
-      energy: 2.2
+      energy: 0.561
     primitive_estimation(s):
     - name: intmac
       estimator: Aladdin_table

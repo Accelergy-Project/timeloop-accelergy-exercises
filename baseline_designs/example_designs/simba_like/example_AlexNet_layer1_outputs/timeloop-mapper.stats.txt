@@ -6,16 +6,16 @@ Level 0
 
     SPECS
     -----
-    Word bits            : 16
+    Word bits            : 8
     Instances            : 256 (16*16)
-    Energy-per-op        : 2.20 pJ
+    Energy-per-op        : 0.56 pJ
 
     STATS
     -----
     Utilized instances   : 144
     Cycles               : 732050
-    Energy (total)       : 231913440.00 pJ
-    Area (total)         : 0.00 um^2
+    Energy (total)       : 59137927.20 pJ
+    Area (total)         : 85056.00 um^2
 
 Level 1
 -------
@@ -35,7 +35,7 @@ Level 1
         Effective size       : 1
         Min utilization      : 0.00
         Vector access energy : 0.00 pJ
-        Area                 : 0.00 um^2
+        Area                 : 0.09 um^2
 
     MAPPING
     -------
@@ -86,7 +86,7 @@ Level 2
         Effective size       : 128
         Min utilization      : 0.00
         Vector access energy : 0.24 pJ
-        Area                 : 0.00 um^2
+        Area                 : 379.68 um^2
 
     MAPPING
     -------
@@ -138,7 +138,7 @@ Level 3
         Effective size       : 32768
         Min utilization      : 0.00
         Vector access energy : 0.24 pJ
-        Area                 : 0.00 um^2
+        Area                 : 379.68 um^2
 
     MAPPING
     -------
@@ -190,7 +190,7 @@ Level 4
         Effective size       : 65536
         Min utilization      : 0.00
         Vector access energy : 0.24 pJ
-        Area                 : 0.00 um^2
+        Area                 : 379.68 um^2
 
     MAPPING
     -------
@@ -241,7 +241,7 @@ Level 5
         Effective size       : 65536
         Min utilization      : 0.00
         Vector access energy : 1.05 pJ
-        Area                 : 0.00 um^2
+        Area                 : 180.00 um^2
 
     MAPPING
     -------
@@ -303,8 +303,8 @@ Level 6
     -----
         Technology           : DRAM
         Size                 : -
-        Word bits            : 16
-        Block size           : 4
+        Word bits            : 8
+        Block size           : 8
         Cluster size         : 1
         Instances            : 1 (1*1)
         Read bandwidth       : -
@@ -313,7 +313,7 @@ Level 6
         Effective size       : -
         Min utilization      : 0.00
         Vector access energy : 512.00 pJ
-        Area                 : 0.00 um^2
+        Area                 : 1.00 um^2
 
     MAPPING
     -------
@@ -334,9 +334,9 @@ Level 6
         Scalar fills (per-instance)              : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 34848
-        Energy (per-scalar-access)               : 128.00 pJ
-        Energy (per-instance)                    : 4460544.00 pJ
-        Energy (total)                           : 4460544.00 pJ
+        Energy (per-scalar-access)               : 64.00 pJ
+        Energy (per-instance)                    : 2230272.00 pJ
+        Energy (total)                           : 2230272.00 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -355,9 +355,9 @@ Level 6
         Scalar fills (per-instance)              : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 154587
-        Energy (per-scalar-access)               : 128.00 pJ
-        Energy (per-instance)                    : 19787264.00 pJ
-        Energy (total)                           : 19787264.00 pJ
+        Energy (per-scalar-access)               : 64.00 pJ
+        Energy (per-instance)                    : 9893888.00 pJ
+        Energy (total)                           : 9893888.00 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -376,9 +376,9 @@ Level 6
         Scalar fills (per-instance)              : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 290400
-        Energy (per-scalar-access)               : 128.00 pJ
-        Energy (per-instance)                    : 37171200.00 pJ
-        Energy (total)                           : 37171200.00 pJ
+        Energy (per-scalar-access)               : 64.00 pJ
+        Energy (per-instance)                    : 18585600.00 pJ
+        Energy (total)                           : 18585600.00 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -399,7 +399,7 @@ DRAM <==> GlobalBuffer
         Type            : Legacy
         Legacy sub-type : 
         ConnectionType  : 3
-        Word bits       : 16
+        Word bits       : 8
         Router energy   : - pJ
         Wire energy     : - pJ/b/mm
 
@@ -774,31 +774,31 @@ PEWeightRegs <==> LMAC
         Spatial Reduction Energy (per-instance) : 0.00 pJ
         Spatial Reduction Energy (total)        : 0.00 pJ
 
-Total topology energy: 310911145.98 pJ
-Total topology area: 0.00 um^2
+Total topology energy: 107426385.18 pJ
+Total topology area: 139934.84 um^2
 Max topology cycles: 732050
 
 Summary Stats
 -------------
 Utilization: 0.56
 Cycles: 732050
-Energy: 310.91 uJ
-Area: 0.00 mm^2
+Energy: 107.43 uJ
+Area: 0.14 mm^2
 
 MACCs = 105415200
 pJ/MACC
-    LMAC                              = 2.20
+    LMAC                              = 0.56
     PEWeightRegs                      = 0.00
     PEAccuBuffer                      = 0.16
     PEWeightBuffer                    = 0.00
     PEInputBuffer                     = 0.01
     GlobalBuffer                      = 0.00
-    DRAM                              = 0.58
+    DRAM                              = 0.29
     DRAM <==> GlobalBuffer            = 0.00
     GlobalBuffer <==> PEInputBuffer   = 0.00
     PEAccuBuffer <==> PEWeightRegs    = 0.00
     PEInputBuffer <==> PEWeightBuffer = 0.00
     PEWeightBuffer <==> PEAccuBuffer  = 0.00
     PEWeightRegs <==> LMAC            = 0.00
-    Total                             = 2.95
+    Total                             = 1.02
 

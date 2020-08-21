@@ -64,7 +64,7 @@ architecture:
     class: compute
     subclass: lmac
     attributes:
-      datawidth: 16
+      datawidth: 8
       meshX: 16
       technology: 45nm
       word-bits: 8
@@ -88,9 +88,9 @@ architecture:
   - name: System.DRAM
     class: DRAM
     attributes:
-      block-size: 4
+      block-size: 8
       datawidth: 8
       technology: 45nm
       type: LPDDR4
       width: 64
-      word-bits: 16
+      word-bits: 8

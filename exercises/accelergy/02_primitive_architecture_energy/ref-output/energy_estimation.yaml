@@ -7,3 +7,4 @@ energy_estimation:
     energy: 10.81
   - name: simple_primitive.PE.MAC
     energy: 67.545
+  Total: 219.695

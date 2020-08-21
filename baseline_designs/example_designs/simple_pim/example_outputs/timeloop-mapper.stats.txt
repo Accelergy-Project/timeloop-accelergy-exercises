@@ -15,7 +15,7 @@ Level 0
     Utilized instances   : 1728
     Cycles               : 50176
     Energy (total)       : 22196256.77 pJ
-    Area (total)         : 0.00 um^2
+    Area (total)         : 262.14 um^2
 
 Level 1
 -------
@@ -40,7 +40,8 @@ Level 1
     MAPPING
     -------
     Loop nest:
-      for Q in [0:4)
+      for Q in [0:8)
+        for P in [0:2)
 
     STATS
     -----
@@ -92,11 +93,10 @@ Level 2
     -------
     Loop nest:
       for Q in [0:7)
-        for P in [0:4)
-          for M in [0:64) (Spatial-Y)
-            for C in [0:3) (Spatial-X)
-              for S in [0:3) (Spatial-X)
-                for R in [0:3) (Spatial-X)
+        for M in [0:64) (Spatial-Y)
+          for C in [0:3) (Spatial-X)
+            for S in [0:3) (Spatial-X)
+              for R in [0:3) (Spatial-X)
 
     STATS
     -----
@@ -121,12 +121,12 @@ Level 3
         Effective size       : 65536
         Min utilization      : 0.00
         Vector access energy : 42.21 pJ
-        Area                 : 0.00 um^2
+        Area                 : 592148.00 um^2
 
     MAPPING
     -------
     Loop nest:
-      for Q in [0:8)
+      for Q in [0:4)
 
     STATS
     -----
@@ -134,7 +134,7 @@ Level 3
     Bandwidth throttling : 0.12
     Inputs:
         Partition size                           : 153228
-        Utilized capacity                        : 4068
+        Utilized capacity                        : 2712
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
         Scalar reads (per-instance)              : 1354752
@@ -155,7 +155,7 @@ Level 3
         Write Bandwidth (total)                  : 0.37 words/cycle
     Outputs:
         Partition size                           : 3211264
-        Utilized capacity                        : 57344
+        Utilized capacity                        : 28672
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
         Scalar reads (per-instance)              : 0
@@ -193,7 +193,7 @@ Level 4
         Effective size       : -
         Min utilization      : 0.00
         Vector access energy : 512.00 pJ
-        Area                 : 0.00 um^2
+        Area                 : 1.00 um^2
 
     MAPPING
     -------
@@ -504,7 +504,7 @@ scratchpad <==> mac
         Spatial Reduction Energy (total)        : 0.00 pJ
 
 Total topology energy: 1253913045.83 pJ
-Total topology area: 0.00 um^2
+Total topology area: 592411.14 um^2
 Max topology cycles: 410985
 
 Summary Stats
@@ -512,7 +512,7 @@ Summary Stats
 Utilization: 0.01
 Cycles: 410985
 Energy: 1253.91 uJ
-Area: 0.00 mm^2
+Area: 0.59 mm^2
 
 MACCs = 86704128
 pJ/MACC

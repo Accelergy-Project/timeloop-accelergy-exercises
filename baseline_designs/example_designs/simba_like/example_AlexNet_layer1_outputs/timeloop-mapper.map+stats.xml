@@ -23,11 +23,11 @@
 							<t_>16</t_>
 						</meshY>
 						<word_bits>
-							<t_>16</t_>
+							<t_>8</t_>
 						</word_bits>
 					</specs_>
-					<energy_>2.31913440000000030e+08</energy_>
-					<area_>0.00000000000000000e+00</area_>
+					<energy_>5.91379272000000030e+07</energy_>
+					<area_>3.32250000000000000e+02</area_>
 					<cycles_>732050</cycles_>
 					<utilized_instances_>144</utilized_instances_>
 					<maccs_>105415200</maccs_>
@@ -1012,13 +1012,13 @@
 						</technology>
 						<size></size>
 						<word_bits>
-							<t_>16</t_>
+							<t_>8</t_>
 						</word_bits>
 						<addr_gen_bits>
-							<t_>17</t_>
+							<t_>16</t_>
 						</addr_gen_bits>
 						<block_size>
-							<t_>4</t_>
+							<t_>8</t_>
 						</block_size>
 						<cluster_size>
 							<t_>1</t_>
@@ -1138,16 +1138,16 @@
 						</write_bandwidth>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>1.28000000000000000e+02</item>
-								<item>1.28000828012704829e+02</item>
-								<item>1.28000000000000000e+02</item>
+								<item>6.40000000000000000e+01</item>
+								<item>6.40020700317620452e+01</item>
+								<item>6.40000000000000000e+01</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>4.46054400000000000e+06</item>
-								<item>1.97872640000000000e+07</item>
-								<item>3.71712000000000000e+07</item>
+								<item>2.23027200000000000e+06</item>
+								<item>9.89388800000000000e+06</item>
+								<item>1.85856000000000000e+07</item>
 							</PerDataSpace>
 						</energy>
 						<temporal_reduction_energy>
@@ -1183,12 +1183,12 @@
 								<name>DRAM &lt;==&gt; GlobalBuffer</name>
 							</NetworkSpecs>
 							<word_bits>
-								<t_>16</t_>
+								<t_>8</t_>
 							</word_bits>
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>3.74077316801471909e+02</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1308,7 +1308,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>9.34591618520452982e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1461,7 +1461,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>1.82302890130765078e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1587,7 +1587,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>4.57026666109621473e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1716,7 +1716,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>4.13407032194297983e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1836,7 +1836,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>1.82277261335581855e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>

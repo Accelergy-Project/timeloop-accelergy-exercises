@@ -1,26 +1,21 @@
-[  7] Utilization = 0.01 | pJ/MACC =   14.462
-[  0] Utilization = 0.01 | pJ/MACC =   14.468
-[  3] Utilization = 0.01 | pJ/MACC =   14.468
-[  6] Utilization = 0.01 | pJ/MACC =   14.462
-[  5] Utilization = 0.01 | pJ/MACC =   14.462
-[  2] Utilization = 0.01 | pJ/MACC =   14.468
-[  1] Utilization = 0.01 | pJ/MACC =   14.468
-[  4] Utilization = 0.01 | pJ/MACC =   14.464
-[  1] Utilization = 0.01 | pJ/MACC =   14.464
-[  0] Utilization = 0.01 | pJ/MACC =   14.464
-[  2] Utilization = 0.01 | pJ/MACC =   14.464
-[  3] Utilization = 0.01 | pJ/MACC =   14.464
-[  2] Utilization = 0.01 | pJ/MACC =   14.462
-[  1] Utilization = 0.01 | pJ/MACC =   14.462
-[  0] Utilization = 0.01 | pJ/MACC =   14.462
-[  4] Utilization = 0.01 | pJ/MACC =   14.462
-[  3] Utilization = 0.01 | pJ/MACC =   14.462
+[  7] Utilization = 0.01 | pJ/MACC =   14.462 | L3[IO] P112 - L2[IO] Q4 P2 - L1[] Q7 M64Y C3X S3X R3X - L0[W] Q8 
+[  6] Utilization = 0.01 | pJ/MACC =   14.462 | L3[IO] P112 - L2[IO] Q4 - L1[] Q7 P2 M64Y C3X S3X R3X - L0[W] Q8 
+[  3] Utilization = 0.01 | pJ/MACC =   14.468 | L3[IO] Q4 P56 - L2[IO] P4 - L1[] Q28 M64Y C3X S3X R3X - L0[W] Q2 
+[  0] Utilization = 0.01 | pJ/MACC =   14.468 | L3[IO] Q4 P56 - L2[IO] Q1 - L1[] Q28 P4 M64Y C3X S3X R3X - L0[W] Q2 
+[  5] Utilization = 0.01 | pJ/MACC =   14.462 | L3[IO] P112 - L2[IO] Q4 - L1[] Q7 M64Y C3X S3X R3X - L0[W] Q8 P2 
+[  2] Utilization = 0.01 | pJ/MACC =   14.468 | L3[IO] Q4 P56 - L2[IO] P2 - L1[] Q28 P2 M64Y C3X S3X R3X - L0[W] Q2 
+[  1] Utilization = 0.01 | pJ/MACC =   14.468 | L3[IO] Q4 P56 - L2[IO] P2 - L1[] Q28 M64Y C3X S3X R3X - L0[W] Q2 P2 
+[  4] Utilization = 0.01 | pJ/MACC =   14.464 | L3[IO] Q2 P28 - L2[IO] Q4 P2 - L1[] Q4 P4 M64Y C3X S3X R3X - L0[W] Q7 
+[  1] Utilization = 0.01 | pJ/MACC =   14.464 | L3[IO] Q2 P28 - L2[IO] Q4 - L1[] Q4 P8 M64Y C3X S3X R3X - L0[W] Q7 
+[  0] Utilization = 0.01 | pJ/MACC =   14.464 | L3[IO] Q2 P28 - L2[IO] Q4 - L1[] Q4 P4 M64Y C3X S3X R3X - L0[W] Q7 P2 
+[  2] Utilization = 0.01 | pJ/MACC =   14.464 | L3[IO] Q2 P28 - L2[IO] Q4 P2 - L1[] Q4 M64Y C3X S3X R3X - L0[W] Q7 P4 
+[  3] Utilization = 0.01 | pJ/MACC =   14.464 | L3[IO] Q2 P28 - L2[IO] Q4 P2 - L1[] Q4 P2 M64Y C3X S3X R3X - L0[W] Q7 P2 
 Interrupt caught. Mapper threads will terminate after completing any ongoing evaluations.
 [  0] STATEMENT: global termination flag activated, terminating search.
 [  5] STATEMENT: global termination flag activated, terminating search.
 [  6] STATEMENT: global termination flag activated, terminating search.
 [  4] STATEMENT: global termination flag activated, terminating search.
 [  1] STATEMENT: global termination flag activated, terminating search.
+[  2] STATEMENT: global termination flag activated, terminating search.
 [  3] STATEMENT: global termination flag activated, terminating search.
 [  7] STATEMENT: global termination flag activated, terminating search.
-[  2] STATEMENT: global termination flag activated, terminating search.

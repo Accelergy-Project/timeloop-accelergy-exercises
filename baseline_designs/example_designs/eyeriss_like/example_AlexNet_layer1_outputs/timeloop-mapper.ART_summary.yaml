@@ -1,10 +1,10 @@
 ART_summary:
   version: 0.3
   table_summary:
-  - name: system.eyeriss.PE.mac
+  - name: system.eyeriss.PE[0..167].mac
     area: 1239.5
     primitive_estimations: Aladdin_table
-  - name: system.eyeriss.DummyBuffer
+  - name: system.eyeriss.DummyBuffer[0..13]
     area: 235.68
     primitive_estimations: Aladdin_table
   - name: system.DRAM

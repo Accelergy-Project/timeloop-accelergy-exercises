@@ -22,7 +22,7 @@ ART_summary:
     - name: address_generators[0..1]
       estimator: table-based-plug-ins
   - name: system_arch.chip.dummy_buffer
-    area: 1
+    area: 0
     primitive_estimations:
     - name: storage
       estimator: dummy_table

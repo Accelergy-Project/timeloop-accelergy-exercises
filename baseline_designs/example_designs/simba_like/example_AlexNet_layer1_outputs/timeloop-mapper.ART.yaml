@@ -12,6 +12,6 @@ ART:
   - name: System.ws.PE[0..15].PEWeightRegs[0..15]
     area: 5.98
   - name: System.ws.PE[0..15].LMAC[0..15]
-    area: 1239.5
+    area: 332.25
   - name: System.ws.GlobalBuffer
     area: 180.0

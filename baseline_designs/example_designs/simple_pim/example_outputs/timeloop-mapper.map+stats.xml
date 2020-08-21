@@ -27,7 +27,7 @@
 						</word_bits>
 					</specs_>
 					<energy_>2.21962567679999992e+07</energy_>
-					<area_>0.00000000000000000e+00</area_>
+					<area_>1.60000007599592209e-02</area_>
 					<cycles_>50176</cycles_>
 					<utilized_instances_>1728</utilized_instances_>
 					<maccs_>86704128</maccs_>
@@ -37,12 +37,19 @@
 				<px class_id="9" class_name="model::BufferLevel" tracking_level="1" version="0" object_id="_1">
 					<Level></Level>
 					<subnest_ class_id="10" tracking_level="0" version="0">
-						<count>1</count>
+						<count>2</count>
 						<item_version>0</item_version>
 						<item class_id="11" tracking_level="0" version="0">
+							<dimension>5</dimension>
+							<start>0</start>
+							<end>2</end>
+							<stride>1</stride>
+							<spacetime_dimension>0</spacetime_dimension>
+						</item>
+						<item>
 							<dimension>6</dimension>
 							<start>0</start>
-							<end>4</end>
+							<end>8</end>
 							<stride>1</stride>
 							<spacetime_dimension>0</spacetime_dimension>
 						</item>
@@ -222,7 +229,7 @@
 				<px class_id_reference="9" object_id="_2">
 					<Level></Level>
 					<subnest_>
-						<count>6</count>
+						<count>5</count>
 						<item_version>0</item_version>
 						<item>
 							<dimension>2</dimension>
@@ -251,13 +258,6 @@
 							<end>64</end>
 							<stride>1</stride>
 							<spacetime_dimension>2</spacetime_dimension>
-						</item>
-						<item>
-							<dimension>5</dimension>
-							<start>0</start>
-							<end>4</end>
-							<stride>1</stride>
-							<spacetime_dimension>0</spacetime_dimension>
 						</item>
 						<item>
 							<dimension>6</dimension>
@@ -451,7 +451,7 @@
 						<item>
 							<dimension>6</dimension>
 							<start>0</start>
-							<end>8</end>
+							<end>4</end>
 							<stride>1</stride>
 							<spacetime_dimension>0</spacetime_dimension>
 						</item>
@@ -535,8 +535,8 @@
 						<utilized_capacity>
 							<PerDataSpace>
 								<item>0</item>
-								<item>4068</item>
-								<item>57344</item>
+								<item>2712</item>
+								<item>28672</item>
 							</PerDataSpace>
 						</utilized_capacity>
 						<utilized_instances>
@@ -829,7 +829,7 @@
 							</word_bits>
 							<action_name>transfer</action_name>
 							<multicast_factor_argument>num_destinations</multicast_factor_argument>
-							<per_datatype_ERT>80</per_datatype_ERT>
+							<per_datatype_ERT>1</per_datatype_ERT>
 						</specs_>
 						<stats_ class_id="27" tracking_level="0" version="0">
 							<energy>
@@ -890,7 +890,7 @@
 							</word_bits>
 							<action_name>transfer</action_name>
 							<multicast_factor_argument>num_destinations</multicast_factor_argument>
-							<per_datatype_ERT>208</per_datatype_ERT>
+							<per_datatype_ERT>1</per_datatype_ERT>
 						</specs_>
 						<stats_>
 							<energy>
@@ -952,7 +952,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>7.69681845967833056e+02</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -1071,7 +1071,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>1.26491109410737712e-01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
@@ -6372,7 +6372,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>0.00000000000000000e+00</t_>
+								<t_>1.26491109410737712e-01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>

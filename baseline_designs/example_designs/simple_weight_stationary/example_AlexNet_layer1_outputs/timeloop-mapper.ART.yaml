@@ -1,7 +1,7 @@
 ART:
   version: 0.3
   tables:
-  - name: system.simple_ws.PE.mac
+  - name: system.simple_ws.PE[0..255].mac
     area: 1239.5
   - name: system.DRAM
     area: 1

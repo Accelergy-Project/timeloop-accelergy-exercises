@@ -15,7 +15,7 @@ Level 0
     Utilized instances   : 168
     Cycles               : 5505024
     Energy (total)       : 2034656870.40 pJ
-    Area (total)         : 0.00 um^2
+    Area (total)         : 208236.00 um^2
 
 Level 1
 -------
@@ -35,7 +35,7 @@ Level 1
         Effective size       : 16
         Min utilization      : 0.00
         Vector access energy : 0.25 pJ
-        Area                 : 0.00 um^2
+        Area                 : 414.68 um^2
 
     MAPPING
     -------
@@ -86,7 +86,7 @@ Level 2
         Effective size       : 192
         Min utilization      : 0.00
         Vector access energy : 1.59 pJ
-        Area                 : 0.00 um^2
+        Area                 : 3634.68 um^2
 
     MAPPING
     -------
@@ -138,7 +138,7 @@ Level 3
         Effective size       : 12
         Min utilization      : 0.00
         Vector access energy : 0.24 pJ
-        Area                 : 0.00 um^2
+        Area                 : 379.68 um^2
 
     MAPPING
     -------
@@ -188,7 +188,7 @@ Level 4
         Effective size       : 16
         Min utilization      : 0.00
         Vector access energy : 0.20 pJ
-        Area                 : 0.00 um^2
+        Area                 : 235.68 um^2
 
     MAPPING
     -------
@@ -219,7 +219,7 @@ Level 5
         Effective size       : 65536
         Min utilization      : 0.00
         Vector access energy : 75.22 pJ
-        Area                 : 0.00 um^2
+        Area                 : 1162549.00 um^2
 
     MAPPING
     -------
@@ -293,7 +293,7 @@ Level 6
         Effective size       : -
         Min utilization      : 0.00
         Vector access energy : 512.00 pJ
-        Area                 : 0.00 um^2
+        Area                 : 1.00 um^2
 
     MAPPING
     -------
@@ -757,7 +757,7 @@ weights_spad <==> psum_spad
         Spatial Reduction Energy (total)        : 0.00 pJ
 
 Total topology energy: 5382308044.80 pJ
-Total topology area: 0.00 um^2
+Total topology area: 2118164.23 um^2
 Max topology cycles: 5505024
 
 Summary Stats
@@ -765,7 +765,7 @@ Summary Stats
 Utilization: 1.00
 Cycles: 5505024
 Energy: 5382.31 uJ
-Area: 0.00 mm^2
+Area: 2.12 mm^2
 
 MACCs = 924844032
 pJ/MACC
