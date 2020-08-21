@@ -15,7 +15,7 @@ Level 0
     Utilized instances   : 1
     Cycles               : 1536
     Energy (total)       : 861.70 pJ
-    Area (total)         : 0.00 um^2
+    Area (total)         : 332.25 um^2
 
 Level 1
 -------
@@ -35,7 +35,7 @@ Level 1
         Effective size       : 64
         Min utilization      : 0.00
         Vector access energy : 0.42 pJ
-        Area                 : 0.00 um^2
+        Area                 : 887.84 um^2
 
     MAPPING
     -------
@@ -129,7 +129,7 @@ Level 2
         Effective size       : 262144
         Min utilization      : 0.00
         Vector access energy : 102.86 pJ
-        Area                 : 0.00 um^2
+        Area                 : 679274.00 um^2
 
     MAPPING
     -------
@@ -159,7 +159,7 @@ Level 3
         Effective size       : -
         Min utilization      : 0.00
         Vector access energy : 2048.00 pJ
-        Area                 : 0.00 um^2
+        Area                 : 1.00 um^2
 
     MAPPING
     -------
@@ -428,7 +428,7 @@ RegisterFile <==> MACC
         Spatial Reduction Energy (total)        : 0.00 pJ
 
 Total topology energy: 44450.06 pJ
-Total topology area: 0.00 um^2
+Total topology area: 680495.09 um^2
 Max topology cycles: 1536
 
 Summary Stats
@@ -436,7 +436,7 @@ Summary Stats
 Utilization: 1.00
 Cycles: 1536
 Energy: 0.04 uJ
-Area: 0.00 mm^2
+Area: 0.68 mm^2
 
 MACCs = 1536
 pJ/MACC

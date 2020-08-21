@@ -15,7 +15,7 @@ Level 0
     Utilized instances   : 1
     Cycles               : 48
     Energy (total)       : 26.93 pJ
-    Area (total)         : 0.00 um^2
+    Area (total)         : 332.25 um^2
 
 Level 1
 -------
@@ -35,7 +35,7 @@ Level 1
         Effective size       : 64
         Min utilization      : 0.00
         Vector access energy : 0.42 pJ
-        Area                 : 0.00 um^2
+        Area                 : 887.84 um^2
 
     MAPPING
     -------
@@ -128,7 +128,7 @@ Level 2
         Effective size       : 262144
         Min utilization      : 0.00
         Vector access energy : 39.88 pJ
-        Area                 : 0.00 um^2
+        Area                 : 746966.00 um^2
 
     MAPPING
     -------
@@ -334,7 +334,7 @@ MainMemory <==> Buffer
         Spatial Reduction Energy (total)        : 0.00 pJ
 
 Total topology energy: 355.66 pJ
-Total topology area: 0.00 um^2
+Total topology area: 748186.09 um^2
 Max topology cycles: 48
 
 Summary Stats
@@ -342,7 +342,7 @@ Summary Stats
 Utilization: 1.00
 Cycles: 48
 Energy: 0.00 uJ
-Area: 0.00 mm^2
+Area: 0.75 mm^2
 
 MACCs = 48
 pJ/MACC
