@@ -13,7 +13,7 @@ To combine them, we will provide detailed design descriptions for the system and
 The following command uses Timeloop to find a good mapping to run on an Eyeriss-like architecture:
 
 ```
-timeloop-mapper arch/eyeriss_like-int16.arch.yaml \
+timeloop-mapper arch/eyeriss_like-int16.yaml \
                 arch/components/*.yaml \
                 prob/prob.yaml \
                 mapper/mapper.yaml \
@@ -30,7 +30,7 @@ Using those provided files, there are many interesting experiments we can explor
     Data type and precision are critical to DNN accelerators. What if we want to build an accelerator operate on different data types? The following command evaluate running an Eyeriss-like architecture with floating-point input, weights, and output:
 
     ```
-    timeloop-mapper arch/eyeriss_like-float32.arch.yaml \
+    timeloop-mapper arch/eyeriss_like-float32.yaml \
                     arch/components/*.yaml \
                     prob/prob.yaml \
                     mapper/mapper.yaml \
