@@ -18,4 +18,4 @@ Q&As:
    make updated the architecture description to include the additional setup for your architecture. 
    
    An example design for compute-in-memory architecture using ReRAM can be found 
-   [here](https://github.com/nelliewu95/processing-in-memory-example)
+   [here](https://github.com/Accelergy-Project/processing-in-memory-design)

@@ -6,7 +6,7 @@ Please find them in the `designs` folder.
 
 ### System requirement
 In order to run the example designs, you need to be either inside a docker with installed tools 
-(e.g., [infrastructure docker](https://github.com/nelliewu95/accelergy-timeloop-infrastructure) 
+(e.g., [infrastructure docker](https://github.com/Accelergy-Project/accelergy-timeloop-infrastructure) 
 or manually install the Accelergy-Timeloop evaluation system. 
 
 ### File Structure

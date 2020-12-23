@@ -5,12 +5,12 @@ DNN accelerator evaluation framework.
 
 ### System Requirement
 The following tools are needed to perform the simulations, 
-- Option 1: run inside a docker with the tools installed [docker](https://github.com/nelliewu95/accelergy-timeloop-infrastructure)
+- Option 1: run inside a docker with the tools installed [docker](https://github.com/Accelergy-Project/accelergy-timeloop-infrastructure)
 - Option 2: manually install the following tools:
-    - [accelergy](https://github.com/nelliewu95/accelergy)
+    - [accelergy](https://github.com/Accelergy-Project/accelergy)
     - [timeloop](https://github.com/NVlabs/timeloop)
-    - [accelergy-table-based-plug-in](https://github.com/nelliewu95/accelergy-table-based-plug-ins)
-    - [accelergy-cacti-plug-in](https://github.com/nelliewu95/accelergy-cacti-plug-in)
+    - [accelergy-table-based-plug-in](https://github.com/Accelergy-Project/accelergy-table-based-plug-ins)
+    - [accelergy-cacti-plug-in](https://github.com/Accelergy-Project/accelergy-cacti-plug-in)
 - Please add the provided PIM estimation tables using the command
 
   ```
