@@ -21,11 +21,11 @@ architecture:
               class: storage
               subclass: smartbuffer_SRAM
               attributes:
-                depth: 2048
-                width: 256
+                memory_depth: 2048
+                memory_width: 256
                 word-bits: 8
                 block-size: 32
-                nbanks: 4
+                n_banks: 4
                 nports: 2
                 meshX: 1
           subtree:
@@ -35,8 +35,8 @@ architecture:
                   class: storage
                   subclass: smartbuffer_RF
                   attributes:
-                    depth: 8192
-                    width: 64
+                    memory_depth: 8192
+                    memory_width: 64
                     word-bits: 8
                     block-size: 8
                     meshX: 16
@@ -44,16 +44,16 @@ architecture:
                   class: storage
                   subclass: smartbuffer_RF
                   attributes:
-                    depth: 4096
+                    memory_depth: 4096
                     word-bits: 8
                     meshX: 16
                     block-size: 8
-                    nbanks: 8
+                    n_banks: 8
                 - name: PEAccuBuffer[0..3]
                   class: storage
                   subclass: smartbuffer_RF
                   attributes:
-                    depth: 128
+                    memory_depth: 128
                     word-bits: 24
                     datawidth: 24
                     meshX: 16
@@ -61,7 +61,7 @@ architecture:
                   class: storage
                   subclass: reg_storage
                   attributes:
-                    depth: 1
+                    memory_depth: 1
                     word-bits: 8
                     cluster-size: 64
                     num-ports: 2
