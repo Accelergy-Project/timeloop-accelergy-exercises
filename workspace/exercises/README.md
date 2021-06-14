@@ -1,7 +1,8 @@
 Fibertree/Timeloop/Accelergy Tutorial Exercises
 ======================================
 
-This repository folder contains exercises for both `Sparse Tensor Accelerator` tutorial and `Timeloop/Acclergy tutorial`.
+This repository folder contains exercises for both **Sparse Tensor Accelerator tutorial**
+and **Timeloop/Acclergy tutorial**.
 
 ---
 ### Sparse Tensor Accelerator Tutorial
