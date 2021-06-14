@@ -1,0 +1,33 @@
+#
+# Docker-compose file for running exercises
+#
+# Notes: 
+#    The READMEs are put in ./workspace
+#    The workspace will be owned by $USER_UID:$USER_GID
+#
+
+# Run as follows:
+#
+#    1) Cd to the directory containing this file
+#    2) Change USER_UID and USER_GID to the desired owner of your files (echo $UID )
+#    3) Run the following command:
+#
+#        % docker-compose up
+#
+#    4) Look at output and use the 127.0.0.1 URL (unless you changed the port below)
+#       if that does not work, try the 192.168.X.X with the same token as shown in the output (X.X can be obtained by `hostname -I`
+#
+
+version: '3'
+
+services:
+  tutorial:
+    hostname: tutorial
+    image: mitdlh/timeloop-accelergy-pytorch:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/home/workspace
+    environment:
+      - USER_UID=197609
+      - USER_GID=197609

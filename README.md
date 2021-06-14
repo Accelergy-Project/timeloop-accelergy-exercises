@@ -1,9 +1,13 @@
-Timeloop/Accelergy Tutorial Exercises
+Fibertree/Timeloop/Accelergy Tutorial Exercises
 ======================================
 
-This repository contains a set of exercises to explore both the Timeloop and 
-Accelergy tools.
+This repository contains a set of exercises to explore Fibreetree, Timeloop, and Accelergy.
 
-See https://github.com/Accelergy-Project/timeloop-accelergy-tutorial for a Docker container
-to run these exercises in.
+## Using Docker
 
+Please pull the docker first to update the container, and then start with `docker-compose up`. 
+```
+cd timeloop-accelergy-exercises
+docker-compose pull
+docker-compose up
+```
