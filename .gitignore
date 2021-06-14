@@ -9,7 +9,9 @@
 
 # Application-specific ignores
 ## accelergy
-!/**/.gitkeep
+
+##fibertree
+notebooks/*.mp4
 
 #
 # Ignore shell files
@@ -31,3 +33,7 @@
 **/.jupyter
 **/.python_history
 
+#
+# Keep some empty directories
+#
+!/**/.gitkeep
