@@ -1,0 +1,9 @@
+ART:
+  version: 0.3
+  tables:
+  - name: system.PE.MAC
+    area: 332.25
+  - name: system.PE.Buffer
+    area: 3991.76
+  - name: system.BackingStorage
+    area: 17178.82

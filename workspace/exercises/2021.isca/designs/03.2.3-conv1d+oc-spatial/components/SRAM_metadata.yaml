@@ -1,0 +1,81 @@
+compound_components:
+  version: 0.3
+  classes:
+  - name: SRAM_metadata
+    attributes:
+      # attributes that must be specified
+      technology: must_specify
+      data_storage_depth: must_specify
+      data_storage_width: must_specify
+      metadata_storage_width: must_specify
+      metadata_storage_depth: must_specify
+      metadata_datawidth: must_specify
+
+      # attributes with default values
+      n_banks: 1
+      n_rdwr_ports: 2
+      num_storage_instances: 1
+      counter_width: 0 # default to no (de)compression counter
+      datawidth: data_storage_width
+      ag_datawidth: log(data_storage_depth)
+
+    subcomponents:
+      - name: storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: data_storage_width
+          depth: data_storage_depth/num_storage_instances
+          datawidth: datawidth
+          n_rdwr_ports: n_rdwr_ports
+          n_banks: n_banks
+          avg_sparsity: avg_sparsity
+      - name: metadata_storage
+        class: regfile
+        attributes:
+          technology: technology
+          width: metadata_storage_width
+          depth: metadata_storage_depth/num_storage_instances
+          datawidth: metadata_datawidth
+
+    actions:
+      - name: write
+        subcomponents:
+          - name: storage
+            actions:
+              - name: write
+      - name: read
+        subcomponents:
+          - name: storage
+            actions:
+              - name: read
+      - name: gated_write
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: gated_read
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: read
+      - name: metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: write
+      - name: gated_metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+      - name: gated_metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle

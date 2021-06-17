@@ -1,0 +1,63 @@
+compound_components:
+  version: 0.3
+  classes:
+  - name: reg_metadata
+    attributes:
+      # attributes that must be specified
+      technology: must_specify
+      datawidth: must_specify
+      metadata_datawidth: must_specify
+
+    subcomponents:
+      - name: storage
+        class: reg
+        attributes:
+          technology: technology
+          datawidth: datawidth
+      - name: metadata_storage
+        class: reg
+        attributes:
+          technology: technology
+          datawidth: metadata_datawidth
+
+    actions:
+      - name: write
+        subcomponents:
+          - name: storage
+            actions:
+              - name: write
+      - name: read
+        subcomponents:
+          - name: storage
+            actions:
+              - name: read
+      - name: gated_write
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: gated_read
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: read
+      - name: metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: write
+      - name: gated_metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+      - name: gated_metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle

@@ -1,0 +1,23 @@
+architecture:
+  version: 0.3
+  local:
+  - name: PE.Buffer
+    class: storage
+    subclass: regfile
+    attributes:
+      datawidth: 8
+      depth: 64
+      latency: 5ns
+      n_ports: 2
+      read_bandwidth: 3
+      technology: 45nm
+      width: 8
+      write_bandwidth: 1
+  - name: PE.MAC
+    class: compute
+    subclass: intmac
+    attributes:
+      datawidth: 8
+      latency: 5ns
+      num_pipeline_stages: 2
+      technology: 45nm

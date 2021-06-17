@@ -1,0 +1,25 @@
+sparse_optimizations:
+  targets:
+    - name: BackingStorage
+      representation-format:
+        data-spaces:
+          - name: Weights
+            ranks:
+              - format: RLE # run length encodin
+
+    - name: Buffer
+      representation-format:
+        data-spaces:
+          - name: Weights
+            ranks:
+              - format: RLE # run length encoding
+
+      action-optimization:
+        - type: skipping
+          options:
+            - target: Inputs
+              condition-on: [ Weights ]
+        - type: skipping
+          options:
+            - target: Outputs
+              condition-on: [ Weights ]

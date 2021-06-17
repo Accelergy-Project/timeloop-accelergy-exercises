@@ -1,0 +1,28 @@
+architecture:
+  version: 0.3
+
+  subtree:
+    - name: PE
+      attributes:
+        technology: 45nm
+
+      local:
+        - name: Buffer
+          class: storage
+          subclass: regfile_metadata    # compound component with separate data and metadata storages
+                                        # definition found in ../components/refile_metadata.yaml
+          attributes:
+            data_storage_depth: 64      # depth of the data storage only
+            data_storage_width: 8       # width of the data storage only
+            datawidth: 8                # actual data's datawidth
+            metadata_storage_depth: 32  # depth of the metadata storage only
+            metadata_storage_width: 4   # width of the metadata storage only
+            metadata_datawidth: 4       # metadata's datawidth (can be different from datawidth)
+            read_bandwidth: 3
+            write_bandwidth: 3
+
+        - name: MAC
+          class: compute
+          subclass: intmac
+          attributes:
+            datawidth: 8

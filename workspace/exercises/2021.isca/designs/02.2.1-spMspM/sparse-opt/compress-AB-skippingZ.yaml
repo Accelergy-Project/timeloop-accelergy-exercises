@@ -1,0 +1,39 @@
+sparse_optimizations:
+  targets:
+    - name: BackingStorage
+      representation-format:
+        data-spaces:
+          - name: A
+            ranks:
+              - format: UOP
+              - format: CP
+          - name: B
+            ranks:
+              - format: UOP
+              - format: CP
+
+    - name: Buffer
+      representation-format:
+        data-spaces:
+          - name: B
+            ranks:
+              - format: UOP # uncompressed offset pair
+              - format: CP  # coordinate payload
+          - name: A
+            ranks:
+              - format: UOP # uncompressed offset pair
+              - format: CP  # coordinate payload
+
+      action-optimization:
+        - type: skipping
+          options:
+            - target: A
+              condition-on: [ B ]
+        - type: skipping
+          options:
+            - target: B
+              condition-on: [ A ]
+        - type: skipping
+          options:
+            - target: Z
+              condition-on: [ A, B ]

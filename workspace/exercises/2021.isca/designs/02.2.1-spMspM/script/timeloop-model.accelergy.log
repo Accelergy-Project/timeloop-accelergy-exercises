@@ -1,0 +1,44 @@
+    _                _                      
+   / \   ___ ___ ___| | ___ _ __ __ _ _   _ 
+  / _ \ / __/ __/ _ \ |/ _ \ '__/ _` | | | |
+ / ___ \ (_| (_|  __/ |  __/ | | (_| | |_| |
+/_/   \_\___\___\___|_|\___|_|  \__, |\__, |
+                                |___/ |___/ 
+
+Info: generating outputs according to the following specified output flags... 
+ Please use the -f flag to update the preference (default to all output files) 
+{'ERT': 1, 'ERT_summary': 1, 'ART': 1, 'ART_summary': 1, 'energy_estimation': 1, 'flattened_arch': 1}
+Warn: Cannot recognize the top key "mapping" in file ../map/mm-2level.yaml 
+Warn: Cannot recognize the top key "sparse_optimizations" in file ../sparse-opt/compress-AB-skippingZ.yaml 
+Warn: Cannot recognize the top key "problem" in file ../prob/spmspm.prob.yaml 
+Info: Parsing file ../arch/2level.arch.yaml for architecture info 
+Info: Parsing file ../components/SRAM_metadata.yaml for compound_components info 
+Info: Parsing file ../components/reg_metadata.yaml for compound_components info 
+Info: Parsing file ../components/regfile_metadata.yaml for compound_components info 
+Info: config file located: /home/nelliewu/.config/accelergy/accelergy_config.yaml 
+config file content: 
+ {'estimator_plug_ins': ['/home/nelliewu/.local/share/accelergy/estimation_plug_ins', '/home/nelliewu/research/workspace/accelergy_project/', '/home/nelliewu/research/workspace/accelergy_project/accelergy_private_plug_ins/65nm_plug_in'], 'primitive_components': ['/home/nelliewu/.local/share/accelergy/primitive_component_libs', '/home/nelliewu/research/workspace/accelergy_project/accelergy/share/primitive_component_libs'], 'table_plug_ins': {'roots': ['/home/nelliewu/research/workspace/accelergy_project/accelergy-cacti-plug-in/../accelergy_private_plug_ins/65nm_plug_in/SRAM_table']}, 'version': 0.3}
+Info: primitive component file parsed:  /home/nelliewu/research/workspace/accelergy_project/accelergy/share/primitive_component_libs/pim_primitive_component.lib.yaml 
+Info: primitive component file parsed:  /home/nelliewu/research/workspace/accelergy_project/accelergy/share/primitive_component_libs/primitive_component.lib.yaml 
+Info: primitive component file parsed:  /home/nelliewu/research/workspace/accelergy_project/accelergy/share/primitive_component_libs/soc_primitives.lib.yaml 
+Info: estimator plug-in identified by:  /home/nelliewu/.local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml 
+Info: estimator plug-in identified by:  /home/nelliewu/.local/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/table.estimator.yaml 
+table-based-plug-ins Identifies a set of tables named:  65nm_SRAM_tables
+Info: estimator plug-in identified by:  /home/nelliewu/research/workspace/accelergy_project/accelergy_private_plug_ins/65nm_plug_in/65nm.estimator.yaml 
+Info: estimator plug-in identified by:  /home/nelliewu/research/workspace/accelergy_project/accelergy/share/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
+Info: estimator plug-in identified by:  /home/nelliewu/research/workspace/accelergy_project/accelergy-aladdin-plug-in/aladdin.estimator.yaml 
+Info: estimator plug-in identified by:  /home/nelliewu/research/workspace/accelergy_project/accelergy-cacti-plug-in/cacti.estimator.yaml 
+Info: estimator plug-in identified by:  /home/nelliewu/research/workspace/accelergy_project/accelergy-table-based-plug-ins/table.estimator.yaml 
+table-based-plug-ins Identifies a set of tables named:  65nm_SRAM_tables
+Info: estimator plug-in identified by:  /home/nelliewu/research/workspace/accelergy_project/accelergy_private_plug_ins/65nm_plug_in/65nm.estimator.yaml 
+Info: CACTI plug-in... Querying CACTI for request:
+ {'class_name': 'SRAM', 'attributes': OrderedDict([('technology', '45nm'), ('width', 32), ('depth', 512.0), ('datawidth', 8), ('n_rdwr_ports', 2), ('n_banks', 1), ('avg_sparsity', 'avg_sparsity'), ('n_rd_ports', 0), ('n_wr_ports', 0), ('latency', '5ns')]), 'action_name': 'write', 'arguments': None}
+copy  /home/nelliewu/research/workspace/accelergy_project/accelergy-cacti-plug-in/default_SRAM.cfg  to  /home/nelliewu/research/workspace/accelergy_project/accelergy-cacti-plug-in/cacti/timeloop-model.06_14_22_08_13_SRAM.cfg
+CACTI plug-in removing temp file:  /home/nelliewu/research/workspace/accelergy_project/accelergy-cacti-plug-in/cacti/timeloop-model.06_14_22_08_13_SRAM.cfg
+Warn: No action counts are specified as yaml input 
+Info: flattened architecture is saved to: ../output//timeloop-model.flattened_architecture.yaml 
+Info: energy reference table is saved to: ../output//timeloop-model.ERT.yaml 
+Info: energy reference table summary is saved to: ../output//timeloop-model.ERT_summary.yaml 
+Warn: no runtime energy estimations are generated... not generating energy_estimation.yaml 
+Info: area reference table is saved to: ../output//timeloop-model.ART.yaml 
+Info: area reference table summary is saved to: ../output//timeloop-model.ART_summary.yaml 

@@ -1,0 +1,24 @@
+architecture:
+  version: 0.3
+
+  subtree:
+    - name: PE
+      attributes:
+        technology: 45nm
+
+      local:
+        - name: Buffer
+          class: storage
+          subclass: regfile
+          attributes:
+            depth: 64
+            width: 8
+            datawidth: 8
+            read_bandwidth: 3
+            write_bandwidth: 1
+
+        - name: MAC
+          class: compute
+          subclass: intmac
+          attributes:
+            datawidth: 8

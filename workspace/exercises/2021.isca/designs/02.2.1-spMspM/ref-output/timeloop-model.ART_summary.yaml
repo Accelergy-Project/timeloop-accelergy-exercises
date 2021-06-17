@@ -1,0 +1,20 @@
+ART_summary:
+  version: 0.3
+  table_summary:
+  - name: system.PE.MAC
+    area: 332.25
+    primitive_estimations: Aladdin_table
+  - name: system.PE.Buffer
+    area: 3991.76
+    primitive_estimations:
+    - name: storage
+      estimator: Aladdin_table
+    - name: metadata_storage
+      estimator: Aladdin_table
+  - name: system.BackingStorage
+    area: 17178.82
+    primitive_estimations:
+    - name: storage
+      estimator: Cacti
+    - name: metadata_storage
+      estimator: Aladdin_table

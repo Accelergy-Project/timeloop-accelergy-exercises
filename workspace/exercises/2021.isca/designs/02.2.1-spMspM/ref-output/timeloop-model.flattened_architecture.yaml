@@ -1,0 +1,44 @@
+architecture:
+  version: 0.3
+  local:
+  - name: system.PE.Buffer
+    class: storage
+    subclass: regfile_metadata
+    attributes:
+      ag_datawidth: 7
+      counter_width: 0
+      data_storage_depth: 128
+      data_storage_width: 8
+      datawidth: 8
+      metadata_datawidth: 4
+      metadata_storage_depth: 128
+      metadata_storage_width: 4
+      n_banks: 1
+      n_rdwr_ports: 2
+      num_storage_instances: 1
+      read_bandwidth: 3
+      technology: 45nm
+      write_bandwidth: 3
+  - name: system.PE.MAC
+    class: compute
+    subclass: intmac
+    attributes:
+      datawidth: 8
+      latency: 5ns
+      num_pipeline_stages: 2
+      technology: 45nm
+  - name: system.BackingStorage
+    class: SRAM_metadata
+    attributes:
+      ag_datawidth: 9
+      counter_width: 0
+      data_storage_depth: 512
+      data_storage_width: 32
+      datawidth: 8
+      metadata_datawidth: 4
+      metadata_storage_depth: 128
+      metadata_storage_width: 4
+      n_banks: 1
+      n_rdwr_ports: 2
+      num_storage_instances: 1
+      technology: 45nm

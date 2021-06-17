@@ -1,0 +1,24 @@
+problem:
+  shape:
+    name: DotProduct
+    dimensions: [ K, M ]
+    data-spaces:
+    - name: A
+      projection:
+      - [ [K] ]
+    - name: B
+      projection:
+      - [ [K] ]
+    - name: Z
+      projection:
+      - [ [M] ]
+      read-write: True
+
+  instance:
+    M: 1
+    K: 16
+
+    densities:
+      A:
+        distribution: fixed-structured # sparsity distribution name
+        density: 0.25

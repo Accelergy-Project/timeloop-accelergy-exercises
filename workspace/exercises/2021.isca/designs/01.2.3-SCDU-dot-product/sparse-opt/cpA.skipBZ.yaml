@@ -1,0 +1,17 @@
+sparse_optimizations:
+  targets:
+    - name: Buffer            # component name in architecture
+      representation-format:  # key word for "format" optimization
+                              # causes the empty element accesses to be eliminated
+        data-spaces:
+          - name: A           # tensor name
+            ranks:            # points to a list of ranks in fibertree representation
+              - format: CP    # coordinate payload representation format
+                              # options: CP, UB, RLE, UOP (i.e., CSR upper rank)
+      action-optimization:    # keyword for *explicit* storage level optimization
+        - type: skipping      # optimization type: either "gating" or "skipping"
+          target: B           # the tensor to perform optimization on
+          condition-on: [ A ] # the tensor that the optimization is based on
+        - type: skipping
+          target: Z
+          condition-on: [ A ]

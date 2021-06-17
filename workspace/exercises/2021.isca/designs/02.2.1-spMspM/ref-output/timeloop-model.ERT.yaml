@@ -1,0 +1,69 @@
+ERT:
+  version: 0.3
+  tables:
+  - name: system.PE.MAC
+    actions:
+    - name: mac_random
+      arguments: null
+      energy: 0.5608
+    - name: mac_reused
+      arguments: null
+      energy: 0.47989
+    - name: mac_gated
+      arguments: null
+      energy: 0.03642
+    - name: idle
+      arguments: null
+      energy: 0.01797
+  - name: system.PE.Buffer
+    actions:
+    - name: write
+      arguments: null
+      energy: 0.88442
+    - name: read
+      arguments: null
+      energy: 0.88442
+    - name: gated_write
+      arguments: null
+      energy: 0.00635
+    - name: gated_read
+      arguments: null
+      energy: 0.00635
+    - name: metadata_read
+      arguments: null
+      energy: 0.84842
+    - name: metadata_write
+      arguments: null
+      energy: 0.84842
+    - name: gated_metadata_read
+      arguments: null
+      energy: 0.00487
+    - name: gated_metadata_write
+      arguments: null
+      energy: 0.00487
+  - name: system.BackingStorage
+    actions:
+    - name: write
+      arguments: null
+      energy: 3.21261
+    - name: read
+      arguments: null
+      energy: 2.67732
+    - name: gated_write
+      arguments: null
+      energy: 6.0e-05
+    - name: gated_read
+      arguments: null
+      energy: 6.0e-05
+    - name: metadata_read
+      arguments: null
+      energy: 0.84842
+    - name: metadata_write
+      arguments: null
+      energy: 0.84842
+    - name: gated_metadata_read
+      arguments: null
+      energy: 0.00487
+    - name: gated_metadata_write
+      arguments: null
+      energy: 0.00487
