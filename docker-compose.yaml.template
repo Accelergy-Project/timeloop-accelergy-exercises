@@ -15,8 +15,11 @@
 #        % docker-compose up
 #
 #    4) Look at output and use the 127.0.0.1 URL (unless you changed the port below)
-#       if that does not work, try the 192.168.X.X with the same token as shown in the output (X.X can be obtained by `hostname -I`
-#
+
+# Notes (if URL does not work)
+# Option1: uncomment the last line under `environment` to disable token and try again
+# Option2: try the 192.168.X.X with the same token as shown in the output (X.X can be obtained by `hostname -I`)
+# Option3: if you have access to docker GUI app (e.g., Kitematic for docker temrinal), try open the web page there with the token
 
 version: '3'
 
@@ -29,5 +32,6 @@ services:
     volumes:
       - ./workspace:/home/workspace
     environment:
-      - USER_UID=197609
-      - USER_GID=197609
+      - USER_UID=1000
+      - USER_GID=1000
+      # - JUPYTER_SWITCHES=--NotebookApp.token=''
