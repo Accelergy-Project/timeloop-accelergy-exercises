@@ -37,3 +37,8 @@ notebooks/*.mp4
 # Keep some empty directories
 #
 !/**/.gitkeep
+
+#
+# docker
+#
+docker-compose.yaml

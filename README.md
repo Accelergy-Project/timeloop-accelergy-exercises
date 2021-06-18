@@ -6,7 +6,7 @@ Please find the respective directories and more detailed descriptions under `wor
 
 ## Using Docker
 
-We provide a docker with built-in tools to your to get started
+We provide a docker with built-in tools for you to get started
 
 - Make a copy of the provided template docker compose file: `cp docker-compose.yaml.template docker-compose.yaml`
 - Examine the instructions in `docker-compose.yaml` to setup the docker correctly, e.g., setup the correct `UID` and `GID`.
