@@ -1,0 +1,63 @@
+compound_components:
+  version: 0.3
+  classes:
+  - name: smartbuffer
+    attributes:
+      technology: must_specify
+      data_storage_depth: must_specify
+      data_storage_width: must_specify
+      n_banks: must_specify
+      n_rdwr_ports: 2
+      datawidth: memory_width
+      ag_datawidth: log(data_storage_depth)
+    subcomponents:
+      - name: storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: data_storage_width
+          depth: data_storage_depth
+          datawidth: datawidth
+          n_rdwr_ports: n_rdwr_ports
+          n_banks: n_banks
+          avg_sparsity: avg_sparsity
+      - name: address_generators[0..1]
+        class: intadder
+        attributes:
+          technology: technology
+          width: ag_datawidth
+    actions:
+      - name: write
+        subcomponents:
+          - name: storage
+            actions:
+              - name: write
+#          - name: address_generators[0]
+#            actions:
+#             - name: add
+      - name: read
+        subcomponents:
+          - name: storage
+            actions:
+              - name: read
+#          - name: address_generators[1]
+#            actions:
+#             - name: add
+      - name: gated_write
+        subcomponents:
+          - name: address_generators[0]
+            actions:
+            - name: idle
+      - name: gated_read
+        subcomponents:
+          - name: address_generators[1]
+            actions:
+            - name: idle
+      - name: idle
+        subcomponents:
+          - name: storage
+            actions:
+              - name: idle
+          - name: address_generators[1]
+            actions:
+              - name: idle

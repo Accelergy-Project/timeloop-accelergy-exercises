@@ -1,0 +1,46 @@
+sparse_optimizations:
+  targets:
+    - name: DRAM
+      representation-format:
+        data-spaces:
+          - name: Inputs
+            ranks:
+              - format: UOP
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]
+              - format: UOP
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]
+              - format: RLE
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]
+
+          - name: Outputs
+            ranks:
+              - format: UOP
+                flattened-rankIDs: [ [P, M, N, Q] ]
+              - format: RLE
+                flattened-rankIDs: [ [P, M, N, Q] ]
+    
+    - name: shared_glb
+      representation-format:
+        data-spaces:
+          - name: Inputs
+            ranks:
+              - format: UOP
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]
+              - format: RLE
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]
+
+
+    - name: weights_spad
+      action-optimization:
+        - type: skipping
+          options:
+            - target: Weights
+              condition-on: [ Inputs ]
+    
+    - name: ifmap_spad
+      representation-format:
+        data-spaces:
+          - name: Inputs
+            ranks:
+              - format: RLE
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]

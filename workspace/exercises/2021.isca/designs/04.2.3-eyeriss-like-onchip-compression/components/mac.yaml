@@ -1,0 +1,44 @@
+compound_components:
+  version: 0.3
+  classes:
+    - name: mac
+      attributes:
+        technology: must_specify
+        datawidth: must_specify
+      subcomponents:
+        - name: multiplier
+          class: intmultiplier
+          attributes:
+            technology: technology
+            datawidth: datawidth
+            avg_sparsity: avg_sparsity
+        - name: adder
+          class: intadder
+          attributes:
+            technology: technology
+            datawidth: datawidth
+      actions:
+        - name: mac_random
+          subcomponents:
+            - name: multiplier
+              actions:
+                - name: multiply_random
+            - name: adder
+              actions:
+                - name: add
+        - name: mac_reuse
+          subcomponents:
+            - name: multiplier
+              actions:
+                - name: multiply_reuse
+            - name: adder
+              actions:
+                - name: add
+        - name: mac_gated
+          subcomponents:
+            - name: multiplier
+              actions:
+                - name: idle
+            - name: adder
+              actions:
+                - name: idle

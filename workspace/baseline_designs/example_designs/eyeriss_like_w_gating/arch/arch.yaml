@@ -1,0 +1,90 @@
+architecture:
+  version: 0.3
+  subtree:
+    - name: eyeriss_168
+      attributes:
+        technology: 45nm
+      local:
+        - name: DRAM
+          class: DRAM
+          attributes:
+            width: 64
+            block_size: 4
+            datawidth: 16
+            metadata_storage_width: 60
+            metadata_datawidth: 5
+            metadata_block_size: 12
+
+        - name: shared_glb
+          class: storage
+          subclass: smartbuffer_metadata
+          attributes:
+            data_storage_depth: 12800
+            data_storage_width: 64
+            block_size: 4
+            n_banks: 1
+            read_bandwidth: 16
+            write_bandwidth: 16
+            metadata_storage_depth: 0
+            metadata_storage_width: 0
+            metadata_block_size: 1
+            metadata_datawidth: 0
+            metadata_counter_width: 9
+            decompression_supported: true  # from DRAM decompression
+            compression_supported: true    # to DRAM compression
+
+        - name: DummyBuffer[0..13]
+          class: storage
+          subclass: SRAM
+          attributes:
+            width: 16
+            depth: 0
+            num_banks: 1
+            datawidth: 16
+            entries: 0
+            meshX: 14
+
+      subtree:
+        - name: PE[0..167]
+          local:
+            - name: ifmap_spad
+              class: storage
+              subclass: smartbuffer
+              attributes:
+                data_storage_depth: 12
+                data_storage_width: 17 # actual data + 1bit mask
+                n_banks: 1
+                datawidth: 17
+                read_bandwidth: 2
+                write_bandwidth: 2
+                meshX: 14
+
+            - name: weights_spad
+              class: storage
+              subclass: smartbuffer
+              attributes:
+                data_storage_depth: 224
+                data_storage_width: 16
+                n_banks: 1
+                datawidth: 16
+                read_bandwidth: 2
+                write_bandwidth: 2
+                meshX: 14
+
+
+            - name: psum_spad
+              class: storage
+              subclass: smartbuffer
+              attributes:
+                data_storage_depth: 24
+                data_storage_width: 16
+                n_banks: 1
+                datawidth: 16
+                meshX: 14
+
+            - name: MACs
+              class: compute
+              subclass: mac
+              attributes:
+                meshX: 14
+                datawidth: 16

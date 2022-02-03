@@ -1,0 +1,159 @@
+ERT:
+  version: 0.3
+  tables:
+  - name: eyeriss_168.DRAM
+    actions:
+    - name: read
+      arguments: null
+      energy: 512
+    - name: write
+      arguments: null
+      energy: 512
+    - name: idle
+      arguments: null
+      energy: 0
+  - name: eyeriss_168.DummyBuffer[0..13]
+    actions:
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0
+    - name: idle
+      arguments: null
+      energy: 0
+  - name: eyeriss_168.PE[0..167].ifmap_spad
+    actions:
+    - name: write
+      arguments: null
+      energy: 1
+    - name: read
+      arguments: null
+      energy: 1
+    - name: gated_write
+      arguments: null
+      energy: 0.00595
+    - name: gated_read
+      arguments: null
+      energy: 0.00595
+    - name: idle
+      arguments: null
+      energy: 0.00595
+  - name: eyeriss_168.PE[0..167].weights_spad
+    actions:
+    - name: write
+      arguments: null
+      energy: 1.13063
+    - name: read
+      arguments: null
+      energy: 0.71011
+    - name: gated_write
+      arguments: null
+      energy: 0.00595
+    - name: gated_read
+      arguments: null
+      energy: 0.00595
+    - name: idle
+      arguments: null
+      energy: 0.00596
+  - name: eyeriss_168.PE[0..167].psum_spad
+    actions:
+    - name: write
+      arguments: null
+      energy: 0.25281
+    - name: read
+      arguments: null
+      energy: 0.25281
+    - name: gated_write
+      arguments: null
+      energy: 0.00595
+    - name: gated_read
+      arguments: null
+      energy: 0.00595
+    - name: idle
+      arguments: null
+      energy: 0.01232
+  - name: eyeriss_168.PE[0..167].MACs
+    actions:
+    - name: mac_random
+      arguments: null
+      energy: 2.20035
+    - name: mac_reuse
+      arguments: null
+      energy: 2.20035
+    - name: mac_gated
+      arguments: null
+      energy: 0.06595
+  - name: eyeriss_168.shared_glb
+    actions:
+    - name: write
+      arguments: null
+      energy: 37.1554
+    - name: read
+      arguments: null
+      energy: 49.1739
+    - name: gated_write
+      arguments: null
+      energy: 0.00616
+    - name: gated_read
+      arguments: null
+      energy: 0.00616
+    - name: address_generation
+      arguments: null
+      energy: 0.03749
+    - name: metadata_read
+      arguments: null
+      energy: 0
+    - name: metadata_write
+      arguments: null
+      energy: 0
+    - name: gated_metadata_read
+      arguments: null
+      energy: 0
+    - name: gated_metadata_write
+      arguments: null
+      energy: 0
+    - name: decompression_count
+      arguments: null
+      energy: 0.0241
+    - name: compression_count
+      arguments: null
+      energy: 0.0241
+    - name: idle
+      arguments: null
+      energy: 0.00616
