@@ -1,7 +1,7 @@
 Fibertree/Timeloop/Accelergy Tutorial Exercises
 ======================================
 
-This repository contains a set of exercises and baseline designs to explore Fibreetree, Timeloop, and Accelergy.
+This repository contains a set of exercises and baseline designs to explore Fibertrees, Timeloop, and Accelergy.
 Please find the respective directories and more detailed descriptions under `workspace` folder.
 
 ## Using Docker
