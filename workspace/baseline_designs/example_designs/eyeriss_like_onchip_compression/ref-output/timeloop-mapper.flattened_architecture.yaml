@@ -1,0 +1,102 @@
+architecture:
+  version: 0.3
+  local:
+  - name: eyeriss_168.PE[0..167].ifmap_spad
+    class: storage
+    subclass: smartbuffer
+    attributes:
+      ag_datawidth: 4
+      data_storage_depth: 12
+      data_storage_width: 16
+      datawidth: 16
+      meshX: 14
+      metadata_block_size: 2
+      metadata_datawidth: 4
+      metadata_storage_depth: 4
+      metadata_storage_width: 8
+      n_banks: 1
+      n_rdwr_ports: 2
+      read_bandwidth: 2
+      technology: 45nm
+      write_bandwidth: 2
+  - name: eyeriss_168.PE[0..167].weights_spad
+    class: storage
+    subclass: smartbuffer
+    attributes:
+      ag_datawidth: 8
+      data_storage_depth: 224
+      data_storage_width: 16
+      datawidth: 16
+      meshX: 14
+      n_banks: 1
+      n_rdwr_ports: 2
+      read_bandwidth: 2
+      technology: 45nm
+      write_bandwidth: 2
+  - name: eyeriss_168.PE[0..167].psum_spad
+    class: storage
+    subclass: smartbuffer
+    attributes:
+      ag_datawidth: 8
+      data_storage_depth: 224
+      data_storage_width: 16
+      datawidth: 16
+      meshX: 14
+      n_banks: 1
+      n_rdwr_ports: 2
+      technology: 45nm
+  - name: eyeriss_168.PE[0..167].MACs
+    class: compute
+    subclass: mac
+    attributes:
+      datawidth: 16
+      meshX: 14
+      technology: 45nm
+  - name: eyeriss_168.DRAM
+    class: DRAM
+    attributes:
+      block_size: 4
+      datawidth: 16
+      metadata_block_size: 12
+      metadata_datawidth: 5
+      metadata_storage_width: 60
+      technology: 45nm
+      type: LPDDR4
+      width: 64
+  - name: eyeriss_168.shared_glb
+    class: storage
+    subclass: smartbuffer_metadata
+    attributes:
+      ag_datawidth: 14
+      block_size: 4
+      compression_supported: true
+      data_storage_depth: 12800
+      data_storage_width: 64
+      datawidth: 64
+      decompression_supported: true
+      metadata_block_size: 8
+      metadata_counter_width: 0
+      metadata_datawidth: 4
+      metadata_storage_depth: 4096
+      metadata_storage_width: 32
+      n_banks: 1
+      n_rdwr_ports: 2
+      read_bandwidth: 16
+      technology: 45nm
+      write_bandwidth: 16
+  - name: eyeriss_168.DummyBuffer[0..13]
+    class: storage
+    subclass: SRAM
+    attributes:
+      datawidth: 16
+      depth: 0
+      entries: 0
+      latency: 5ns
+      meshX: 14
+      n_banks: 1
+      n_rd_ports: 0
+      n_rdwr_ports: 1
+      n_wr_ports: 0
+      num_banks: 1
+      technology: 45nm
+      width: 16

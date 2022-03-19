@@ -1,0 +1,116 @@
+compound_components:
+  version: 0.3
+  classes:
+  - name: smartbuffer_metadata
+    attributes:
+      technology: must_specify
+      data_storage_depth: must_specify
+      data_storage_width: must_specify
+      n_banks: must_specify
+      n_rdwr_ports: 2
+      datawidth: data_storage_width
+      ag_datawidth: log(data_storage_depth)
+      metadata_storage_width: must_specify
+      metadata_storage_depth: must_specify
+      metadata_datawidth: must_specify
+      metadata_counter_width: must_specify
+      metadata_block_size: 1
+
+    subcomponents:
+      - name: storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: data_storage_width
+          depth: data_storage_depth
+          datawidth: datawidth
+          n_rdwr_ports: n_rdwr_ports
+          n_banks: n_banks
+          avg_sparsity: avg_sparsity
+      - name: address_generators[0..1] # one for read, one for write
+        class: intadder
+        attributes:
+          technology: technology
+          datawidth: ag_datawidth
+      - name: metadata_counters[0..1] # one for read, one for write
+        class: intadder
+        attributes:
+          technology: technology
+          datawidth: metadata_counter_width
+      - name: metadata_storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: metadata_storage_width
+          depth: metadata_storage_depth
+          datawidth: metadata_datawidth * metadata_block_size
+      - name: intersection_unit  # place holder
+        class: intadder
+        attributes:
+          technology: technology
+          width: 0
+
+    actions:
+      - name: write
+        subcomponents:
+          - name: storage
+            actions:
+              - name: write
+      - name: read
+        subcomponents:
+          - name: storage
+            actions:
+              - name: read
+      - name: gated_write
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: gated_read
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: address_generation
+        subcomponents:
+          - name: address_generators[0]
+            actions:
+              - name: add
+      - name: metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: read
+      - name: metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: write
+      - name: gated_metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+      - name: gated_metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+      - name: decompression_count
+        subcomponents:
+          - name: metadata_counters[1]
+            actions:
+              - name: add
+      - name: compression_count
+        subcomponents:
+          - name: metadata_counters[0]
+            actions:
+              - name: add
+      - name: idle
+        subcomponents:
+          - name: storage
+            actions:
+              - name: idle
+          - name: storage
+            actions:
+              - name: idle

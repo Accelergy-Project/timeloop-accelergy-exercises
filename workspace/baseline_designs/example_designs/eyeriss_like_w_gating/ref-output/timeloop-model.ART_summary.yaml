@@ -1,0 +1,50 @@
+ART_summary:
+  version: 0.3
+  table_summary:
+  - name: eyeriss_168.DRAM
+    area: 0
+    primitive_estimations: Cacti
+  - name: eyeriss_168.DummyBuffer[0..13]
+    area: 0
+    primitive_estimations: Aladdin_table
+  - name: eyeriss_168.PE[0..167].ifmap_spad
+    area: 180.0
+    primitive_estimations:
+    - name: storage
+      estimator: dummy_table
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+  - name: eyeriss_168.PE[0..167].weights_spad
+    area: 3474.22
+    primitive_estimations:
+    - name: storage
+      estimator: Cacti
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+  - name: eyeriss_168.PE[0..167].psum_spad
+    area: 537.18
+    primitive_estimations:
+    - name: storage
+      estimator: Aladdin_table
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+  - name: eyeriss_168.PE[0..167].MACs
+    area: 1239.5
+    primitive_estimations:
+    - name: multiplier
+      estimator: Aladdin_table
+    - name: adder
+      estimator: Aladdin_table
+  - name: eyeriss_168.shared_glb
+    area: 641718.8125
+    primitive_estimations:
+    - name: storage
+      estimator: Cacti
+    - name: address_generators[0..1]
+      estimator: Aladdin_table
+    - name: metadata_counters[0..1]
+      estimator: Aladdin_table
+    - name: metadata_storage
+      estimator: Aladdin_table
+    - name: intersection_unit
+      estimator: Aladdin_table

@@ -1,0 +1,31 @@
+# eyeriss v1 optimization features
+#  - DRAM compression for Inputs and Weights
+#  - gating on weights scratchpad
+#  - note that the bitmask metadata associated with the ifmap scratchpad is not here because the metadata did not
+#    allow ifmap accesses to be saved, which is what conventionally what metadata will help to achieve, so we model
+#    it as an extra bit in the datawidth instead of as a metadata
+sparse_optimizations:
+  targets:
+    - name: DRAM
+      representation-format:
+        data-spaces:
+          - name: Inputs
+            ranks:
+              - format: UOP
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]
+              - format: RLE
+                flattened-rankIDs: [ [R, S, P, C, M, N, Q] ]
+
+          - name: Outputs
+            ranks:
+              - format: UOP
+                flattened-rankIDs: [ [P, M, N, Q] ]
+              - format: RLE
+                flattened-rankIDs: [ [P, M, N, Q] ]
+
+    - name: weights_spad
+      action-optimization:
+        - type: gating
+          options:
+            - target: Weights
+              condition-on: [ Inputs ]
