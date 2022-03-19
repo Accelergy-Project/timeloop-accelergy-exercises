@@ -1,0 +1,62 @@
+ERT:
+  version: 0.3
+  tables:
+  - name: PE.Buffer
+    actions:
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.00441
+    - name: read
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.07345
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0.35114
+    - name: read
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0.42018
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 0
+      energy: 0.00441
+    - name: write
+      arguments:
+        address_delta: 0
+        data_delta: 1
+      energy: 0.07345
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 0
+      energy: 0.35114
+    - name: write
+      arguments:
+        address_delta: 1
+        data_delta: 1
+      energy: 0.42018
+    - name: idle
+      arguments: null
+      energy: 0.00441
+  - name: PE.MAC
+    actions:
+    - name: mac_random
+      arguments: null
+      energy: 0.5608
+    - name: mac_reused
+      arguments: null
+      energy: 0.47989
+    - name: mac_gated
+      arguments: null
+      energy: 0.03642
+    - name: idle
+      arguments: null
+      energy: 0.01797

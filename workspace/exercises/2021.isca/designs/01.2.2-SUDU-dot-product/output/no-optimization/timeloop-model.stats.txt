@@ -8,7 +8,7 @@ Level 0
     -----
     Word bits             : 8
     Instances             : 1 (1*1)
-    Energy-per-op         : 0.56 pJ
+    Compute energy        : 0.56 pJ
 
     STATS
     -----
@@ -23,25 +23,19 @@ Level 1
 
     SPECS
     -----
-        Technology                   : SRAM
-        Data storage size            : 64
-        Data word bits               : 8
-        Data block size              : 1
-        Metadata storage width(bits) : 0
-        Metadata storage depth       : -
-        Cluster size                 : 1
-        Instances                    : 1 (1*1)
-        Read bandwidth               : 3.00
-        Write bandwidth              : 1.00
-        Multiple buffering           : 1.00
-        Effective data storage size  : 64
-        Min utilization              : 0.00
-        Vector read energy           : 0.42 pJ
-        Vector write energy          : 0.42 pJ
-        Vector metadata read energy  : 0.00 pJ
-        Vector metadata write energy : 0.00 pJ
-        (De)compression energy       : 0.00 pJ
-        Area                         : 887.84 um^2
+        Technology           : SRAM
+        Size                 : 64
+        Word bits            : 8
+        Block size           : 1
+        Cluster size         : 1
+        Instances            : 1 (1*1)
+        Read bandwidth       : 3.00
+        Write bandwidth      : 1.00
+        Multiple buffering   : 1.00
+        Effective size       : 64
+        Min utilization      : 0.00
+        Vector access energy : 0.42 pJ
+        Area                 : 887.84 um^2
 
     MAPPING
     -------

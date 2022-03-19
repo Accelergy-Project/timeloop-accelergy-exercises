@@ -12,6 +12,7 @@ architecture:
           data_storage_depth: 512
           data_storage_width: 32
           datawidth: 8
+          block_size: 4
           metadata_storage_depth: 128
           metadata_storage_width: 4
           metadata_datawidth: 4
@@ -26,6 +27,7 @@ architecture:
             data_storage_depth: 64
             data_storage_width: 8
             datawidth: 8
+            block_size: 1
             metadata_storage_depth: 16
             metadata_storage_width: 4
             metadata_datawidth: 4

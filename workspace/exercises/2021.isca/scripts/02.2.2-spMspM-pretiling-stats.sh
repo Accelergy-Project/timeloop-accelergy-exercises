@@ -1,18 +1,18 @@
 
 printf "\n=== BackingStorage ===\n"
 printf "\n --- B --- \n"
-grep "=== BackingStorage" *.stats.txt -A 120 | grep "B:" -A 80 | grep -e 'shape' -e ' storage c' -e 'format' \
--e reads
+grep "=== BackingStorage" *.stats.txt -A 120 | grep "B:" -A 70 | grep -e 'shape' -e ' storage c' -e 'format' \
+-e reads -e Rank
 
 
 printf "\n=== Buffer ===\n"
 printf "\n --- A --- \n"
-grep "=== Buffer" *.stats.txt -A 80 | grep -e 'shape' -e ' storage c' -e 'format'
+grep "=== Buffer" *.stats.txt -A 43 | grep -e 'shape' -e ' storage c' -e 'format' -e Rank
 printf "\n --- B --- \n"
-grep "=== Buffer" *.stats.txt -A 120 | grep "B:" -A 80 | grep -e 'shape' -e ' storage c' -e 'format' \
--e reads -e fills
+grep "=== Buffer" *.stats.txt -A 150 | grep "B:" -A 50 | grep -e 'shape' -e ' storage c' -e 'format' \
+-e reads -e fills -e Rank
 printf "\n --- Z --- \n"
-grep "=== Buffer" *.stats.txt -A 170 | grep "Z:" -A 80 | grep -e 'shape' -e ' storage c'
+grep "=== Buffer" *.stats.txt -A 170 | grep "Z:" -A 50 | grep -e 'shape' -e ' storage c'
 
 echo ""
 

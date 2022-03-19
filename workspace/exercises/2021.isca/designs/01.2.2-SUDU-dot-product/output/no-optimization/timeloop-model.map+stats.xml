@@ -26,13 +26,13 @@
 							<t_>8</t_>
 						</word_bits>
 					</specs_>
-					<energy_>2.24319999999999986e+00</energy_>
+					<energy_>8.97279999999999944e+00</energy_>
 					<area_>3.32250000000000000e+02</area_>
-					<cycles_>4</cycles_>
+					<cycles_>16</cycles_>
 					<utilized_instances_>1</utilized_instances_>
 					<avg_utilized_instances_>1</avg_utilized_instances_>
 					<algorithmic_computes_>16</algorithmic_computes_>
-					<random_computes_>4</random_computes_>
+					<random_computes_>16</random_computes_>
 					<gated_computes_>0</gated_computes_>
 					<skipped_computes_>0</skipped_computes_>
 				</px>
@@ -130,11 +130,11 @@
 								<item>1</item>
 							</PerDataSpace>
 						</utilized_capacity>
-						<utilized_instances>
+						<utilized_instances class_id="19" tracking_level="0" version="0">
 							<PerDataSpace>
-								<item>1</item>
-								<item>1</item>
-								<item>1</item>
+								<item>1.00000000000000000e+00</item>
+								<item>1.00000000000000000e+00</item>
+								<item>1.00000000000000000e+00</item>
 							</PerDataSpace>
 						</utilized_instances>
 						<utilized_clusters>
@@ -168,8 +168,8 @@
 						<gated_reads>
 							<PerDataSpace>
 								<item>0</item>
-								<item>12</item>
-								<item>12</item>
+								<item>0</item>
+								<item>0</item>
 							</PerDataSpace>
 						</gated_reads>
 						<skipped_reads>
@@ -182,8 +182,8 @@
 						<random_reads>
 							<PerDataSpace>
 								<item>16</item>
-								<item>4</item>
-								<item>3</item>
+								<item>16</item>
+								<item>15</item>
 							</PerDataSpace>
 						</random_reads>
 						<gated_fills>
@@ -211,7 +211,7 @@
 							<PerDataSpace>
 								<item>0</item>
 								<item>0</item>
-								<item>12</item>
+								<item>0</item>
 							</PerDataSpace>
 						</gated_updates>
 						<skipped_updates>
@@ -225,12 +225,12 @@
 							<PerDataSpace>
 								<item>0</item>
 								<item>0</item>
-								<item>4</item>
+								<item>16</item>
 							</PerDataSpace>
 						</random_updates>
-						<random_format_reads class_id="19" tracking_level="0" version="0">
+						<random_format_reads class_id="20" tracking_level="0" version="0">
 							<PerDataSpace>
-								<item class_id="20" tracking_level="0" version="0">
+								<item class_id="21" tracking_level="0" version="0">
 									<count>0</count>
 									<item_version>0</item_version>
 								</item>
@@ -397,10 +397,10 @@
 							<PerDataSpace>
 								<item>0</item>
 								<item>0</item>
-								<item>4</item>
+								<item>15</item>
 							</PerDataSpace>
 						</temporal_reductions>
-						<read_bandwidth class_id="21" tracking_level="0" version="0">
+						<read_bandwidth>
 							<PerDataSpace>
 								<item>1.00000000000000000e+00</item>
 								<item>1.00000000000000000e+00</item>
@@ -417,22 +417,22 @@
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
 								<item>4.20179999999999998e-01</item>
-								<item>1.08352500000000004e-01</item>
-								<item>9.82935483870967519e-02</item>
+								<item>4.20179999999999998e-01</item>
+								<item>4.20179999999999998e-01</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
 								<item>4.20179999999999998e-01</item>
-								<item>4.33410000000000017e-01</item>
-								<item>4.35299999999999909e-01</item>
+								<item>4.20179999999999998e-01</item>
+								<item>4.20179999999999998e-01</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
 								<item>6.72287999999999997e+00</item>
-								<item>1.73364000000000007e+00</item>
-								<item>3.04709999999999948e+00</item>
+								<item>6.72287999999999997e+00</item>
+								<item>1.30255799999999997e+01</item>
 							</PerDataSpace>
 						</energy>
 						<temporal_reduction_energy>
@@ -450,7 +450,7 @@
 							</PerDataSpace>
 						</addr_gen_energy>
 						<cycles>16</cycles>
-						<slowdown>2.50000000000000000e-01</slowdown>
+						<slowdown>1.00000000000000000e+00</slowdown>
 						<format_read_bandwidth_ratio>
 							<PerDataSpace>
 								<item>0.00000000000000000e+00</item>

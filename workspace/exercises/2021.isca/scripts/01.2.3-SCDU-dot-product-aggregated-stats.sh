@@ -1,11 +1,11 @@
 printf "\n=== Buffer ===\n"
 printf "\n --- A --- \n"
-grep "=== Buffer" *.stats.txt -A 80 | grep -e 'shape' -e ' storage c' -e 'format' -e 'A[a-z ]* reads'
+grep "=== Buffer" *.stats.txt -A 70 | grep -e 'shape' -e ' storage c' -e 'format' -e 'A[a-z ]* reads' -e 'Rank'
 printf "\n --- B --- \n"
-grep "=== Buffer" *.stats.txt -A 120 | grep "B:" -A 80 | grep -e 'shape' -e 'data storage c' -e 'A[a-z]* scalar reads' \
--e 'Skipped scalar reads'
+grep "=== Buffer" *.stats.txt -A 110 | grep "B:" -A 50 | grep -e 'shape' -e 'data storage c' -e 'A[a-z]* scalar reads' \
+-e 'Skipped scalar reads' 
 printf "\n --- Z --- \n"
-grep "=== Buffer" *.stats.txt -A 170 | grep "Z:" -A 80 | grep -e 'shape' -e 'data storage c' -e 'A[a-z]* scalar [reads|updates]' \
+grep "=== Buffer" *.stats.txt -A 170 | grep "Z:" -A 50 | grep -e 'shape' -e 'data storage c' -e 'A[a-z]* scalar [reads|updates]' \
  -e 'Skipped scalar [reads|updates]'
 
 echo ""

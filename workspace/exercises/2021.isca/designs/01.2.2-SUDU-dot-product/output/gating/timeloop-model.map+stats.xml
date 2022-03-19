@@ -130,11 +130,11 @@
 								<item>1</item>
 							</PerDataSpace>
 						</utilized_capacity>
-						<utilized_instances>
+						<utilized_instances class_id="19" tracking_level="0" version="0">
 							<PerDataSpace>
-								<item>1</item>
-								<item>1</item>
-								<item>1</item>
+								<item>1.00000000000000000e+00</item>
+								<item>1.00000000000000000e+00</item>
+								<item>1.00000000000000000e+00</item>
 							</PerDataSpace>
 						</utilized_instances>
 						<utilized_clusters>
@@ -228,9 +228,9 @@
 								<item>4</item>
 							</PerDataSpace>
 						</random_updates>
-						<random_format_reads class_id="19" tracking_level="0" version="0">
+						<random_format_reads class_id="20" tracking_level="0" version="0">
 							<PerDataSpace>
-								<item class_id="20" tracking_level="0" version="0">
+								<item class_id="21" tracking_level="0" version="0">
 									<count>0</count>
 									<item_version>0</item_version>
 								</item>
@@ -400,7 +400,7 @@
 								<item>4</item>
 							</PerDataSpace>
 						</temporal_reductions>
-						<read_bandwidth class_id="21" tracking_level="0" version="0">
+						<read_bandwidth>
 							<PerDataSpace>
 								<item>1.00000000000000000e+00</item>
 								<item>1.00000000000000000e+00</item>

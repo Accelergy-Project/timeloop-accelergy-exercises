@@ -14,6 +14,7 @@ architecture:
             depth: 64       # number of entries in storage
             width: 8        # number of bits for each entry
             datawidth: 8    # number of bits per data
+            block_size: 1   # number of blocks per storage fetch
             read_bandwidth: 3
             write_bandwidth: 1
 

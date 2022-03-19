@@ -30,6 +30,7 @@
 					<area_>3.32250000000000000e+02</area_>
 					<cycles_>4</cycles_>
 					<utilized_instances_>1</utilized_instances_>
+					<avg_utilized_instances_>1</avg_utilized_instances_>
 					<algorithmic_computes_>16</algorithmic_computes_>
 					<random_computes_>4</random_computes_>
 					<gated_computes_>0</gated_computes_>
@@ -85,7 +86,7 @@
 							<t_>1</t_>
 						</meshY>
 						<read_bandwidth class_id="15" tracking_level="0" version="0">
-							<t_>3.00000000000000000e+00</t_>
+							<t_>4.00000000000000000e+00</t_>
 						</read_bandwidth>
 						<write_bandwidth>
 							<t_>3.00000000000000000e+00</t_>
@@ -164,27 +165,6 @@
 								<item>0</item>
 							</PerDataSpace>
 						</fills>
-						<metadata_reads>
-							<PerDataSpace>
-								<item>4</item>
-								<item>0</item>
-								<item>0</item>
-							</PerDataSpace>
-						</metadata_reads>
-						<metadata_fills>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
-							</PerDataSpace>
-						</metadata_fills>
-						<metadata_updates>
-							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
-							</PerDataSpace>
-						</metadata_updates>
 						<gated_reads>
 							<PerDataSpace>
 								<item>0</item>
@@ -248,69 +228,204 @@
 								<item>4</item>
 							</PerDataSpace>
 						</random_updates>
-						<random_metadata_reads>
+						<random_format_reads class_id="19" tracking_level="0" version="0">
 							<PerDataSpace>
-								<item>4</item>
-								<item>0</item>
-								<item>0</item>
+								<item class_id="20" tracking_level="0" version="0">
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>4</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</random_metadata_reads>
-						<gated_metadata_reads>
+						</random_format_reads>
+						<gated_format_reads>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</gated_metadata_reads>
-						<skipped_metadata_reads>
+						</gated_format_reads>
+						<skipped_format_reads>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</skipped_metadata_reads>
-						<random_metadata_fills>
+						</skipped_format_reads>
+						<random_format_fills>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</random_metadata_fills>
-						<gated_metadata_fills>
+						</random_format_fills>
+						<gated_format_fills>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</gated_metadata_fills>
-						<skipped_metadata_fills>
+						</gated_format_fills>
+						<skipped_format_fills>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</skipped_metadata_fills>
-						<random_metadata_updates>
+						</skipped_format_fills>
+						<random_format_updates>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</random_metadata_updates>
-						<gated_metadata_updates>
+						</random_format_updates>
+						<gated_format_updates>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</gated_metadata_updates>
-						<skipped_metadata_updates>
+						</gated_format_updates>
+						<skipped_format_updates>
 							<PerDataSpace>
-								<item>0</item>
-								<item>0</item>
-								<item>0</item>
+								<item>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<count>2</count>
+										<item_version>0</item_version>
+										<item>0</item>
+										<item>0</item>
+									</item>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
+								<item>
+									<count>0</count>
+									<item_version>0</item_version>
+								</item>
 							</PerDataSpace>
-						</skipped_metadata_updates>
+						</skipped_format_updates>
 						<decompression_counts>
 							<PerDataSpace>
 								<item>0</item>
@@ -339,9 +454,9 @@
 								<item>4</item>
 							</PerDataSpace>
 						</temporal_reductions>
-						<read_bandwidth class_id="19" tracking_level="0" version="0">
+						<read_bandwidth class_id="22" tracking_level="0" version="0">
 							<PerDataSpace>
-								<item>1.00000000000000000e+00</item>
+								<item>1.50000000000000000e+00</item>
 								<item>1.00000000000000000e+00</item>
 								<item>7.50000000000000000e-01</item>
 							</PerDataSpace>
@@ -390,20 +505,34 @@
 						</addr_gen_energy>
 						<cycles>4</cycles>
 						<slowdown>1.00000000000000000e+00</slowdown>
+						<format_read_bandwidth_ratio>
+							<PerDataSpace>
+								<item>3.33333333333333315e-01</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</format_read_bandwidth_ratio>
+						<format_write_bandwidth_ratio>
+							<PerDataSpace>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+								<item>0.00000000000000000e+00</item>
+							</PerDataSpace>
+						</format_write_bandwidth_ratio>
 					</stats_>
 				</px>
 			</item>
 		</levels_>
-		<networks_ class_id="20" tracking_level="0" version="0">
+		<networks_ class_id="23" tracking_level="0" version="0">
 			<count>1</count>
 			<item_version>0</item_version>
-			<item class_id="21" tracking_level="0" version="0">
+			<item class_id="24" tracking_level="0" version="0">
 				<first>Buffer &lt;==&gt; MAC</first>
-				<second class_id="22" tracking_level="0" version="1">
-					<px class_id="23" class_name="model::LegacyNetwork" tracking_level="1" version="0" object_id="_2">
-						<Network class_id="24" tracking_level="0" version="0"></Network>
-						<specs_ class_id="25" tracking_level="0" version="0">
-							<NetworkSpecs class_id="26" tracking_level="0" version="0">
+				<second class_id="25" tracking_level="0" version="1">
+					<px class_id="26" class_name="model::LegacyNetwork" tracking_level="1" version="0" object_id="_2">
+						<Network class_id="27" tracking_level="0" version="0"></Network>
+						<specs_ class_id="28" tracking_level="0" version="0">
+							<NetworkSpecs class_id="29" tracking_level="0" version="0">
 								<name>Buffer &lt;==&gt; MAC</name>
 							</NetworkSpecs>
 							<word_bits>
@@ -416,7 +545,7 @@
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 						</specs_>
-						<stats_ class_id="27" tracking_level="0" version="0">
+						<stats_ class_id="30" tracking_level="0" version="0">
 							<fanout>
 								<PerDataSpace>
 									<item>1</item>
@@ -438,25 +567,6 @@
 									<item>1</item>
 								</PerDataSpace>
 							</multicast_factor>
-							<ingresses class_id="28" tracking_level="0" version="0">
-								<PerDataSpace>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>16</item>
-									</item>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>16</item>
-									</item>
-									<item>
-										<count>1</count>
-										<item_version>0</item_version>
-										<item>16</item>
-									</item>
-								</PerDataSpace>
-							</ingresses>
 							<distributed_multicast>
 								<PerDataSpace>
 									<item>0</item>
@@ -520,9 +630,9 @@
 		</networks_>
 	</topology_>
 </engine>
-<mapping class_id="30" tracking_level="0" version="0">
+<mapping class_id="31" tracking_level="0" version="0">
 	<datatype_bypass_nest>
-		<item class_id="31" tracking_level="0" version="0">
+		<item class_id="32" tracking_level="0" version="0">
 			<bits>0000000000000001</bits>
 		</item>
 		<item>
@@ -533,12 +643,12 @@
 		</item>
 	</datatype_bypass_nest>
 </mapping>
-<a class_id="32" tracking_level="1" version="0" object_id="_3">
-	<workload_ class_id="33" tracking_level="0" version="0">
-		<bounds_ class_id="34" tracking_level="0" version="0">
+<a class_id="33" tracking_level="1" version="0" object_id="_3">
+	<workload_ class_id="34" tracking_level="0" version="0">
+		<factorized_bounds_ class_id="35" tracking_level="0" version="0">
 			<count>2</count>
 			<item_version>0</item_version>
-			<item class_id="35" tracking_level="0" version="0">
+			<item class_id="36" tracking_level="0" version="0">
 				<first>0</first>
 				<second>16</second>
 			</item>
@@ -546,21 +656,21 @@
 				<first>1</first>
 				<second>1</second>
 			</item>
-		</bounds_>
+		</factorized_bounds_>
 		<coefficients_>
 			<count>0</count>
 			<item_version>0</item_version>
 		</coefficients_>
-		<densities_ class_id="36" tracking_level="0" version="0">
+		<densities_ class_id="37" tracking_level="0" version="0">
 			<count>3</count>
 			<item_version>0</item_version>
-			<item class_id="37" tracking_level="0" version="0">
+			<item class_id="38" tracking_level="0" version="0">
 				<first>0</first>
-				<second class_id="38" tracking_level="0" version="1">
-					<px class_id="39" class_name="problem::FixedStructuredDistribution" tracking_level="1" version="0" object_id="_4">
-						<DensityDistribution class_id="40" tracking_level="0" version="0"></DensityDistribution>
-						<specs_ class_id="41" tracking_level="0" version="0">
-							<DensityDistributionSpecs class_id="42" tracking_level="0" version="0">
+				<second class_id="39" tracking_level="0" version="1">
+					<px class_id="40" class_name="problem::FixedStructuredDistribution" tracking_level="1" version="0" object_id="_4">
+						<DensityDistribution class_id="41" tracking_level="0" version="0"></DensityDistribution>
+						<specs_ class_id="42" tracking_level="0" version="0">
+							<DensityDistributionSpecs class_id="43" tracking_level="0" version="0">
 								<type>UNSET</type>
 							</DensityDistributionSpecs>
 							<type>fixed-structured</type>
@@ -572,7 +682,7 @@
 			<item>
 				<first>1</first>
 				<second>
-					<px class_id_reference="39" object_id="_5">
+					<px class_id_reference="40" object_id="_5">
 						<DensityDistribution></DensityDistribution>
 						<specs_>
 							<DensityDistributionSpecs>
@@ -587,7 +697,7 @@
 			<item>
 				<first>2</first>
 				<second>
-					<px class_id_reference="39" object_id="_6">
+					<px class_id_reference="40" object_id="_6">
 						<DensityDistribution></DensityDistribution>
 						<specs_>
 							<DensityDistributionSpecs>
