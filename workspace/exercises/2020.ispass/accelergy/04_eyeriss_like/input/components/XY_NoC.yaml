@@ -26,7 +26,7 @@ compound_components:
         class: wire
         attributes:
           technology: technology
-          width: datawidth + X_comparator_width
+          datawidth: datawidth + X_comparator_width
           length: Y_X_wire_avg_length
     actions:
       - name: transfer_random

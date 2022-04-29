@@ -4,26 +4,26 @@ ERT_summary:
   - name: eyeriss_like.PE[0..167].mac
     actions:
     - name: mac_random
-      energy: 2.2
+      energy: 2.20035
     - name: mac_reused
-      energy: 1.877
+      energy: 1.87673
     - name: mac_gated
-      energy: 0.103
+      energy: 0.10285
     - name: idle
-      energy: 0.066
+      energy: 0.06595
     primitive_estimation(s):
     - name: eyeriss_like.PE[0..167].mac
       estimator: Aladdin_table
   - name: eyeriss_like.PE[0..167].ifmap_spad
     actions:
     - name: write
-      average_energy: 0.146
-      max_energy: 0.237
-      min_energy: 0.055
+      average_energy: 0.14561
+      max_energy: 0.23632
+      min_energy: 0.0549
     - name: read
-      average_energy: 0.146
-      max_energy: 0.237
-      min_energy: 0.055
+      average_energy: 0.14561
+      max_energy: 0.23632
+      min_energy: 0.0549
     - name: idle
       energy: 0.018
     primitive_estimation(s):
@@ -38,15 +38,15 @@ ERT_summary:
   - name: eyeriss_like.PE[0..167].weights_spad
     actions:
     - name: write
-      average_energy: 0.824
-      max_energy: 1.586
-      min_energy: 0.061
+      average_energy: 0.82303
+      max_energy: 1.58552
+      min_energy: 0.06053
     - name: read
-      average_energy: 0.824
-      max_energy: 1.586
-      min_energy: 0.061
+      average_energy: 0.82303
+      max_energy: 1.58552
+      min_energy: 0.06053
     - name: idle
-      energy: 0.024
+      energy: 0.02363
     primitive_estimation(s):
     - name: storage
       estimator: Aladdin_table
@@ -59,15 +59,15 @@ ERT_summary:
   - name: eyeriss_like.PE[0..167].psum_spad
     actions:
     - name: write
-      average_energy: 0.153
-      max_energy: 0.251
-      min_energy: 0.055
+      average_energy: 0.1529
+      max_energy: 0.25083
+      min_energy: 0.05496
     - name: read
-      average_energy: 0.153
-      max_energy: 0.251
-      min_energy: 0.055
+      average_energy: 0.1529
+      max_energy: 0.25083
+      min_energy: 0.05496
     - name: idle
-      energy: 0.018
+      energy: 0.01806
     primitive_estimation(s):
     - name: storage
       estimator: Aladdin_table
@@ -80,15 +80,15 @@ ERT_summary:
   - name: eyeriss_like.weights_glb
     actions:
     - name: write
-      average_energy: 5.695
-      max_energy: 11.34
-      min_energy: 0.049
+      average_energy: 5.69428
+      max_energy: 11.3395
+      min_energy: 0.04906
     - name: read
-      average_energy: 5.159
-      max_energy: 10.269
-      min_energy: 0.049
+      average_energy: 5.15898
+      max_energy: 10.2689
+      min_energy: 0.04906
     - name: idle
-      energy: 0.012
+      energy: 0.01216
     primitive_estimation(s):
     - name: storage
       estimator: Cacti
@@ -101,15 +101,15 @@ ERT_summary:
   - name: eyeriss_like.shared_glb
     actions:
     - name: write
-      average_energy: 34.403
-      max_energy: 68.751
-      min_energy: 0.054
+      average_energy: 34.40252
+      max_energy: 68.7512
+      min_energy: 0.05383
     - name: read
-      average_energy: 33.996
-      max_energy: 67.938
-      min_energy: 0.054
+      average_energy: 33.99577
+      max_energy: 67.9377
+      min_energy: 0.05383
     - name: idle
-      energy: 0.017
+      energy: 0.01693
     primitive_estimation(s):
     - name: storage
       estimator: Cacti
@@ -122,15 +122,15 @@ ERT_summary:
   - name: eyeriss_like.ifmap_NoC
     actions:
     - name: transfer_random
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.20057
+      max_energy: 0.65341
+      min_energy: 0.00727
     - name: transfer_repeated
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.20056
+      max_energy: 0.6534
+      min_energy: 0.00726
     - name: idle
-      energy: 0.0
+      energy: 0.0036
     primitive_estimation(s):
     - name: Y_memory_controller[0..0]
       estimator: Aladdin_table
@@ -165,15 +165,15 @@ ERT_summary:
   - name: eyeriss_like.weights_NoC
     actions:
     - name: transfer_random
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.2006
+      max_energy: 0.65344
+      min_energy: 0.0073
     - name: transfer_repeated
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.20056
+      max_energy: 0.6534
+      min_energy: 0.00726
     - name: idle
-      energy: 0.0
+      energy: 0.0036
     primitive_estimation(s):
     - name: Y_memory_controller[0..0]
       estimator: Aladdin_table
@@ -208,15 +208,15 @@ ERT_summary:
   - name: eyeriss_like.psum_write_NoC
     actions:
     - name: transfer_random
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.2006
+      max_energy: 0.65344
+      min_energy: 0.0073
     - name: transfer_repeated
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.20056
+      max_energy: 0.6534
+      min_energy: 0.00726
     - name: idle
-      energy: 0.0
+      energy: 0.0036
     primitive_estimation(s):
     - name: Y_memory_controller[0..0]
       estimator: Aladdin_table
@@ -251,15 +251,15 @@ ERT_summary:
   - name: eyeriss_like.psum_read_NoC
     actions:
     - name: transfer_random
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.20065
+      max_energy: 0.65349
+      min_energy: 0.00735
     - name: transfer_repeated
-      average_energy: 0.221
-      max_energy: 0.72
-      min_energy: 0.008
+      average_energy: 0.20056
+      max_energy: 0.6534
+      min_energy: 0.00726
     - name: idle
-      energy: 0.0
+      energy: 0.0036
     primitive_estimation(s):
     - name: Y_memory_controller[0..0]
       estimator: Aladdin_table
