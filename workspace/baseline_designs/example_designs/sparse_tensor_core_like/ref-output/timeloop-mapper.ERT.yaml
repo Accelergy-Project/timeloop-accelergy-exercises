@@ -1,0 +1,103 @@
+ERT:
+  version: 0.3
+  tables:
+  - name: system.DRAM
+    actions:
+    - name: read
+      arguments: null
+      energy: 512
+    - name: write
+      arguments: null
+      energy: 512
+    - name: idle
+      arguments: null
+      energy: 0
+  - name: system.SM.Subpartition[0..3].PE[0..255].LRF
+    actions:
+    - name: write
+      arguments: null
+      energy: 0.072
+    - name: read
+      arguments: null
+      energy: 0.072
+    - name: gated_write
+      arguments: null
+      energy: 0.00296
+    - name: gated_read
+      arguments: null
+      energy: 0.00296
+    - name: metadata_read
+      arguments: null
+      energy: 0.072
+    - name: metadata_write
+      arguments: null
+      energy: 0.072
+    - name: gated_metadata_read
+      arguments: null
+      energy: 0.00296
+    - name: gated_metadata_write
+      arguments: null
+      energy: 0.00296
+  - name: system.SM.Subpartition[0..3].PE[0..255].MAC
+    actions:
+    - name: mac_random
+      arguments: null
+      energy: 0.5608
+    - name: mac_gated
+      arguments: null
+      energy: 0.01798
+    - name: mac_skipped
+      arguments: null
+      energy: 0.01798
+  - name: system.SM.Subpartition[0..3].RF
+    actions:
+    - name: write
+      arguments: null
+      energy: 1.67589
+    - name: read
+      arguments: null
+      energy: 1.65889
+    - name: gated_write
+      arguments: null
+      energy: 6.0e-05
+    - name: gated_read
+      arguments: null
+      energy: 6.0e-05
+    - name: metadata_read
+      arguments: null
+      energy: 0
+    - name: metadata_write
+      arguments: null
+      energy: 0
+    - name: gated_metadata_read
+      arguments: null
+      energy: 0
+    - name: gated_metadata_write
+      arguments: null
+      energy: 0
+  - name: system.SM.SMEM
+    actions:
+    - name: write
+      arguments: null
+      energy: 157.14005
+    - name: read
+      arguments: null
+      energy: 164.04205
+    - name: gated_write
+      arguments: null
+      energy: 0.03198
+    - name: gated_read
+      arguments: null
+      energy: 0.03198
+    - name: metadata_read
+      arguments: null
+      energy: 25.8695
+    - name: metadata_write
+      arguments: null
+      energy: 19.6486
+    - name: gated_metadata_read
+      arguments: null
+      energy: 0.00276
+    - name: gated_metadata_write
+      arguments: null
+      energy: 0.00276

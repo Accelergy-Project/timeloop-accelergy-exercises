@@ -1,0 +1,57 @@
+sparse_optimizations:
+  targets:
+    - name: DRAM 
+      representation-format:          
+        data-spaces:
+          - name: A          
+            ranks:
+              - format: UOP               # DRAM M temporal
+                payload-word-bits: 0    
+              - format: UOP               # DRAM N temporal
+                payload-word-bits: 0    
+              - format: UOP               # SMEM M temporal
+                payload-word-bits: 0    
+              - format: UOP               # SMEM N temporal
+                payload-word-bits: 0    
+              - format: UOP               # SMEM M spatial
+                payload-word-bits: 0 
+              - format: UOP               # RF M spatial
+                payload-word-bits: 0
+              - format: CP                # RF K spatial
+                metadata-word-bits: 2           
+            rank-application-order: inner-to-outer
+    
+    - name: SMEM   
+      representation-format:          
+        data-spaces:
+          - name: A          
+            ranks:
+              - format: UOP               # SMEM M temporal
+                payload-word-bits: 0    
+              - format: UOP               # SMEM N temporal
+                payload-word-bits: 0    
+              - format: UOP               # SMEM M spatial
+                payload-word-bits: 0 
+              - format: UOP               # RF M spatial
+                payload-word-bits: 0
+              - format: CP                # RF K spatial
+                metadata-word-bits: 2
+            rank-application-order: inner-to-outer
+    
+    - name: RF            
+      action-optimization:    
+        - type: skipping-spatial      
+          target: B           
+          condition-on: [ A ] 
+        - type: skipping-spatial
+          target: Z
+          condition-on: [ A ]
+
+    - name: LRF        
+      representation-format:          
+        data-spaces:
+          - name: A          
+            ranks:            
+              - format: CP   
+                metadata-word-bits: 2
+

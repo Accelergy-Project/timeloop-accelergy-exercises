@@ -1,0 +1,308 @@
+compound_components:
+  version: 0.3
+  classes:
+  - name: SRAM_MD
+    attributes:
+      # attributes that must be specified
+      technology: must_specify
+      data_storage_depth: must_specify
+      data_storage_width: must_specify
+      metadata_storage_width: 0
+      metadata_storage_depth: 0      
+      # attributes with default values
+      n_banks: 1
+      n_rdwr_ports: 2
+      counter_width: 0 # default to no (de)compression counter
+      phy_datawidth: data_storage_width
+      phy_metadata_datawidth: metadata_storage_width
+      ag_datawidth: log(data_storage_depth)
+
+    subcomponents:
+      - name: storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: data_storage_width
+          depth: data_storage_depth
+          datawidth: phy_datawidth
+          n_rdwr_ports: n_rdwr_ports
+          n_banks: n_banks
+      - name: metadata_storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: metadata_storage_width
+          depth: metadata_storage_depth
+          datawidth: phy_metadata_datawidth
+
+    actions:
+      - name: write
+        subcomponents:
+          - name: storage
+            actions:
+              - name: write
+      - name: read
+        subcomponents:
+          - name: storage
+            actions:
+              - name: read
+      - name: gated_write
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: gated_read
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: read
+      - name: metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: write
+      - name: gated_metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+      - name: gated_metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+  
+  
+  - name: FIFO
+    attributes:
+      technology: must_specify
+      depth: must_specify
+      width: must_specify
+      counter_width: log2(depth)
+    subcomponents:
+      - name: storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: width
+          depth: depth
+          datawidth: width
+      - name: addr_counters[0..1] #read and write addr counters
+        class: intadder
+        attributes:
+          technology: technology
+          datawidth: counter_width
+      - name: occupancy_counter
+        class: intadder
+        attributes:
+          technology: technology
+          datawidth: counter_width
+    actions:
+      - name: read
+        subcomponents:
+          - name: storage
+            actions:
+              - name: read
+          - name: addr_counters[0]
+            actions: 
+              - name: add
+          - name: occupancy_counter
+            actions:
+              - name: add
+      - name: write
+        subcomponents:
+          - name: storage
+            actions:
+              - name: write
+          - name: addr_counters[0]
+            actions: 
+              - name: add
+          - name: occupancy_counter
+            actions:
+              - name: add
+              
+  - name: SRAM_MD_bank_control
+    attributes:
+      # attributes that must be specified
+      technology: must_specify
+      data_storage_depth: must_specify
+      data_storage_width: must_specify
+      control_queue_depth: must_specify
+      metadata_storage_width: 0
+      metadata_storage_depth: 0      
+      # attributes with default values
+      n_banks: 1
+      n_rdwr_ports: 2
+      counter_width: 0 # default to no (de)compression counter
+      phy_datawidth: data_storage_width
+      phy_metadata_datawidth: metadata_storage_width
+      ag_datawidth: log(data_storage_depth)
+
+    subcomponents:
+      - name: storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: data_storage_width
+          depth: data_storage_depth
+          datawidth: phy_datawidth
+          n_rdwr_ports: n_rdwr_ports
+          n_banks: n_banks
+      - name: control_queues[0..n_banks]
+        class: FIFO
+        attributes:
+          technology: technology
+          width: datawidth
+          depth: control_queue_depth
+      - name: metadata_storage
+        class: SRAM
+        attributes:
+          technology: technology
+          width: metadata_storage_width
+          depth: metadata_storage_depth
+          datawidth: phy_metadata_datawidth
+
+    actions:
+      - name: write
+        subcomponents:
+          - name: storage
+            actions:
+              - name: write
+          - name: control_queues[0]
+            actions:
+              - name: write
+      - name: read
+        subcomponents:
+          - name: storage
+            actions:
+              - name: read
+          - name: control_queues[0]
+            actions:
+              - name: read
+      - name: gated_write
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: gated_read
+        subcomponents:
+          - name: storage
+            actions:
+            - name: idle
+      - name: metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: read
+      - name: metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: write
+      - name: gated_metadata_read
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+      - name: gated_metadata_write
+        subcomponents:
+          - name: metadata_storage
+            actions:
+              - name: idle
+ 
+
+
+  - name: Imac
+    attributes:
+      technology: must_specify
+      datawidth: must_specify
+    subcomponents:
+      - name: multiplier
+        class: intmultiplier
+        attributes:
+          technology: technology
+          datawidth: datawidth
+      - name: adder
+        class: intadder
+        attributes:
+          technology: technology
+          datawidth: datawidth
+    actions:
+      - name: mac_random
+        subcomponents:
+          - name: multiplier
+            actions:
+              - name: multiply_random
+          - name: adder
+            actions:
+              - name: add
+      - name: mac_gated
+        subcomponents:
+          - name: multiplier
+            actions:
+              - name: idle
+          - name: adder
+            actions:
+              - name: idle
+      - name: mac_skipped
+        subcomponents:
+          - name: multiplier
+            actions:
+              - name: idle
+          - name: adder
+            actions:
+              - name: idle
+  - name: Imac_Decoder
+    attributes:
+      technology: must_specify
+      datawidth: must_specify
+      decoder_width: must_specify
+    subcomponents:
+      - name: multiplier
+        class: intmultiplier
+        attributes:
+          technology: technology
+          datawidth: datawidth
+      - name: adder
+        class: intadder
+        attributes:
+          technology: technology
+          datawidth: datawidth
+      - name: decoder
+        class: intadder
+        attributes:
+          technology: technology
+          datawidth: decoder_width
+    actions:
+      - name: mac_random
+        subcomponents:
+          - name: multiplier
+            actions:
+              - name: multiply_random
+          - name: adder
+            actions:
+              - name: add
+          - name: decoder
+            actions:
+              - name: adder
+      - name: mac_gated
+        subcomponents:
+          - name: multiplier
+            actions:
+              - name: idle
+          - name: adder
+            actions:
+              - name: idle
+      - name: mac_skipped
+        subcomponents:
+          - name: multiplier
+            actions:
+              - name: idle
+          - name: adder
+            actions:
+              - name: idle

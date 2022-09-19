@@ -1,0 +1,82 @@
+architecture:
+  version: 0.3
+  local:
+  - name: system.SM.Subpartition[0..3].PE[0..255].LRF
+    class: storage
+    subclass: SRAM_MD
+    attributes:
+      ag_datawidth: 0
+      cluster-size: 1
+      counter_width: 0
+      data_storage_depth: 1
+      data_storage_width: 8
+      datawidth: 8
+      meshX: 16
+      meshY: 64
+      metadata_n_banks: 1
+      metadata_storage_depth: 1
+      metadata_storage_width: 8
+      n_banks: 1
+      n_rdwr_ports: 1
+      phy_datawidth: 8
+      phy_metadata_datawidth: 8
+      technology: 45nm
+  - name: system.SM.Subpartition[0..3].PE[0..255].MAC
+    class: compute
+    subclass: Imac
+    attributes:
+      datawidth: 8
+      meshX: 16
+      meshY: 64
+      technology: 45nm
+  - name: system.SM.Subpartition[0..3].RF
+    class: storage
+    subclass: SRAM_MD
+    attributes:
+      ag_datawidth: 11
+      cluster-size: 1
+      counter_width: 0
+      data_storage_depth: 2048
+      data_storage_width: 8
+      datawidth: 8
+      meshX: 1
+      meshY: 4
+      metadata_n_banks: 1
+      metadata_storage_depth: 0
+      metadata_storage_width: 0
+      n_banks: 16
+      n_rdwr_ports: 2
+      phy_datawidth: 8
+      phy_metadata_datawidth: 0
+      technology: 45nm
+  - name: system.SM.SMEM
+    class: storage
+    subclass: SRAM_MD
+    attributes:
+      ag_datawidth: 13
+      cluster-size: 1
+      counter_width: 0
+      data_storage_depth: 8192
+      data_storage_width: 256
+      datawidth: 8
+      metadata_n_banks: 1
+      metadata_storage_depth: 8192
+      metadata_storage_width: 64
+      n_banks: 2
+      n_rdwr_ports: 2
+      phy_datawidth: 256
+      phy_metadata_datawidth: 64
+      read_bandwidth: 42
+      technology: 45nm
+      write_bandwidth: 42
+  - name: system.DRAM
+    class: DRAM
+    attributes:
+      cluster-size: 1
+      datawidth: 8
+      metadata_storage_width: 64
+      read_bandwidth: 32
+      technology: 45nm
+      type: LPDDR4
+      width: 64
+      write_bandwidth: 32

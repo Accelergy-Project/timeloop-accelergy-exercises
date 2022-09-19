@@ -1,0 +1,34 @@
+ART_summary:
+  version: 0.3
+  table_summary:
+  - name: system.DRAM
+    area: 0
+    primitive_estimations: Cacti
+  - name: system.SM.Subpartition[0..3].PE[0..255].LRF
+    area: 95.68
+    primitive_estimations:
+    - name: storage
+      estimator: Aladdin_table
+    - name: metadata_storage
+      estimator: Aladdin_table
+  - name: system.SM.Subpartition[0..3].PE[0..255].MAC
+    area: 332.25
+    primitive_estimations:
+    - name: multiplier
+      estimator: Aladdin_table
+    - name: adder
+      estimator: Aladdin_table
+  - name: system.SM.Subpartition[0..3].RF
+    area: 23384.0
+    primitive_estimations:
+    - name: storage
+      estimator: Cacti
+    - name: metadata_storage
+      estimator: Aladdin_table
+  - name: system.SM.SMEM
+    area: 2066196.0
+    primitive_estimations:
+    - name: storage
+      estimator: Cacti
+    - name: metadata_storage
+      estimator: Cacti

@@ -1,0 +1,96 @@
+ERT_summary:
+  version: 0.3
+  table_summary:
+  - name: system.DRAM
+    actions:
+    - name: read
+      energy: 512
+    - name: write
+      energy: 512
+    - name: idle
+      energy: 0
+    primitive_estimation(s):
+    - name: system.DRAM
+      estimator: Cacti
+  - name: system.SM.Subpartition[0..3].PE[0..255].LRF
+    actions:
+    - name: write
+      energy: 0.072
+    - name: read
+      energy: 0.072
+    - name: gated_write
+      energy: 0.00296
+    - name: gated_read
+      energy: 0.00296
+    - name: metadata_read
+      energy: 0.072
+    - name: metadata_write
+      energy: 0.072
+    - name: gated_metadata_read
+      energy: 0.00296
+    - name: gated_metadata_write
+      energy: 0.00296
+    primitive_estimation(s):
+    - name: storage
+      estimator: Aladdin_table
+    - name: metadata_storage
+      estimator: Aladdin_table
+  - name: system.SM.Subpartition[0..3].PE[0..255].MAC
+    actions:
+    - name: mac_random
+      energy: 0.5608
+    - name: mac_gated
+      energy: 0.01798
+    - name: mac_skipped
+      energy: 0.01798
+    primitive_estimation(s):
+    - name: multiplier
+      estimator: Aladdin_table
+    - name: adder
+      estimator: Aladdin_table
+  - name: system.SM.Subpartition[0..3].RF
+    actions:
+    - name: write
+      energy: 1.67589
+    - name: read
+      energy: 1.65889
+    - name: gated_write
+      energy: 6.0e-05
+    - name: gated_read
+      energy: 6.0e-05
+    - name: metadata_read
+      energy: 0
+    - name: metadata_write
+      energy: 0
+    - name: gated_metadata_read
+      energy: 0
+    - name: gated_metadata_write
+      energy: 0
+    primitive_estimation(s):
+    - name: storage
+      estimator: Cacti
+    - name: metadata_storage
+      estimator: Aladdin_table
+  - name: system.SM.SMEM
+    actions:
+    - name: write
+      energy: 157.14005
+    - name: read
+      energy: 164.04205
+    - name: gated_write
+      energy: 0.03198
+    - name: gated_read
+      energy: 0.03198
+    - name: metadata_read
+      energy: 25.8695
+    - name: metadata_write
+      energy: 19.6486
+    - name: gated_metadata_read
+      energy: 0.00276
+    - name: gated_metadata_write
+      energy: 0.00276
+    primitive_estimation(s):
+    - name: storage
+      estimator: Cacti
+    - name: metadata_storage
+      estimator: Cacti
