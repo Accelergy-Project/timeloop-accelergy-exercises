@@ -58,9 +58,9 @@ mapping:
     split: 0
   - target: SMEM
     type: temporal
-    factors: M1 N1 K1
+    factors: M4 N1 K1
     permutation: MNK
   - target: DRAM
     type: temporal
-    factors: M8 N2 K1
-    permutation: MNK
+    factors: M2 N2 K1
+    permutation: NMK

@@ -49,7 +49,7 @@ architecture_constraints:
     # spatial K upper limited by a density 2:4
   - target: RF
     type: spatial
-    factors: K<=32 M=16 N=1 
+    factors: K=32 M=16 N=1 
     permutation: KMN
     split: 1
  

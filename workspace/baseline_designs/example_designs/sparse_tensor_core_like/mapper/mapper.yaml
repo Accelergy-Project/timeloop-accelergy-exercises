@@ -4,5 +4,5 @@ mapper:
   num-threads: 8 
   timeout: 800
   victory-condition: 1200
-  algorithm: random-pruned
+  algorithm: linear-pruned
   max-permutations-per-if-visit: 16
