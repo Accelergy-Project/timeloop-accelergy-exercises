@@ -1,0 +1,80 @@
+mapping:
+  - target: LRF
+    type: datatype
+    keep:
+      - A
+    bypass:
+      - B
+      - Z
+  - target: inter_PE_spatial
+    type: datatype
+    keep:
+      []
+    bypass:
+      - A
+      - B
+      - Z
+  - target: RF
+    type: datatype
+    keep:
+      - Z
+    bypass:
+      - A
+      - B
+  - target: inter_Subpartition_spatial
+    type: datatype
+    keep:
+      []
+    bypass:
+      - A
+      - B
+      - Z
+  - target: SMEM
+    type: datatype
+    keep:
+      - A
+      - B
+    bypass:
+      - Z
+  - target: DRAM
+    type: datatype
+    keep:
+      - A
+      - B
+      - Z
+    bypass:
+      []
+  - target: LRF
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: inter_PE_spatial
+    type: spatial
+    factors: M16 N1 K1
+    permutation: MNK
+    split: 0
+  - target: inter_PE_spatial
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: RF
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: inter_Subpartition_spatial
+    type: spatial
+    factors: M4 N1 K1
+    permutation: MNK
+    split: 0
+  - target: inter_Subpartition_spatial
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: SMEM
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK
+  - target: DRAM
+    type: temporal
+    factors: M1 N1 K1
+    permutation: MNK

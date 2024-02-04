@@ -1,0 +1,231 @@
+ERT:
+    version: '0.4'
+    tables:
+      - name: System_top_level.MainMemory[1..1]
+        actions:
+          - name: read
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 2048.0
+          - name: write
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 2048.0
+          - name: idle
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: leak
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 2048.0
+      - name: System_top_level.GlobalBuffer[1..16]
+        actions:
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 27.33962
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 5.85849
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 33.19811
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 2
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 11.71698
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 2
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 39.0566
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 22.10369
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 4.736505
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 26.840195
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 2
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 9.47301
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 2
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 31.5767
+          - name: idle
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: leak
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.008787
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 26.840195
+      - name: System_top_level.RegisterFile[1..16]
+        actions:
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.072
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.35364
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.072
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.35364
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+          - name: idle
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+          - name: leak
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.000861
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+      - name: System_top_level.MACC[1..16]
+        actions:
+          - name: mac_random
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.845
+          - name: mac_reused
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.726125
+          - name: mac_gated
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0575
+          - name: idle
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.845
+          - name: compute
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.845

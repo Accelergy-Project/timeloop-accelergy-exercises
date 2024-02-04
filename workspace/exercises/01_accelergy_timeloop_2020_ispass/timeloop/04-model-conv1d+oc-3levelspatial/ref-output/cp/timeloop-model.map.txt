@@ -1,0 +1,15 @@
+MainMemory [ Weights:3072 (3072) Inputs:576 (576) Outputs:512 (512) ] 
+inter_PE_spatial [ ] 
+--------------------
+| for C in [0:16) (Spatial-X)
+
+GlobalBuffer [ Weights:192 (192) Inputs:36 (36) Outputs:512 (512) ] 
+-------------------------------------------------------------------
+|   for C in [0:2)
+|     for K in [0:32)
+|       for R in [0:3)
+
+RegisterFile [ Weights:1 (1) Inputs:16 (16) Outputs:16 (16) ] 
+-------------------------------------------------------------
+|         for P in [0:16)
+|           << Compute >>

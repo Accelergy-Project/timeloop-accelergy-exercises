@@ -1,4 +1,5 @@
 problem:
+  version: 0.4
   instance:
     C: 96
     Hdilation: 1
@@ -21,7 +22,7 @@ problem:
       name: Wdilation
     - default: 1
       name: Hdilation
-    data-spaces:
+    data_spaces:
     - name: Weights
       projection:
       - - - C
@@ -46,7 +47,7 @@ problem:
       - - - M
       - - - Q
       - - - P
-      read-write: true
+      read_write: true
     dimensions:
     - C
     - M
@@ -55,4 +56,4 @@ problem:
     - N
     - P
     - Q
-    name: CNN-Layer
+    name: CNN_Layer

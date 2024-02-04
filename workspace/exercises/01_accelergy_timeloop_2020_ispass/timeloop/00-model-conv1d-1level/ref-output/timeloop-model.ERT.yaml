@@ -1,0 +1,103 @@
+ERT:
+    version: '0.4'
+    tables:
+      - name: PE_top_level.Buffer[1..1]
+        actions:
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.072
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.35364
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.072
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.35364
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+          - name: idle
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+          - name: leak
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.000861
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.42564
+      - name: PE_top_level.MACC[1..1]
+        actions:
+          - name: mac_random
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.845
+          - name: mac_reused
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.726125
+          - name: mac_gated
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0575
+          - name: idle
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.845
+          - name: compute
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.845

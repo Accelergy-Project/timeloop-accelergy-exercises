@@ -1,0 +1,82 @@
+ERT:
+    version: '0.4'
+    tables:
+      - name: system_arch.chip.DRAM
+        actions:
+          - name: read
+            arguments:
+                global_cycle_seconds: 0.001
+            energy: 2048.0
+          - name: write
+            arguments:
+                global_cycle_seconds: 0.001
+            energy: 2048.0
+          - name: idle
+            arguments:
+                global_cycle_seconds: 0.001
+            energy: 0.0
+      - name: system_arch.chip.buffer
+        actions:
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 0.001
+            energy: 0.0
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 0.001
+            energy: 0.989555
+          - name: read
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 0.001
+            energy: 0.424095
+          - name: read
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 0.001
+            energy: 1.41365
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 0
+                global_cycle_seconds: 0.001
+            energy: 0.0
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 0
+                global_cycle_seconds: 0.001
+            energy: 1.59656
+          - name: write
+            arguments:
+                data_delta: 0
+                address_delta: 1
+                global_cycle_seconds: 0.001
+            energy: 0.68424
+          - name: write
+            arguments:
+                data_delta: 1
+                address_delta: 1
+                global_cycle_seconds: 0.001
+            energy: 2.2808
+          - name: idle
+            arguments:
+                global_cycle_seconds: 0.001
+            energy: 0.0
+      - name: system_arch.chip.PE[1..8]
+        actions:
+          - name: mac_random_to_accurate_picky
+            arguments: {}
+            energy: 0.69139
+          - name: mac_random_to_inaccurate_flexible
+            arguments: {}
+            energy: 0.345695
+          - name: reset_expensive_specified_argument
+            arguments: {}
+            energy: 1000000000000.0

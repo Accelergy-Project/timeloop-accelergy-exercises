@@ -42,3 +42,5 @@ notebooks/*.mp4
 # docker
 #
 docker-compose.yaml
+
+.past_versions

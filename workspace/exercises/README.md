@@ -1,19 +1,11 @@
 Fibertree/Timeloop/Accelergy Tutorial Exercises
 ======================================
 
-This repository folder contains exercises for both **Sparse Tensor Accelerator tutorial**
-and **Timeloop/Acclergy tutorial**.
-
----
-### Sparse Tensor Accelerator Tutorial
-*Will be held at ISCA 2021*
-
-Please navigate to `2021.isca`, and explore the set of exercises for **Fibretree** 
-and **Timeloop v2 (a.k.a Sparseloop)** 
-
----
-### Timeloop/Accelergy Tutorial
-*Held at ISPASS 2020, ISCA 2020, MICRO 2019*
-
-Please navigate to `2020.ispass`, and explore the set of exercises for **Timeloop V1** and **Accelergy** 
-
+Tutorial list:
+- 01_accelergy_timeloop_2020_ispass: Introduction to Accelergy and Timeloop.
+- 02_interface_and_design_space_exploration_2024: Using the Timeloop
+  and Accelergy Python interface and running design space explorations
+- 03_sparse_tensors_2021_isca: Using the Fibertree sparse tensor representation
+  and modeling sparse tensor accelerators
+- 04_compute_in_memory_2024: IN-PROGRESS tutorial. Not yet complete.
+- 05_creating_accelergy_plug_ins: Creating your own Accelergy plug-ins

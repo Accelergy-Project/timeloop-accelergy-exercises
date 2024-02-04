@@ -1,5 +1,10 @@
 ## exercises
-Simple exercises from conference tutorials to get familiar with the tools.
+Exercises and tutorials to get familiar with the tools.
 
 ## baseline_designs
-More complex realistic accelerator design setups.
+Example accelerator design setups.
+
+## cheatsheets
+Skeletons to use for Timeloop & Accelergy input files
+
+

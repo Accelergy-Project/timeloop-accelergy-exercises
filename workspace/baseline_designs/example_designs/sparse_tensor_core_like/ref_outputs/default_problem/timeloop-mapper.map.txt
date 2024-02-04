@@ -1,0 +1,14 @@
+DRAM [ A:64 (64) B:1 (1) Z:64 (64) ] 
+SMEM [ A:64 (64) B:1 (1) ] 
+inter_Subpartition_spatial [ ] 
+------------------------------
+| for M in [0:4) (Spatial-Y)
+
+RF [ Z:16 (16) ] 
+inter_PE_spatial [ ] 
+--------------------
+|   for M in [0:16) (Spatial-Y)
+
+LRF [ A:1 (1) ] 
+---------------
+|     << Compute >>

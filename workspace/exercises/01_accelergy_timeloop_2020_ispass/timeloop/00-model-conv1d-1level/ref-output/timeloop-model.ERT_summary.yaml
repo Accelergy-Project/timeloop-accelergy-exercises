@@ -1,0 +1,37 @@
+ERT_summary:
+    version: '0.4'
+    table_summary:
+      - name: PE_top_level.Buffer[1..1]
+        actions:
+          - name: read
+            average_energy: 0.21282
+            max_energy: 0.42564
+            min_energy: 0.0
+          - name: write
+            average_energy: 0.21282
+            max_energy: 0.42564
+            min_energy: 0.0
+          - name: idle
+            energy: 0.42564
+          - name: leak
+            energy: 0.000861
+          - name: update
+            energy: 0.42564
+        primitive_estimation(s):
+          - name: PE_top_level.Buffer[1..1]
+            estimator: Aladdin_table
+      - name: PE_top_level.MACC[1..1]
+        actions:
+          - name: mac_random
+            energy: 0.845
+          - name: mac_reused
+            energy: 0.726125
+          - name: mac_gated
+            energy: 0.0575
+          - name: idle
+            energy: 0.845
+          - name: compute
+            energy: 0.845
+        primitive_estimation(s):
+          - name: PE_top_level.MACC[1..1]
+            estimator: Aladdin_table

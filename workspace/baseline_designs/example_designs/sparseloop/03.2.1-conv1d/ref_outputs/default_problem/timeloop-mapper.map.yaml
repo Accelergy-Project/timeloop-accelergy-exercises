@@ -1,0 +1,25 @@
+mapping:
+  - target: Buffer
+    type: datatype
+    keep:
+      - Weights
+      - Inputs
+      - Outputs
+    bypass:
+      []
+  - target: BackingStorage
+    type: datatype
+    keep:
+      - Weights
+      - Inputs
+      - Outputs
+    bypass:
+      []
+  - target: Buffer
+    type: temporal
+    factors: S3 Q9
+    permutation: SQ
+  - target: BackingStorage
+    type: temporal
+    factors: S1 Q1
+    permutation: SQ

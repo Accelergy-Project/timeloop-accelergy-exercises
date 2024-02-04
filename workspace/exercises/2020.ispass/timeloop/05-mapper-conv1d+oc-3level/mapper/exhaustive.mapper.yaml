@@ -1,7 +1,0 @@
-mapper:
-  optimization-metric: [ delay, energy ]
-  num-threads: 1
-  algorithm: linear-pruned
-  victory-condition: 0
-  timeout: 0
-

@@ -13,9 +13,9 @@ Q&As
 
   No, the sparse tensor core design treats all problems as matrix multiplications, so the constraints are setup based on the **matrix multiplication** problem shape. **Please use example layers under `../layer_shapes/MM` to run the design**. `A` tensor is our 2:4 structured sparse weight tensor in all of the problems specs. We also provide an example problem in this directory: `prob/prob.yaml`.
 
-#### 3. What does `skipping-spatial` in `sparse-opt/sparse-opt.yaml` mean?
+#### 3. What does `skipping_spatial` in `sparse-opt/sparse-opt.yaml` mean?
 
-  `skipping-spatial` refers to skipping on spatial instances, i.e., if a specific hardware instance is assigned to tiles with all zeros, use it for other tiles.
+  `skipping_spatial` refers to skipping on spatial instances, i.e., if a specific hardware instance is assigned to tiles with all zeros, use it for other tiles.
 By doing that, we allow more processing parallelism.
 
 #### 4. Where does the 2:4 structure along the channels come into the picture?

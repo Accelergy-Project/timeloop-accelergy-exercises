@@ -1,0 +1,134 @@
+ERT_summary:
+    version: '0.4'
+    table_summary:
+      - name: system_top_level.DRAM[1..1]
+        actions:
+          - name: read
+            energy: 512.0
+          - name: write
+            energy: 512.0
+          - name: idle
+            energy: 0.0
+          - name: leak
+            energy: 0.0
+          - name: update
+            energy: 512.0
+        primitive_estimation(s):
+          - name: system_top_level.DRAM[1..1]
+            estimator: CACTI
+      - name: system_top_level.SMEM[1..1]
+        actions:
+          - name: read
+            energy: 199.397532
+          - name: write
+            energy: 191.276532
+          - name: update
+            energy: 191.276532
+          - name: metadata_read
+            energy: 38.155032
+          - name: metadata_write
+            energy: 30.332432
+          - name: metadata_update
+            energy: 30.332432
+          - name: leak
+            energy: 0.008885
+          - name: decompression_count
+            energy: 0.0
+          - name: compression_count
+            energy: 0.0
+        primitive_estimation(s):
+          - name: storage.storage
+            estimator: CACTI
+          - name: storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.storage
+            estimator: CACTI
+          - name: metadata_storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_counters[1]
+            estimator: Aladdin_table
+          - name: metadata_counters[0]
+            estimator: Aladdin_table
+      - name: system_top_level.RF[1..4]
+        actions:
+          - name: write
+            energy: 15.133133
+          - name: read
+            energy: 15.205133
+          - name: leak
+            energy: 0.012859
+          - name: update
+            energy: 15.133133
+        primitive_estimation(s):
+          - name: storage.storage[1..32]
+            estimator: Library
+          - name: storage.comparator[1..2048]
+            estimator: Library
+          - name: address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: storage.storage[1..65536]
+            estimator: Library
+          - name: address_generators[0..1]
+            estimator: Neurosim Plug-In
+      - name: system_top_level.LRF[1..1024]
+        actions:
+          - name: read
+            energy: 0.010553
+          - name: write
+            energy: 0.010553
+          - name: update
+            energy: 0.010553
+          - name: metadata_read
+            energy: 0.010553
+          - name: metadata_write
+            energy: 0.010553
+          - name: metadata_update
+            energy: 0.010553
+          - name: leak
+            energy: 2.1e-05
+          - name: decompression_count
+            energy: 0.0
+          - name: compression_count
+            energy: 0.0
+        primitive_estimation(s):
+          - name: storage.storage
+            estimator: Aladdin_table
+          - name: storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.storage
+            estimator: Aladdin_table
+          - name: metadata_storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_counters[1]
+            estimator: Aladdin_table
+          - name: metadata_counters[0]
+            estimator: Aladdin_table
+      - name: system_top_level.mac[1..1024]
+        actions:
+          - name: compute
+            energy: 0.315
+          - name: leak
+            energy: 0.0036
+        primitive_estimation(s):
+          - name: intadder
+            estimator: Library
+          - name: intmultiplier
+            estimator: Library

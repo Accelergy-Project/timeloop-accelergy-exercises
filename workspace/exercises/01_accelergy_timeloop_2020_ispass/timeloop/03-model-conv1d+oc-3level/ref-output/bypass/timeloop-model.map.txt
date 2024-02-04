@@ -1,0 +1,11 @@
+MainMemory [ Weights:96 (96) Inputs:18 (18) Outputs:512 (512) ] 
+GlobalBuffer [ Weights:96 (96) Inputs:18 (18) ] 
+-----------------------------------------------
+| for K in [0:16)
+|   for P in [0:16)
+
+RegisterFile [ Outputs:2 (2) ] 
+------------------------------
+|     for K in [0:2)
+|       for R in [0:3)
+|         << Compute >>
