@@ -26,7 +26,7 @@ version: '3'
 services:
   tutorial:
     hostname: tutorial
-    image: mitdlh/timeloop-accelergy-pytorch:latest
+    image: timeloopaccelergy/timeloop-accelergy-pytorch:latest
     ports:
       - "8888:8888"
     volumes:
