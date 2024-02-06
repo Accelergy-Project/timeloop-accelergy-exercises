@@ -1,0 +1,71 @@
+ERT_summary:
+    version: '0.4'
+    table_summary:
+      - name: System_top_level.MainMemory[1..1]
+        actions:
+          - name: read
+            energy: 2048.0
+          - name: write
+            energy: 2048.0
+          - name: idle
+            energy: 0.0
+          - name: leak
+            energy: 0.0
+          - name: update
+            energy: 2048.0
+        primitive_estimation(s):
+          - name: System_top_level.MainMemory[1..1]
+            estimator: CACTI
+      - name: System_top_level.GlobalBuffer[1..16]
+        actions:
+          - name: read
+            average_energy: 19.5283
+            max_energy: 39.0566
+            min_energy: 0.0
+          - name: write
+            average_energy: 15.78835
+            max_energy: 31.5767
+            min_energy: 0.0
+          - name: idle
+            energy: 0.0
+          - name: leak
+            energy: 0.008787
+          - name: update
+            energy: 26.840195
+        primitive_estimation(s):
+          - name: System_top_level.GlobalBuffer[1..16]
+            estimator: CACTI
+      - name: System_top_level.RegisterFile[1..16]
+        actions:
+          - name: read
+            average_energy: 0.21282
+            max_energy: 0.42564
+            min_energy: 0.0
+          - name: write
+            average_energy: 0.21282
+            max_energy: 0.42564
+            min_energy: 0.0
+          - name: idle
+            energy: 0.42564
+          - name: leak
+            energy: 0.000861
+          - name: update
+            energy: 0.42564
+        primitive_estimation(s):
+          - name: System_top_level.RegisterFile[1..16]
+            estimator: Aladdin_table
+      - name: System_top_level.MACC[1..16]
+        actions:
+          - name: mac_random
+            energy: 0.845
+          - name: mac_reused
+            energy: 0.726125
+          - name: mac_gated
+            energy: 0.0575
+          - name: idle
+            energy: 0.845
+          - name: compute
+            energy: 0.845
+        primitive_estimation(s):
+          - name: System_top_level.MACC[1..16]
+            estimator: Aladdin_table

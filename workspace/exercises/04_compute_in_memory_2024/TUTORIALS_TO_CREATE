@@ -1,0 +1,45 @@
+"""
+## Basic CiM Array Structure
+### Basic Analog CiM Array
+### CiM Container Syntax
+### CiM Peripherals
+"""
+
+"""
+## Complex CiM Array Structure
+### Dataflow Options
+### CiMAProcessor Variables
+### Variables File
+### Digital CiM
+### Example Macros
+"""
+
+"""
+## CiM Components
+### Component Definitions
+### Provided Components
+### Data-Value-Dependence
+### NeuroSim Plug-In & Memory Cells
+"""
+
+"""
+## Plug-Ins
+### Library Plug-In
+### User-Defined Plug-Ins
+"""
+
+"""
+## Building Larger Systems
+### Top-Level File
+### More Architecture Levels
+### Examples of Larger Systems, Mix&Match
+### Leakage and Power Gating
+### Read/Write CiM Arrays
+"""
+
+"""
+## Running Simulations and Design Space Exploration
+### Running Multiple Simulations
+### Editing the Specification from Python
+### Design Space Exploration Examples
+"""

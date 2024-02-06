@@ -1,0 +1,7 @@
+BackingStorage [ A:64 (16) B:64 (32) Z:64 (64) ] 
+Buffer [ B:64 (32) Z:64 (64) ] 
+------------------------------
+| for K in [0:8)
+|   for N in [0:8)
+|     for M in [0:8)
+|       << Compute >>

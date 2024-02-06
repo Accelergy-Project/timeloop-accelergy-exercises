@@ -25,7 +25,7 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 problem:
   shape:
-    name: "CNN-Layer"
+    name: "CNN_Layer"
     dimensions: [ C, M, R, S, N, P, Q ]
     coefficients:
       - name: Wstride
@@ -36,7 +36,7 @@ problem:
         default: 1
       - name: Hdilation
         default: 1
-    data-spaces:
+    data_spaces:
       - name: Weights
         projection:
           - [ [C] ]
@@ -55,7 +55,7 @@ problem:
           - [ [M] ]
           - [ [Q] ]
           - [ [P] ]
-        read-write: True
+        read_write: True
   instance:
     C: 16
     M: 32

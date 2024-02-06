@@ -1,0 +1,40 @@
+ERT:
+    version: '0.4'
+    tables:
+      - name: PE_top_level.Buffer[1..1]
+        actions:
+          - name: read
+            arguments: {}
+            energy: 0.567914
+          - name: write
+            arguments: {}
+            energy: 0.495914
+          - name: update
+            arguments: {}
+            energy: 0.495914
+          - name: metadata_read
+            arguments: {}
+            energy: 0.178639
+          - name: metadata_write
+            arguments: {}
+            energy: 0.157673
+          - name: metadata_update
+            arguments: {}
+            energy: 0.157673
+          - name: leak
+            arguments: {}
+            energy: 0.00051
+          - name: decompression_count
+            arguments: {}
+            energy: 0.0
+          - name: compression_count
+            arguments: {}
+            energy: 0.0
+      - name: PE_top_level.mac[1..1]
+        actions:
+          - name: compute
+            arguments: {}
+            energy: 0.315
+          - name: leak
+            arguments: {}
+            energy: 0.0036

@@ -1,8 +1,0 @@
-mapper:
-  optimization-metrics: [ delay, energy ]
-  live-status: False
-  num-threads: 8 
-  timeout: 800
-  victory-condition: 1200
-  algorithm: linear-pruned
-  max-permutations-per-if-visit: 16

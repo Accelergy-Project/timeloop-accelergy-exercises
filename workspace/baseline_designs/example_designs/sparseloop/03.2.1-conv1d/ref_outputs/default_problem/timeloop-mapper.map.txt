@@ -1,0 +1,6 @@
+BackingStorage [ Weights:3 (2) Inputs:11 (11) Outputs:9 (9) ] 
+Buffer [ Weights:3 (2) Inputs:11 (11) Outputs:9 (9) ] 
+-----------------------------------------------------
+| for Q in [0:9)
+|   for S in [0:3)
+|     << Compute >>

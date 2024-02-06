@@ -1,0 +1,13 @@
+mapping:
+  - target: Buffer
+    type: datatype
+    keep:
+      - A
+      - B
+      - Z
+    bypass:
+      []
+  - target: Buffer
+    type: temporal
+    factors: K16 M1
+    permutation: KM

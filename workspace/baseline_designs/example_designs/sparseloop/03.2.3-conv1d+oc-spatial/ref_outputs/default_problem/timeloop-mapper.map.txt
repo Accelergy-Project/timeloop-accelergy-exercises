@@ -1,0 +1,13 @@
+BackingStorage [ Weights:48 (21) Inputs:11 (11) Outputs:144 (144) ] 
+-------------------------------------------------------------------
+| for M in [0:4)
+
+inter_PE_spatial [ ] 
+--------------------
+|   for M in [0:4) (Spatial-X)
+
+Buffer [ Inputs:11 (11) Outputs:9 (9) ] 
+---------------------------------------
+|     for Q in [0:9)
+|       for S in [0:3)
+|         << Compute >>

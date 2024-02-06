@@ -1,0 +1,104 @@
+ERT_summary:
+    version: '0.4'
+    table_summary:
+      - name: system_top_level.BackingStorage[1..1]
+        actions:
+          - name: read
+            energy: 2.268273
+          - name: write
+            energy: 2.671563
+          - name: update
+            energy: 2.671563
+          - name: metadata_read
+            energy: 0.167559
+          - name: metadata_write
+            energy: 0.167559
+          - name: metadata_update
+            energy: 0.167559
+          - name: leak
+            energy: 0.000455
+          - name: decompression_count
+            energy: 0.0
+          - name: compression_count
+            energy: 0.0
+        primitive_estimation(s):
+          - name: storage.storage
+            estimator: CACTI
+          - name: storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.storage
+            estimator: Aladdin_table
+          - name: metadata_storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_counters[1]
+            estimator: Aladdin_table
+          - name: metadata_counters[0]
+            estimator: Aladdin_table
+      - name: system_top_level.Buffer[1..1]
+        actions:
+          - name: read
+            energy: 0.567914
+          - name: write
+            energy: 0.495914
+          - name: update
+            energy: 0.495914
+          - name: metadata_read
+            energy: 0.296154
+          - name: metadata_write
+            energy: 0.260154
+          - name: metadata_update
+            energy: 0.260154
+          - name: leak
+            energy: 0.000611
+          - name: decompression_count
+            energy: 0.0
+          - name: compression_count
+            energy: 0.0
+        primitive_estimation(s):
+          - name: storage.storage.storage[1..32]
+            estimator: Library
+          - name: storage.storage.comparator[1..64]
+            estimator: Library
+          - name: storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.storage.storage[1..32]
+            estimator: Library
+          - name: metadata_storage.storage.comparator[1..64]
+            estimator: Library
+          - name: metadata_storage.address_generators[1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.address_generators[0]
+            estimator: Neurosim Plug-In
+          - name: storage.storage.storage[1..2048]
+            estimator: Library
+          - name: storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_storage.storage.storage[1..2048]
+            estimator: Library
+          - name: metadata_storage.address_generators[0..1]
+            estimator: Neurosim Plug-In
+          - name: metadata_counters[1]
+            estimator: Aladdin_table
+          - name: metadata_counters[0]
+            estimator: Aladdin_table
+      - name: system_top_level.mac[1..1]
+        actions:
+          - name: compute
+            energy: 0.315
+          - name: leak
+            energy: 0.0036
+        primitive_estimation(s):
+          - name: intadder
+            estimator: Library
+          - name: intmultiplier
+            estimator: Library

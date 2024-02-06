@@ -1,0 +1,14 @@
+ART_summary:
+    version: '0.4'
+    table_summary:
+      - name: system_arch.chip.DRAM
+        area: 0.0
+        primitive_estimations: CACTI
+      - name: system_arch.chip.buffer
+        area: 2143.76
+        primitive_estimations: CACTI
+      - name: system_arch.chip.PE[1..8]
+        area: 1494.452559
+        primitive_estimations:
+          - name: mac
+            estimator: AccurateButPicky
