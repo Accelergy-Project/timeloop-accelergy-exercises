@@ -23,4 +23,4 @@ to a web browser of your choice to access the workspace.
 
 ## Native Installation
 
-Please find the instructions for native installations of the tools needed [here](http://accelergy.mit.edu/infra_instructions.html)
+Please find the instructions for native installations of the tools needed [here](https://timeloop.csail.mit.edu/installation)
