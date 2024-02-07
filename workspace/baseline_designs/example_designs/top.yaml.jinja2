@@ -15,15 +15,17 @@ globals:
 # ==============================================================================
 # PROBLEM SPECIFICATION
 # ==============================================================================
-
-# If the alternative problem file exists, & problem is not set, set problem to the alternative problem
+# Some of the architectures have an alternative `problem.yaml` file. If this
+# file exists & problem is not set, set problem to the alternative problem
 {% set alt_problem = cwd() ~ '/' ~ architecture ~ '/problem.yaml'%}
 {% if path_exists(alt_problem) %}
   {% set problem = problem | default(alt_problem)%}
 {% endif %}
-# Can be overridden with jinja2_parse_data argument
+
+# Can be overridden with the jinja2_parse_data argument to spec.from_yaml_files()
 {%set problem =       problem | default('_include/default_problem.yaml')%}
 
+# Set the problem file
 problem: {{include(problem, 'problem')}}
 
 # ==============================================================================
@@ -39,7 +41,6 @@ extra_mapping_constraints:
 # ==============================================================================
 # ARCHITECTURE SPECIFICATION
 # ==============================================================================
-
 architecture: {{include(cwd() ~ '/' ~ architecture ~ '/arch.yaml', 'architecture')}}
 
 # ==============================================================================
