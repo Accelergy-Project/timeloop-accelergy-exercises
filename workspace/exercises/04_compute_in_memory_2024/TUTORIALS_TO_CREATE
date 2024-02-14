@@ -10,6 +10,7 @@
 ### Dataflow Options
 ### CiMAProcessor Variables
 ### Variables File
+### Variables free & iso
 ### Digital CiM
 ### Example Macros
 """
@@ -25,7 +26,9 @@
 """
 ## Plug-Ins
 ### Library Plug-In
+### Adding new components to library
 ### User-Defined Plug-Ins
+### Creating a plug-in
 """
 
 """
@@ -42,4 +45,12 @@
 ### Running Multiple Simulations
 ### Editing the Specification from Python
 ### Design Space Exploration Examples
+### Swapping iso files
+"""
+
+"""
+## Internals
+### Include file
+### Defines file
+### CiM Processor
 """
