@@ -3,19 +3,17 @@ ERT_summary:
     table_summary:
       - name: system_top_level.DRAM[1..1]
         actions:
-          - name: read
-            energy: 512.0
-          - name: write
-            energy: 512.0
-          - name: idle
-            energy: 0.0
           - name: leak
             energy: 0.0
+          - name: write
+            energy: 512.0
+          - name: read
+            energy: 512.0
           - name: update
             energy: 512.0
         primitive_estimation(s):
           - name: system_top_level.DRAM[1..1]
-            estimator: CACTI
+            estimator: CactiDRAM
       - name: system_top_level.shared_glb[1..1]
         actions:
           - name: write
@@ -28,7 +26,7 @@ ERT_summary:
             energy: 26.121552
         primitive_estimation(s):
           - name: storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: address_generators[0]
             estimator: Neurosim Plug-In
           - name: address_generators[1]

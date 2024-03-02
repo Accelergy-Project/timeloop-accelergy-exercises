@@ -165,8 +165,7 @@ Level 3
     MAPPING
     -------
     Loop nest:
-      for Q in [0:2)
-        for P in [0:7)
+      for Q in [0:4)
 
     STATS
     -----
@@ -178,11 +177,11 @@ Level 3
         Utilized instances (max)                 : 16
         Utilized clusters (max)                  : 16
         Scalar reads (per-instance)              : 677376
-        Scalar fills (per-instance)              : 48384
+        Scalar fills (per-instance)              : 169344
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
-        Address generations (per-cluster)        : 725760
-        Energy (per-scalar-access)               : 0.13 pJ
+        Address generations (per-cluster)        : 846720
+        Energy (per-scalar-access)               : 0.12 pJ
         Energy (per-instance)                    : 97542.14 pJ
         Energy (total)                           : 1560674.30 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
@@ -190,12 +189,12 @@ Level 3
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
         Bandwidth Consumption Scale              : 1.00
-        Shared Bandwidth (per-instance)          : 1.07 words/cycle
-        Shared Bandwidth (total)                 : 17.14 words/cycle
+        Shared Bandwidth (per-instance)          : 1.25 words/cycle
+        Shared Bandwidth (total)                 : 20.00 words/cycle
         Read Bandwidth (per-instance)            : 1.00 words/cycle
         Read Bandwidth (total)                   : 16.00 words/cycle
-        Write Bandwidth (per-instance)           : 0.07 words/cycle
-        Write Bandwidth (total)                  : 1.14 words/cycle
+        Write Bandwidth (per-instance)           : 0.25 words/cycle
+        Write Bandwidth (total)                  : 4.00 words/cycle
 
 Level 4
 -------
@@ -215,7 +214,7 @@ Level 4
         Multiple buffering              : 1.00
         Effective size                  : 192
         Min utilization                 : 0.00
-        Vector access energy            : 1.21 pJ
+        Vector access energy            : 1.56 pJ
         Vector access energy source     : ERT
         Per-instance-cycle leakage      : 0.00 pJ
         Instances sharing power gating  : 1.00
@@ -226,8 +225,8 @@ Level 4
     MAPPING
     -------
     Loop nest:
-      for M in [0:2)
-        for P in [0:2)
+      for C in [0:3)
+        for Q in [0:4)
           for S in [0:3)
             for R in [0:3)
 
@@ -237,7 +236,7 @@ Level 4
     Bandwidth throttling : 1.00
     Outputs:
         Partition size                           : 25088
-        Utilized capacity                        : 56
+        Utilized capacity                        : 16
         Utilized instances (max)                 : 16
         Utilized clusters (max)                  : 16
         Scalar reads (per-instance)              : 652288
@@ -245,9 +244,9 @@ Level 4
         Scalar updates (per-instance)            : 677376
         Temporal reductions (per-instance)       : 652288
         Address generations (per-cluster)        : 677376
-        Energy (per-scalar-access)               : 0.87 pJ
-        Energy (per-instance)                    : 1155411.43 pJ
-        Energy (total)                           : 18486582.92 pJ
+        Energy (per-scalar-access)               : 1.12 pJ
+        Energy (per-instance)                    : 1489097.49 pJ
+        Energy (total)                           : 23825559.80 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -289,9 +288,9 @@ Level 6
     MAPPING
     -------
     Loop nest:
-      for P in [0:8)
-        for Q in [0:14)
-          for C in [0:3)
+      for P in [0:16)
+        for Q in [0:7)
+          for M in [0:2)
 
     STATS
     -----
@@ -302,28 +301,28 @@ Level 6
         Utilized capacity                        : 864
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
-        Scalar reads (per-instance)              : 774144
+        Scalar reads (per-instance)              : 2709504
         Scalar fills (per-instance)              : 864
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
-        Address generations (per-cluster)        : 775008
-        Energy (per-scalar-access)               : 8.08 pJ
-        Energy (per-instance)                    : 6265071.05 pJ
-        Energy (total)                           : 6265071.05 pJ
+        Address generations (per-cluster)        : 2710368
+        Energy (per-scalar-access)               : 8.09 pJ
+        Energy (per-instance)                    : 21913643.02 pJ
+        Energy (total)                           : 21913643.02 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
         Address Generation Energy (total)        : 0.00 pJ
         Bandwidth Consumption Scale              : 1.00
-        Shared Bandwidth (per-instance)          : 1.14 words/cycle
-        Shared Bandwidth (total)                 : 1.14 words/cycle
-        Read Bandwidth (per-instance)            : 1.14 words/cycle
-        Read Bandwidth (total)                   : 1.14 words/cycle
+        Shared Bandwidth (per-instance)          : 4.00 words/cycle
+        Shared Bandwidth (total)                 : 4.00 words/cycle
+        Read Bandwidth (per-instance)            : 4.00 words/cycle
+        Read Bandwidth (total)                   : 4.00 words/cycle
         Write Bandwidth (per-instance)           : 0.00 words/cycle
         Write Bandwidth (total)                  : 0.00 words/cycle
     Inputs:
         Partition size                           : 151875
-        Utilized capacity                        : 38475
+        Utilized capacity                        : 22275
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
         Scalar reads (per-instance)              : 677376
@@ -375,7 +374,7 @@ Level 7
     MAPPING
     -------
     Loop nest:
-      for Q in [0:4)
+      for P in [0:7)
 
     STATS
     -----
@@ -472,15 +471,15 @@ Operational Intensity Stats
     Total scalar accesses                   : 21676032
     Op per Byte                             : 0.49
 === weight_reg ===
-    Total scalar accesses                   : 11612160
-    Op per Byte                             : 0.92
+    Total scalar accesses                   : 13547520
+    Op per Byte                             : 0.79
 === pe_spad ===
     Total scalar accesses                   : 21274624
     Op per Byte                             : 0.50
 === inter_PE_spatial ===
 === shared_glb ===
-    Total scalar accesses                   : 1604259
-    Op per Byte                             : 6.63
+    Total scalar accesses                   : 3539619
+    Op per Byte                             : 3.01
 === DRAM ===
     Total scalar accesses                   : 554147
     Op per Byte                             : 19.20
@@ -491,8 +490,8 @@ Summary Stats
 GFLOPs (@1GHz): 31.41
 Utilization: 6.25%
 Cycles: 677376
-Energy: 110.19 uJ
-EDP(J*cycle): 7.46e+01
+Energy: 131.18 uJ
+EDP(J*cycle): 8.89e+01
 Area: 0.00 mm^2
 
 Computes = 10838016
@@ -501,8 +500,8 @@ pJ/Compute
     output_activation_reg                           = 0.14
     input_activation_reg                            = 0.14
     weight_reg                                      = 0.14
-    pe_spad                                         = 1.71
-    shared_glb                                      = 1.18
+    pe_spad                                         = 2.20
+    shared_glb                                      = 2.62
     DRAM                                            = 6.54
-    Total                                           = 10.17
+    Total                                           = 12.10
 

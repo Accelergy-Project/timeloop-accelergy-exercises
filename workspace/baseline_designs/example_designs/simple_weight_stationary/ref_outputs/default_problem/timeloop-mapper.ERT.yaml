@@ -3,39 +3,39 @@ ERT:
     tables:
       - name: system_top_level.DRAM[1..1]
         actions:
-          - name: read
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 512.0
           - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 512.0
-          - name: idle
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.0
           - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 512.0
+          - name: read
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 512.0
       - name: system_top_level.weight_reg[1..256]
         actions:
+          - name: write
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.0
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -45,19 +45,19 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.144
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
       - name: system_top_level.input_activation_reg[1..256]
         actions:
+          - name: write
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.0
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -67,19 +67,19 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.144
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
       - name: system_top_level.output_activation_reg[1..256]
         actions:
+          - name: write
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.0
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -89,11 +89,6 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.144
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
       - name: system_top_level.shared_glb[1..1]
         actions:
           - name: write
@@ -112,16 +107,16 @@ ERT:
         actions:
           - name: write
             arguments: {}
-            energy: 1.209494
+            energy: 1.562612
           - name: read
             arguments: {}
-            energy: 0.515308
+            energy: 0.660171
           - name: leak
             arguments: {}
             energy: 2.1e-05
           - name: update
             arguments: {}
-            energy: 1.209494
+            energy: 1.562612
       - name: system_top_level.mac[1..256]
         actions:
           - name: compute

@@ -26,10 +26,10 @@ architecture:
                 global_cycle_seconds: 1e-9
                 power_gated_at: "MainMemory"
             required_actions:
-              - read
-              - write
-              - leak
               - update
+              - read
+              - leak
+              - write
             enabled: true
           - name: GlobalBuffer[1..1]
             class: SRAM
@@ -50,10 +50,10 @@ architecture:
                 global_cycle_seconds: 1e-9
                 power_gated_at: "GlobalBuffer"
             required_actions:
-              - read
-              - write
-              - leak
               - update
+              - read
+              - leak
+              - write
             enabled: true
           - name: RegisterFile[1..1]
             class: regfile
@@ -74,10 +74,10 @@ architecture:
                 global_cycle_seconds: 1e-9
                 power_gated_at: "RegisterFile"
             required_actions:
-              - read
-              - write
-              - leak
               - update
+              - read
+              - leak
+              - write
             enabled: true
           - name: MACC[1..1]
             class: intmac

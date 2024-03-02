@@ -3,7 +3,7 @@ ART_summary:
     table_summary:
       - name: system_top_level.DRAM[1..1]
         area: 0.0
-        primitive_estimations: CACTI
+        primitive_estimations: CactiDRAM
       - name: system_top_level.inter_Subpartition_spatial[1..1]
         area: 1.0
         primitive_estimations: dummy_table
@@ -11,14 +11,14 @@ ART_summary:
         area: 1.0
         primitive_estimations: dummy_table
       - name: system_top_level.SMEM[1..1]
-        area: 2305303.50584
+        area: 1069113.50584
         primitive_estimations:
           - name: storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: storage.address_generators[0..1]
             estimator: Neurosim Plug-In
           - name: metadata_storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: metadata_storage.address_generators[0..1]
             estimator: Neurosim Plug-In
           - name: metadata_counters[0..1]
@@ -36,11 +36,11 @@ ART_summary:
         area: 31.51468
         primitive_estimations:
           - name: storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: storage.address_generators[0..1]
             estimator: Neurosim Plug-In
           - name: metadata_storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: metadata_storage.address_generators[0..1]
             estimator: Neurosim Plug-In
           - name: metadata_counters[0..1]

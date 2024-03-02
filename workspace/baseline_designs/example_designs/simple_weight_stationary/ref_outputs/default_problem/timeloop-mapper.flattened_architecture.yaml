@@ -24,10 +24,10 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
           - write
-          - read
+          - leak
           - update
+          - read
         enabled: true
       - name: system_top_level.shared_glb[1..1]
         class: smartbuffer_SRAM
@@ -53,20 +53,12 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            memory_width: 64
-            memory_depth: 16384
-            widthscale: 1.0
-            depthscale: 1.0
-            real_depth: 16384
-            area_scale: 1.0
-            dynamic_energy_scale: 1.0
-            static_energy_scale: 1.0
-            n_rdwr_ports: 1
+            n_rw_ports: 1
         required_actions:
-          - leak
           - write
-          - read
+          - leak
           - update
+          - read
         enabled: true
       - name: system_top_level.inter_PE_spatial[1..1]
         class: dummy_storage
@@ -113,20 +105,12 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            memory_width: 32
-            memory_depth: 192
-            widthscale: 0.5
-            depthscale: 1.0
-            real_depth: 192
-            area_scale: 0.5
-            dynamic_energy_scale: 0.5
-            static_energy_scale: 0.5
-            n_rdwr_ports: 1
+            n_rw_ports: 1
         required_actions:
-          - leak
           - write
-          - read
+          - leak
           - update
+          - read
         enabled: true
       - name: system_top_level.weight_reg[1..256]
         class: storage
@@ -152,10 +136,10 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
           - write
-          - read
+          - leak
           - update
+          - read
         enabled: true
       - name: system_top_level.input_activation_reg[1..256]
         class: storage
@@ -181,10 +165,10 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
           - write
-          - read
+          - leak
           - update
+          - read
         enabled: true
       - name: system_top_level.output_activation_reg[1..256]
         class: storage
@@ -210,10 +194,10 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
           - write
-          - read
+          - leak
           - update
+          - read
         enabled: true
       - name: system_top_level.mac[1..256]
         class: intmac

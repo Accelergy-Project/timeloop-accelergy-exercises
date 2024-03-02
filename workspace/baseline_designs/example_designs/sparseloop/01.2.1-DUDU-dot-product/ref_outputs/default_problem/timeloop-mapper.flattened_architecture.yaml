@@ -29,8 +29,8 @@ architecture:
         required_actions:
           - read
           - leak
-          - write
           - update
+          - write
         enabled: true
       - name: PE_top_level.mac[1..1]
         class: intmac

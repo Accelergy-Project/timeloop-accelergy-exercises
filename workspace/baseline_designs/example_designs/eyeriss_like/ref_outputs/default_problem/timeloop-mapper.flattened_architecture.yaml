@@ -24,9 +24,9 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
-          - read
           - update
+          - read
+          - leak
           - write
         enabled: true
       - name: system_top_level.shared_glb[1..1]
@@ -53,19 +53,11 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            memory_width: 64
-            memory_depth: 16384
-            widthscale: 1.0
-            depthscale: 1.0
-            real_depth: 16384
-            area_scale: 1.0
-            dynamic_energy_scale: 1.0
-            static_energy_scale: 1.0
-            n_rdwr_ports: 1
+            n_rw_ports: 1
         required_actions:
-          - leak
-          - read
           - update
+          - read
+          - leak
           - write
         enabled: true
       - name: system_top_level.inter_PE_column_spatial[1..1]
@@ -148,9 +140,9 @@ architecture:
             static_energy_scale: 0.09375
             n_rdwr_ports: 1
         required_actions:
-          - leak
-          - read
           - update
+          - read
+          - leak
           - write
         enabled: true
       - name: system_top_level.weights_spad[1..168]
@@ -187,9 +179,9 @@ architecture:
             static_energy_scale: 0.5
             n_rdwr_ports: 1
         required_actions:
-          - leak
-          - read
           - update
+          - read
+          - leak
           - write
         enabled: true
       - name: system_top_level.psum_spad[1..168]
@@ -227,9 +219,9 @@ architecture:
             static_energy_scale: 0.125
             n_rdwr_ports: 1
         required_actions:
-          - leak
-          - read
           - update
+          - read
+          - leak
           - write
         enabled: true
       - name: system_top_level.mac[1..168]

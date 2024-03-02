@@ -26,10 +26,10 @@ architecture:
                 global_cycle_seconds: 1e-9
                 power_gated_at: "MainMemory"
             required_actions:
-              - read
-              - write
-              - leak
               - update
+              - read
+              - leak
+              - write
             enabled: true
           - name: inter_PE_spatial[1..1]
             class: dummy_storage
@@ -69,10 +69,10 @@ architecture:
                 global_cycle_seconds: 1e-9
                 power_gated_at: "GlobalBuffer"
             required_actions:
-              - read
-              - write
-              - leak
               - update
+              - read
+              - leak
+              - write
             enabled: true
           - name: RegisterFile[1..16]
             class: regfile
@@ -93,10 +93,10 @@ architecture:
                 global_cycle_seconds: 1e-9
                 power_gated_at: "RegisterFile"
             required_actions:
-              - read
-              - write
-              - leak
               - update
+              - read
+              - leak
+              - write
             enabled: true
           - name: MACC[1..16]
             class: intmac

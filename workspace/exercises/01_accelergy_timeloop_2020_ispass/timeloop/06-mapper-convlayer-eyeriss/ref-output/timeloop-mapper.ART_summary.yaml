@@ -3,7 +3,7 @@ ART_summary:
     table_summary:
       - name: system_top_level.DRAM[1..1]
         area: 0.0
-        primitive_estimations: CACTI
+        primitive_estimations: CactiDRAM
       - name: system_top_level.inter_PE_column_spatial[1..1]
         area: 1.0
         primitive_estimations: dummy_table
@@ -14,7 +14,7 @@ ART_summary:
         area: 217363.36892
         primitive_estimations:
           - name: storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: address_generators[0..1]
             estimator: Neurosim Plug-In
       - name: system_top_level.ifmap_spad[1..168]

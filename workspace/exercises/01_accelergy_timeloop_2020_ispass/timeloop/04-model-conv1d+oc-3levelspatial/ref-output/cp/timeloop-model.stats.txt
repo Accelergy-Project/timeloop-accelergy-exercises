@@ -144,13 +144,13 @@ Level 2
         Multiple buffering              : 1.00
         Effective size                  : 262144
         Min utilization                 : 0.00
-        Vector access energy            : 39.06 pJ
+        Vector access energy            : 43.35 pJ
         Vector access energy source     : ERT
         Per-instance-cycle leakage      : 0.01 pJ
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
-        Leakage energy (total)          : 431.90 pJ
-        Area                            : 760789.00 um^2
+        Leakage energy (total)          : 391.84 pJ
+        Area                            : 707084.00 um^2
 
     MAPPING
     -------
@@ -173,9 +173,9 @@ Level 2
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 384
-        Energy (per-scalar-access)               : 4.41 pJ
-        Energy (per-instance)                    : 1695.20 pJ
-        Energy (total)                           : 27123.19 pJ
+        Energy (per-scalar-access)               : 4.64 pJ
+        Energy (per-instance)                    : 1781.55 pJ
+        Energy (total)                           : 28504.84 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -197,9 +197,9 @@ Level 2
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 1188
-        Energy (per-scalar-access)               : 4.87 pJ
-        Energy (per-instance)                    : 5782.03 pJ
-        Energy (total)                           : 92512.54 pJ
+        Energy (per-scalar-access)               : 5.38 pJ
+        Energy (per-instance)                    : 6397.23 pJ
+        Energy (total)                           : 102355.70 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -221,9 +221,9 @@ Level 2
         Scalar updates (per-instance)            : 1024
         Temporal reductions (per-instance)       : 512
         Address generations (per-cluster)        : 1024
-        Energy (per-scalar-access)               : 3.86 pJ
-        Energy (per-instance)                    : 5935.17 pJ
-        Energy (total)                           : 94962.68 pJ
+        Energy (per-scalar-access)               : 4.38 pJ
+        Energy (per-instance)                    : 6727.02 pJ
+        Energy (total)                           : 107632.27 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -371,15 +371,15 @@ Summary Stats
 GFLOPs (@1GHz): 31.83
 Utilization: 100.00%
 Cycles: 3072
-Energy: 0.62 uJ
-EDP(J*cycle): 1.89e-03
+Energy: 0.64 uJ
+EDP(J*cycle): 1.96e-03
 Area: 0.00 mm^2
 
 Computes = 49152
 pJ/Compute
     MACC                               = 0.85
     RegisterFile                       = 1.89
-    GlobalBuffer                       = 4.37
+    GlobalBuffer                       = 4.86
     MainMemory                         = 5.42
-    Total                              = 12.53
+    Total                              = 13.01
 

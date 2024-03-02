@@ -30,8 +30,8 @@ architecture:
             metadata_counter_width: 0
         required_actions:
           - update
-          - read
           - leak
+          - read
           - write
         enabled: true
       - name: system_top_level.Buffer[1..1]
@@ -65,8 +65,8 @@ architecture:
             metadata_counter_width: 0
         required_actions:
           - update
-          - read
           - leak
+          - read
           - write
         enabled: true
       - name: system_top_level.mac[1..1]

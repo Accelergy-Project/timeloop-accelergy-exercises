@@ -24,13 +24,13 @@ mapping:
       []
   - target: RegisterFile
     type: temporal
-    factors: K8 R3 P4
+    factors: K8 R3 P1
     permutation: KRP
   - target: GlobalBuffer
     type: temporal
-    factors: K4 R1 P2
+    factors: K4 R1 P4
     permutation: PKR
   - target: MainMemory
     type: temporal
-    factors: K1 R1 P2
+    factors: K1 R1 P4
     permutation: PKR

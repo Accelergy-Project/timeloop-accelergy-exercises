@@ -896,23 +896,23 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>4.41458125000000035e+00</item>
-								<item>4.57041249999999977e+00</item>
-								<item>4.10643023809523822e+00</item>
+								<item>4.63945912500000013e+00</item>
+								<item>4.89934999999999921e+00</item>
+								<item>4.62708336904761897e+00</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>4.41458125000000035e+00</item>
-								<item>4.57041249999999977e+00</item>
-								<item>4.10643023809523822e+00</item>
+								<item>4.63945912500000013e+00</item>
+								<item>4.89934999999999921e+00</item>
+								<item>4.62708336904761897e+00</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>1.69519920000000002e+03</item>
-								<item>7.89767280000000028e+03</item>
-								<item>8.27856336000000010e+03</item>
+								<item>1.78155230400000005e+03</item>
+								<item>8.46607679999999891e+03</item>
+								<item>9.32820007199999964e+03</item>
 							</PerDataSpace>
 						</energy>
 						<temporal_reduction_energy>
@@ -1990,7 +1990,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>3.49172542454725226e+03</t_>
+								<t_>3.36643230147729037e+03</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 							<fill_latency>
@@ -2204,7 +2204,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>8.72931320337891975e+02</t_>
+								<t_>8.41608038238024164e+02</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 							<fill_latency>

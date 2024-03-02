@@ -10,26 +10,26 @@ ERT_summary:
           - name: update
             energy: 2.671563
           - name: metadata_read
-            energy: 0.167559
+            energy: 0.356362
           - name: metadata_write
-            energy: 0.167559
+            energy: 0.709364
           - name: metadata_update
-            energy: 0.167559
+            energy: 0.709364
           - name: leak
-            energy: 0.000455
+            energy: 9e-05
           - name: decompression_count
             energy: 0.0
           - name: compression_count
             energy: 0.0
         primitive_estimation(s):
           - name: storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: storage.address_generators[1]
             estimator: Neurosim Plug-In
           - name: storage.address_generators[0]
             estimator: Neurosim Plug-In
           - name: metadata_storage.storage
-            estimator: Aladdin_table
+            estimator: CactiSRAM
           - name: metadata_storage.address_generators[1]
             estimator: Neurosim Plug-In
           - name: metadata_storage.address_generators[0]

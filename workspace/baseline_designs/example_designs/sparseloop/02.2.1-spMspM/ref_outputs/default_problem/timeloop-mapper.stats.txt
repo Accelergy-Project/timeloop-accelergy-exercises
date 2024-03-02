@@ -187,13 +187,13 @@ Level 2
         Min utilization                 : 0.00
         Vector read energy              : 2.27 pJ
         Vector write energy             : 2.67 pJ
-        Vector metadata read energy     : 0.17 pJ
-        Vector metadata write energy    : 0.17 pJ
+        Vector metadata read energy     : 0.36 pJ
+        Vector metadata write energy    : 0.71 pJ
         (De)compression energy          : 0.00 pJ
         Per-instance-cycle leakage      : 0.00 pJ
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
-        Leakage energy (total)          : 0.03 pJ
+        Leakage energy (total)          : 0.01 pJ
         Area                            : 7642.98 um^2
 
     MAPPING
@@ -243,9 +243,9 @@ Level 2
         Skipped scalar format updates (per-instance)                : 0
         Temporal reductions (per-instance)                          : 0
         Address generations (per-cluster)                           : 64
-        Energy (per-scalar-access)                                  : 0.83 pJ
-        Energy (per-instance)                                       : 53.05 pJ
-        Energy (total)                                              : 53.05 pJ
+        Energy (per-scalar-access)                                  : 1.12 pJ
+        Energy (per-instance)                                       : 71.93 pJ
+        Energy (total)                                              : 71.93 pJ
         Temporal Reduction Energy (per-instance)                    : 0.00 pJ
         Temporal Reduction Energy (total)                           : 0.00 pJ
         Address Generation Energy (per-cluster)                     : 0.00 pJ
@@ -297,9 +297,9 @@ Level 2
         Skipped scalar format updates (per-instance)                : 0
         Temporal reductions (per-instance)                          : 0
         Address generations (per-cluster)                           : 32
-        Energy (per-scalar-access)                                  : 0.78 pJ
-        Energy (per-instance)                                       : 25.02 pJ
-        Energy (total)                                              : 25.02 pJ
+        Energy (per-scalar-access)                                  : 1.02 pJ
+        Energy (per-instance)                                       : 32.76 pJ
+        Energy (total)                                              : 32.76 pJ
         Temporal Reduction Energy (per-instance)                    : 0.00 pJ
         Temporal Reduction Energy (total)                           : 0.00 pJ
         Address Generation Energy (per-cluster)                     : 0.00 pJ
@@ -381,20 +381,20 @@ GFLOPs (@1GHz): 1.00
 Utilization: 100.00%
 Cycles: 64
 Energy: 0.00 uJ
-EDP(J*cycle): 2.71e-08
+EDP(J*cycle): 2.88e-08
 Area: 0.00 mm^2
 
 Algorithmic Computes = 512
 pJ/Algorithmic-Compute
     mac                        = 0.04
     Buffer                     = 0.55
-    BackingStorage             = 0.24
-    Total                      = 0.83
+    BackingStorage             = 0.29
+    Total                      = 0.88
 
 Actual Computes = 64
 pJ/Compute
     mac                        = 0.32
     Buffer                     = 4.42
-    BackingStorage             = 1.89
-    Total                      = 6.62
+    BackingStorage             = 2.30
+    Total                      = 7.04
 

@@ -3,48 +3,46 @@ ERT_summary:
     table_summary:
       - name: system_top_level.DRAM[1..1]
         actions:
-          - name: read
-            energy: 512.0
-          - name: write
-            energy: 512.0
-          - name: idle
-            energy: 0.0
           - name: leak
             energy: 0.0
+          - name: write
+            energy: 512.0
           - name: update
+            energy: 512.0
+          - name: read
             energy: 512.0
         primitive_estimation(s):
           - name: system_top_level.DRAM[1..1]
-            estimator: CACTI
+            estimator: CactiDRAM
       - name: system_top_level.SMEM[1..1]
         actions:
           - name: read
-            energy: 199.397532
+            energy: 124.662532
           - name: write
-            energy: 191.276532
+            energy: 118.085532
           - name: update
-            energy: 191.276532
+            energy: 118.085532
           - name: metadata_read
-            energy: 38.155032
+            energy: 25.922032
           - name: metadata_write
-            energy: 30.332432
+            energy: 19.701132
           - name: metadata_update
-            energy: 30.332432
+            energy: 19.701132
           - name: leak
-            energy: 0.008885
+            energy: 0.007921
           - name: decompression_count
             energy: 0.0
           - name: compression_count
             energy: 0.0
         primitive_estimation(s):
           - name: storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: storage.address_generators[1]
             estimator: Neurosim Plug-In
           - name: storage.address_generators[0]
             estimator: Neurosim Plug-In
           - name: metadata_storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: metadata_storage.address_generators[1]
             estimator: Neurosim Plug-In
           - name: metadata_storage.address_generators[0]
@@ -83,32 +81,32 @@ ERT_summary:
       - name: system_top_level.LRF[1..1024]
         actions:
           - name: read
-            energy: 0.010553
+            energy: 0.01674
           - name: write
-            energy: 0.010553
+            energy: 0.024774
           - name: update
-            energy: 0.010553
+            energy: 0.024774
           - name: metadata_read
-            energy: 0.010553
+            energy: 0.01674
           - name: metadata_write
-            energy: 0.010553
+            energy: 0.024774
           - name: metadata_update
-            energy: 0.010553
+            energy: 0.024774
           - name: leak
-            energy: 2.1e-05
+            energy: 2e-06
           - name: decompression_count
             energy: 0.0
           - name: compression_count
             energy: 0.0
         primitive_estimation(s):
           - name: storage.storage
-            estimator: Aladdin_table
+            estimator: CactiSRAM
           - name: storage.address_generators[1]
             estimator: Neurosim Plug-In
           - name: storage.address_generators[0]
             estimator: Neurosim Plug-In
           - name: metadata_storage.storage
-            estimator: Aladdin_table
+            estimator: CactiSRAM
           - name: metadata_storage.address_generators[1]
             estimator: Neurosim Plug-In
           - name: metadata_storage.address_generators[0]

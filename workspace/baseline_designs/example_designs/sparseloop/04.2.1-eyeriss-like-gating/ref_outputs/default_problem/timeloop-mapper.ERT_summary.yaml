@@ -3,19 +3,17 @@ ERT_summary:
     table_summary:
       - name: eyeriss_168_top_level.DRAM[1..1]
         actions:
-          - name: read
-            energy: 512.0
-          - name: write
-            energy: 512.0
-          - name: idle
-            energy: 0.0
           - name: leak
             energy: 0.0
           - name: update
             energy: 512.0
+          - name: write
+            energy: 512.0
+          - name: read
+            energy: 512.0
         primitive_estimation(s):
           - name: eyeriss_168_top_level.DRAM[1..1]
-            estimator: CACTI
+            estimator: CactiDRAM
       - name: eyeriss_168_top_level.shared_glb[1..1]
         actions:
           - name: read
@@ -38,7 +36,7 @@ ERT_summary:
             energy: 0.059062
         primitive_estimation(s):
           - name: storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: storage.address_generators[1]
             estimator: Neurosim Plug-In
           - name: storage.address_generators[0]

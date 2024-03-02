@@ -28,8 +28,8 @@ architecture:
         required_actions:
           - leak
           - write
-          - update
           - read
+          - update
         enabled: true
       - name: system_top_level.shared_glb[1..1]
         class: smartbuffer_SRAM
@@ -69,8 +69,8 @@ architecture:
         required_actions:
           - leak
           - write
-          - update
           - read
+          - update
         enabled: true
       - name: system_top_level.inter_PE_column_spatial[1..1]
         class: dummy_storage
@@ -160,8 +160,8 @@ architecture:
         required_actions:
           - leak
           - write
-          - update
           - read
+          - update
         enabled: true
       - name: system_top_level.weights_spad[1..168]
         class: smartbuffer_RF
@@ -201,8 +201,8 @@ architecture:
         required_actions:
           - leak
           - write
-          - update
           - read
+          - update
         enabled: true
       - name: system_top_level.psum_spad[1..168]
         class: smartbuffer_RF
@@ -243,8 +243,8 @@ architecture:
         required_actions:
           - leak
           - write
-          - update
           - read
+          - update
         enabled: true
       - name: system_top_level.mac[1..168]
         class: fpmac

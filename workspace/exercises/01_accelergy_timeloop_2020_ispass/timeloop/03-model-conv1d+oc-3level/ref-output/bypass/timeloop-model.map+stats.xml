@@ -896,22 +896,22 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>4.82707573529411782e+00</item>
-								<item>4.88648474903474916e+00</item>
+								<item>5.32740555882353028e+00</item>
+								<item>5.41597248648648755e+00</item>
 								<item>-nan</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>4.82707573529411782e+00</item>
-								<item>4.88648474903474916e+00</item>
+								<item>5.32740555882353028e+00</item>
+								<item>5.41597248648648755e+00</item>
 								<item>-nan</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>7.87778760000000057e+03</item>
-								<item>7.59359730000000036e+03</item>
+								<item>8.69432587200000125e+03</item>
+								<item>8.41642124400000102e+03</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy>
@@ -1531,7 +1531,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>8.72931320337891975e+02</t_>
+								<t_>8.41608038238024164e+02</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 							<fill_latency>

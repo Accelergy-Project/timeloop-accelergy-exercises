@@ -6,7 +6,7 @@ ART:
       - name: System_top_level.inter_PE_spatial[1..1]
         area: 1.0
       - name: System_top_level.GlobalBuffer[1..16]
-        area: 760789.0
+        area: 707084.0
       - name: System_top_level.RegisterFile[1..16]
         area: 887.84
       - name: System_top_level.MACC[1..16]

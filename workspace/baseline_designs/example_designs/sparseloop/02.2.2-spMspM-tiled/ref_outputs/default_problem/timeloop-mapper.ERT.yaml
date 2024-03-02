@@ -14,16 +14,16 @@ ERT:
             energy: 2.671563
           - name: metadata_read
             arguments: {}
-            energy: 0.167559
+            energy: 0.356362
           - name: metadata_write
             arguments: {}
-            energy: 0.167559
+            energy: 0.709364
           - name: metadata_update
             arguments: {}
-            energy: 0.167559
+            energy: 0.709364
           - name: leak
             arguments: {}
-            energy: 0.000455
+            energy: 9e-05
           - name: decompression_count
             arguments: {}
             energy: 0.0

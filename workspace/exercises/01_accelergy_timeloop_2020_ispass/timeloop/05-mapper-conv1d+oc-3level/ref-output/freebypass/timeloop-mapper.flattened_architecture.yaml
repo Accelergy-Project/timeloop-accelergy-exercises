@@ -22,12 +22,11 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            type: "LPDDR4"
         required_actions:
-          - read
-          - write
-          - leak
           - update
+          - read
+          - leak
+          - write
         enabled: true
       - name: System_top_level.GlobalBuffer[1..1]
         class: SRAM
@@ -51,15 +50,11 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            n_rd_ports: 0
-            n_wr_ports: 0
-            n_rdwr_ports: 1
-            latency: "5ns"
         required_actions:
-          - read
-          - write
-          - leak
           - update
+          - read
+          - leak
+          - write
         enabled: true
       - name: System_top_level.RegisterFile[1..1]
         class: regfile
@@ -83,13 +78,11 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            n_ports: 2
-            latency: "5ns"
         required_actions:
-          - read
-          - write
-          - leak
           - update
+          - read
+          - leak
+          - write
         enabled: true
       - name: System_top_level.MACC[1..1]
         class: intmac
@@ -105,8 +98,6 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            num_pipeline_stages: 2
-            latency: "5ns"
         required_actions:
           - compute
         enabled: true

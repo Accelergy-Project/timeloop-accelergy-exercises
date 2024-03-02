@@ -8,11 +8,11 @@ ART_summary:
         area: 7642.97744
         primitive_estimations:
           - name: storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: storage.address_generators[0..1]
             estimator: Neurosim Plug-In
           - name: metadata_storage.storage
-            estimator: CACTI
+            estimator: CactiSRAM
           - name: metadata_storage.address_generators[0..1]
             estimator: Neurosim Plug-In
           - name: metadata_counters[0..1]

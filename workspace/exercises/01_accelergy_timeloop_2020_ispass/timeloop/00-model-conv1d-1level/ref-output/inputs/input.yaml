@@ -27,10 +27,10 @@ architecture:
                 global_cycle_seconds: 1e-9
                 power_gated_at: "Buffer"
             required_actions:
-              - read
-              - write
-              - leak
               - update
+              - read
+              - leak
+              - write
             enabled: true
           - name: MACC[1..1]
             class: intmac

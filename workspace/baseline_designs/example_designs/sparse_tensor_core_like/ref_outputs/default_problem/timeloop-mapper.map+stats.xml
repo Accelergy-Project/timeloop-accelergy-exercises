@@ -430,21 +430,21 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>1.05529999999999999e-02</item>
+								<item>2.07570000000000011e-02</item>
 								<item>-nan</item>
 								<item>-nan</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>1.05529999999999999e-02</item>
+								<item>2.07570000000000011e-02</item>
 								<item>-nan</item>
 								<item>-nan</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>2.11059999999999998e-02</item>
+								<item>4.15140000000000023e-02</item>
 								<item>0.00000000000000000e+00</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
@@ -2256,22 +2256,22 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>6.10428225000000069e+00</item>
-								<item>1.95337032000000022e+02</item>
+								<item>3.79293849999999999e+00</item>
+								<item>1.21374032000000000e+02</item>
 								<item>-nan</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>6.10428225000000069e+00</item>
-								<item>1.95337032000000022e+02</item>
+								<item>3.79293849999999999e+00</item>
+								<item>1.21374032000000000e+02</item>
 								<item>-nan</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>7.81348128000000088e+02</item>
-								<item>3.90674064000000044e+02</item>
+								<item>4.85496127999999999e+02</item>
+								<item>2.42748063999999999e+02</item>
 								<item>0.00000000000000000e+00</item>
 							</PerDataSpace>
 						</energy>
@@ -2788,7 +2788,7 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>1.81725417063852819e+03</t_>
+								<t_>1.43743616230534735e+03</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
 							<fill_latency>

@@ -889,23 +889,23 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>4.88207500000000039e+00</item>
-								<item>4.88207500000000039e+00</item>
-								<item>3.35502437500000017e+00</item>
+								<item>5.41913175000000091e+00</item>
+								<item>5.41913175000000003e+00</item>
+								<item>3.85978649999999979e+00</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>4.88207500000000039e+00</item>
-								<item>4.88207500000000039e+00</item>
-								<item>3.35502437500000017e+00</item>
+								<item>5.41913175000000091e+00</item>
+								<item>5.41913175000000003e+00</item>
+								<item>3.85978649999999979e+00</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>4.68679200000000037e+02</item>
-								<item>2.81207520000000022e+03</item>
-								<item>1.71777248000000009e+03</item>
+								<item>5.20236648000000059e+02</item>
+								<item>3.12141988799999990e+03</item>
+								<item>1.97621068799999989e+03</item>
 							</PerDataSpace>
 						</energy>
 						<temporal_reduction_energy>

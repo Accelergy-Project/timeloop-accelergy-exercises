@@ -53,15 +53,7 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            memory_width: 64
-            memory_depth: 16384
-            widthscale: 1.0
-            depthscale: 1.0
-            real_depth: 16384
-            area_scale: 1.0
-            dynamic_energy_scale: 1.0
-            static_energy_scale: 1.0
-            n_rdwr_ports: 1
+            n_rw_ports: 1
         required_actions:
           - write
           - read
@@ -113,15 +105,7 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            memory_width: 32
-            memory_depth: 192
-            widthscale: 0.5
-            depthscale: 1.0
-            real_depth: 192
-            area_scale: 0.5
-            dynamic_energy_scale: 0.5
-            static_energy_scale: 0.5
-            n_rdwr_ports: 1
+            n_rw_ports: 1
         required_actions:
           - write
           - read

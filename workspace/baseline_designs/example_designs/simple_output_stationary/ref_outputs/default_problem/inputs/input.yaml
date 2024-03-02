@@ -218,8 +218,8 @@ architecture_constraints:
           - Weights
         type: bypass
         bypass:
-          - Outputs
           - Inputs
+          - Outputs
         target: weight_reg
       - factors: R=1,S=1,M=1,C=1
         type: temporal
@@ -566,31 +566,22 @@ compound_components:
             technology: "must_specify"
             width: "must_specify"
             depth: "must_specify"
-            memory_width: max(32, width)
-            memory_depth: max(64, depth)
-            widthscale: width / memory_width
-            depthscale: depth / memory_depth
-            real_depth: depth
-            area_scale: widthscale * depthscale
-            dynamic_energy_scale: widthscale * (depthscale ** (1.56 / 2))
-            static_energy_scale: area_scale
-            n_rdwr_ports: 1
+            n_rw_ports: 1
             global_cycle_seconds: "must_specify"
         subcomponents:
           - name: storage
             class: SRAM
-            area_share: area_scale
             attributes:
-                width: memory_width
-                depth: memory_depth
-                n_rdwr_ports: n_rdwr_ports
+                width: width
+                depth: depth
+                n_rw_ports: n_rw_ports
+                technology: technology
                 global_cycle_seconds: global_cycle_seconds
           - name: address_generators[0..1]
             class: intadder
             attributes:
-                n_bits: max(1, ceil(log2(real_depth))) if real_depth >= 1 else 1
-                precision: max(1, ceil(log2(real_depth))) if real_depth >= 1 else
-                    1
+                n_bits: max(1, ceil(log2(depth))) if depth >= 1 else 1
+                precision: max(1, ceil(log2(depth))) if depth >= 1 else 1
                 global_cycle_seconds: global_cycle_seconds
         actions:
           - name: write
@@ -598,7 +589,6 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add
@@ -607,7 +597,6 @@ compound_components:
               - name: storage
                 actions:
                   - name: read
-                    action_share: dynamic_energy_scale
               - name: address_generators[1]
                 actions:
                   - name: add
@@ -616,7 +605,6 @@ compound_components:
               - name: storage
                 actions:
                   - name: leak
-                    action_share: static_energy_scale
               - name: address_generators[0..1]
                 actions:
                   - name: leak
@@ -625,7 +613,6 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add

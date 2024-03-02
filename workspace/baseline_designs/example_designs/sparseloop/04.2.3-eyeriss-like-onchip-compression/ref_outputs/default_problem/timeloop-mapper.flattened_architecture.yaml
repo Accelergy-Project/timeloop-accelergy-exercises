@@ -24,12 +24,11 @@ architecture:
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
-            type: "LPDDR4"
         required_actions:
-          - read
-          - write
           - leak
           - update
+          - read
+          - write
         enabled: true
       - name: eyeriss_168_top_level.shared_glb[1..1]
         class: storage
@@ -64,10 +63,10 @@ architecture:
             n_instances: 1
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - write
           - leak
           - update
+          - read
+          - write
         enabled: true
       - name: eyeriss_168_top_level.inter_PE_column_spatial[1..1]
         class: dummy_storage
@@ -153,10 +152,10 @@ architecture:
             static_energy_scale: 0.09375
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - write
           - leak
           - update
+          - read
+          - write
         enabled: true
       - name: eyeriss_168_top_level.weights_spad[1..168]
         class: storage
@@ -193,10 +192,10 @@ architecture:
             static_energy_scale: 0.5
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - write
           - leak
           - update
+          - read
+          - write
         enabled: true
       - name: eyeriss_168_top_level.psum_spad[1..168]
         class: storage
@@ -231,10 +230,10 @@ architecture:
             static_energy_scale: 0.5
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - write
           - leak
           - update
+          - read
+          - write
         enabled: true
       - name: eyeriss_168_top_level.mac[1..168]
         class: intmac
