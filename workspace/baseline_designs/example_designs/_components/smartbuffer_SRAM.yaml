@@ -25,6 +25,7 @@ compound_components:
       attributes:
         n_bits: max(1, ceil(log2(depth))) if depth >= 1 else 1
         precision: max(1, ceil(log2(depth))) if depth >= 1 else 1
+        datawidth: max(1, ceil(log2(depth))) if depth >= 1 else 1
         global_cycle_seconds: global_cycle_seconds
 
     actions:
