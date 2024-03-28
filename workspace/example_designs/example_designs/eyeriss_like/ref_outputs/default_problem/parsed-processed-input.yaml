@@ -26,8 +26,8 @@ architecture:
                 meshY: 1
                 power_gated_at: "DRAM"
             required_actions:
-              - read
               - write
+              - read
               - update
               - leak
             enabled: true
@@ -51,8 +51,8 @@ architecture:
                 technology: "32nm"
                 power_gated_at: "shared_glb"
             required_actions:
-              - read
               - write
+              - read
               - update
               - leak
             enabled: true
@@ -112,8 +112,8 @@ architecture:
                 technology: "32nm"
                 power_gated_at: "ifmap_spad"
             required_actions:
-              - read
               - write
+              - read
               - update
               - leak
             enabled: true
@@ -137,8 +137,8 @@ architecture:
                 technology: "32nm"
                 power_gated_at: "weights_spad"
             required_actions:
-              - read
               - write
+              - read
               - update
               - leak
             enabled: true
@@ -163,8 +163,8 @@ architecture:
                 technology: "32nm"
                 power_gated_at: "psum_spad"
             required_actions:
-              - read
               - write
+              - read
               - update
               - leak
             enabled: true
@@ -241,8 +241,8 @@ architecture_constraints:
           - Weights
         type: dataspace
         bypass:
-          - Outputs
           - Inputs
+          - Outputs
         target: weights_spad
       - permutation: NMPQSCR
         factors: N=1,M=1,P=1,Q=1,S=1

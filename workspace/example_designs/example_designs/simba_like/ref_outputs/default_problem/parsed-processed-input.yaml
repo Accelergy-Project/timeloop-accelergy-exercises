@@ -28,10 +28,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "DRAM"
             required_actions:
+              - write
               - read
               - leak
               - update
-              - write
             enabled: true
           - name: GlobalBuffer[1..1]
             class: smartbuffer_SRAM
@@ -52,10 +52,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "GlobalBuffer"
             required_actions:
+              - write
               - read
               - leak
               - update
-              - write
             enabled: true
           - name: inter_PE_spatial[1..1]
             class: dummy_storage
@@ -94,10 +94,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "PEInputBuffer"
             required_actions:
+              - write
               - read
               - leak
               - update
-              - write
             enabled: true
           - name: inter_distributed_buffers_spatial[1..16]
             class: dummy_storage
@@ -136,10 +136,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "PEWeightBuffer"
             required_actions:
+              - write
               - read
               - leak
               - update
-              - write
             enabled: true
           - name: PEAccuBuffer[1..64]
             class: storage
@@ -160,10 +160,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "PEAccuBuffer"
             required_actions:
+              - write
               - read
               - leak
               - update
-              - write
             enabled: true
           - name: inter_reg_mac_spatial[1..64]
             class: dummy_storage
@@ -203,10 +203,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "PEWeightRegs"
             required_actions:
+              - write
               - read
               - leak
               - update
-              - write
             enabled: true
           - name: mac[1..256]
             class: intmac

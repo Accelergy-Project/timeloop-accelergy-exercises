@@ -30,10 +30,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "BackingStorage"
             required_actions:
-              - leak
-              - read
               - write
+              - read
               - update
+              - leak
             enabled: true
           - name: Buffer[1..1]
             class: storage
@@ -57,10 +57,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "Buffer"
             required_actions:
-              - leak
-              - read
               - write
+              - read
               - update
+              - leak
             enabled: true
           - name: mac[1..1]
             class: intmac

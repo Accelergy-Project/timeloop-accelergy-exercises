@@ -27,10 +27,10 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - write
-          - read
           - update
           - leak
+          - read
+          - write
         enabled: true
       - name: system_top_level.SMEM[1..1]
         class: storage
@@ -62,10 +62,10 @@ architecture:
             n_instances: 1
             metadata_counter_width: 0
         required_actions:
-          - write
-          - read
           - update
           - leak
+          - read
+          - write
         enabled: true
       - name: system_top_level.inter_Subpartition_spatial[1..1]
         class: dummy_storage
@@ -123,10 +123,10 @@ architecture:
             dynamic_energy_scale: 0.25
             static_energy_scale: 0.25
         required_actions:
-          - write
-          - read
           - update
           - leak
+          - read
+          - write
         enabled: true
       - name: system_top_level.inter_PE_spatial[1..4]
         class: dummy_storage
@@ -179,10 +179,10 @@ architecture:
             n_rdwr_ports: 1
             metadata_counter_width: 0
         required_actions:
-          - write
-          - read
           - update
           - leak
+          - read
+          - write
         enabled: true
       - name: system_top_level.mac[1..1024]
         class: intmac

@@ -31,10 +31,10 @@ architecture:
             n_instances: 1
             metadata_counter_width: 0
         required_actions:
-          - update
-          - read
           - write
           - leak
+          - update
+          - read
         enabled: true
       - name: PE_top_level.mac[1..1]
         class: intmac

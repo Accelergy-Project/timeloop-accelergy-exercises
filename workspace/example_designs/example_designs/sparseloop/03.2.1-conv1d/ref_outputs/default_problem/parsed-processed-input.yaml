@@ -30,9 +30,9 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "BackingStorage"
             required_actions:
+              - leak
               - write
               - read
-              - leak
               - update
             enabled: true
           - name: Buffer[1..1]
@@ -57,9 +57,9 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "Buffer"
             required_actions:
+              - leak
               - write
               - read
-              - leak
               - update
             enabled: true
           - name: mac[1..1]

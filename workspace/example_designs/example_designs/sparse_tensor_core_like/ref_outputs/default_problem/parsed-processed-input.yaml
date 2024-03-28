@@ -30,10 +30,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "DRAM"
             required_actions:
-              - write
-              - read
               - update
               - leak
+              - read
+              - write
             enabled: true
           - name: SMEM[1..1]
             class: storage
@@ -59,10 +59,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "SMEM"
             required_actions:
-              - write
-              - read
               - update
               - leak
+              - read
+              - write
             enabled: true
           - name: inter_Subpartition_spatial[1..1]
             class: dummy_storage
@@ -102,10 +102,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "RF"
             required_actions:
-              - write
-              - read
               - update
               - leak
+              - read
+              - write
             enabled: true
           - name: inter_PE_spatial[1..4]
             class: dummy_storage
@@ -146,10 +146,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "LRF"
             required_actions:
-              - write
-              - read
               - update
               - leak
+              - read
+              - write
             enabled: true
           - name: mac[1..1024]
             class: intmac

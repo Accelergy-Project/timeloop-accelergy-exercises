@@ -26,9 +26,9 @@ architecture:
                 meshY: 1
                 power_gated_at: "DRAM"
             required_actions:
+              - leak
               - read
               - write
-              - leak
               - update
             enabled: true
           - name: shared_glb[1..1]
@@ -51,9 +51,9 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "shared_glb"
             required_actions:
+              - leak
               - read
               - write
-              - leak
               - update
             enabled: true
           - name: inter_PE_spatial[1..1]
@@ -92,9 +92,9 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "pe_spad"
             required_actions:
+              - leak
               - read
               - write
-              - leak
               - update
             enabled: true
           - name: weight_reg[1..256]
@@ -116,9 +116,9 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "weight_reg"
             required_actions:
+              - leak
               - read
               - write
-              - leak
               - update
             enabled: true
           - name: input_activation_reg[1..256]
@@ -140,9 +140,9 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "input_activation_reg"
             required_actions:
+              - leak
               - read
               - write
-              - leak
               - update
             enabled: true
           - name: output_activation_reg[1..256]
@@ -164,9 +164,9 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "output_activation_reg"
             required_actions:
+              - leak
               - read
               - write
-              - leak
               - update
             enabled: true
           - name: mac[1..256]
@@ -219,8 +219,8 @@ architecture_constraints:
           - Weights
         type: dataspace
         bypass:
-          - Outputs
           - Inputs
+          - Outputs
         target: weight_reg
       - factors: R=1,S=1,M=1,C=1
         type: temporal
@@ -230,8 +230,8 @@ architecture_constraints:
           - Inputs
         type: dataspace
         bypass:
-          - Outputs
           - Weights
+          - Outputs
         target: input_activation_reg
       - factors: P=1,Q=1,C=1,N=1
         type: temporal

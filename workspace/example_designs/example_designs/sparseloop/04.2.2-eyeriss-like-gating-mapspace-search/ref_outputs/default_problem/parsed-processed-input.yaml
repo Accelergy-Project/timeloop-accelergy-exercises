@@ -233,8 +233,8 @@ architecture_constraints:
           - Inputs
         type: dataspace
         bypass:
-          - Outputs
           - Weights
+          - Outputs
         target: ifmap_spad
       - permutation: NMCPQRS
         factors: M=1,C=1,P=1,Q=1,R=1,S=1
@@ -255,8 +255,8 @@ architecture_constraints:
           - Outputs
         type: dataspace
         bypass:
-          - Inputs
           - Weights
+          - Inputs
         target: psum_spad
       - permutation: NCPQRSM
         factors: C=1,R=1,S=1,P=1,Q=1

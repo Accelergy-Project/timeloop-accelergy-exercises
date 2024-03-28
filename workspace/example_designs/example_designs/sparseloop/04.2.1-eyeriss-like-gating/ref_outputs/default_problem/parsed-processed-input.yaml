@@ -28,10 +28,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "DRAM"
             required_actions:
-              - read
-              - leak
               - write
               - update
+              - leak
+              - read
             enabled: true
           - name: shared_glb[1..1]
             class: storage
@@ -60,10 +60,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "shared_glb"
             required_actions:
-              - read
-              - leak
               - write
               - update
+              - leak
+              - read
             enabled: true
           - name: inter_PE_column_spatial[1..1]
             class: dummy_storage
@@ -122,10 +122,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "ifmap_spad"
             required_actions:
-              - read
-              - leak
               - write
               - update
+              - leak
+              - read
             enabled: true
           - name: weights_spad[1..168]
             class: storage
@@ -148,10 +148,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "weights_spad"
             required_actions:
-              - read
-              - leak
               - write
               - update
+              - leak
+              - read
             enabled: true
           - name: psum_spad[1..168]
             class: storage
@@ -172,10 +172,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "psum_spad"
             required_actions:
-              - read
-              - leak
               - write
               - update
+              - leak
+              - read
             enabled: true
           - name: mac[1..168]
             class: intmac

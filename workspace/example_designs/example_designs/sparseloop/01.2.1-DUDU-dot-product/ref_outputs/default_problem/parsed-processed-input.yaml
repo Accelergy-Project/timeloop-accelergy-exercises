@@ -31,8 +31,8 @@ architecture:
                 power_gated_at: "Buffer"
             required_actions:
               - leak
-              - update
               - read
+              - update
               - write
             enabled: true
           - name: mac[1..1]

@@ -33,10 +33,10 @@ architecture:
                 technology: "45nm"
                 power_gated_at: "Buffer"
             required_actions:
-              - update
-              - read
               - write
               - leak
+              - update
+              - read
             enabled: true
           - name: mac[1..1]
             class: intmac
