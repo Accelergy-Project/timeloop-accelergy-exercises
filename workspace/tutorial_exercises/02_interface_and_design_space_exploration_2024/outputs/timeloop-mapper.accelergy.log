@@ -1,0 +1,228 @@
+2024-03-28 11:12:11 INFO            _                _                      
+2024-03-28 11:12:11 INFO           / \   ___ ___ ___| | ___ _ __ __ _ _   _ 
+2024-03-28 11:12:11 INFO          / _ \ / __/ __/ _ \ |/ _ \ '__/ _` | | | |
+2024-03-28 11:12:11 INFO         / ___ \ (_| (_|  __/ |  __/ | | (_| | |_| |
+2024-03-28 11:12:11 INFO        /_/   \_\___\___\___|_|\___|_|  \__, |\__, |
+2024-03-28 11:12:11 INFO                                        |___/ |___/ 
+2024-03-28 11:12:11 INFO        generating outputs according to the following specified output flags... 
+2024-03-28 11:12:11 INFO         Please use the -f flag to update the preference (default to all output files)
+2024-03-28 11:12:11 INFO        {'ERT': 1, 'ERT_summary': 1, 'ART': 1, 'ART_summary': 1, 'energy_estimation': 1, 'flattened_arch': 1}
+2024-03-28 11:12:11 INFO        Located config file at /home/tanner/.config/accelergy/accelergy_config.yaml.
+2024-03-28 11:12:11 INFO        config file located:
+2024-03-28 11:12:11 INFO        /home/tanner/.config/accelergy/accelergy_config.yaml
+2024-03-28 11:12:11 INFO        Parsing file /home/tanner/research/cimloop/infrastructure/timeloop-accelergy-exercises/workspace/tutorial_exercises/02_interface_and_design_space_exploration_2024/outputs/parsed-processed-input.yaml for architecture info
+2024-03-28 11:12:11 INFO        Parsing file /home/tanner/research/cimloop/infrastructure/timeloop-accelergy-exercises/workspace/tutorial_exercises/02_interface_and_design_space_exploration_2024/outputs/parsed-processed-input.yaml for compound_components info
+2024-03-28 11:12:11 INFO        primitive component file parsed: 
+2024-03-28 11:12:11 INFO        /home/tanner/research/cimloop/venv/share/accelergy/primitive_component_libs/neurosim_components.lib.yaml
+2024-03-28 11:12:11 INFO        Adding required action "write" to class DRAM
+2024-03-28 11:12:11 INFO        Adding required action "read" to class DRAM
+2024-03-28 11:12:11 INFO        Adding required action "leak" to class DRAM
+2024-03-28 11:12:11 INFO        Adding required action "update" to class DRAM
+2024-03-28 11:12:11 INFO        Adding required action "write" to class SRAM
+2024-03-28 11:12:11 INFO        Adding required action "read" to class SRAM
+2024-03-28 11:12:11 INFO        Adding required action "leak" to class SRAM
+2024-03-28 11:12:11 INFO        Adding required action "update" to class SRAM
+2024-03-28 11:12:11 INFO        Calculated adder."width" as "adder_width" = 16.
+2024-03-28 11:12:11 INFO        Calculated multiplier."width" as "multiplier_width" = 8.
+2024-03-28 11:12:11 INFO        Estimator plug-in identified by: /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/table.estimator.yaml
+2024-03-28 11:12:11 INFO        Estimator plug-in identified by: /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin.estimator.yaml
+2024-03-28 11:12:11 INFO        Estimator plug-in identified by: /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/dummy_tables/dummy.estimator.yaml
+2024-03-28 11:12:11 INFO        Estimator plug-in identified by: /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml
+2024-03-28 11:12:11 INFO        Estimator plug-in identified by: /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-neurosim-plugin/neurosim.estimator.yaml
+2024-03-28 11:12:11 INFO        Estimator plug-in identified by: /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-library-plugin/library.estimator.yaml
+2024-03-28 11:12:11 INFO        Estimator plug-in identified by: /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-adc-plug-in/adc.estimator.yaml
+2024-03-28 11:12:11 INFO        Getting all estimators in module <module 'python_plug_in' from '/home/tanner/research/cimloop/artifact/models/plug_ins/__init__.py'>
+2024-03-28 11:12:11 INFO        Getting all estimators in module <module 'python_plug_in' from '/home/tanner/research/cimloop/artifact/models/plug_ins/X2X_ladder.py'>
+2024-03-28 11:12:11 INFO        Added estimator DigitalAnalogConverterX2XLadder that estimates dac_x2x_ladder with actions convert, idle, leak, leak
+2024-03-28 11:12:11 INFO        Added estimator DigitalAnalogConverter_C2C that estimates dac_c2c_ladder with actions convert, idle, leak, leak
+2024-03-28 11:12:11 INFO        Added estimator DigitalAnalogConverter_R2R that estimates dac_r2r_ladder with actions convert, idle, leak, leak
+2024-03-28 11:12:11 INFO        Getting all estimators in module <module 'python_plug_in' from '/home/tanner/research/cimloop/artifact/models/plug_ins/misc_components.py'>
+2024-03-28 11:12:11 INFO        Added estimator Capacitor that estimates capacitor with actions charge, idle, leak, raise_voltage_to, raise_voltage_to_from_non_supply, read, switch, update, write, leak
+2024-03-28 11:12:11 INFO        Added estimator ExampleRRAM that estimates ExampleRRAM with actions idle, multiply_accumulate, leak
+2024-03-28 11:12:11 INFO        Added estimator PassGate that estimates pass_gate with actions idle, leak
+2024-03-28 11:12:11 INFO        Added estimator Wire that estimates wire with actions charge, idle, leak, raise_voltage_to, raise_voltage_to_from_non_supply, read, switch, update, write, leak
+2024-03-28 11:12:11 INFO        Getting all estimators in module <module 'python_plug_in' from '/home/tanner/research/cimloop/artifact/models/plug_ins/utils/__init__.py'>
+2024-03-28 11:12:11 INFO        Getting all estimators in module <module 'python_plug_in' from '/home/tanner/research/cimloop/artifact/models/plug_ins/utils/bit_functions.py'>
+2024-03-28 11:12:11 INFO        Getting all estimators in module <module 'python_plug_in' from '/home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_wrapper.py'>
+2024-03-28 11:12:11 INFO        Added estimator CactiCache that estimates cache with actions idle, read, read_access, update, update_access, write, write_access, leak
+2024-03-28 11:12:11 INFO        Added estimator CactiDRAM that estimates DRAM with actions idle, read, update, write, leak
+2024-03-28 11:12:11 INFO        Added estimator CactiSRAM that estimates SRAM with actions idle, read, update, write, leak
+2024-03-28 11:12:11 INFO        Found estimator plug-in: table-based-plug-ins (<SetsOfTables.SetsOfTables object at 0x7f93c3591670>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: Aladdin_table (<AladdinTable.AladdinTable object at 0x7f93c33db800>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: dummy_table (<DummyTable.DummyTable object at 0x7f93c36526f0>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: Neurosim Plug-In (<NeuroWrapper.NeuroWrapper object at 0x7f93c34aaff0>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: Library (<LibraryEstimator.LibraryEstimator object at 0x7f93c34ab770>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: ADC Plug-In (<ADCEstimator.ADCEstimator object at 0x7f93c32d29f0>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: DigitalAnalogConverterX2XLadder (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c35c4a10>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: DigitalAnalogConverter_C2C (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c33299d0>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: DigitalAnalogConverter_R2R (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c3329940>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: Capacitor (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c3329c10>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: ExampleRRAM (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c332a3c0>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: PassGate (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c332a750>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: Wire (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c332a960>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: CactiCache (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c332aea0>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: CactiDRAM (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c332be00>)
+2024-03-28 11:12:11 INFO        Found estimator plug-in: CactiSRAM (<accelergy.plug_in_interface.estimator_wrapper.EstimatorWrapper object at 0x7f93c335c0b0>)
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=DRAM, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).write(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiDRAM estimated 5.12e-10 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, n_banks, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, technology, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for DRAM.__init__. Arguments used: (type, width)
+2024-03-28 11:12:11 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for DRAM.write. Arguments used: ()
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=DRAM, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).read(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiDRAM estimated 5.12e-10 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, n_banks, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, technology, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for DRAM.__init__. Arguments used: (type, width)
+2024-03-28 11:12:11 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for DRAM.read. Arguments used: ()
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=DRAM, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).leak(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiDRAM estimated 0 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, n_banks, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, technology, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for DRAM.__init__. Arguments used: (type, width)
+2024-03-28 11:12:11 INFO        | Unused arguments (action_latency_cycles) provided for DRAM.leak. Arguments used: (global_cycle_seconds)
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for DRAM(type=LPDDR4, width=64, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=DRAM, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).update(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiDRAM estimated 5.12e-10 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, n_banks, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, technology, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for DRAM.__init__. Arguments used: (type, width)
+2024-03-28 11:12:11 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for DRAM.update. Arguments used: ()
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for SRAM(depth=512, width=128, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=buffer, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).write(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiSRAM estimated 1.26203e-11 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for SRAM.__init__. Arguments used: (depth, width, n_banks, technology)
+2024-03-28 11:12:11 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for SRAM.write. Arguments used: ()
+2024-03-28 11:12:11 INFO        | Calling CACTI with cache_size=8192 n_rw_ports=1 block_size=16 tech_node_um=0.045 n_banks=2 tag_size=0 associativity=1
+2024-03-28 11:12:11 INFO        | Calling CACTI with input path /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp6kkb50m0
+2024-03-28 11:12:11 INFO        | CACTI output will be written to /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpi7a85ehe
+2024-03-28 11:12:11 INFO        | CACTI executable not found at /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/cacti
+2024-03-28 11:12:11 INFO        | Calling: cd /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in ; ./cacti -infile /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp6kkb50m0 >> /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpi7a85ehe 2>&1
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 32.0 bits/cycle
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 331.75576555234744 bits/second
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for SRAM(depth=512, width=128, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=buffer, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).read(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiSRAM estimated 9.65335e-12 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for SRAM.__init__. Arguments used: (depth, width, n_banks, technology)
+2024-03-28 11:12:11 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for SRAM.read. Arguments used: ()
+2024-03-28 11:12:11 INFO        | Calling CACTI with cache_size=8192 n_rw_ports=1 block_size=16 tech_node_um=0.045 n_banks=2 tag_size=0 associativity=1
+2024-03-28 11:12:11 INFO        | Calling CACTI with input path /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmphjfnp3ch
+2024-03-28 11:12:11 INFO        | CACTI output will be written to /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp_u46yb7o
+2024-03-28 11:12:11 INFO        | CACTI executable not found at /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/cacti
+2024-03-28 11:12:11 INFO        | Calling: cd /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in ; ./cacti -infile /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmphjfnp3ch >> /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp_u46yb7o 2>&1
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 32.0 bits/cycle
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 331.75576555234744 bits/second
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for SRAM(depth=512, width=128, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=buffer, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).leak(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiSRAM estimated 2.71132e-16 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for SRAM.__init__. Arguments used: (depth, width, n_banks, technology)
+2024-03-28 11:12:11 INFO        | Unused arguments (action_latency_cycles) provided for SRAM.leak. Arguments used: (global_cycle_seconds)
+2024-03-28 11:12:11 INFO        | Calling CACTI with cache_size=8192 n_rw_ports=1 block_size=16 tech_node_um=0.045 n_banks=2 tag_size=0 associativity=1
+2024-03-28 11:12:11 INFO        | Calling CACTI with input path /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpbraxx0xr
+2024-03-28 11:12:11 INFO        | CACTI output will be written to /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp5j424y4u
+2024-03-28 11:12:11 INFO        | CACTI executable not found at /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/cacti
+2024-03-28 11:12:11 INFO        | Calling: cd /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in ; ./cacti -infile /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpbraxx0xr >> /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp5j424y4u 2>&1
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 32.0 bits/cycle
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 331.75576555234744 bits/second
+2024-03-28 11:12:11 INFO        | Global cycle time 1e-09 is less than the cache's random cycle time 0.771652
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for SRAM(depth=512, width=128, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=buffer, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1).update(global_cycle_seconds=1e-09, action_latency_cycles=1)
+2024-03-28 11:12:11 INFO        CactiSRAM estimated 1.26203e-11 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for SRAM.__init__. Arguments used: (depth, width, n_banks, technology)
+2024-03-28 11:12:11 INFO        | Unused arguments (global_cycle_seconds, action_latency_cycles) provided for SRAM.update. Arguments used: ()
+2024-03-28 11:12:11 INFO        | Calling CACTI with cache_size=8192 n_rw_ports=1 block_size=16 tech_node_um=0.045 n_banks=2 tag_size=0 associativity=1
+2024-03-28 11:12:11 INFO        | Calling CACTI with input path /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpk_7g_wz4
+2024-03-28 11:12:11 INFO        | CACTI output will be written to /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpte2apg74
+2024-03-28 11:12:11 INFO        | CACTI executable not found at /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/cacti
+2024-03-28 11:12:11 INFO        | Calling: cd /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in ; ./cacti -infile /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpk_7g_wz4 >> /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpte2apg74 2>&1
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 32.0 bits/cycle
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 331.75576555234744 bits/second
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for aladdin_adder(width=16, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1).add(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-03-28 11:12:11 INFO        Library estimated 0.105p with accuracy 90%. Messages:
+2024-03-28 11:12:11 INFO        | Found 1 entries for aladdin_adder.add.
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0.21', 'area': '2.78E+02', 'action': 'add', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=0.21, matching_attrs=3, log=['Scaling width from 32 to 16', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x energy', 'Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x energy', 'aladdin_adder energy has been scaled 0.5x']
+2024-03-28 11:12:11 INFO        | Best-matching entry: {'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0.21', 'area': '2.78E+02', 'action': 'add', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | Scaling width from 32 to 16
+2024-03-28 11:12:11 INFO        | Scaling global_cycle_seconds from 1e-9 to 1e-09
+2024-03-28 11:12:11 INFO        | Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x energy
+2024-03-28 11:12:11 INFO        | Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x energy
+2024-03-28 11:12:11 INFO        | aladdin_adder energy has been scaled 0.5x
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        ENERGY ESTIMATION for aladdin_multiplier(width=8, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1).multiply(global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-03-28 11:12:11 INFO        Library estimated 3.17p with accuracy 90%. Messages:
+2024-03-28 11:12:11 INFO        | Found 1 entries for aladdin_multiplier.multiply.
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '12.68', 'area(um^2)': '6350', 'action': 'multiply', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=12.68, matching_attrs=3, log=['Scaling width from 32 to 8', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x energy', 'Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x energy', 'aladdin_multiplier energy has been scaled 0.25x']
+2024-03-28 11:12:11 INFO        | Best-matching entry: {'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '12.68', 'area(um^2)': '6350', 'action': 'multiply', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | Scaling width from 32 to 8
+2024-03-28 11:12:11 INFO        | Scaling global_cycle_seconds from 1e-9 to 1e-09
+2024-03-28 11:12:11 INFO        | Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x energy
+2024-03-28 11:12:11 INFO        | Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x energy
+2024-03-28 11:12:11 INFO        | aladdin_multiplier energy has been scaled 0.25x
+2024-03-28 11:12:11 WARNING     No action counts are specified as yaml input
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        AREA ESTIMATION for DRAM(type=LPDDR4, width=64, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=DRAM, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-03-28 11:12:11 INFO        CactiDRAM estimated 0 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, n_banks, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, technology, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for DRAM.__init__. Arguments used: (type, width)
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        AREA ESTIMATION for SRAM(depth=512, width=128, datawidth=8, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=buffer, version=0.4, technology=45nm, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-03-28 11:12:11 INFO        CactiSRAM estimated 4.36084e-08 with accuracy 80%. Messages:
+2024-03-28 11:12:11 INFO        | Unused arguments (datawidth, has_power_gating, cluster_size, reduction_supported, multiple_buffering, min_utilization, allow_overbooking, meshX, meshY, power_gated_at, version, global_cycle_seconds, DATAWIDTH, action_latency_cycles, cycle_seconds, n_instances) provided for SRAM.__init__. Arguments used: (depth, width, n_banks, technology)
+2024-03-28 11:12:11 INFO        | Calling CACTI with cache_size=8192 n_rw_ports=1 block_size=16 tech_node_um=0.045 n_banks=2 tag_size=0 associativity=1
+2024-03-28 11:12:11 INFO        | Calling CACTI with input path /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpif5bwiin
+2024-03-28 11:12:11 INFO        | CACTI output will be written to /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp3ma9kcbl
+2024-03-28 11:12:11 INFO        | CACTI executable not found at /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti/cacti
+2024-03-28 11:12:11 INFO        | Calling: cd /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in ; ./cacti -infile /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmpif5bwiin >> /home/tanner/research/cimloop/venv/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti_inputs_outputs/tmp3ma9kcbl 2>&1
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 32.0 bits/cycle
+2024-03-28 11:12:11 INFO        | Cache bandwidth: 331.75576555234744 bits/second
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        AREA ESTIMATION for dummy_storage(width=1, depth=1, datawidth=1, technology=-1, has_power_gating=False, n_banks=2, cluster_size=1, reduction_supported=True, multiple_buffering=1, min_utilization=0, allow_overbooking=False, meshX=1, meshY=1, power_gated_at=inter_PE_spatial, version=0.4, global_cycle_seconds=1e-09, DATAWIDTH=8, action_latency_cycles=1, cycle_seconds=1e-09, n_instances=1)
+2024-03-28 11:12:11 INFO        dummy_table estimated 1u^2 with accuracy 100%. 
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        AREA ESTIMATION for aladdin_adder(width=16, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-03-28 11:12:11 INFO        Library estimated 139.0u^2 with accuracy 90%. Messages:
+2024-03-28 11:12:11 INFO        | Found 5 entries for aladdin_adder.
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0.21', 'area': '2.78E+02', 'action': 'add', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=278.0, matching_attrs=3, log=['Scaling width from 32 to 16', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x area', 'Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_adder area has been scaled 0.5x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0.21', 'area': '2.78E+02', 'action': 'read', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=278.0, matching_attrs=3, log=['Scaling width from 32 to 16', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x area', 'Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_adder area has been scaled 0.5x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0.0024', 'area': '2.78E+02', 'action': 'leak', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=278.0, matching_attrs=3, log=['Scaling width from 32 to 16', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x area', 'Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_adder area has been scaled 0.5x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0', 'area': '2.78E+02', 'action': 'update', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=278.0, matching_attrs=3, log=['Scaling width from 32 to 16', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x area', 'Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_adder area has been scaled 0.5x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0', 'area': '2.78E+02', 'action': 'write', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=278.0, matching_attrs=3, log=['Scaling width from 32 to 16', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x area', 'Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_adder area has been scaled 0.5x']
+2024-03-28 11:12:11 INFO        | Best-matching entry: {'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'energy': '0.21', 'area': '2.78E+02', 'action': 'add', 'name': 'aladdin_adder', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | Scaling width from 32 to 16
+2024-03-28 11:12:11 INFO        | Scaling global_cycle_seconds from 1e-9 to 1e-09
+2024-03-28 11:12:11 INFO        | Scaled aladdin_adder.width from 32.0 to 16.0: 0.5x area
+2024-03-28 11:12:11 INFO        | Scaled aladdin_adder.global_cycle_seconds from 1e-09 to 1e-09: 1x area
+2024-03-28 11:12:11 INFO        | aladdin_adder area has been scaled 0.5x
+2024-03-28 11:12:11 INFO        
+2024-03-28 11:12:11 INFO        AREA ESTIMATION for aladdin_multiplier(width=8, global_cycle_seconds=1e-09, action_latency_cycles=1, cycle_seconds=1e-09, technology=45nm, n_instances=1)
+2024-03-28 11:12:11 INFO        Library estimated 1587.5u^2 with accuracy 90%. Messages:
+2024-03-28 11:12:11 INFO        | Found 5 entries for aladdin_multiplier.
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '12.68', 'area(um^2)': '6350', 'action': 'multiply', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=6350.0, matching_attrs=3, log=['Scaling width from 32 to 8', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x area', 'Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_multiplier area has been scaled 0.25x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '12.68', 'area(um^2)': '6350', 'action': 'read', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=6350.0, matching_attrs=3, log=['Scaling width from 32 to 8', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x area', 'Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_multiplier area has been scaled 0.25x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '0.08', 'area(um^2)': '6350', 'action': 'leak', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=6350.0, matching_attrs=3, log=['Scaling width from 32 to 8', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x area', 'Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_multiplier area has been scaled 0.25x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '0', 'area(um^2)': '6350', 'action': 'update', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=6350.0, matching_attrs=3, log=['Scaling width from 32 to 8', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x area', 'Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_multiplier area has been scaled 0.25x']
+2024-03-28 11:12:11 INFO        | Checking entry "{'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '0', 'area(um^2)': '6350', 'action': 'write', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | value=6350.0, matching_attrs=3, log=['Scaling width from 32 to 8', 'Scaling global_cycle_seconds from 1e-9 to 1e-09', 'Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x area', 'Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x area', 'aladdin_multiplier area has been scaled 0.25x']
+2024-03-28 11:12:11 INFO        | Best-matching entry: {'technology': '45nm', 'global_cycle_seconds': '1e-9', 'width|datawidth': '32', 'width_a|datawidth_a': '32', 'width_b|datawidth_b': '32', 'energy(pJ)': '12.68', 'area(um^2)': '6350', 'action': 'multiply', 'name': 'aladdin_multiplier', 'area_scale': 1, 'energy_scale': 1, 'n_instances': 1}
+2024-03-28 11:12:11 INFO        | Scaling width from 32 to 8
+2024-03-28 11:12:11 INFO        | Scaling global_cycle_seconds from 1e-9 to 1e-09
+2024-03-28 11:12:11 INFO        | Scaled aladdin_multiplier.width from 32.0 to 8.0: 0.25x area
+2024-03-28 11:12:11 INFO        | Scaled aladdin_multiplier.global_cycle_seconds from 1e-09 to 1e-09: 1x area
+2024-03-28 11:12:11 INFO        | aladdin_multiplier area has been scaled 0.25x
+2024-03-28 11:12:11 INFO        flattened architecture is saved to:
+2024-03-28 11:12:11 INFO        ./timeloop-mapper.flattened_architecture.yaml
+2024-03-28 11:12:11 INFO        energy reference table is saved to:
+2024-03-28 11:12:11 INFO        ./timeloop-mapper.ERT.yaml
+2024-03-28 11:12:11 INFO        energy reference table summary is saved to:
+2024-03-28 11:12:11 INFO        ./timeloop-mapper.ERT_summary.yaml
+2024-03-28 11:12:11 WARNING     no runtime energy estimations are generated... not generating energy_estimation.yaml
+2024-03-28 11:12:11 INFO        area reference table is saved to:
+2024-03-28 11:12:11 INFO        ./timeloop-mapper.ART.yaml
+2024-03-28 11:12:11 INFO        area reference table summary is saved to:
+2024-03-28 11:12:11 INFO        ./timeloop-mapper.ART_summary.yaml

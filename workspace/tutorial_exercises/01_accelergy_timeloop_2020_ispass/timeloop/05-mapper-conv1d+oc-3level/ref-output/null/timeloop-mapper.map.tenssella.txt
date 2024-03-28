@@ -2,9 +2,10 @@
 t2
 K 1 R 1 P 4 
 P
+#error Tenssella does not support bypass.
 t1
-K 4 R 1 P 2 
-PK
+K 1 R 3 P 4 
+RP
 t0
-K 8 R 3 P 2 
-KRP
+K 32 R 1 P 1 
+K

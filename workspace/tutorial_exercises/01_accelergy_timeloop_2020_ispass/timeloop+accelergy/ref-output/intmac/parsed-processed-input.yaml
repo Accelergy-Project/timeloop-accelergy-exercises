@@ -28,10 +28,10 @@ architecture:
                 meshY: 1
                 power_gated_at: "DRAM"
             required_actions:
-              - write
-              - update
               - leak
+              - write
               - read
+              - update
             enabled: true
           - name: shared_glb[1..1]
             class: smartbuffer_SRAM
@@ -52,10 +52,10 @@ architecture:
                 meshY: 1
                 power_gated_at: "shared_glb"
             required_actions:
-              - write
-              - update
               - leak
+              - write
               - read
+              - update
             enabled: true
           - name: inter_PE_column_spatial[1..1]
             class: dummy_storage
@@ -112,10 +112,10 @@ architecture:
                 meshY: 12
                 power_gated_at: "ifmap_spad"
             required_actions:
-              - write
-              - update
               - leak
+              - write
               - read
+              - update
             enabled: true
           - name: weights_spad[1..168]
             class: smartbuffer_RF
@@ -136,10 +136,10 @@ architecture:
                 meshY: 12
                 power_gated_at: "weights_spad"
             required_actions:
-              - write
-              - update
               - leak
+              - write
               - read
+              - update
             enabled: true
           - name: psum_spad[1..168]
             class: smartbuffer_RF
@@ -161,10 +161,10 @@ architecture:
                 meshY: 12
                 power_gated_at: "psum_spad"
             required_actions:
-              - write
-              - update
               - leak
+              - write
               - read
+              - update
             enabled: true
           - name: mac[1..168]
             class: intmac
@@ -250,8 +250,8 @@ architecture_constraints:
           - Outputs
         type: dataspace
         bypass:
-          - Weights
           - Inputs
+          - Weights
         target: psum_spad
       - permutation: NCPQRSM
         factors: N=1,C=1,R=1,S=1,P=1,Q=1

@@ -1,0 +1,24 @@
+mapping:
+  - target: Buffer
+    type: datatype
+    keep:
+      - B
+      - Z
+    bypass:
+      - A
+  - target: BackingStorage
+    type: datatype
+    keep:
+      - A
+      - B
+      - Z
+    bypass:
+      []
+  - target: Buffer
+    type: temporal
+    factors: M8 N2 K8
+    permutation: MNK
+  - target: BackingStorage
+    type: temporal
+    factors: M1 N4 K1
+    permutation: NMK

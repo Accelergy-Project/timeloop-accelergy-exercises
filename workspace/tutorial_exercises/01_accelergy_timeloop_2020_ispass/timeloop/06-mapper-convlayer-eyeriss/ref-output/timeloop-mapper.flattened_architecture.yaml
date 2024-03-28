@@ -25,9 +25,9 @@ architecture:
             n_instances: 1
         required_actions:
           - leak
-          - write
-          - read
           - update
+          - read
+          - write
         enabled: true
       - name: system_top_level.shared_glb[1..1]
         class: smartbuffer_SRAM
@@ -64,9 +64,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
-          - write
-          - read
           - update
+          - read
+          - write
         enabled: true
       - name: system_top_level.inter_PE_column_spatial[1..1]
         class: dummy_storage
@@ -149,9 +149,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
-          - write
-          - read
           - update
+          - read
+          - write
         enabled: true
       - name: system_top_level.weights_spad[1..168]
         class: smartbuffer_RF
@@ -188,9 +188,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
-          - write
-          - read
           - update
+          - read
+          - write
         enabled: true
       - name: system_top_level.psum_spad[1..168]
         class: smartbuffer_RF
@@ -228,9 +228,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
-          - write
-          - read
           - update
+          - read
+          - write
         enabled: true
       - name: system_top_level.mac[1..168]
         class: intmac

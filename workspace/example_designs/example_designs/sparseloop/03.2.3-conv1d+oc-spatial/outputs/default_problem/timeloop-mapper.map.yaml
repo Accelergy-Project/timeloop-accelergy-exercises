@@ -1,0 +1,41 @@
+mapping:
+  - target: Buffer
+    type: datatype
+    keep:
+      - Inputs
+      - Outputs
+    bypass:
+      - Weights
+  - target: inter_PE_spatial
+    type: datatype
+    keep:
+      []
+    bypass:
+      - Weights
+      - Inputs
+      - Outputs
+  - target: BackingStorage
+    type: datatype
+    keep:
+      - Weights
+      - Inputs
+      - Outputs
+    bypass:
+      []
+  - target: Buffer
+    type: temporal
+    factors: M1 S3 Q9
+    permutation: SQM
+  - target: inter_PE_spatial
+    type: spatial
+    factors: M4 S1 Q1
+    permutation: MSQ
+    split: 1
+  - target: inter_PE_spatial
+    type: temporal
+    factors: M1 S1 Q1
+    permutation: MSQ
+  - target: BackingStorage
+    type: temporal
+    factors: M4 S1 Q1
+    permutation: MSQ

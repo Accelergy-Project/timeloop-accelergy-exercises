@@ -28,9 +28,9 @@ architecture:
                 power_gated_at: "MainMemory"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: inter_PE_spatial[1..1]
             class: dummy_storage
@@ -71,9 +71,9 @@ architecture:
                 power_gated_at: "GlobalBuffer"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: RegisterFile[1..16]
             class: regfile
@@ -95,9 +95,9 @@ architecture:
                 power_gated_at: "RegisterFile"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: MACC[1..16]
             class: intmac

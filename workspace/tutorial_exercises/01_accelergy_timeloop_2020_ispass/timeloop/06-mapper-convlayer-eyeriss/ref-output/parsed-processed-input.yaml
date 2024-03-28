@@ -29,9 +29,9 @@ architecture:
                 power_gated_at: "DRAM"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: shared_glb[1..1]
             class: smartbuffer_SRAM
@@ -55,9 +55,9 @@ architecture:
                 power_gated_at: "shared_glb"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: inter_PE_column_spatial[1..1]
             class: dummy_storage
@@ -119,9 +119,9 @@ architecture:
                 power_gated_at: "ifmap_spad"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: weights_spad[1..168]
             class: smartbuffer_RF
@@ -145,9 +145,9 @@ architecture:
                 power_gated_at: "weights_spad"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: psum_spad[1..168]
             class: smartbuffer_RF
@@ -172,9 +172,9 @@ architecture:
                 power_gated_at: "psum_spad"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: mac[1..168]
             class: intmac
@@ -239,8 +239,8 @@ architecture_constraints:
           - Inputs
         type: dataspace
         bypass:
-          - Weights
           - Outputs
+          - Weights
         target: ifmap_spad
       - permutation: NMCPQRS
         factors: N=1,M=1,C=1,P=1,Q=1,R=1,S=1
@@ -250,8 +250,8 @@ architecture_constraints:
           - Weights
         type: dataspace
         bypass:
-          - Inputs
           - Outputs
+          - Inputs
         target: weights_spad
       - permutation: NMPQSCR
         factors: N=1,M=1,P=1,Q=1,S=1
@@ -261,8 +261,8 @@ architecture_constraints:
           - Outputs
         type: dataspace
         bypass:
-          - Weights
           - Inputs
+          - Weights
         target: psum_spad
       - permutation: NCPQRSM
         factors: N=1,C=1,R=1,S=1,P=1,Q=1

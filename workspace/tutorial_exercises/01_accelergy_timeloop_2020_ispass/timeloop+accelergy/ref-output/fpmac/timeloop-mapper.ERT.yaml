@@ -3,22 +3,22 @@ ERT:
     tables:
       - name: system_top_level.DRAM[1..1]
         actions:
-          - name: write
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 512.0
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 512.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.0
+          - name: write
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 512.0
           - name: read
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 512.0
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1

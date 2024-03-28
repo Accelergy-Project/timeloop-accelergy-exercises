@@ -29,9 +29,9 @@ architecture:
                 power_gated_at: "Buffer"
             required_actions:
               - leak
-              - write
-              - read
               - update
+              - read
+              - write
             enabled: true
           - name: MACC[1..1]
             class: intmac

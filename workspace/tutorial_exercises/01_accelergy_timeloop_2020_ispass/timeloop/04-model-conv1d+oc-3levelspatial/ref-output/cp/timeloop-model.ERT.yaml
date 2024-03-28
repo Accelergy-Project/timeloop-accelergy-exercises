@@ -8,7 +8,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.0
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -18,7 +18,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 2048.0
-          - name: update
+          - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -30,7 +30,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.007972
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -40,7 +40,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 43.353054
-          - name: update
+          - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -52,7 +52,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.000861
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -62,7 +62,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.42564
-          - name: update
+          - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1

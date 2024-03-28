@@ -8,7 +8,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.0
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -18,7 +18,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 512.0
-          - name: update
+          - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
