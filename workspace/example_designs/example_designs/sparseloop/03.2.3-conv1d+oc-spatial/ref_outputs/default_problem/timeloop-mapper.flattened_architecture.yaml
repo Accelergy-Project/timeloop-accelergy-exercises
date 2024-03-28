@@ -30,9 +30,9 @@ architecture:
             metadata_counter_width: 0
         required_actions:
           - leak
-          - update
           - read
           - write
+          - update
         enabled: true
       - name: system_top_level.inter_PE_spatial[1..1]
         class: dummy_storage
@@ -86,9 +86,9 @@ architecture:
             metadata_counter_width: 0
         required_actions:
           - leak
-          - update
           - read
           - write
+          - update
         enabled: true
       - name: system_top_level.mac[1..4]
         class: intmac

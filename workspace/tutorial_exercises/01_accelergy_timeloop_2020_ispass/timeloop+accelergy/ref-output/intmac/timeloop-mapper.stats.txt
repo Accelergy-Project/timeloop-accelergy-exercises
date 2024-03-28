@@ -435,12 +435,12 @@ EDP(J*cycle): 4.95e+04
 Area: 0.00 mm^2
 
 Computes = 924844032
-pJ/Compute
-    mac                                           = 0.32
-    psum_spad                                     = 0.76
-    weights_spad                                  = 2.94
-    ifmap_spad                                    = 0.17
-    shared_glb                                    = 0.43
-    DRAM                                          = 5.12
-    Total                                         = 9.73
+fJ/Compute
+    mac                                           = 315.00
+    psum_spad                                     = 759.69
+    weights_spad                                  = 2935.97
+    ifmap_spad                                    = 172.61
+    shared_glb                                    = 426.60
+    DRAM                                          = 5120.18
+    Total                                         = 9730.04
 

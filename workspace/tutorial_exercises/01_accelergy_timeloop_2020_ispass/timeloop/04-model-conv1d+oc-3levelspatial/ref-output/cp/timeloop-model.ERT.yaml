@@ -3,16 +3,6 @@ ERT:
     tables:
       - name: System_top_level.MainMemory[1..1]
         actions:
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 2048.0
-          - name: read
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 2048.0
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
@@ -23,18 +13,18 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 2048.0
-      - name: System_top_level.GlobalBuffer[1..16]
-        actions:
-          - name: update
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 30.878292
           - name: read
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 43.353054
+            energy: 2048.0
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 2048.0
+      - name: System_top_level.GlobalBuffer[1..16]
+        actions:
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
@@ -45,9 +35,24 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 30.878292
+          - name: read
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 43.353054
+          - name: update
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 30.878292
       - name: System_top_level.RegisterFile[1..16]
         actions:
-          - name: update
+          - name: leak
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.000861
+          - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -57,12 +62,7 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.42564
-          - name: leak
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.000861
-          - name: write
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1

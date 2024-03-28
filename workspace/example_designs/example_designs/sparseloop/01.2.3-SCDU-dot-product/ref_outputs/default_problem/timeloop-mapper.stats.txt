@@ -43,16 +43,16 @@ Level 1
         Multiple buffering              : 1.00
         Effective data storage size     : 64
         Min utilization                 : 0.00
-        Vector read energy              : 0.57 pJ
-        Vector write energy             : 0.50 pJ
-        Vector metadata read energy     : 0.18 pJ
-        Vector metadata write energy    : 0.16 pJ
+        Vector read energy              : 0.58 pJ
+        Vector write energy             : 0.51 pJ
+        Vector metadata read energy     : 0.19 pJ
+        Vector metadata write energy    : 0.17 pJ
         (De)compression energy          : 0.00 pJ
         Per-instance-cycle leakage      : 0.00 pJ
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
-        Leakage energy (total)          : 0.00 pJ
-        Area                            : 5375.18 um^2
+        Leakage energy (total)          : 0.01 pJ
+        Area                            : 5370.26 um^2
 
     MAPPING
     -------
@@ -98,9 +98,9 @@ Level 1
         Skipped scalar format updates (per-instance)                : 0
         Temporal reductions (per-instance)                          : 0
         Address generations (per-cluster)                           : 4
-        Energy (per-scalar-access)                                  : 0.75 pJ
-        Energy (per-instance)                                       : 2.99 pJ
-        Energy (total)                                              : 2.99 pJ
+        Energy (per-scalar-access)                                  : 0.77 pJ
+        Energy (per-instance)                                       : 3.10 pJ
+        Energy (total)                                              : 3.10 pJ
         Temporal Reduction Energy (per-instance)                    : 0.00 pJ
         Temporal Reduction Energy (total)                           : 0.00 pJ
         Address Generation Energy (per-cluster)                     : 0.00 pJ
@@ -139,9 +139,9 @@ Level 1
         Skipped scalar updates (per-instance)                       : 0
         Temporal reductions (per-instance)                          : 0
         Address generations (per-cluster)                           : 4
-        Energy (per-scalar-access)                                  : 0.57 pJ
-        Energy (per-instance)                                       : 2.27 pJ
-        Energy (total)                                              : 2.27 pJ
+        Energy (per-scalar-access)                                  : 0.58 pJ
+        Energy (per-instance)                                       : 2.33 pJ
+        Energy (total)                                              : 2.33 pJ
         Temporal Reduction Energy (per-instance)                    : 0.00 pJ
         Temporal Reduction Energy (total)                           : 0.00 pJ
         Address Generation Energy (per-cluster)                     : 0.00 pJ
@@ -180,9 +180,9 @@ Level 1
         Skipped scalar updates (per-instance)                       : 12
         Temporal reductions (per-instance)                          : 4
         Address generations (per-cluster)                           : 4
-        Energy (per-scalar-access)                                  : 0.53 pJ
-        Energy (per-instance)                                       : 3.69 pJ
-        Energy (total)                                              : 3.69 pJ
+        Energy (per-scalar-access)                                  : 0.54 pJ
+        Energy (per-instance)                                       : 3.79 pJ
+        Energy (total)                                              : 3.79 pJ
         Temporal Reduction Energy (per-instance)                    : 0.00 pJ
         Temporal Reduction Energy (total)                           : 0.00 pJ
         Address Generation Energy (per-cluster)                     : 0.00 pJ
@@ -220,18 +220,18 @@ GFLOPs (@1GHz): 1.75
 Utilization: 100.00%
 Cycles: 4
 Energy: 0.00 uJ
-EDP(J*cycle): 4.08e-11
+EDP(J*cycle): 4.20e-11
 Area: 0.00 mm^2
 
 Algorithmic Computes = 16
-pJ/Algorithmic-Compute
-    mac             = 0.08
-    Buffer          = 0.56
-    Total           = 0.64
+fJ/Algorithmic-Compute
+    mac             = 78.75
+    Buffer          = 576.75
+    Total           = 655.50
 
 Actual Computes = 4
-pJ/Compute
-    mac             = 0.32
-    Buffer          = 2.24
-    Total           = 2.55
+fJ/Compute
+    mac             = 315.00
+    Buffer          = 2307.02
+    Total           = 2622.02
 

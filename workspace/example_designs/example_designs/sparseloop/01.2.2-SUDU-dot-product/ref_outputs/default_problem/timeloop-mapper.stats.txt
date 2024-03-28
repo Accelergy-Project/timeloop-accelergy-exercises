@@ -213,14 +213,14 @@ EDP(J*cycle): 8.62e-10
 Area: 0.00 mm^2
 
 Algorithmic Computes = 16
-pJ/Algorithmic-Compute
-    mac             = 0.08
-    Buffer          = 3.29
-    Total           = 3.37
+fJ/Algorithmic-Compute
+    mac             = 78.75
+    Buffer          = 3287.87
+    Total           = 3366.62
 
 Actual Computes = 4
-pJ/Compute
-    mac             = 0.32
-    Buffer          = 13.15
-    Total           = 13.47
+fJ/Compute
+    mac             = 315.00
+    Buffer          = 13151.46
+    Total           = 13466.46
 

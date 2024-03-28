@@ -488,23 +488,23 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>1.86638250000000006e-01</item>
-								<item>1.41978500000000007e-01</item>
-								<item>1.18948322580645166e-01</item>
+								<item>1.93492750000000019e-01</item>
+								<item>1.45723750000000013e-01</item>
+								<item>1.22331129032258068e-01</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>7.46553000000000022e-01</item>
-								<item>5.67914000000000030e-01</item>
-								<item>5.26771142857142882e-01</item>
+								<item>7.73971000000000076e-01</item>
+								<item>5.82895000000000052e-01</item>
+								<item>5.41752142857142904e-01</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>2.98621200000000009e+00</item>
-								<item>2.27165600000000012e+00</item>
-								<item>3.68739799999999995e+00</item>
+								<item>3.09588400000000030e+00</item>
+								<item>2.33158000000000021e+00</item>
+								<item>3.79226500000000000e+00</item>
 							</PerDataSpace>
 						</energy>
 						<temporal_reduction_energy>
@@ -569,6 +569,7 @@
 								<t_>2.04205778566621383e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
+							<ingress_energy></ingress_energy>
 							<fill_latency>
 								<t_>0</t_>
 							</fill_latency>
@@ -584,13 +585,6 @@
 									<item>1</item>
 								</PerDataSpace>
 							</fanout>
-							<distributed_fanout>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</distributed_fanout>
 							<multicast_factor>
 								<PerDataSpace>
 									<item>1</item>
@@ -598,6 +592,13 @@
 									<item>1</item>
 								</PerDataSpace>
 							</multicast_factor>
+							<distributed_multicast_factor>
+								<PerDataSpace>
+									<item>0</item>
+									<item>0</item>
+									<item>0</item>
+								</PerDataSpace>
+							</distributed_multicast_factor>
 							<distributed_multicast>
 								<PerDataSpace>
 									<item>0</item>
@@ -628,9 +629,9 @@
 							</link_transfer_energy>
 							<num_hops>
 								<PerDataSpace>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</num_hops>
 							<energy_per_hop>

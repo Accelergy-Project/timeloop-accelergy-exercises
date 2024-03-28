@@ -3,13 +3,13 @@ ERT_summary:
     table_summary:
       - name: PE_top_level.Buffer[1..1]
         actions:
-          - name: update
-            energy: 0.42564
-          - name: read
-            energy: 0.42564
           - name: leak
             energy: 0.000861
           - name: write
+            energy: 0.42564
+          - name: read
+            energy: 0.42564
+          - name: update
             energy: 0.42564
         primitive_estimation(s):
           - name: PE_top_level.Buffer[1..1]

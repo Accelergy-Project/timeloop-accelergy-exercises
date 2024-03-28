@@ -215,13 +215,13 @@ Level 4
         Multiple buffering              : 1.00
         Effective size                  : 192
         Min utilization                 : 0.00
-        Vector access energy            : 1.56 pJ
+        Vector access energy            : 1.58 pJ
         Vector access energy source     : ERT
         Per-instance-cycle leakage      : 0.00 pJ
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
-        Leakage energy (total)          : 227.60 pJ
-        Area                            : 1423.39 um^2
+        Leakage energy (total)          : 12626.29 pJ
+        Area                            : 1419.81 um^2
 
     MAPPING
     -------
@@ -245,9 +245,9 @@ Level 4
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 2304
-        Energy (per-scalar-access)               : 1.11 pJ
-        Energy (per-instance)                    : 2560.65 pJ
-        Energy (total)                           : 30727.75 pJ
+        Energy (per-scalar-access)               : 1.13 pJ
+        Energy (per-instance)                    : 2606.88 pJ
+        Energy (total)                           : 31282.54 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -278,13 +278,13 @@ Level 6
         Multiple buffering              : 1.00
         Effective size                  : 65536
         Min utilization                 : 0.00
-        Vector access energy            : 32.34 pJ
+        Vector access energy            : 32.38 pJ
         Vector access energy source     : ERT
-        Per-instance-cycle leakage      : 0.00 pJ
+        Per-instance-cycle leakage      : 0.01 pJ
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
-        Leakage energy (total)          : 3026.52 pJ
-        Area                            : 429751.88 um^2
+        Leakage energy (total)          : 4834.66 pJ
+        Area                            : 429745.62 um^2
 
     MAPPING
     -------
@@ -305,9 +305,9 @@ Level 6
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 14688
-        Energy (per-scalar-access)               : 7.99 pJ
-        Energy (per-instance)                    : 117417.77 pJ
-        Energy (total)                           : 117417.77 pJ
+        Energy (per-scalar-access)               : 8.00 pJ
+        Energy (per-instance)                    : 117547.48 pJ
+        Energy (total)                           : 117547.48 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -329,9 +329,9 @@ Level 6
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
         Address generations (per-cluster)        : 2866104
-        Energy (per-scalar-access)               : 8.00 pJ
-        Energy (per-instance)                    : 22930659.53 pJ
-        Energy (total)                           : 22930659.53 pJ
+        Energy (per-scalar-access)               : 8.01 pJ
+        Energy (per-instance)                    : 22955969.37 pJ
+        Energy (total)                           : 22955969.37 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -353,9 +353,9 @@ Level 6
         Scalar updates (per-instance)            : 3612672
         Temporal reductions (per-instance)       : 3211264
         Address generations (per-cluster)        : 3612672
-        Energy (per-scalar-access)               : 7.26 pJ
-        Energy (per-instance)                    : 49557187.82 pJ
-        Energy (total)                           : 49557187.82 pJ
+        Energy (per-scalar-access)               : 7.27 pJ
+        Energy (per-instance)                    : 49617448.29 pJ
+        Energy (total)                           : 49617448.29 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -514,18 +514,18 @@ Summary Stats
 GFLOPs (@1GHz): 23.56
 Utilization: 4.69%
 Cycles: 903168
-Energy: 152.10 uJ
+Energy: 152.20 uJ
 EDP(J*cycle): 1.37e+02
 Area: 0.00 mm^2
 
 Computes = 10838016
-pJ/Compute
-    mac                                             = 0.32
-    output_activation_reg                           = 0.13
-    input_activation_reg                            = 0.14
-    weight_reg                                      = 0.14
-    pe_spad                                         = 0.00
-    shared_glb                                      = 6.70
-    DRAM                                            = 6.60
-    Total                                           = 14.03
+fJ/Compute
+    mac                                             = 315.00
+    output_activation_reg                           = 128.00
+    input_activation_reg                            = 144.00
+    weight_reg                                      = 144.00
+    pe_spad                                         = 4.05
+    shared_glb                                      = 6707.48
+    DRAM                                            = 6600.43
+    Total                                           = 14042.97
 

@@ -263,9 +263,9 @@ EDP(J*cycle): 1.73e-08
 Area: 0.00 mm^2
 
 Computes = 48
-pJ/Compute
-    MACC                   = 0.85
-    Buffer                 = 1.75
-    MainMemory             = 4.91
-    Total                  = 7.50
+fJ/Compute
+    MACC                   = 845.00
+    Buffer                 = 1747.76
+    MainMemory             = 4907.32
+    Total                  = 7500.08
 

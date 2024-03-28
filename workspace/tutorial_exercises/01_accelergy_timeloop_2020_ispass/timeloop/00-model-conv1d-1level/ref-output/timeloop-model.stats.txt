@@ -153,8 +153,8 @@ EDP(J*cycle): 5.54e-09
 Area: 0.00 mm^2
 
 Computes = 48
-pJ/Compute
-    MACC             = 0.85
-    Buffer           = 1.56
-    Total            = 2.41
+fJ/Compute
+    MACC             = 845.00
+    Buffer           = 1561.54
+    Total            = 2406.54
 

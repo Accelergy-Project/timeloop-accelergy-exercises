@@ -1,0 +1,1114 @@
+processors:                 < Type = ListNode,  Default = '[]' >
+_required_processors:       < Type = ListNode,  Default = '[]' >
+_parsed_expressions:        < Type = bool,  Default = 'False' >
+_processors_run:            < Type = ListNode,  Default = '[]' >
+_processors_run_pre_parse:  < Type = ListNode,  Default = '[]' >
+architecture:               # < Type = Architecture, REQUIRED >
+  nodes:    # < Type = ArchNodes,  Default = '[]' >
+  - !Component  # < Type = Storage >
+    name:                  < Type = str, REQUIRED >
+    attributes:            # < Type = StorageAttributes,  Default = '{}' >
+      has_power_gating:                           < Type = str/bool,  Default = 'False' >
+      <Any>:                                      < Type = None,  Default = Optional >
+      datawidth:                                  < Type = str/int, REQUIRED >
+      technology:                                 < Type = str/int,  Default = 'None' >
+      n_banks:                                    < Type = str/int,  Default = '2' >
+      block_size:                                 < Type = str/int,  Default = 'None' >
+      cluster_size:                               < Type = str/int,  Default = '1' >
+      width:                                      < Type = str/int,  Default = 'None' >
+      depth:                                      < Type = str/int,  Default = 'None' >
+      entries:                                    < Type = str/int,  Default = 'None' >
+      sizeKB:                                     < Type = str/int,  Default = 'None' >
+      reduction_supported:                        < Type = str/bool,  Default = 'True' >
+      multiple_buffering:                         < Type = str/Number,  Default = '1' >
+      min_utilization:                            < Type = str/Number,  Default = '0' >
+      shared_bandwidth:                           < Type = str/Number,  Default = 'None' >
+      read_bandwidth:                             < Type = str/Number,  Default = 'None' >
+      write_bandwidth:                            < Type = str/Number,  Default = 'None' >
+      network_fill_latency:                       < Type = str/int,  Default = 'None' >
+      network_drain_latency:                      < Type = str/int,  Default = 'None' >
+      per_dataspace_bandwidth_consumption_scale:  < Type = dict,  Default = '{}' >
+      allow_overbooking:                          < Type = str/bool,  Default = 'False' >
+      metadata_block_size:                        < Type = str/int,  Default = 'None' >
+      metadata_datawidth:                         < Type = str/int,  Default = 'None' >
+      metadata_storage_width:                     < Type = str/int,  Default = 'None' >
+      metadata_storage_depth:                     < Type = str/int,  Default = 'None' >
+      concordant_compressed_tile_traversal:       < Type = str/bool,  Default = 'None' >
+      tile_partition_supported:                   < Type = str/bool,  Default = 'None' >
+      decompression_supported:                    < Type = str/bool,  Default = 'None' >
+      compression_supported:                      < Type = str/bool,  Default = 'None' >
+
+    spatial:               # < Type = Spatial,  Default = '{}' >
+      meshX:  < Type = int,  Default = '1' >
+      meshY:  < Type = int,  Default = '1' >
+    constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+      spatial:                    # < Type = Spatial,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        split:                         < Type = int,  Default = 'None' >
+
+      temporal:                   # < Type = Temporal,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+
+      dataspace:                  # < Type = Dataspace,  Default = '{}' >
+        type:         < Type = str,  Default = '' >
+        target:       < Type = str,  Default = '' >
+        bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        keep_only:    < Type = None,  Default = 'None' >
+        bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        bypass_only:  < Type = None,  Default = 'None' >
+
+      max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+        type:        < Type = str,  Default = '' >
+        target:      < Type = str,  Default = '' >
+        proportion:  < Type = float,  Default = 'None' >
+
+    sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+      target:                 < Type = str,  Default = 'None' >
+      action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+      - # < Type = ActionOptimization >
+        type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+        options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+        - # < Type = ActionOptimizationOption >
+          target:        < Type = str, REQUIRED >
+          condition_on:  < Type = list, REQUIRED >
+
+      representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+        data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+        - # < Type = RepresentationDataSpace >
+          name:   < Type = str, REQUIRED >
+          ranks:  # < Type = RepresentationRankList, REQUIRED >
+          - # < Type = RepresentationRank >
+            format:              < Type = CP/B/RLE/UOP, REQUIRED >
+            metadata_word_bits:  < Type = int,  Default = 'None' >
+            payload_word_bits:   < Type = int,  Default = 'None' >
+            flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+      compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+    class:                 < Type = str, REQUIRED >
+    subclass:              < Type = str,  Default = 'None' >
+    required_actions:      < Type = list,  Default = '[]' >
+    area_share:            < Type = Number,  Default = 'None' >
+    enabled:               < Type = bool,  Default = 'True' >
+
+  - !Component  # < Type = Network >
+    name:                  < Type = str, REQUIRED >
+    attributes:            # < Type = Attributes,  Default = '{}' >
+      has_power_gating:  < Type = str/bool,  Default = 'False' >
+      <Any>:             < Type = None,  Default = Optional >
+    spatial:               # < Type = Spatial,  Default = '{}' >
+      meshX:  < Type = int,  Default = '1' >
+      meshY:  < Type = int,  Default = '1' >
+    constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+      spatial:                    # < Type = Spatial,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        split:                         < Type = int,  Default = 'None' >
+
+      temporal:                   # < Type = Temporal,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+
+      dataspace:                  # < Type = Dataspace,  Default = '{}' >
+        type:         < Type = str,  Default = '' >
+        target:       < Type = str,  Default = '' >
+        bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        keep_only:    < Type = None,  Default = 'None' >
+        bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        bypass_only:  < Type = None,  Default = 'None' >
+
+      max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+        type:        < Type = str,  Default = '' >
+        target:      < Type = str,  Default = '' >
+        proportion:  < Type = float,  Default = 'None' >
+
+    sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+      target:                 < Type = str,  Default = 'None' >
+      action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+      - # < Type = ActionOptimization >
+        type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+        options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+        - # < Type = ActionOptimizationOption >
+          target:        < Type = str, REQUIRED >
+          condition_on:  < Type = list, REQUIRED >
+
+      representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+        data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+        - # < Type = RepresentationDataSpace >
+          name:   < Type = str, REQUIRED >
+          ranks:  # < Type = RepresentationRankList, REQUIRED >
+          - # < Type = RepresentationRank >
+            format:              < Type = CP/B/RLE/UOP, REQUIRED >
+            metadata_word_bits:  < Type = int,  Default = 'None' >
+            payload_word_bits:   < Type = int,  Default = 'None' >
+            flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+      compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+    class:                 < Type = str, REQUIRED >
+    subclass:              < Type = str,  Default = 'None' >
+    required_actions:      < Type = list,  Default = '[]' >
+    area_share:            < Type = Number,  Default = 'None' >
+    enabled:               < Type = bool,  Default = 'True' >
+
+  - !Component  # < Type = Compute >
+    name:                  < Type = str, REQUIRED >
+    attributes:            # < Type = Attributes,  Default = '{}' >
+      has_power_gating:  < Type = str/bool,  Default = 'False' >
+      <Any>:             < Type = None,  Default = Optional >
+    spatial:               # < Type = Spatial,  Default = '{}' >
+      meshX:  < Type = int,  Default = '1' >
+      meshY:  < Type = int,  Default = '1' >
+    constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+      spatial:                    # < Type = Spatial,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        split:                         < Type = int,  Default = 'None' >
+
+      temporal:                   # < Type = Temporal,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+
+      dataspace:                  # < Type = Dataspace,  Default = '{}' >
+        type:         < Type = str,  Default = '' >
+        target:       < Type = str,  Default = '' >
+        bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        keep_only:    < Type = None,  Default = 'None' >
+        bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        bypass_only:  < Type = None,  Default = 'None' >
+
+      max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+        type:        < Type = str,  Default = '' >
+        target:      < Type = str,  Default = '' >
+        proportion:  < Type = float,  Default = 'None' >
+
+    sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+      target:                 < Type = str,  Default = 'None' >
+      action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+      - # < Type = ActionOptimization >
+        type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+        options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+        - # < Type = ActionOptimizationOption >
+          target:        < Type = str, REQUIRED >
+          condition_on:  < Type = list, REQUIRED >
+
+      representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+        data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+        - # < Type = RepresentationDataSpace >
+          name:   < Type = str, REQUIRED >
+          ranks:  # < Type = RepresentationRankList, REQUIRED >
+          - # < Type = RepresentationRank >
+            format:              < Type = CP/B/RLE/UOP, REQUIRED >
+            metadata_word_bits:  < Type = int,  Default = 'None' >
+            payload_word_bits:   < Type = int,  Default = 'None' >
+            flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+      compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+    class:                 < Type = str, REQUIRED >
+    subclass:              < Type = str,  Default = 'None' >
+    required_actions:      < Type = list,  Default = '[]' >
+    area_share:            < Type = Number,  Default = 'None' >
+    enabled:               < Type = bool,  Default = 'True' >
+
+  - !Component  # < Type = Nothing >
+    name:                  < Type = str, REQUIRED >
+    attributes:            # < Type = Attributes,  Default = '{}' >
+      has_power_gating:  < Type = str/bool,  Default = 'False' >
+      <Any>:             < Type = None,  Default = Optional >
+    spatial:               # < Type = Spatial,  Default = '{}' >
+      meshX:  < Type = int,  Default = '1' >
+      meshY:  < Type = int,  Default = '1' >
+    constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+      spatial:                    # < Type = Spatial,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        split:                         < Type = int,  Default = 'None' >
+
+      temporal:                   # < Type = Temporal,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+
+      dataspace:                  # < Type = Dataspace,  Default = '{}' >
+        type:         < Type = str,  Default = '' >
+        target:       < Type = str,  Default = '' >
+        bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        keep_only:    < Type = None,  Default = 'None' >
+        bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        bypass_only:  < Type = None,  Default = 'None' >
+
+      max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+        type:        < Type = str,  Default = '' >
+        target:      < Type = str,  Default = '' >
+        proportion:  < Type = float,  Default = 'None' >
+
+    sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+      target:                 < Type = str,  Default = 'None' >
+      action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+      - # < Type = ActionOptimization >
+        type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+        options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+        - # < Type = ActionOptimizationOption >
+          target:        < Type = str, REQUIRED >
+          condition_on:  < Type = list, REQUIRED >
+
+      representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+        data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+        - # < Type = RepresentationDataSpace >
+          name:   < Type = str, REQUIRED >
+          ranks:  # < Type = RepresentationRankList, REQUIRED >
+          - # < Type = RepresentationRank >
+            format:              < Type = CP/B/RLE/UOP, REQUIRED >
+            metadata_word_bits:  < Type = int,  Default = 'None' >
+            payload_word_bits:   < Type = int,  Default = 'None' >
+            flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+      compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+    class:                 < Type = str, REQUIRED >
+    subclass:              < Type = str,  Default = 'None' >
+    required_actions:      < Type = list,  Default = '[]' >
+    area_share:            < Type = Number,  Default = 'None' >
+    enabled:               < Type = bool,  Default = 'True' >
+
+  - !Component  # < Type = Component >
+    name:                  < Type = str, REQUIRED >
+    attributes:            # < Type = Attributes,  Default = '{}' >
+      has_power_gating:  < Type = str/bool,  Default = 'False' >
+      <Any>:             < Type = None,  Default = Optional >
+    spatial:               # < Type = Spatial,  Default = '{}' >
+      meshX:  < Type = int,  Default = '1' >
+      meshY:  < Type = int,  Default = '1' >
+    constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+      spatial:                    # < Type = Spatial,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        split:                         < Type = int,  Default = 'None' >
+
+      temporal:                   # < Type = Temporal,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+
+      dataspace:                  # < Type = Dataspace,  Default = '{}' >
+        type:         < Type = str,  Default = '' >
+        target:       < Type = str,  Default = '' >
+        bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        keep_only:    < Type = None,  Default = 'None' >
+        bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        bypass_only:  < Type = None,  Default = 'None' >
+
+      max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+        type:        < Type = str,  Default = '' >
+        target:      < Type = str,  Default = '' >
+        proportion:  < Type = float,  Default = 'None' >
+
+    sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+      target:                 < Type = str,  Default = 'None' >
+      action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+      - # < Type = ActionOptimization >
+        type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+        options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+        - # < Type = ActionOptimizationOption >
+          target:        < Type = str, REQUIRED >
+          condition_on:  < Type = list, REQUIRED >
+
+      representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+        data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+        - # < Type = RepresentationDataSpace >
+          name:   < Type = str, REQUIRED >
+          ranks:  # < Type = RepresentationRankList, REQUIRED >
+          - # < Type = RepresentationRank >
+            format:              < Type = CP/B/RLE/UOP, REQUIRED >
+            metadata_word_bits:  < Type = int,  Default = 'None' >
+            payload_word_bits:   < Type = int,  Default = 'None' >
+            flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+      compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+    class:                 < Type = str, REQUIRED >
+    subclass:              < Type = str,  Default = 'None' >
+    required_actions:      < Type = list,  Default = '[]' >
+    area_share:            < Type = Number,  Default = 'None' >
+    enabled:               < Type = bool,  Default = 'True' >
+
+  - !Container  # < Type = Container >
+    name:                  < Type = str, REQUIRED >
+    attributes:            # < Type = Attributes,  Default = '{}' >
+      has_power_gating:  < Type = str/bool,  Default = 'False' >
+      <Any>:             < Type = None,  Default = Optional >
+    spatial:               # < Type = Spatial,  Default = '{}' >
+      meshX:  < Type = int,  Default = '1' >
+      meshY:  < Type = int,  Default = '1' >
+    constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+      spatial:                    # < Type = Spatial,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        split:                         < Type = int,  Default = 'None' >
+
+      temporal:                   # < Type = Temporal,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+
+      dataspace:                  # < Type = Dataspace,  Default = '{}' >
+        type:         < Type = str,  Default = '' >
+        target:       < Type = str,  Default = '' >
+        bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        keep_only:    < Type = None,  Default = 'None' >
+        bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        bypass_only:  < Type = None,  Default = 'None' >
+
+      max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+        type:        < Type = str,  Default = '' >
+        target:      < Type = str,  Default = '' >
+        proportion:  < Type = float,  Default = 'None' >
+
+    sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+      target:                 < Type = str,  Default = 'None' >
+      action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+      - # < Type = ActionOptimization >
+        type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+        options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+        - # < Type = ActionOptimizationOption >
+          target:        < Type = str, REQUIRED >
+          condition_on:  < Type = list, REQUIRED >
+
+      representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+        data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+        - # < Type = RepresentationDataSpace >
+          name:   < Type = str, REQUIRED >
+          ranks:  # < Type = RepresentationRankList, REQUIRED >
+          - # < Type = RepresentationRank >
+            format:              < Type = CP/B/RLE/UOP, REQUIRED >
+            metadata_word_bits:  < Type = int,  Default = 'None' >
+            payload_word_bits:   < Type = int,  Default = 'None' >
+            flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+      compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+    networks:              # < Type = Networks,  Default = '[]' >
+    - # < Type = Network >
+      name:                  < Type = str, REQUIRED >
+      attributes:            # < Type = Attributes,  Default = '{}' >
+        has_power_gating:  < Type = str/bool,  Default = 'False' >
+        <Any>:             < Type = None,  Default = Optional >
+      spatial:               # < Type = Spatial,  Default = '{}' >
+        meshX:  < Type = int,  Default = '1' >
+        meshY:  < Type = int,  Default = '1' >
+      constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+        spatial:                    # < Type = Spatial,  Default = '{}' >
+          type:                          < Type = str,  Default = '' >
+          target:                        < Type = str,  Default = '' >
+          factors:                       # < Type = Factors,  Default = '[]' >
+          - < Type = Factor >
+          permutation:                   < Type = Permutation,  Default = '[]' >
+          default_max_factor:            < Type = int,  Default = 'None' >
+          default_min_factor:            < Type = int,  Default = 'None' >
+          remainders:                    < Type = int,  Default = 'None' >
+          factors_only:                  < Type = None,  Default = 'None' >
+          no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+          - < Type = str >
+          no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+          must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+          - < Type = str >
+          must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+          maximize_dims:                 < Type = ListNode,  Default = 'None' >
+          maximize_dims_capacity:        < Type = int,  Default = 'None' >
+          no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+          - < Type = str >
+          no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+          - < Type = str >
+          split:                         < Type = int,  Default = 'None' >
+
+        temporal:                   # < Type = Temporal,  Default = '{}' >
+          type:                          < Type = str,  Default = '' >
+          target:                        < Type = str,  Default = '' >
+          factors:                       # < Type = Factors,  Default = '[]' >
+          - < Type = Factor >
+          permutation:                   < Type = Permutation,  Default = '[]' >
+          default_max_factor:            < Type = int,  Default = 'None' >
+          default_min_factor:            < Type = int,  Default = 'None' >
+          remainders:                    < Type = int,  Default = 'None' >
+          factors_only:                  < Type = None,  Default = 'None' >
+          no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+          - < Type = str >
+          no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+          must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+          - < Type = str >
+          must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+          maximize_dims:                 < Type = ListNode,  Default = 'None' >
+          maximize_dims_capacity:        < Type = int,  Default = 'None' >
+          no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+          - < Type = str >
+          rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+          - < Type = str >
+
+        dataspace:                  # < Type = Dataspace,  Default = '{}' >
+          type:         < Type = str,  Default = '' >
+          target:       < Type = str,  Default = '' >
+          bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+          - < Type = str >
+          keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+          - < Type = str >
+          no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+          - < Type = str >
+          keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+          - < Type = str >
+          keep_only:    < Type = None,  Default = 'None' >
+          bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+          - < Type = str >
+          bypass_only:  < Type = None,  Default = 'None' >
+
+        max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+          type:        < Type = str,  Default = '' >
+          target:      < Type = str,  Default = '' >
+          proportion:  < Type = float,  Default = 'None' >
+
+      sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+        target:                 < Type = str,  Default = 'None' >
+        action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+        - # < Type = ActionOptimization >
+          type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+          options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+          - # < Type = ActionOptimizationOption >
+            target:        < Type = str, REQUIRED >
+            condition_on:  < Type = list, REQUIRED >
+
+        representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+          data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+          - # < Type = RepresentationDataSpace >
+            name:   < Type = str, REQUIRED >
+            ranks:  # < Type = RepresentationRankList, REQUIRED >
+            - # < Type = RepresentationRank >
+              format:              < Type = CP/B/RLE/UOP, REQUIRED >
+              metadata_word_bits:  < Type = int,  Default = 'None' >
+              payload_word_bits:   < Type = int,  Default = 'None' >
+              flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+        compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+      class:                 < Type = str, REQUIRED >
+      subclass:              < Type = str,  Default = 'None' >
+      required_actions:      < Type = list,  Default = '[]' >
+      area_share:            < Type = Number,  Default = 'None' >
+      enabled:               < Type = bool,  Default = 'True' >
+
+  - !Hierarchical  # < Type = Hierarchical >
+    nodes:  # < Type = ArchNodes,  Default = '[]' >
+    nodes:  < Type    already shown above >
+  - !Parallel  # < Type = Parallel >
+    nodes:  # < Type = ArchNodes,  Default = '[]' >
+    nodes:  < Type    already shown above >
+  - !Pipelined  # < Type = Pipelined >
+    nodes:  # < Type = ArchNodes,  Default = '[]' >
+    nodes:  < Type    already shown above >
+  - !Nothing  # < Type = Nothing >
+    name:                  < Type = str, REQUIRED >
+    attributes:            # < Type = Attributes,  Default = '{}' >
+      has_power_gating:  < Type = str/bool,  Default = 'False' >
+      <Any>:             < Type = None,  Default = Optional >
+    spatial:               # < Type = Spatial,  Default = '{}' >
+      meshX:  < Type = int,  Default = '1' >
+      meshY:  < Type = int,  Default = '1' >
+    constraints:           # < Type = ConstraintGroup,  Default = '{}' >
+      spatial:                    # < Type = Spatial,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        split:                         < Type = int,  Default = 'None' >
+
+      temporal:                   # < Type = Temporal,  Default = '{}' >
+        type:                          < Type = str,  Default = '' >
+        target:                        < Type = str,  Default = '' >
+        factors:                       # < Type = Factors,  Default = '[]' >
+        - < Type = Factor >
+        permutation:                   < Type = Permutation,  Default = '[]' >
+        default_max_factor:            < Type = int,  Default = 'None' >
+        default_min_factor:            < Type = int,  Default = 'None' >
+        remainders:                    < Type = int,  Default = 'None' >
+        factors_only:                  < Type = None,  Default = 'None' >
+        no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+        must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+        maximize_dims:                 < Type = ListNode,  Default = 'None' >
+        maximize_dims_capacity:        < Type = int,  Default = 'None' >
+        no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+
+      dataspace:                  # < Type = Dataspace,  Default = '{}' >
+        type:         < Type = str,  Default = '' >
+        target:       < Type = str,  Default = '' >
+        bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+        - < Type = str >
+        keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        keep_only:    < Type = None,  Default = 'None' >
+        bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+        - < Type = str >
+        bypass_only:  < Type = None,  Default = 'None' >
+
+      max_overbooked_proportion:  # < Type = MaxOverbookedProportion,  Default = '{}' >
+        type:        < Type = str,  Default = '' >
+        target:      < Type = str,  Default = '' >
+        proportion:  < Type = float,  Default = 'None' >
+
+    sparse_optimizations:  # < Type = SparseOptimizationGroup,  Default = '{}' >
+      target:                 < Type = str,  Default = 'None' >
+      action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+      - # < Type = ActionOptimization >
+        type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+        options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+        - # < Type = ActionOptimizationOption >
+          target:        < Type = str, REQUIRED >
+          condition_on:  < Type = list, REQUIRED >
+
+      representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+        data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+        - # < Type = RepresentationDataSpace >
+          name:   < Type = str, REQUIRED >
+          ranks:  # < Type = RepresentationRankList, REQUIRED >
+          - # < Type = RepresentationRank >
+            format:              < Type = CP/B/RLE/UOP, REQUIRED >
+            metadata_word_bits:  < Type = int,  Default = 'None' >
+            payload_word_bits:   < Type = int,  Default = 'None' >
+            flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+      compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+    class:                 < Type = str, REQUIRED >
+    subclass:              < Type = str,  Default = 'None' >
+    required_actions:      < Type = list,  Default = '[]' >
+    area_share:            < Type = Number,  Default = 'None' >
+    enabled:               < Type = bool,  Default = 'True' >
+
+  version:  < Type = None,  Default = '0.4' >
+
+components:                 # < Type = Components,  Default = '{'version': 0.4}' >
+  version:  < Type = None,  Default = '0.4' >
+  classes:  < Type = FlatteningListNode,  Default = '[]' >
+constraints:                # < Type = Constraints,  Default = '{'version': 0.4}' >
+  version:  < Type = None,  Default = '0.4' >
+  targets:  # < Type = ConstraintsList,  Default = '[]' >
+  - # < Type = Spatial >
+    type:                          < Type = str,  Default = '' >
+    target:                        < Type = str,  Default = '' >
+    factors:                       # < Type = Factors,  Default = '[]' >
+    - < Type = Factor >
+    permutation:                   < Type = Permutation,  Default = '[]' >
+    default_max_factor:            < Type = int,  Default = 'None' >
+    default_min_factor:            < Type = int,  Default = 'None' >
+    remainders:                    < Type = int,  Default = 'None' >
+    factors_only:                  < Type = None,  Default = 'None' >
+    no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+    - < Type = str >
+    no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+    must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+    - < Type = str >
+    must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+    maximize_dims:                 < Type = ListNode,  Default = 'None' >
+    maximize_dims_capacity:        < Type = int,  Default = 'None' >
+    no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+    - < Type = str >
+    no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+    - < Type = str >
+    split:                         < Type = int,  Default = 'None' >
+
+  - # < Type = Temporal >
+    type:                          < Type = str,  Default = '' >
+    target:                        < Type = str,  Default = '' >
+    factors:                       # < Type = Factors,  Default = '[]' >
+    - < Type = Factor >
+    permutation:                   < Type = Permutation,  Default = '[]' >
+    default_max_factor:            < Type = int,  Default = 'None' >
+    default_min_factor:            < Type = int,  Default = 'None' >
+    remainders:                    < Type = int,  Default = 'None' >
+    factors_only:                  < Type = None,  Default = 'None' >
+    no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+    - < Type = str >
+    no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+    must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+    - < Type = str >
+    must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+    maximize_dims:                 < Type = ListNode,  Default = 'None' >
+    maximize_dims_capacity:        < Type = int,  Default = 'None' >
+    no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+    - < Type = str >
+    rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+    - < Type = str >
+
+  - # < Type = Dataspace >
+    type:         < Type = str,  Default = '' >
+    target:       < Type = str,  Default = '' >
+    bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+    - < Type = str >
+    keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+    - < Type = str >
+    no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+    - < Type = str >
+    keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+    - < Type = str >
+    keep_only:    < Type = None,  Default = 'None' >
+    bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+    - < Type = str >
+    bypass_only:  < Type = None,  Default = 'None' >
+
+  - # < Type = MaxOverbookedProportion >
+    type:        < Type = str,  Default = '' >
+    target:      < Type = str,  Default = '' >
+    proportion:  < Type = float,  Default = 'None' >
+
+mapping:                    # < Type = ConstraintsList,  Default = '[]' >
+- # < Type = Spatial >
+  type:                          < Type = str,  Default = '' >
+  target:                        < Type = str,  Default = '' >
+  factors:                       # < Type = Factors,  Default = '[]' >
+  - < Type = Factor >
+  permutation:                   < Type = Permutation,  Default = '[]' >
+  default_max_factor:            < Type = int,  Default = 'None' >
+  default_min_factor:            < Type = int,  Default = 'None' >
+  remainders:                    < Type = int,  Default = 'None' >
+  factors_only:                  < Type = None,  Default = 'None' >
+  no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+  - < Type = str >
+  no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+  must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+  - < Type = str >
+  must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+  maximize_dims:                 < Type = ListNode,  Default = 'None' >
+  maximize_dims_capacity:        < Type = int,  Default = 'None' >
+  no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+  - < Type = str >
+  no_link_transfer:              # < Type = ProblemDataspaceList,  Default = '[]' >
+  - < Type = str >
+  split:                         < Type = int,  Default = 'None' >
+
+- # < Type = Temporal >
+  type:                          < Type = str,  Default = '' >
+  target:                        < Type = str,  Default = '' >
+  factors:                       # < Type = Factors,  Default = '[]' >
+  - < Type = Factor >
+  permutation:                   < Type = Permutation,  Default = '[]' >
+  default_max_factor:            < Type = int,  Default = 'None' >
+  default_min_factor:            < Type = int,  Default = 'None' >
+  remainders:                    < Type = int,  Default = 'None' >
+  factors_only:                  < Type = None,  Default = 'None' >
+  no_iteration_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+  - < Type = str >
+  no_iteration_over_dataspaces:  < Type = None,  Default = 'None' >
+  must_iterate_over_dataspaces:  # < Type = ProblemDataspaceList,  Default = 'None' >
+  - < Type = str >
+  must_iterate_over_dataspaces:  < Type = None,  Default = 'None' >
+  maximize_dims:                 < Type = ListNode,  Default = 'None' >
+  maximize_dims_capacity:        < Type = int,  Default = 'None' >
+  no_reuse:                      # < Type = ProblemDataspaceList,  Default = '[]' >
+  - < Type = str >
+  rmw_first_update:              # < Type = ProblemDataspaceList,  Default = '[]' >
+  - < Type = str >
+
+- # < Type = Dataspace >
+  type:         < Type = str,  Default = '' >
+  target:       < Type = str,  Default = '' >
+  bypass:       # < Type = ProblemDataspaceList,  Default = '[]' >
+  - < Type = str >
+  keep:         # < Type = ProblemDataspaceList,  Default = '[]' >
+  - < Type = str >
+  no_coalesce:  # < Type = ProblemDataspaceList,  Default = '[]' >
+  - < Type = str >
+  keep_only:    # < Type = ProblemDataspaceList,  Default = 'None' >
+  - < Type = str >
+  keep_only:    < Type = None,  Default = 'None' >
+  bypass_only:  # < Type = ProblemDataspaceList,  Default = 'None' >
+  - < Type = str >
+  bypass_only:  < Type = None,  Default = 'None' >
+
+- # < Type = MaxOverbookedProportion >
+  type:        < Type = str,  Default = '' >
+  target:      < Type = str,  Default = '' >
+  proportion:  < Type = float,  Default = 'None' >
+
+mapper:                     # < Type = Mapper,  Default = '{'version': 0.4}' >
+  version:                            < Type = None,  Default = '0.4' >
+  out_prefix:                         < Type = str,  Default = 'timeloop-mapper' >
+  num_threads:                        < Type = int,  Default = '8' >
+  optimization_metric:                # < Type = OptimizationMetrics,  Default = '[]' >
+  - < Type = delay/energy/edp/last_level_accesses >
+  search_size:                        < Type = int,  Default = 'None' >
+  timeout:                            < Type = int,  Default = '1000' >
+  victory_condition:                  < Type = int,  Default = 'None' >
+  sync_interval:                      < Type = int,  Default = 'None' >
+  log_interval:                       < Type = int,  Default = '1' >
+  log_oaves:                          < Type = bool,  Default = 'False' >
+  log_oaves_mappings:                 < Type = bool,  Default = 'False' >
+  log_stats:                          < Type = bool,  Default = 'False' >
+  log_suboptimal:                     < Type = bool,  Default = 'False' >
+  live_status:                        < Type = bool,  Default = 'False' >
+  diagnostics:                        < Type = bool,  Default = 'False' >
+  penalize_consecutive_bypass_fails:  < Type = bool,  Default = 'False' >
+  emit_whoop_nest:                    < Type = bool,  Default = 'False' >
+  max_temporal_loops_in_a_mapping:    < Type = int,  Default = '-1' >
+  algorithm:                          < Type = random/exhaustive/linear_pruned/hybrid/random_pruned,  Default = 'hybrid' >
+  filter_revisits:                    < Type = bool,  Default = 'False' >
+  max_permutations_per_if_visit:      < Type = int,  Default = '16' >
+
+problem:                    # < Type = Problem, REQUIRED >
+  version:   < Type = None,  Default = '0.4' >
+  instance:  # < Type = Instance, REQUIRED >
+    densities:  # < Type = DensityList,  Default = '{}' >
+      <Any>:  # < Type = Density,  Default = Optional >
+        density:               < Type = Number/str, REQUIRED >
+        distribution:          < Type = fixed_structured/hypergeometric/banded, REQUIRED >
+        band_width:            < Type = int,  Default = '0' >
+        workload_tensor_size:  < Type = int,  Default = '0' >
+    <Any>:      < Type = int,  Default = Optional >
+
+  shape:     # < Type = Shape, REQUIRED >
+    name:          < Type = str,  Default = '' >
+    dimensions:    < Type = ListNode, REQUIRED >
+    data_spaces:   # < Type = ProblemDataspaceList, REQUIRED >
+    - # < Type = DataSpace >
+      name:        < Type = str, REQUIRED >
+      projection:  < Type = list, REQUIRED >
+      read_write:  < Type = str/bool/int,  Default = 'False' >
+    coefficients:  < Type = ListNode,  Default = '[]' >
+
+sparse_optimizations:       # < Type = SparseOptimizations,  Default = '{'version': 0.4}' >
+  version:  < Type = None,  Default = '0.4' >
+  targets:  # < Type = SparseOptimizationsList,  Default = '[]' >
+  - # < Type = SparseOptimizationGroup >
+    target:                 < Type = str,  Default = 'None' >
+    action_optimization:    # < Type = ActionOptimizationList,  Default = '[]' >
+    - # < Type = ActionOptimization >
+      type:     < Type = gating/skipping/spatial_skipping, REQUIRED >
+      options:  # < Type = ActionOptimizationOptionList, REQUIRED >
+      - # < Type = ActionOptimizationOption >
+        target:        < Type = str, REQUIRED >
+        condition_on:  < Type = list, REQUIRED >
+
+    representation_format:  # < Type = RepresentationFormat,  Default = '{}' >
+      data_spaces:  # < Type = RepresentationProblemDataspaceList,  Default = '[]' >
+      - # < Type = RepresentationDataSpace >
+        name:   < Type = str, REQUIRED >
+        ranks:  # < Type = RepresentationRankList, REQUIRED >
+        - # < Type = RepresentationRank >
+          format:              < Type = CP/B/RLE/UOP, REQUIRED >
+          metadata_word_bits:  < Type = int,  Default = 'None' >
+          payload_word_bits:   < Type = int,  Default = 'None' >
+          flattened_rankIDs:   < Type = list,  Default = 'None' >
+
+    compute_optimization:   < Type = ComputeOptimizationList,  Default = '[]' >
+
+variables:                  # < Type = Variables,  Default = '{'version': 0.4}' >
+  version:  < Type = None,  Default = '0.4' >
+  <Any>:    < Type = None,  Default = Optional >
+mapspace:                   # < Type = Mapspace,  Default = '{'version': 0.4}' >
+  version:   < Type = None,  Default = '0.4' >
+  template:  < Type = str,  Default = 'ruby' >
+globals:                    # < Type = Globals,  Default = '{'version': 0.4}' >
+  version:                      < Type = None,  Default = '0.4' >
+  environment_variables:        < Type = EnvironmentVariables,  Default = '[]' >
+  expression_custom_functions:  # < Type = ExpressionCustomFunctions,  Default = '[]' >
+  - < Type = str >

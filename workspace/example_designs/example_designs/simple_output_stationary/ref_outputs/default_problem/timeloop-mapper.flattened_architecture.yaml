@@ -24,8 +24,8 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - write
           - read
+          - write
           - leak
           - update
         enabled: true
@@ -55,8 +55,8 @@ architecture:
             n_instances: 1
             n_rw_ports: 1
         required_actions:
-          - write
           - read
+          - write
           - leak
           - update
         enabled: true
@@ -107,8 +107,8 @@ architecture:
             n_instances: 1
             n_rw_ports: 1
         required_actions:
-          - write
           - read
+          - write
           - leak
           - update
         enabled: true
@@ -136,8 +136,8 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - write
           - read
+          - write
           - leak
           - update
         enabled: true
@@ -165,8 +165,8 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - write
           - read
+          - write
           - leak
           - update
         enabled: true
@@ -194,8 +194,8 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - write
           - read
+          - write
           - leak
           - update
         enabled: true

@@ -47,8 +47,9 @@ Level 1
     MAPPING
     -------
     Loop nest:
-      for R in [0:3)
-        for K in [0:8)
+      for P in [0:2)
+        for R in [0:3)
+          for K in [0:8)
 
     STATS
     -----
@@ -80,17 +81,17 @@ Level 1
         Write Bandwidth (total)                  : 0.25 words/cycle
     Inputs:
         Partition size                           : 18
-        Utilized capacity                        : 3
+        Utilized capacity                        : 4
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
         Scalar reads (per-instance)              : 1536
-        Scalar fills (per-instance)              : 96
+        Scalar fills (per-instance)              : 90
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
-        Address generations (per-cluster)        : 1632
+        Address generations (per-cluster)        : 1626
         Energy (per-scalar-access)               : 0.43 pJ
-        Energy (per-instance)                    : 694.64 pJ
-        Energy (total)                           : 694.64 pJ
+        Energy (per-instance)                    : 692.09 pJ
+        Energy (total)                           : 692.09 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
         Temporal Reduction Energy (total)        : 0.00 pJ
         Address Generation Energy (per-cluster)  : 0.00 pJ
@@ -104,7 +105,7 @@ Level 1
         Write Bandwidth (total)                  : 0.06 words/cycle
     Outputs:
         Partition size                           : 512
-        Utilized capacity                        : 8
+        Utilized capacity                        : 16
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
         Scalar reads (per-instance)              : 1024
@@ -157,7 +158,7 @@ Level 2
     -------
     Loop nest:
       for K in [0:4)
-        for P in [0:4)
+        for P in [0:2)
 
     STATS
     -----
@@ -192,12 +193,12 @@ Level 2
         Utilized capacity                        : 6
         Utilized instances (max)                 : 1
         Utilized clusters (max)                  : 1
-        Scalar reads (per-instance)              : 96
+        Scalar reads (per-instance)              : 90
         Scalar fills (per-instance)              : 18
         Scalar updates (per-instance)            : 0
         Temporal reductions (per-instance)       : 0
-        Address generations (per-cluster)        : 114
-        Energy (per-scalar-access)               : 5.38 pJ
+        Address generations (per-cluster)        : 108
+        Energy (per-scalar-access)               : 5.67 pJ
         Energy (per-instance)                    : 612.87 pJ
         Energy (total)                           : 612.87 pJ
         Temporal Reduction Energy (per-instance) : 0.00 pJ
@@ -332,11 +333,11 @@ Operational Intensity Stats
     Optimal Op per Byte                     : 4.09
 
 === RegisterFile ===
-    Total scalar accesses                   : 6112
+    Total scalar accesses                   : 6106
     Op per Byte                             : 0.42
 === GlobalBuffer ===
-    Total scalar accesses                   : 594
-    Op per Byte                             : 4.31
+    Total scalar accesses                   : 588
+    Op per Byte                             : 4.35
 === MainMemory ===
     Total scalar accesses                   : 626
     Op per Byte                             : 4.09
@@ -352,10 +353,10 @@ EDP(J*cycle): 7.36e-05
 Area: 0.00 mm^2
 
 Computes = 1536
-pJ/Compute
-    MACC                           = 0.85
-    RegisterFile                   = 1.69
-    GlobalBuffer                   = 2.00
-    MainMemory                     = 26.67
-    Total                          = 31.21
+fJ/Compute
+    MACC                           = 845.00
+    RegisterFile                   = 1692.89
+    GlobalBuffer                   = 2003.00
+    MainMemory                     = 26666.67
+    Total                          = 31207.55
 

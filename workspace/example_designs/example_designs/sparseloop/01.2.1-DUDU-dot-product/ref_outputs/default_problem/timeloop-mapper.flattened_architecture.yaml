@@ -27,9 +27,9 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - read
           - leak
           - update
+          - read
           - write
         enabled: true
       - name: PE_top_level.mac[1..1]

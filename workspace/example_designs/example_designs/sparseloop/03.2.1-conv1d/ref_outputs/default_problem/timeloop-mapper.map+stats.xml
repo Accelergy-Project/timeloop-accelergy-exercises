@@ -491,23 +491,23 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>3.10056600000000071e-01</item>
-								<item>3.22895315789473725e-01</item>
-								<item>2.20585911111111144e-01</item>
+								<item>3.21665399999999935e-01</item>
+								<item>3.31962763157894747e-01</item>
+								<item>2.26911222222222236e-01</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>6.64407000000000081e-01</item>
-								<item>5.33479217391304439e-01</item>
-								<item>5.22440315789473808e-01</item>
+								<item>6.89282999999999868e-01</item>
+								<item>5.48460217391304350e-01</item>
+								<item>5.37421315789473719e-01</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>9.30169800000000180e+00</item>
-								<item>1.22700220000000009e+01</item>
-								<item>9.92636600000000158e+00</item>
+								<item>9.64996199999999860e+00</item>
+								<item>1.26145849999999999e+01</item>
+								<item>1.02110050000000001e+01</item>
 							</PerDataSpace>
 						</energy>
 						<temporal_reduction_energy>
@@ -997,23 +997,23 @@
 						</write_bandwidth>
 						<energy_per_algorithmic_access>
 							<PerDataSpace>
-								<item>2.58204288372093016e+00</item>
-								<item>6.18619909090909137e-01</item>
-								<item>8.90521000000000118e-01</item>
+								<item>2.61709335917312602e+00</item>
+								<item>6.24785999999999953e-01</item>
+								<item>8.98057666666666865e-01</item>
 							</PerDataSpace>
 						</energy_per_algorithmic_access>
 						<energy_per_access>
 							<PerDataSpace>
-								<item>3.87306432558139502e+00</item>
-								<item>6.18619909090909137e-01</item>
-								<item>8.90521000000000118e-01</item>
+								<item>3.92564003875968925e+00</item>
+								<item>6.24785999999999953e-01</item>
+								<item>8.98057666666666865e-01</item>
 							</PerDataSpace>
 						</energy_per_access>
 						<energy>
 							<PerDataSpace>
-								<item>7.74612865116279004e+00</item>
-								<item>6.80481900000000017e+00</item>
-								<item>8.01468900000000062e+00</item>
+								<item>7.85128007751937851e+00</item>
+								<item>6.87264599999999959e+00</item>
+								<item>8.08251900000000134e+00</item>
 							</PerDataSpace>
 						</energy>
 						<temporal_reduction_energy>
@@ -1075,9 +1075,10 @@
 							<router_energy></router_energy>
 							<wire_energy></wire_energy>
 							<tile_width>
-								<t_>7.24970938264510778e+01</t_>
+								<t_>7.24662333812704134e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
+							<ingress_energy></ingress_energy>
 							<fill_latency>
 								<t_>0</t_>
 							</fill_latency>
@@ -1093,13 +1094,6 @@
 									<item>1</item>
 								</PerDataSpace>
 							</fanout>
-							<distributed_fanout>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</distributed_fanout>
 							<multicast_factor>
 								<PerDataSpace>
 									<item>1</item>
@@ -1107,6 +1101,13 @@
 									<item>1</item>
 								</PerDataSpace>
 							</multicast_factor>
+							<distributed_multicast_factor>
+								<PerDataSpace>
+									<item>0</item>
+									<item>0</item>
+									<item>0</item>
+								</PerDataSpace>
+							</distributed_multicast_factor>
 							<distributed_multicast>
 								<PerDataSpace>
 									<item>0</item>
@@ -1137,9 +1138,9 @@
 							</link_transfer_energy>
 							<num_hops>
 								<PerDataSpace>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</num_hops>
 							<energy_per_hop>
@@ -1185,6 +1186,7 @@
 								<t_>2.04205778566621383e+01</t_>
 							</tile_width>
 							<energy_per_hop></energy_per_hop>
+							<ingress_energy></ingress_energy>
 							<fill_latency>
 								<t_>0</t_>
 							</fill_latency>
@@ -1200,13 +1202,6 @@
 									<item>1</item>
 								</PerDataSpace>
 							</fanout>
-							<distributed_fanout>
-								<PerDataSpace>
-									<item>0</item>
-									<item>0</item>
-									<item>0</item>
-								</PerDataSpace>
-							</distributed_fanout>
 							<multicast_factor>
 								<PerDataSpace>
 									<item>1</item>
@@ -1214,6 +1209,13 @@
 									<item>1</item>
 								</PerDataSpace>
 							</multicast_factor>
+							<distributed_multicast_factor>
+								<PerDataSpace>
+									<item>0</item>
+									<item>0</item>
+									<item>0</item>
+								</PerDataSpace>
+							</distributed_multicast_factor>
 							<distributed_multicast>
 								<PerDataSpace>
 									<item>0</item>
@@ -1244,9 +1246,9 @@
 							</link_transfer_energy>
 							<num_hops>
 								<PerDataSpace>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
-									<item>5.00000000000000000e-01</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
+									<item>0.00000000000000000e+00</item>
 								</PerDataSpace>
 							</num_hops>
 							<energy_per_hop>

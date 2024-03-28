@@ -3,8 +3,8 @@ t2
 K 1 R 1 P 4 
 P
 t1
-K 4 R 1 P 4 
+K 4 R 1 P 2 
 PK
 t0
-K 8 R 3 P 1 
-KR
+K 8 R 3 P 2 
+KRP

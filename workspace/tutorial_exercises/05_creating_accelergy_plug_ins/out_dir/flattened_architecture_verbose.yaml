@@ -8,8 +8,8 @@ architecture:
             accum_datawidth: 5
             technology: "45nm"
             global_cycle_seconds: 0.001
-            cycle_seconds: 0.001
             action_latency_cycles: 1
+            cycle_seconds: 0.001
             n_instances: 1
         primitive_components:
           - name: mac
@@ -18,8 +18,8 @@ architecture:
                 tech_node: 45
                 accum_datawidth: 5
                 global_cycle_seconds: 0.001
-                cycle_seconds: 0.001
                 action_latency_cycles: 1
+                cycle_seconds: 0.001
                 technology: "45nm"
                 n_instances: 1
             area_share: 1
@@ -32,8 +32,8 @@ architecture:
                 arguments:
                     unsigned: 0
                     global_cycle_seconds: 0.001
-                    cycle_seconds: 0.001
                     action_latency_cycles: 1
+                    cycle_seconds: 0.001
                     technology: "45nm"
                     n_instances: 1
                 action_share: 1.0
@@ -45,8 +45,8 @@ architecture:
                 arguments:
                     unsigned: 1
                     global_cycle_seconds: 0.001
-                    cycle_seconds: 0.001
                     action_latency_cycles: 1
+                    cycle_seconds: 0.001
                     technology: "45nm"
                     n_instances: 1
                 action_share: 1.0
@@ -58,66 +58,14 @@ architecture:
                 arguments:
                     make_expensive: 1
                     global_cycle_seconds: 0.001
-                    cycle_seconds: 0.001
                     action_latency_cycles: 1
+                    cycle_seconds: 0.001
                     technology: "45nm"
                     n_instances: 1
                 action_share: 1.0
       - name: system_arch.chip.DRAM
         class: DRAM
-        actions:
-          - name: read
-            arguments:
-                global_cycle_seconds: 0.001
-          - name: write
-            arguments:
-                global_cycle_seconds: 0.001
-          - name: idle
-            arguments:
-                global_cycle_seconds: 0.001
+        actions: []
       - name: system_arch.chip.buffer
         class: SRAM
-        actions:
-          - name: read
-            arguments:
-                data_delta: 0
-                address_delta: 0
-                global_cycle_seconds: 0.001
-          - name: read
-            arguments:
-                data_delta: 1
-                address_delta: 0
-                global_cycle_seconds: 0.001
-          - name: read
-            arguments:
-                data_delta: 0
-                address_delta: 1
-                global_cycle_seconds: 0.001
-          - name: read
-            arguments:
-                data_delta: 1
-                address_delta: 1
-                global_cycle_seconds: 0.001
-          - name: write
-            arguments:
-                data_delta: 0
-                address_delta: 0
-                global_cycle_seconds: 0.001
-          - name: write
-            arguments:
-                data_delta: 1
-                address_delta: 0
-                global_cycle_seconds: 0.001
-          - name: write
-            arguments:
-                data_delta: 0
-                address_delta: 1
-                global_cycle_seconds: 0.001
-          - name: write
-            arguments:
-                data_delta: 1
-                address_delta: 1
-                global_cycle_seconds: 0.001
-          - name: idle
-            arguments:
-                global_cycle_seconds: 0.001
+        actions: []

@@ -9,10 +9,9 @@ architecture:
             technology: "45nm"
             tech_node: 45
             global_cycle_seconds: 0.001
-            cycle_seconds: 0.001
             action_latency_cycles: 1
+            cycle_seconds: 0.001
             n_instances: 1
-            type: "LPDDR4"
       - name: system_arch.chip.buffer
         subclass: SRAM
         attributes:
@@ -22,14 +21,9 @@ architecture:
             technology: "45nm"
             tech_node: 45
             global_cycle_seconds: 0.001
-            cycle_seconds: 0.001
             action_latency_cycles: 1
+            cycle_seconds: 0.001
             n_instances: 1
-            n_rd_ports: 0
-            n_wr_ports: 0
-            n_rdwr_ports: 1
-            n_banks: 1
-            latency: "5ns"
       - name: system_arch.chip.PE[1..8]
         class: mac
         subclass: custom_mac
@@ -38,6 +32,6 @@ architecture:
             accum_datawidth: 5
             technology: "45nm"
             global_cycle_seconds: 0.001
-            cycle_seconds: 0.001
             action_latency_cycles: 1
+            cycle_seconds: 0.001
             n_instances: 1

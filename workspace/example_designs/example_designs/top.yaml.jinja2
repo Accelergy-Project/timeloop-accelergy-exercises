@@ -31,6 +31,7 @@ problem: {{include(problem, 'problem')}}
 # ==============================================================================
 # MAPPING SPECIFICATION
 # ==============================================================================
+# If a mapping file exists in the architecture directory, include it.
 {% set mapping = cwd() ~ '/' ~ architecture ~ '/mapping.yaml'%}
 {% if path_exists(mapping) %}
 extra_mapping_constraints: 

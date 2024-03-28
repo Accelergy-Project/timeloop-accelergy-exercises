@@ -8,10 +8,10 @@ ART:
       - name: system_top_level.inter_PE_spatial[1..4]
         area: 1.0
       - name: system_top_level.SMEM[1..1]
-        area: 1069113.50584
+        area: 1069101.875
       - name: system_top_level.RF[1..4]
-        area: 134456.30324
+        area: 134451.3825
       - name: system_top_level.LRF[1..1024]
-        area: 31.51468
+        area: 30.62
       - name: system_top_level.mac[1..1024]
         area: 417.0

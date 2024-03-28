@@ -1,32 +1,6 @@
 ERT_summary:
     version: '0.4'
     table_summary:
-      - name: system_arch.chip.DRAM
-        actions:
-          - name: read
-            energy: 2048.0
-          - name: write
-            energy: 2048.0
-          - name: idle
-            energy: 0.0
-        primitive_estimation(s):
-          - system_arch.chip.DRAM:
-                estimator: CACTI
-      - name: system_arch.chip.buffer
-        actions:
-          - name: read
-            average_energy: 0.706825
-            max_energy: 1.41365
-            min_energy: 0.0
-          - name: write
-            average_energy: 1.1404
-            max_energy: 2.2808
-            min_energy: 0.0
-          - name: idle
-            energy: 0.0
-        primitive_estimation(s):
-          - system_arch.chip.buffer:
-                estimator: CACTI
       - name: system_arch.chip.PE[1..8]
         actions:
           - name: mac_random_to_accurate_picky
@@ -45,8 +19,8 @@ ERT_summary:
                 arguments:
                     unsigned: 0
                     global_cycle_seconds: 0.001
-                    cycle_seconds: 0.001
                     action_latency_cycles: 1
+                    cycle_seconds: 0.001
                     technology: "45nm"
                     n_instances: 1
                 energy: 0.6913899529408735
@@ -63,8 +37,8 @@ ERT_summary:
                 arguments:
                     unsigned: 1
                     global_cycle_seconds: 0.001
-                    cycle_seconds: 0.001
                     action_latency_cycles: 1
+                    cycle_seconds: 0.001
                     technology: "45nm"
                     n_instances: 1
                 energy: 0.34569497647043673
@@ -81,8 +55,8 @@ ERT_summary:
                 arguments:
                     make_expensive: 1
                     global_cycle_seconds: 0.001
-                    cycle_seconds: 0.001
                     action_latency_cycles: 1
+                    cycle_seconds: 0.001
                     technology: "45nm"
                     n_instances: 1
                 energy: 1000000000000.0

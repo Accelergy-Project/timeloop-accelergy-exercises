@@ -5,25 +5,25 @@ ERT:
         actions:
           - name: read
             arguments: {}
-            energy: 2.268273
+            energy: 2.290882
           - name: write
             arguments: {}
-            energy: 2.671563
+            energy: 2.694173
           - name: update
             arguments: {}
-            energy: 2.671563
+            energy: 2.694173
           - name: metadata_read
             arguments: {}
-            energy: 0.356362
+            energy: 0.373885
           - name: metadata_write
             arguments: {}
-            energy: 0.709364
+            energy: 0.726887
           - name: metadata_update
             arguments: {}
-            energy: 0.709364
+            energy: 0.726887
           - name: leak
             arguments: {}
-            energy: 9e-05
+            energy: 0.002378
           - name: decompression_count
             arguments: {}
             energy: 0.0
@@ -34,25 +34,25 @@ ERT:
         actions:
           - name: read
             arguments: {}
-            energy: 1.043454
+            energy: 1.060977
           - name: write
             arguments: {}
-            energy: 0.971454
+            energy: 0.988977
           - name: update
             arguments: {}
-            energy: 0.971454
+            energy: 0.988977
           - name: metadata_read
             arguments: {}
-            energy: 0.535934
+            energy: 0.553457
           - name: metadata_write
             arguments: {}
-            energy: 0.499934
+            energy: 0.517458
           - name: metadata_update
             arguments: {}
-            energy: 0.499934
+            energy: 0.517458
           - name: leak
             arguments: {}
-            energy: 0.001215
+            energy: 0.003217
           - name: decompression_count
             arguments: {}
             energy: 0.0

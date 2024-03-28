@@ -31,8 +31,8 @@ architecture:
             n_instances: 1
             metadata_counter_width: 0
         required_actions:
-          - read
           - update
+          - read
           - write
           - leak
         enabled: true

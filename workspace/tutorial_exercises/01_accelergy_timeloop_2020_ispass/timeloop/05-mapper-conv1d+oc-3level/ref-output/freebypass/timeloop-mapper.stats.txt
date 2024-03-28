@@ -327,10 +327,10 @@ EDP(J*cycle): 7.14e-05
 Area: 0.00 mm^2
 
 Computes = 1536
-pJ/Compute
-    MACC                           = 0.85
-    RegisterFile                   = 1.67
-    GlobalBuffer                   = 1.08
-    MainMemory                     = 26.67
-    Total                          = 30.26
+fJ/Compute
+    MACC                           = 845.00
+    RegisterFile                   = 1667.95
+    GlobalBuffer                   = 1084.37
+    MainMemory                     = 26666.67
+    Total                          = 30263.99
 
