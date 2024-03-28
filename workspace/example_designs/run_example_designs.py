@@ -56,7 +56,7 @@ def run_mapper(
 
     # Used for some Sparseloop tutorials to test with/without sparse optimizations
     if remove_sparse_opts:
-        remove_sparse_opts(spec)
+        remove_sparse_optimizations(spec)
 
     tl.call_mapper(
         spec,
