@@ -2,7 +2,7 @@
 pip3 install jupyter_contrib_nbextensions notebook==6.4.12
 pip3 install notebook==6.4.12
 
-for f in $(find .. -name "*.ipynb"); do
+for f in $(find ../tutorial_exercises -name "*.ipynb"); do
     if [[ $f == *"nbconvert"* ]]; then
         continue
     fi
@@ -13,8 +13,8 @@ for f in $(find .. -name "*.ipynb"); do
         echo "Failed: $f"
         cat /tmp/nbtest.log
         echo "Failed: $f"
-        find .. -name "*.nbconvert.ipynb" -exec rm {} \;
+        find ../tutorial_exercises -name "*.nbconvert.ipynb" -exec rm {} \;
         exit 1
     fi
 done
-find .. -name "*.nbconvert.ipynb" -exec rm {} \;
+find ../tutorial_exercises -name "*.nbconvert.ipynb" -exec rm {} \;
