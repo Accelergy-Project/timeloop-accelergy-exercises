@@ -24,3 +24,10 @@ to a web browser of your choice to access the workspace.
 ## Native Installation
 
 Please find the instructions for native installations of the tools needed [here](https://timeloop.csail.mit.edu/installation)
+
+##  Related reading
+ - [Timeloop/Accelergy documentation](https://timeloop.csail.mit.edu/)
+ - [Timeloop/Accelergy tutorial](http://accelergy.mit.edu/tutorial.html)
+ - [SparseLoop tutorial](https://accelergy.mit.edu/sparse_tutorial.html)
+ - [eyeriss-like design](https://people.csail.mit.edu/emer/papers/2017.01.jssc.eyeriss_design.pdf)
+ - [simba-like architecture](https://people.eecs.berkeley.edu/~ysshao/assets/papers/shao2019-micro.pdf)
