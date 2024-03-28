@@ -67,19 +67,29 @@ result_of_merged_dict2:
 anchored_dict_hierarchical_1: &my_anchored_dict
   key1: value1_dict1
   key2: {subkey1: subvalue1, subkey2: subvalue2}
+  mylist: [d, e, f]
+  mylist_nomerge: [4, 5, 6]
 
 merged_dict_hierarchical:
   <<<: *my_anchored_dict
   key2: {subkey1: override1} # subkey2: subvalue2 will come from the merge
+  mylist: [a, b, c]
+  mylist_nomerge: !nomerge [1, 2, 3]
 
 result_of_merged_dict_hierarchical:
   key1: value1_dict1
   key2: {subkey1: override1, subkey2: subvalue2}
+  mylist: [a, b, c, d, e, f]
+  mylist_nomerge: [1, 2, 3]
 
 merged_dict_non_hierarchical:
   <<: *my_anchored_dict
   key2: {subkey1: override1} # This will override all of key2
+  mylist: [a, b, c]
+  mylist_nomerge: !nomerge [1, 2, 3]
 
 result_of_merged_dict_non_hierarchical:
   key1: value1_dict1
   key2: {subkey1: override1}
+  mylist: [a, b, c]
+  mylist_nomerge: [1, 2, 3]
