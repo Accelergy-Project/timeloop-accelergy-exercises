@@ -12,7 +12,7 @@ compound_components:   # REQUIRED top-level key
     subcomponents: 
     - name: subcomponent_name_1
       class: class_of_subcomponent_1 # class must be defined by a plug-in or compound component
-      area_share: 1 # Area share scales the area of the subcomponent
+      area_scale: 1 # Area share scales the area of the subcomponent
       attributes:
         subcomponent_attribute_1: 123
         subcomponent_attribute_2: 456
@@ -20,7 +20,7 @@ compound_components:   # REQUIRED top-level key
     # Multiple subcomponents can be instantiated with a range
     - name: subcomponent_name_2[1..123] 
       class: class_of_subcomponent_2
-      area_share: 1 # Area share scales the area of the subcomponent
+      area_scale: 1 # Area share scales the area of the subcomponent
       attributes:
         subcomponent_attribute_1: 123
         subcomponent_attribute_2: 456
@@ -32,14 +32,14 @@ compound_components:   # REQUIRED top-level key
       - name: subcomponent_name_1
         actions:
         - name: read
-          action_share: 1 # action_share specifies how many times the action is performed
+          energy_scale: 1 # energy_scale specifies how many times the action is performed
           arguments: {arg1: 123, arg2: 456} # Arguments are passed to the action
 
       - name: subcomponent_name_2[0] # Multiple subcomponents can be called. We use [0] here
                                      # because we only want one subcomponent to be read.
         actions:
         - name: read
-          action_share: 1 # action_share specifies how many times the action is performed
+          energy_scale: 1 # energy_scale specifies how many times the action is performed
           arguments: {arg1: 123, arg2: 456}
 
     # Specify empty subcomponents to have zero-energy actions

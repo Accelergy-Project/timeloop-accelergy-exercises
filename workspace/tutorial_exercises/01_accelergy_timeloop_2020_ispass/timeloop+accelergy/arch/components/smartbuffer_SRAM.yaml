@@ -24,7 +24,7 @@ compound_components:
     subcomponents:
     - name: storage
       class: SRAM
-      area_share: area_scale
+      area_scale: area_scale
       attributes:
         width: memory_width
         depth: memory_depth
@@ -44,19 +44,19 @@ compound_components:
       name: write 
       subcomponents:
       - name: storage
-        actions: [{name: write, action_share: dynamic_energy_scale}]
+        actions: [{name: write, energy_scale: dynamic_energy_scale}]
       - name: address_generators[0]
         actions: [{name: add}]
     - name: read
       subcomponents:
       - name: storage
-        actions: [{name: read, action_share: dynamic_energy_scale}]
+        actions: [{name: read, energy_scale: dynamic_energy_scale}]
       - name: address_generators[1]
         actions: [{name: add}]
     - name: leak
       subcomponents:
       - name: storage
-        actions: [{name: leak, action_share: static_energy_scale}]
+        actions: [{name: leak, energy_scale: static_energy_scale}]
       - name: address_generators[0..1]
         actions: [{name: leak}]
     - name: update

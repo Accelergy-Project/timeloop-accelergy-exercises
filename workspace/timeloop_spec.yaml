@@ -136,7 +136,7 @@ architecture:               # < Type = Architecture, REQUIRED >
     class:                 < Type = str, REQUIRED >
     subclass:              < Type = str,  Default = 'None' >
     required_actions:      < Type = list,  Default = '[]' >
-    area_share:            < Type = Number,  Default = 'None' >
+    area_scale:            < Type = Number,  Default = 'None' >
     enabled:               < Type = bool,  Default = 'True' >
 
   - !Component  # < Type = Network >
@@ -242,7 +242,7 @@ architecture:               # < Type = Architecture, REQUIRED >
     class:                 < Type = str, REQUIRED >
     subclass:              < Type = str,  Default = 'None' >
     required_actions:      < Type = list,  Default = '[]' >
-    area_share:            < Type = Number,  Default = 'None' >
+    area_scale:            < Type = Number,  Default = 'None' >
     enabled:               < Type = bool,  Default = 'True' >
 
   - !Component  # < Type = Compute >
@@ -348,7 +348,7 @@ architecture:               # < Type = Architecture, REQUIRED >
     class:                 < Type = str, REQUIRED >
     subclass:              < Type = str,  Default = 'None' >
     required_actions:      < Type = list,  Default = '[]' >
-    area_share:            < Type = Number,  Default = 'None' >
+    area_scale:            < Type = Number,  Default = 'None' >
     enabled:               < Type = bool,  Default = 'True' >
 
   - !Component  # < Type = Nothing >
@@ -454,7 +454,7 @@ architecture:               # < Type = Architecture, REQUIRED >
     class:                 < Type = str, REQUIRED >
     subclass:              < Type = str,  Default = 'None' >
     required_actions:      < Type = list,  Default = '[]' >
-    area_share:            < Type = Number,  Default = 'None' >
+    area_scale:            < Type = Number,  Default = 'None' >
     enabled:               < Type = bool,  Default = 'True' >
 
   - !Component  # < Type = Component >
@@ -560,7 +560,7 @@ architecture:               # < Type = Architecture, REQUIRED >
     class:                 < Type = str, REQUIRED >
     subclass:              < Type = str,  Default = 'None' >
     required_actions:      < Type = list,  Default = '[]' >
-    area_share:            < Type = Number,  Default = 'None' >
+    area_scale:            < Type = Number,  Default = 'None' >
     enabled:               < Type = bool,  Default = 'True' >
 
   - !Container  # < Type = Container >
@@ -767,7 +767,7 @@ architecture:               # < Type = Architecture, REQUIRED >
       class:                 < Type = str, REQUIRED >
       subclass:              < Type = str,  Default = 'None' >
       required_actions:      < Type = list,  Default = '[]' >
-      area_share:            < Type = Number,  Default = 'None' >
+      area_scale:            < Type = Number,  Default = 'None' >
       enabled:               < Type = bool,  Default = 'True' >
 
   - !Hierarchical  # < Type = Hierarchical >
@@ -882,7 +882,7 @@ architecture:               # < Type = Architecture, REQUIRED >
     class:                 < Type = str, REQUIRED >
     subclass:              < Type = str,  Default = 'None' >
     required_actions:      < Type = list,  Default = '[]' >
-    area_share:            < Type = Number,  Default = 'None' >
+    area_scale:            < Type = Number,  Default = 'None' >
     enabled:               < Type = bool,  Default = 'True' >
 
   version:  < Type = None,  Default = '0.4' >

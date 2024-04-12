@@ -60,7 +60,7 @@ compound_components:   # REQUIRED top-level key
     subcomponents:
     - name: subcomponent_name_1[1..scalar] # Can reference attributes of parent components
       class: class_of_subcomponent_1
-      area_share: scalar * 123
+      area_scale: scalar * 123
       attributes:
         subcomponent_attribute_1: scalar * 2     # Can reference attributes of parent components
         subcomponent_attribute_2: expression + 1 #
@@ -71,7 +71,7 @@ compound_components:   # REQUIRED top-level key
       - name: subcomponent_name_1
         actions:
         - name: read
-          action_share: expression # 
+          energy_scale: expression # 
           arguments: {arg1: expression} # Arguments are passed to the action
 
 # ==============================================================================
