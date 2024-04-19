@@ -97,7 +97,7 @@ if __name__ == "__main__":
     if args.problem:
         problem = os.path.join(THIS_SCRIPT_DIR, "layer_shapes", args.problem)
         if os.path.isdir(problem):
-            problems = [os.path.join(problem, f) for f in os.listdir(problem)]
+            problems = [os.path.join(problem, f) for f in os.listdir(problem) if f.endswith(".yaml")]
         else:
             problems = [problem]
 
