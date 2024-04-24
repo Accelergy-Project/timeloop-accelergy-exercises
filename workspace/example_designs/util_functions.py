@@ -32,7 +32,7 @@ def get_arguments():
         "the default problem will be run.",
     )
     argparser.add_argument(
-        "--n_jobs", type=int, default=16, help="Number of jobs to run in parallel"
+        "--n_jobs", type=int, default=None, help="Number of jobs to run in parallel"
     )
     argparser.add_argument(
         "--remove-sparse-opts",
