@@ -26,7 +26,7 @@ This generates the following output in folder `output/`
 - The area reference tables (ERTs) (umm^2/component) for the components in the architecture `ART.yaml`(note that the DRAM area is a place holder as it is not on-chip).
 - The area reference table summary for the components in the architecture `ART_summary.yaml`.
 - The flattened architecture that describes the class and attributes of the components in
-the architecture is saved to `flattened_architectue.yaml`.
+the architecture is saved to `flattened_architecture.yaml`.
 - The estimation (pJ) for the primitive components in the design are saved in `estimation.yaml`.
 
 
