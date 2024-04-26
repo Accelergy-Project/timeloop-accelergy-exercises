@@ -40,14 +40,14 @@ architecture:
       spatial:
         permutation: [N, C, P, R, S, Q, M]
         factors: [N=1, C=1, P=1, R=1, S=1]
-        split: 7
+        split: 999
 
   - !Container # Each PE in the column receives a different filter row
     name: PE
     spatial: {meshY: 12}
     constraints:
       spatial:
-        split: 4
+        split: 0
         permutation: [N, P, Q, R, S, C, M]
         factors: [N=1, P=1, Q=1, R=1]
 
