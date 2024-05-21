@@ -16,7 +16,7 @@ architecture:
       datawidth: 8
       cluster_size: 1
       read_bandwidth: 32
-      write_bandwidth: 32
+      write_bandwidth: 323
     constraints:
       temporal: {permutation: [K], factors: K=1}
 
@@ -65,7 +65,7 @@ architecture:
     name: PE
     spatial: {meshX: 16, meshY: 16}
     constraints:
-      spatial: {permutation: [K, M, N], factors: K=32 M=16 N=1, split: 1}
+      spatial: {permutation: [K, M, N], factors: K=16 M=16 N=1, split: 1}
 
   - !Component # Local register file
     name: LRF 
