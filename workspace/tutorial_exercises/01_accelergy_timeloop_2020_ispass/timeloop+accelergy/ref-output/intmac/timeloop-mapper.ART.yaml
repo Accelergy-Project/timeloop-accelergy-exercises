@@ -10,10 +10,10 @@ ART:
       - name: system_top_level.shared_glb[1..1]
         area: 429751.88776
       - name: system_top_level.ifmap_spad[1..168]
-        area: 1620.69936
+        area: 151.940565
       - name: system_top_level.weights_spad[1..168]
-        area: 25279.63872
+        area: 12639.81936
       - name: system_top_level.psum_spad[1..168]
-        area: 2145.41936
+        area: 268.17742
       - name: system_top_level.mac[1..168]
         area: 417.0

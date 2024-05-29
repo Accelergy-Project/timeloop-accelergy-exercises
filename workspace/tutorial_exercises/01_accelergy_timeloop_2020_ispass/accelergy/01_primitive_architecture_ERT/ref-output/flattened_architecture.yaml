@@ -4,7 +4,7 @@ architecture:
   - name: simple_primitive.PE.MAC
     class: intmac
     attributes:
-      datawidth: 16
+      width: 16
       latency: 5ns
       num_pipeline_stages: 1
       technology: 45nm
@@ -18,7 +18,6 @@ architecture:
       n_ports: 2
       technology: 45nm
       voltage: 1V
-      width: 16
   - name: simple_primitive.GLB
     class: SRAM
     attributes:

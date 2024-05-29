@@ -3,11 +3,6 @@ ERT:
     tables:
       - name: System_top_level.MainMemory[1..1]
         actions:
-          - name: leak
-            arguments:
-                global_cycle_seconds: 1e-09
-                action_latency_cycles: 1
-            energy: 0.0
           - name: update
             arguments:
                 global_cycle_seconds: 1e-09
@@ -23,13 +18,13 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 2048.0
-      - name: System_top_level.GlobalBuffer[1..16]
-        actions:
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 0.007972
+            energy: 0.0
+      - name: System_top_level.GlobalBuffer[1..16]
+        actions:
           - name: update
             arguments:
                 global_cycle_seconds: 1e-09
@@ -45,13 +40,13 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 30.878292
-      - name: System_top_level.RegisterFile[1..16]
-        actions:
           - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-            energy: 0.000861
+            energy: 0.007972
+      - name: System_top_level.RegisterFile[1..16]
+        actions:
           - name: update
             arguments:
                 global_cycle_seconds: 1e-09
@@ -67,6 +62,11 @@ ERT:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
             energy: 0.42564
+          - name: leak
+            arguments:
+                global_cycle_seconds: 1e-09
+                action_latency_cycles: 1
+            energy: 0.000861
       - name: System_top_level.MACC[1..16]
         actions:
           - name: compute

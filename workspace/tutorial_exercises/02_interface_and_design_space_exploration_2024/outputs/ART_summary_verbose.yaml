@@ -19,10 +19,10 @@ ART_summary:
           - name: adder
             estimator: Library
             area: 139.0
-            area_share: 1
+            area_scale: 1
             total_component_area: 139.0
           - name: multiplier
             estimator: Library
             area: 1587.5
-            area_share: 1
+            area_scale: 1
             total_component_area: 1587.5

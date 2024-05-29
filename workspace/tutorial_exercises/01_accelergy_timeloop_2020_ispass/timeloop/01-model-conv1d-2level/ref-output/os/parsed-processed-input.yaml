@@ -8,6 +8,7 @@ architecture:
             technology: "40nm"
             global_cycle_seconds: 1e-9
             has_power_gating: false
+            power_gated_at: null
         local:
           - name: MainMemory[1..1]
             class: SRAM
@@ -26,12 +27,12 @@ architecture:
                 meshY: 1
                 technology: "40nm"
                 global_cycle_seconds: 1e-9
-                power_gated_at: "MainMemory"
+                power_gated_at: null
             required_actions:
-              - leak
               - update
               - read
               - write
+              - leak
             enabled: true
           - name: Buffer[1..1]
             class: regfile
@@ -50,23 +51,23 @@ architecture:
                 meshY: 1
                 technology: "40nm"
                 global_cycle_seconds: 1e-9
-                power_gated_at: "Buffer"
+                power_gated_at: null
             required_actions:
-              - leak
               - update
               - read
               - write
+              - leak
             enabled: true
           - name: MACC[1..1]
             class: intmac
             attributes:
-                datawidth: 8
+                width: 8
                 has_power_gating: false
                 meshX: 1
                 meshY: 1
                 technology: "40nm"
                 global_cycle_seconds: 1e-9
-                power_gated_at: "MACC"
+                power_gated_at: null
             required_actions:
               - compute
             enabled: true
@@ -134,8 +135,9 @@ mapper:
     max_permutations_per_if_visit: 16
 mapspace:
     version: '0.4'
-    template: ruby
+    template: uber
 globals:
     version: '0.4'
     environment_variables: {}
     expression_custom_functions: []
+    accelergy_plug_ins: []

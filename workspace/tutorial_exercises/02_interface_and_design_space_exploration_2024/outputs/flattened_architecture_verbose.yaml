@@ -16,7 +16,7 @@ architecture:
             allow_overbooking: false
             meshX: 8
             meshY: 1
-            power_gated_at: "reg"
+            power_gated_at: null
             version: '0.4'
             technology: "45nm"
             global_cycle_seconds: 1e-09
@@ -46,7 +46,7 @@ architecture:
             has_power_gating: false
             meshX: 8
             meshY: 1
-            power_gated_at: "mac"
+            power_gated_at: null
             version: '0.4'
             technology: "45nm"
             global_cycle_seconds: 1e-09
@@ -64,7 +64,7 @@ architecture:
                 cycle_seconds: 1e-09
                 technology: "45nm"
                 n_instances: 1
-            area_share: 1
+            area_scale: 1
           - name: multiplier
             class: aladdin_multiplier
             attributes:
@@ -74,7 +74,7 @@ architecture:
                 cycle_seconds: 1e-09
                 technology: "45nm"
                 n_instances: 1
-            area_share: 1
+            area_scale: 1
         actions:
           - name: compute
             arguments: {}
@@ -87,7 +87,7 @@ architecture:
                     cycle_seconds: 1e-09
                     technology: "45nm"
                     n_instances: 1
-                action_share: 1.0
+                energy_scale: 1.0
               - name: multiplier
                 action: multiply
                 arguments:
@@ -96,11 +96,11 @@ architecture:
                     cycle_seconds: 1e-09
                     technology: "45nm"
                     n_instances: 1
-                action_share: 1.0
+                energy_scale: 1.0
       - name: system_top_level.DRAM[1..1]
         class: DRAM
         actions:
-          - name: write
+          - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -108,18 +108,18 @@ architecture:
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-          - name: leak
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-          - name: update
+          - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
       - name: system_top_level.buffer[1..1]
         class: SRAM
         actions:
-          - name: write
+          - name: leak
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
@@ -127,11 +127,11 @@ architecture:
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-          - name: leak
+          - name: update
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1
-          - name: update
+          - name: write
             arguments:
                 global_cycle_seconds: 1e-09
                 action_latency_cycles: 1

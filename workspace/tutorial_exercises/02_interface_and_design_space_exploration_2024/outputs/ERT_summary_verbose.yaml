@@ -3,26 +3,26 @@ ERT_summary:
     table_summary:
       - name: system_top_level.DRAM[1..1]
         actions:
-          - name: write
-            energy: 512.0
-          - name: read
-            energy: 512.0
           - name: leak
             energy: 0.0
+          - name: read
+            energy: 512.0
           - name: update
+            energy: 512.0
+          - name: write
             energy: 512.0
         primitive_estimation(s):
           - system_top_level.DRAM[1..1]:
                 estimator: CactiDRAM
       - name: system_top_level.buffer[1..1]
         actions:
-          - name: write
-            energy: 12.6203
-          - name: read
-            energy: 9.65335
           - name: leak
             energy: 0.000271
+          - name: read
+            energy: 9.65335
           - name: update
+            energy: 12.6203
+          - name: write
             energy: 12.6203
         primitive_estimation(s):
           - system_top_level.buffer[1..1]:
@@ -72,7 +72,7 @@ ERT_summary:
                     technology: "45nm"
                     n_instances: 1
                 energy: 0.105
-                action_share: 1.0
+                scale_energy_by: 1.0
                 interpreted_energy: 0.105
                 percentage: 3.21%
                 estimator: Library
@@ -85,7 +85,7 @@ ERT_summary:
                     technology: "45nm"
                     n_instances: 1
                 energy: 3.17
-                action_share: 1.0
+                scale_energy_by: 1.0
                 interpreted_energy: 3.17
                 percentage: 96.79%
                 estimator: Library

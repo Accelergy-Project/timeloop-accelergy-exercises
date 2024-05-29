@@ -18,7 +18,7 @@ ART_summary:
           - name: address_generators[0..1]
             estimator: Neurosim Plug-In
       - name: system_top_level.ifmap_spad[1..168]
-        area: 3194.85936
+        area: 599.03613
         primitive_estimations:
           - name: storage.storage[1..2048]
             estimator: Library
@@ -36,7 +36,7 @@ ART_summary:
           - name: address_generators[0..1]
             estimator: Neurosim Plug-In
       - name: system_top_level.psum_spad[1..168]
-        area: 4244.29936
+        area: 1061.07484
         primitive_estimations:
           - name: storage.storage[1..2048]
             estimator: Library

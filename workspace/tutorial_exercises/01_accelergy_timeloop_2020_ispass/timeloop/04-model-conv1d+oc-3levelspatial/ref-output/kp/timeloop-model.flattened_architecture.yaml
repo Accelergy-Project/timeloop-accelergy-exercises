@@ -17,16 +17,16 @@ architecture:
             meshY: 1
             technology: "40nm"
             global_cycle_seconds: 1e-09
-            power_gated_at: "MainMemory"
+            power_gated_at: null
             version: '0.4'
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
           - update
           - read
           - write
+          - leak
         enabled: true
       - name: System_top_level.inter_PE_spatial[1..1]
         class: dummy_storage
@@ -45,7 +45,7 @@ architecture:
             meshX: 1
             meshY: 1
             global_cycle_seconds: 1e-09
-            power_gated_at: "inter_PE_spatial"
+            power_gated_at: null
             version: '0.4'
             action_latency_cycles: 1
             cycle_seconds: 1e-09
@@ -68,16 +68,16 @@ architecture:
             meshY: 1
             technology: "40nm"
             global_cycle_seconds: 1e-09
-            power_gated_at: "GlobalBuffer"
+            power_gated_at: null
             version: '0.4'
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
           - update
           - read
           - write
+          - leak
         enabled: true
       - name: System_top_level.RegisterFile[1..16]
         class: regfile
@@ -96,27 +96,27 @@ architecture:
             meshY: 1
             technology: "40nm"
             global_cycle_seconds: 1e-09
-            power_gated_at: "RegisterFile"
+            power_gated_at: null
             version: '0.4'
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
           - update
           - read
           - write
+          - leak
         enabled: true
       - name: System_top_level.MACC[1..16]
         class: intmac
         attributes:
-            datawidth: 8
+            width: 8
             has_power_gating: false
             meshX: 16
             meshY: 1
             technology: "40nm"
             global_cycle_seconds: 1e-09
-            power_gated_at: "MACC"
+            power_gated_at: null
             version: '0.4'
             action_latency_cycles: 1
             cycle_seconds: 1e-09

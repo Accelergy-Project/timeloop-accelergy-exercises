@@ -12,13 +12,14 @@ compound_components:
         class: intmac
         attributes:
           technology: technology
-          datawidth: datawidth
+          width: datawidth
           num_pipeline_stages: num_pipeline_stages
       - name: output_fifo
         class: FIFO
         attributes:
           technology: technology
           depth: fifo_depth
+          width: datawidth * 2
           datawidth: datawidth * 2
     actions:
       - name: mac_random

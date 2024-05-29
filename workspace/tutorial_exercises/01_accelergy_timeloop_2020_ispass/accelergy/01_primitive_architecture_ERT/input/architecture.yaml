@@ -28,6 +28,7 @@ architecture:
               class: intmac
               attributes:
                 num_pipeline_stages: 1
+                width: 8
             - name: buffer    # local storage under the PE
               class: regfile
               attributes:

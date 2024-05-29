@@ -9,6 +9,7 @@ architecture:
             global_cycle_seconds: 1e-9
             DATAWIDTH: 8
             has_power_gating: false
+            power_gated_at: null
         local:
           - name: DRAM[1..1]
             class: DRAM
@@ -25,12 +26,12 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
-                power_gated_at: "DRAM"
+                power_gated_at: null
             required_actions:
-              - write
-              - read
               - leak
+              - read
               - update
+              - write
             enabled: true
           - name: buffer[1..1]
             class: SRAM
@@ -47,12 +48,12 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
-                power_gated_at: "buffer"
+                power_gated_at: null
             required_actions:
-              - write
-              - read
               - leak
+              - read
               - update
+              - write
             enabled: true
           - name: inter_PE_spatial[1..1]
             class: dummy_storage
@@ -70,7 +71,7 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
-                power_gated_at: "inter_PE_spatial"
+                power_gated_at: null
             enabled: true
           - name: mac[1..8]
             class: intmac
@@ -80,7 +81,7 @@ architecture:
                 has_power_gating: false
                 meshX: 8
                 meshY: 1
-                power_gated_at: "mac"
+                power_gated_at: null
             required_actions:
               - compute
             enabled: true
@@ -93,7 +94,7 @@ architecture_constraints:
           - Inputs
           - Outputs
           - Weights
-        type: dataspace
+        type: bypass
         target: buffer
       - type: temporal
         permutation: GSR
@@ -111,7 +112,7 @@ architecture_constraints:
           - Weights
           - Inputs
           - Outputs
-        type: dataspace
+        type: bypass
         target: inter_PE_spatial
 problem:
     version: '0.4'
@@ -248,8 +249,9 @@ mapper:
     filter_revisits: false
 mapspace:
     version: '0.4'
-    template: ruby
+    template: uber
 globals:
     version: '0.4'
     environment_variables: {}
     expression_custom_functions: []
+    accelergy_plug_ins: []

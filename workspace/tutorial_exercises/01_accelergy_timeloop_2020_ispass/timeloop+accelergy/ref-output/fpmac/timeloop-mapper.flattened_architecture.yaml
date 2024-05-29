@@ -16,7 +16,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "DRAM"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32
@@ -27,9 +27,9 @@ architecture:
             n_instances: 1
         required_actions:
           - leak
+          - update
           - write
           - read
-          - update
         enabled: true
       - name: system_top_level.shared_glb[1..1]
         class: smartbuffer_SRAM
@@ -48,7 +48,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "shared_glb"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32
@@ -68,9 +68,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
+          - update
           - write
           - read
-          - update
         enabled: true
       - name: system_top_level.inter_PE_column_spatial[1..1]
         class: dummy_storage
@@ -88,7 +88,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "inter_PE_column_spatial"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32
@@ -113,7 +113,7 @@ architecture:
             allow_overbooking: false
             meshX: 14
             meshY: 1
-            power_gated_at: "inter_PE_spatial"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32
@@ -139,7 +139,7 @@ architecture:
             allow_overbooking: false
             meshX: 14
             meshY: 12
-            power_gated_at: "ifmap_spad"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32
@@ -159,9 +159,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
+          - update
           - write
           - read
-          - update
         enabled: true
       - name: system_top_level.weights_spad[1..168]
         class: smartbuffer_RF
@@ -180,7 +180,7 @@ architecture:
             allow_overbooking: false
             meshX: 14
             meshY: 12
-            power_gated_at: "weights_spad"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32
@@ -200,9 +200,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
+          - update
           - write
           - read
-          - update
         enabled: true
       - name: system_top_level.psum_spad[1..168]
         class: smartbuffer_RF
@@ -222,7 +222,7 @@ architecture:
             allow_overbooking: false
             meshX: 14
             meshY: 12
-            power_gated_at: "psum_spad"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32
@@ -242,9 +242,9 @@ architecture:
             n_rdwr_ports: 1
         required_actions:
           - leak
+          - update
           - write
           - read
-          - update
         enabled: true
       - name: system_top_level.mac[1..168]
         class: fpmac
@@ -255,7 +255,7 @@ architecture:
             has_power_gating: false
             meshX: 14
             meshY: 12
-            power_gated_at: "mac"
+            power_gated_at: null
             version: '0.4'
             PSUM_DATAWIDTH: 32
             INPUT_WEIGHT_DATAWIDTH: 32

@@ -32,9 +32,9 @@ architecture:
                 power_gated_at: null
             required_actions:
               - write
-              - update
               - leak
               - read
+              - update
             enabled: true
           - name: Buffer[1..1]
             class: storage
@@ -61,9 +61,9 @@ architecture:
                 power_gated_at: null
             required_actions:
               - write
-              - update
               - leak
               - read
+              - update
             enabled: true
           - name: mac[1..1]
             class: intmac

@@ -6,7 +6,7 @@ Level 0
 
     SPECS
     -----
-    Word bits             : 8
+    Word bits             : 16
     Instances             : 1 (1*1)
     Compute energy        : 0.84 pJ
 
