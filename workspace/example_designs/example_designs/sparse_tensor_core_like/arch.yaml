@@ -16,7 +16,7 @@ architecture:
       datawidth: 8
       cluster_size: 1
       read_bandwidth: 32
-      write_bandwidth: 32
+      write_bandwidth: 323
     constraints:
       temporal: {permutation: [K], factors: K=1}
 
