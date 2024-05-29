@@ -8,6 +8,7 @@ architecture:
             technology: "45nm"
             global_cycle_seconds: 1e-9
             has_power_gating: false
+            power_gated_at: null
         local:
           - name: Buffer[1..1]
             class: storage
@@ -28,12 +29,12 @@ architecture:
                 meshX: 1
                 meshY: 1
                 technology: "45nm"
-                power_gated_at: "Buffer"
+                power_gated_at: null
             required_actions:
               - leak
               - read
-              - write
               - update
+              - write
             enabled: true
           - name: mac[1..1]
             class: intmac
@@ -44,7 +45,7 @@ architecture:
                 meshX: 1
                 meshY: 1
                 technology: "45nm"
-                power_gated_at: "mac"
+                power_gated_at: null
             required_actions:
               - compute
             enabled: true
@@ -144,7 +145,7 @@ compound_components:
             class: intadder
             attributes:
                 technology: technology
-                datawidth: metadata_counter_width
+                width: metadata_counter_width
         actions:
           - name: read
             subcomponents:
@@ -278,7 +279,7 @@ compound_components:
             class: intadder
             attributes:
                 technology: technology
-                datawidth: metadata_counter_width
+                width: metadata_counter_width
         actions:
           - name: read
             subcomponents:
@@ -353,7 +354,7 @@ compound_components:
             attributes:
                 n_bits: max(1, ceil(log2(depth))) if depth >= 1 else 1
                 precision: max(1, ceil(log2(depth))) if depth >= 1 else 1
-                datawidth: max(1, ceil(log2(depth))) if depth >= 1 else 1
+                width: max(1, ceil(log2(depth))) if depth >= 1 else 1
                 global_cycle_seconds: global_cycle_seconds
         actions:
           - name: write
@@ -406,7 +407,7 @@ compound_components:
         subcomponents:
           - name: storage
             class: regfile
-            area_share: area_scale
+            area_scale: area_scale
             attributes:
                 width: memory_width
                 depth: memory_depth
@@ -418,8 +419,7 @@ compound_components:
                 n_bits: max(1, ceil(log2(real_depth))) if real_depth >= 1 else 1
                 precision: max(1, ceil(log2(real_depth))) if real_depth >= 1 else
                     1
-                datawidth: max(1, ceil(log2(real_depth))) if real_depth >= 1 else
-                    1
+                width: max(1, ceil(log2(real_depth))) if real_depth >= 1 else 1
                 global_cycle_seconds: global_cycle_seconds
         actions:
           - name: write
@@ -427,7 +427,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add
@@ -436,7 +436,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: read
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[1]
                 actions:
                   - name: add
@@ -445,7 +445,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: leak
-                    action_share: static_energy_scale
+                    energy_scale: static_energy_scale
               - name: address_generators[0..1]
                 actions:
                   - name: leak
@@ -454,7 +454,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add
@@ -499,9 +499,10 @@ mapper:
     max_permutations_per_if_visit: 16
 mapspace:
     version: '0.4'
-    template: ruby
+    template: uber
 globals:
     version: '0.4'
     environment_variables:
         TIMELOOP_HIDE_INCONSEQUENTIAL_STATS: 1
     expression_custom_functions: []
+    accelergy_plug_ins: []

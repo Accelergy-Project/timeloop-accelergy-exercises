@@ -52,7 +52,7 @@ Level 1
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
         Leakage energy (total)          : 305021.74 pJ
-        Area                            : 3204.26 um^2
+        Area                            : 600.80 um^2
 
     MAPPING
     -------
@@ -134,7 +134,7 @@ Level 2
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
         Leakage energy (total)          : 1184501.10 pJ
-        Area                            : 29473.82 um^2
+        Area                            : 14736.91 um^2
 
     MAPPING
     -------
@@ -217,7 +217,7 @@ Level 3
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
         Leakage energy (total)          : 219795.08 pJ
-        Area                            : 1717.30 um^2
+        Area                            : 171.06 um^2
 
     MAPPING
     -------

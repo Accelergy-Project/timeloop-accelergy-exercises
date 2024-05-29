@@ -20,7 +20,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "BackingStorage"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -29,10 +29,10 @@ architecture:
             n_rdwr_ports: 1
             metadata_counter_width: 0
         required_actions:
-          - update
           - write
-          - leak
+          - update
           - read
+          - leak
         enabled: true
       - name: system_top_level.Buffer[1..1]
         class: storage
@@ -56,7 +56,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "Buffer"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -64,10 +64,10 @@ architecture:
             n_instances: 1
             metadata_counter_width: 0
         required_actions:
-          - update
           - write
-          - leak
+          - update
           - read
+          - leak
         enabled: true
       - name: system_top_level.mac[1..1]
         class: intmac
@@ -78,7 +78,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "mac"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1

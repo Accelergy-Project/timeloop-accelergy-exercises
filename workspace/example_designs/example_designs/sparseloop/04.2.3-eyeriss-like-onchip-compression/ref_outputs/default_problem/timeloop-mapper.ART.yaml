@@ -10,10 +10,10 @@ ART:
       - name: eyeriss_168_top_level.shared_glb[1..1]
         area: 399033.2625
       - name: eyeriss_168_top_level.ifmap_spad[1..168]
-        area: 1618.91
+        area: 151.772812
       - name: eyeriss_168_top_level.weights_spad[1..168]
-        area: 29473.82
+        area: 14736.91
       - name: eyeriss_168_top_level.psum_spad[1..168]
-        area: 29473.82
+        area: 14736.91
       - name: eyeriss_168_top_level.mac[1..168]
         area: 417.0

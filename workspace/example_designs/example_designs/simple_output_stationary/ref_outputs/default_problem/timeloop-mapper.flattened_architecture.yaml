@@ -16,7 +16,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "DRAM"
+            power_gated_at: null
             version: '0.4'
             technology: "SET ME"
             global_cycle_seconds: 1e-09
@@ -24,10 +24,10 @@ architecture:
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
+          - update
           - read
           - write
-          - update
+          - leak
         enabled: true
       - name: system_top_level.shared_glb[1..1]
         class: smartbuffer_SRAM
@@ -46,8 +46,8 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
+            power_gated_at: null
             technology: "45nm"
-            power_gated_at: "shared_glb"
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -55,10 +55,10 @@ architecture:
             n_instances: 1
             n_rw_ports: 1
         required_actions:
-          - leak
+          - update
           - read
           - write
-          - update
+          - leak
         enabled: true
       - name: system_top_level.inter_PE_spatial[1..1]
         class: dummy_storage
@@ -76,7 +76,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "inter_PE_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -98,8 +98,8 @@ architecture:
             allow_overbooking: false
             meshX: 16
             meshY: 16
+            power_gated_at: null
             technology: "45nm"
-            power_gated_at: "pe_spad"
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -107,10 +107,10 @@ architecture:
             n_instances: 1
             n_rw_ports: 1
         required_actions:
-          - leak
+          - update
           - read
           - write
-          - update
+          - leak
         enabled: true
       - name: system_top_level.weight_reg[1..256]
         class: storage
@@ -128,18 +128,18 @@ architecture:
             allow_overbooking: false
             meshX: 16
             meshY: 16
+            power_gated_at: null
             technology: "45nm"
-            power_gated_at: "weight_reg"
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
+          - update
           - read
           - write
-          - update
+          - leak
         enabled: true
       - name: system_top_level.input_activation_reg[1..256]
         class: storage
@@ -157,18 +157,18 @@ architecture:
             allow_overbooking: false
             meshX: 16
             meshY: 16
+            power_gated_at: null
             technology: "45nm"
-            power_gated_at: "input_activation_reg"
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
+          - update
           - read
           - write
-          - update
+          - leak
         enabled: true
       - name: system_top_level.output_activation_reg[1..256]
         class: storage
@@ -186,18 +186,18 @@ architecture:
             allow_overbooking: false
             meshX: 16
             meshY: 16
+            power_gated_at: null
             technology: "45nm"
-            power_gated_at: "output_activation_reg"
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - leak
+          - update
           - read
           - write
-          - update
+          - leak
         enabled: true
       - name: system_top_level.mac[1..256]
         class: intmac
@@ -207,8 +207,8 @@ architecture:
             has_power_gating: false
             meshX: 16
             meshY: 16
+            power_gated_at: null
             technology: "45nm"
-            power_gated_at: "mac"
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1

@@ -101,7 +101,7 @@ Level 3
         Instances sharing power gating  : 1.00
         Non-power-gated utilization     : 100.00%
         Leakage energy (total)          : 0.17 pJ
-        Area                            : 134451.38 um^2
+        Area                            : 33612.84 um^2
 
     MAPPING
     -------

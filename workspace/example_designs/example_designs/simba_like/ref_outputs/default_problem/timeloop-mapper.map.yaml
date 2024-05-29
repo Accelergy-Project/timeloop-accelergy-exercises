@@ -68,20 +68,20 @@ mapping:
       []
   - target: PEWeightRegs
     type: temporal
-    factors: C1 M1 R1 S1 N1 P2 Q1
-    permutation: PCMRSNQ
+    factors: C1 M1 R1 S1 N1 P1 Q1
+    permutation: CMRSNPQ
   - target: inter_reg_mac_spatial
     type: temporal
     factors: C1 M1 R1 S1 N1 P1 Q1
     permutation: CMRSNPQ
   - target: PEAccuBuffer
     type: temporal
-    factors: C1 M4 R3 S3 N1 P2 Q1
-    permutation: MRPSCNQ
+    factors: C1 M2 R1 S1 N1 P7 Q1
+    permutation: PMCRSNQ
   - target: PEWeightBuffer
     type: temporal
-    factors: C1 M1 R1 S1 N1 P1 Q1
-    permutation: CMRSNPQ
+    factors: C1 M1 R3 S3 N1 P4 Q1
+    permutation: SPRCMNQ
   - target: inter_distributed_buffers_spatial
     type: spatial
     factors: C1 M4 R1 S1 N1 P1 Q1
@@ -93,11 +93,11 @@ mapping:
     permutation: CMRSNPQ
   - target: PEInputBuffer
     type: temporal
-    factors: C1 M1 R1 S1 N1 P2 Q1
-    permutation: PCMRSNQ
+    factors: C1 M1 R1 S1 N1 P1 Q4
+    permutation: QCMRSNP
   - target: inter_PE_spatial
     type: spatial
-    factors: C3 M2 R1 S1 N1 P1 Q1
+    factors: C3 M4 R1 S1 N1 P1 Q1
     permutation: MCRSNPQ
     split: 2
   - target: inter_PE_spatial
@@ -106,9 +106,9 @@ mapping:
     permutation: CMRSNPQ
   - target: GlobalBuffer
     type: temporal
-    factors: C1 M1 R1 S1 N1 P2 Q16
-    permutation: QPCMRSN
+    factors: C1 M1 R1 S1 N1 P4 Q1
+    permutation: PCMRSNQ
   - target: DRAM
     type: temporal
-    factors: C1 M1 R1 S1 N1 P7 Q7
-    permutation: QPCMRSN
+    factors: C1 M1 R1 S1 N1 P1 Q28
+    permutation: QCMRSNP

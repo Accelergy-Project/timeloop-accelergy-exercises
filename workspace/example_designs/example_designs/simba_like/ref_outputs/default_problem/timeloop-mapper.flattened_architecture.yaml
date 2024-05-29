@@ -17,17 +17,17 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "DRAM"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - write
           - read
-          - leak
           - update
+          - leak
+          - write
         enabled: true
       - name: System_top_level.GlobalBuffer[1..1]
         class: smartbuffer_SRAM
@@ -46,7 +46,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "GlobalBuffer"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -54,10 +54,10 @@ architecture:
             n_instances: 1
             n_rw_ports: 1
         required_actions:
-          - write
           - read
-          - leak
           - update
+          - leak
+          - write
         enabled: true
       - name: System_top_level.inter_PE_spatial[1..1]
         class: dummy_storage
@@ -75,7 +75,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "inter_PE_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -99,7 +99,7 @@ architecture:
             meshX: 16
             meshY: 1
             technology: "45nm"
-            power_gated_at: "PEInputBuffer"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -115,10 +115,10 @@ architecture:
             static_energy_scale: 1.0
             n_rdwr_ports: 1
         required_actions:
-          - write
           - read
-          - leak
           - update
+          - leak
+          - write
         enabled: true
       - name: System_top_level.inter_distributed_buffers_spatial[1..16]
         class: dummy_storage
@@ -136,7 +136,7 @@ architecture:
             allow_overbooking: false
             meshX: 16
             meshY: 1
-            power_gated_at: "inter_distributed_buffers_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -160,7 +160,7 @@ architecture:
             meshX: 16
             meshY: 4
             technology: "45nm"
-            power_gated_at: "PEWeightBuffer"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -176,10 +176,10 @@ architecture:
             static_energy_scale: 1.0
             n_rdwr_ports: 1
         required_actions:
-          - write
           - read
-          - leak
           - update
+          - leak
+          - write
         enabled: true
       - name: System_top_level.PEAccuBuffer[1..64]
         class: storage
@@ -198,7 +198,7 @@ architecture:
             meshX: 16
             meshY: 4
             technology: "45nm"
-            power_gated_at: "PEAccuBuffer"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -214,10 +214,10 @@ architecture:
             static_energy_scale: 0.75
             n_rdwr_ports: 1
         required_actions:
-          - write
           - read
-          - leak
           - update
+          - leak
+          - write
         enabled: true
       - name: System_top_level.inter_reg_mac_spatial[1..64]
         class: dummy_storage
@@ -235,7 +235,7 @@ architecture:
             allow_overbooking: false
             meshX: 16
             meshY: 4
-            power_gated_at: "inter_reg_mac_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -260,7 +260,7 @@ architecture:
             meshX: 16
             meshY: 16
             technology: "45nm"
-            power_gated_at: "PEWeightRegs"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -276,10 +276,10 @@ architecture:
             static_energy_scale: 0.015625
             n_rdwr_ports: 1
         required_actions:
-          - write
           - read
-          - leak
           - update
+          - leak
+          - write
         enabled: true
       - name: System_top_level.mac[1..256]
         class: intmac
@@ -291,7 +291,7 @@ architecture:
             meshY: 16
             datawidth: 8
             technology: "45nm"
-            power_gated_at: "mac"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1

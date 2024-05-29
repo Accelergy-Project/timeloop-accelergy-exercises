@@ -20,7 +20,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "BackingStorage"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -30,9 +30,9 @@ architecture:
             metadata_counter_width: 0
         required_actions:
           - update
-          - write
-          - read
           - leak
+          - read
+          - write
         enabled: true
       - name: system_top_level.inter_PE_spatial[1..1]
         class: dummy_storage
@@ -50,7 +50,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "inter_PE_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -77,7 +77,7 @@ architecture:
             meshX: 4
             meshY: 1
             technology: "45nm"
-            power_gated_at: "Buffer"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -86,9 +86,9 @@ architecture:
             metadata_counter_width: 0
         required_actions:
           - update
-          - write
-          - read
           - leak
+          - read
+          - write
         enabled: true
       - name: system_top_level.mac[1..4]
         class: intmac
@@ -99,7 +99,7 @@ architecture:
             meshX: 4
             meshY: 1
             technology: "45nm"
-            power_gated_at: "mac"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1

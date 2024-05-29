@@ -8,6 +8,7 @@ architecture:
             technology: "SET ME"
             global_cycle_seconds: 1e-9
             has_power_gating: false
+            power_gated_at: null
         local:
           - name: DRAM[1..1]
             class: DRAM
@@ -24,12 +25,12 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
-                power_gated_at: "DRAM"
+                power_gated_at: null
             required_actions:
+              - leak
               - write
               - read
               - update
-              - leak
             enabled: true
           - name: shared_glb[1..1]
             class: smartbuffer_SRAM
@@ -48,13 +49,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
+                power_gated_at: null
                 technology: "32nm"
-                power_gated_at: "shared_glb"
             required_actions:
+              - leak
               - write
               - read
               - update
-              - leak
             enabled: true
           - name: inter_PE_column_spatial[1..1]
             class: dummy_storage
@@ -72,7 +73,7 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
-                power_gated_at: "inter_PE_column_spatial"
+                power_gated_at: null
             enabled: true
           - name: inter_PE_spatial[1..14]
             class: dummy_storage
@@ -90,7 +91,7 @@ architecture:
                 allow_overbooking: false
                 meshX: 14
                 meshY: 1
-                power_gated_at: "inter_PE_spatial"
+                power_gated_at: null
             enabled: true
           - name: ifmap_spad[1..168]
             class: smartbuffer_RF
@@ -109,13 +110,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 14
                 meshY: 12
+                power_gated_at: null
                 technology: "32nm"
-                power_gated_at: "ifmap_spad"
             required_actions:
+              - leak
               - write
               - read
               - update
-              - leak
             enabled: true
           - name: weights_spad[1..168]
             class: smartbuffer_RF
@@ -134,13 +135,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 14
                 meshY: 12
+                power_gated_at: null
                 technology: "32nm"
-                power_gated_at: "weights_spad"
             required_actions:
+              - leak
               - write
               - read
               - update
-              - leak
             enabled: true
           - name: psum_spad[1..168]
             class: smartbuffer_RF
@@ -160,13 +161,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 14
                 meshY: 12
+                power_gated_at: null
                 technology: "32nm"
-                power_gated_at: "psum_spad"
             required_actions:
+              - leak
               - write
               - read
               - update
-              - leak
             enabled: true
           - name: mac[1..168]
             class: intmac
@@ -176,8 +177,8 @@ architecture:
                 has_power_gating: false
                 meshX: 14
                 meshY: 12
+                power_gated_at: null
                 technology: "32nm"
-                power_gated_at: "mac"
             required_actions:
               - compute
             enabled: true
@@ -191,7 +192,7 @@ architecture_constraints:
           - Outputs
         bypass:
           - Weights
-        type: dataspace
+        type: bypass
         target: shared_glb
       - type: temporal
         permutation: N
@@ -199,7 +200,7 @@ architecture_constraints:
       - type: spatial
         factors: N=1,C=1,P=1,R=1,S=1
         permutation: NCPRSQM
-        split: 7
+        split: 999
         target: inter_PE_column_spatial
       - factors: C=1,M=1,R=1,S=1,N=1,P=1,Q=1
         permutation: CMRSNPQ
@@ -209,12 +210,12 @@ architecture_constraints:
           - Weights
           - Inputs
           - Outputs
-        type: dataspace
+        type: bypass
         target: inter_PE_column_spatial
       - type: spatial
         factors: N=1,P=1,Q=1,R=1
         permutation: NPQRSCM
-        split: 4
+        split: 0
         target: inter_PE_spatial
       - factors: C=1,M=1,R=1,S=1,N=1,P=1,Q=1
         permutation: CMRSNPQ
@@ -224,14 +225,14 @@ architecture_constraints:
           - Weights
           - Inputs
           - Outputs
-        type: dataspace
+        type: bypass
         target: inter_PE_spatial
       - keep:
           - Inputs
-        type: dataspace
+        type: bypass
         bypass:
-          - Outputs
           - Weights
+          - Outputs
         target: ifmap_spad
       - permutation: NMCPQRS
         factors: N=1,M=1,C=1,P=1,Q=1,R=1,S=1
@@ -239,10 +240,10 @@ architecture_constraints:
         target: ifmap_spad
       - keep:
           - Weights
-        type: dataspace
+        type: bypass
         bypass:
-          - Inputs
           - Outputs
+          - Inputs
         target: weights_spad
       - permutation: NMPQSCR
         factors: N=1,M=1,P=1,Q=1,S=1
@@ -250,10 +251,10 @@ architecture_constraints:
         target: weights_spad
       - keep:
           - Outputs
-        type: dataspace
+        type: bypass
         bypass:
-          - Inputs
           - Weights
+          - Inputs
         target: psum_spad
       - permutation: NCPQRSM
         factors: N=1,C=1,R=1,S=1,P=1,Q=1
@@ -385,7 +386,7 @@ compound_components:
             class: intadder
             attributes:
                 technology: technology
-                datawidth: metadata_counter_width
+                width: metadata_counter_width
         actions:
           - name: read
             subcomponents:
@@ -519,7 +520,7 @@ compound_components:
             class: intadder
             attributes:
                 technology: technology
-                datawidth: metadata_counter_width
+                width: metadata_counter_width
         actions:
           - name: read
             subcomponents:
@@ -594,7 +595,7 @@ compound_components:
             attributes:
                 n_bits: max(1, ceil(log2(depth))) if depth >= 1 else 1
                 precision: max(1, ceil(log2(depth))) if depth >= 1 else 1
-                datawidth: max(1, ceil(log2(depth))) if depth >= 1 else 1
+                width: max(1, ceil(log2(depth))) if depth >= 1 else 1
                 global_cycle_seconds: global_cycle_seconds
         actions:
           - name: write
@@ -647,7 +648,7 @@ compound_components:
         subcomponents:
           - name: storage
             class: regfile
-            area_share: area_scale
+            area_scale: area_scale
             attributes:
                 width: memory_width
                 depth: memory_depth
@@ -659,8 +660,7 @@ compound_components:
                 n_bits: max(1, ceil(log2(real_depth))) if real_depth >= 1 else 1
                 precision: max(1, ceil(log2(real_depth))) if real_depth >= 1 else
                     1
-                datawidth: max(1, ceil(log2(real_depth))) if real_depth >= 1 else
-                    1
+                width: max(1, ceil(log2(real_depth))) if real_depth >= 1 else 1
                 global_cycle_seconds: global_cycle_seconds
         actions:
           - name: write
@@ -668,7 +668,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add
@@ -677,7 +677,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: read
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[1]
                 actions:
                   - name: add
@@ -686,7 +686,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: leak
-                    action_share: static_energy_scale
+                    energy_scale: static_energy_scale
               - name: address_generators[0..1]
                 actions:
                   - name: leak
@@ -695,7 +695,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add
@@ -726,9 +726,10 @@ mapper:
     max_permutations_per_if_visit: 16
 mapspace:
     version: '0.4'
-    template: ruby
+    template: uber
 globals:
     version: '0.4'
     environment_variables:
         TIMELOOP_HIDE_INCONSEQUENTIAL_STATS: 1
     expression_custom_functions: []
+    accelergy_plug_ins: []

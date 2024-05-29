@@ -16,8 +16,8 @@ ART:
       - name: System_top_level.PEWeightBuffer[1..64]
         area: 1858571.37
       - name: System_top_level.PEAccuBuffer[1..64]
-        area: 25264.8725
+        area: 18948.654375
       - name: System_top_level.PEWeightRegs[1..256]
-        area: 3143.9475
+        area: 49.12418
       - name: System_top_level.mac[1..256]
         area: 417.0

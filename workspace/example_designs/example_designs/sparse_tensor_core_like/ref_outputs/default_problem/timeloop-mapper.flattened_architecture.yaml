@@ -20,7 +20,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "DRAM"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -54,7 +54,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "SMEM"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -83,7 +83,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "inter_Subpartition_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -108,7 +108,7 @@ architecture:
             meshX: 1
             meshY: 4
             technology: "45nm"
-            power_gated_at: "RF"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -144,7 +144,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 4
-            power_gated_at: "inter_PE_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -170,7 +170,7 @@ architecture:
             meshX: 16
             meshY: 64
             technology: "45nm"
-            power_gated_at: "LRF"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -193,7 +193,7 @@ architecture:
             meshX: 16
             meshY: 64
             technology: "45nm"
-            power_gated_at: "mac"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1

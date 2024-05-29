@@ -83,9 +83,9 @@ mapping:
     permutation: CMRSNPQ
   - target: shared_glb
     type: temporal
-    factors: C1 M1 R1 S1 N4 P13 Q13
-    permutation: NPQCMRS
+    factors: C8 M2 R1 S3 N4 P1 Q13
+    permutation: NQCSMRP
   - target: DRAM
     type: temporal
-    factors: C32 M6 R1 S3 N1 P1 Q1
-    permutation: SMCRNPQ
+    factors: C4 M3 R1 S1 N1 P13 Q1
+    permutation: CPMRSNQ

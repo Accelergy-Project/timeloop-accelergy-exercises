@@ -39,7 +39,7 @@ ART_summary:
           - name: address_generators[0..1]
             estimator: Aladdin_table
       - name: System_top_level.PEAccuBuffer[1..64]
-        area: 25264.8725
+        area: 18948.654375
         primitive_estimations:
           - name: storage.storage[1..4096]
             estimator: Library
@@ -48,7 +48,7 @@ ART_summary:
           - name: address_generators[0..1]
             estimator: Aladdin_table
       - name: System_top_level.PEWeightRegs[1..256]
-        area: 3143.9475
+        area: 49.12418
         primitive_estimations:
           - name: storage.storage[1..32768]
             estimator: Library

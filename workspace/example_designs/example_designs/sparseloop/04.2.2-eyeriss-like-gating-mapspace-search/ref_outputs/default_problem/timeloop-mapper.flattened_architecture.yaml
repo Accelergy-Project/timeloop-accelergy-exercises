@@ -18,16 +18,16 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "DRAM"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
             cycle_seconds: 1e-09
             n_instances: 1
         required_actions:
-          - read
-          - leak
           - update
+          - leak
+          - read
           - write
         enabled: true
       - name: eyeriss_168_top_level.shared_glb[1..1]
@@ -55,7 +55,7 @@ architecture:
             meshX: 1
             meshY: 1
             technology: "45nm"
-            power_gated_at: "shared_glb"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -63,9 +63,9 @@ architecture:
             n_instances: 1
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - leak
           - update
+          - leak
+          - read
           - write
         enabled: true
       - name: eyeriss_168_top_level.inter_PE_column_spatial[1..1]
@@ -84,7 +84,7 @@ architecture:
             allow_overbooking: false
             meshX: 1
             meshY: 1
-            power_gated_at: "inter_PE_column_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -107,7 +107,7 @@ architecture:
             allow_overbooking: false
             meshX: 14
             meshY: 1
-            power_gated_at: "inter_PE_spatial"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -133,7 +133,7 @@ architecture:
             meshX: 14
             meshY: 12
             technology: "45nm"
-            power_gated_at: "ifmap_spad"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -149,9 +149,9 @@ architecture:
             static_energy_scale: 0.099609375
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - leak
           - update
+          - leak
+          - read
           - write
         enabled: true
       - name: eyeriss_168_top_level.weights_spad[1..168]
@@ -173,7 +173,7 @@ architecture:
             meshX: 14
             meshY: 12
             technology: "45nm"
-            power_gated_at: "weights_spad"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -189,9 +189,9 @@ architecture:
             static_energy_scale: 0.5
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - leak
           - update
+          - leak
+          - read
           - write
         enabled: true
       - name: eyeriss_168_top_level.psum_spad[1..168]
@@ -211,7 +211,7 @@ architecture:
             meshX: 14
             meshY: 12
             technology: "45nm"
-            power_gated_at: "psum_spad"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1
@@ -227,9 +227,9 @@ architecture:
             static_energy_scale: 0.1875
             n_rdwr_ports: 1
         required_actions:
-          - read
-          - leak
           - update
+          - leak
+          - read
           - write
         enabled: true
       - name: eyeriss_168_top_level.mac[1..168]
@@ -241,7 +241,7 @@ architecture:
             meshX: 14
             meshY: 12
             technology: "45nm"
-            power_gated_at: "mac"
+            power_gated_at: null
             version: '0.4'
             global_cycle_seconds: 1e-09
             action_latency_cycles: 1

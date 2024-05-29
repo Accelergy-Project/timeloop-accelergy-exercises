@@ -29,7 +29,7 @@ compound_components:
         class: intadder
         attributes:
           technology: technology
-          datawidth: metadata_counter_width
+          width: metadata_counter_width
 
     actions:
       - name: read

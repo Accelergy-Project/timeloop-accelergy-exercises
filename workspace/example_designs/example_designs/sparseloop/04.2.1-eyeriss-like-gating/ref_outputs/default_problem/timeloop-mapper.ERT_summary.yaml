@@ -5,11 +5,11 @@ ERT_summary:
         actions:
           - name: write
             energy: 512.0
-          - name: update
+          - name: read
             energy: 512.0
           - name: leak
             energy: 0.0
-          - name: read
+          - name: update
             energy: 512.0
         primitive_estimation(s):
           - name: eyeriss_168_top_level.DRAM[1..1]

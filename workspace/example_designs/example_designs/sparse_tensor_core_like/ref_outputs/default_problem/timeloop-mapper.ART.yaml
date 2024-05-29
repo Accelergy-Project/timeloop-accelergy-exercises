@@ -10,7 +10,7 @@ ART:
       - name: system_top_level.SMEM[1..1]
         area: 1069101.875
       - name: system_top_level.RF[1..4]
-        area: 134451.3825
+        area: 33612.845625
       - name: system_top_level.LRF[1..1024]
         area: 30.62
       - name: system_top_level.mac[1..1024]

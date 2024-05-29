@@ -24,7 +24,7 @@ ART_summary:
           - name: metadata_counters[0..1]
             estimator: Aladdin_table
       - name: eyeriss_168_top_level.ifmap_spad[1..168]
-        area: 1618.91
+        area: 151.772812
         primitive_estimations:
           - name: storage.storage[1..2048]
             estimator: Library
@@ -33,7 +33,7 @@ ART_summary:
           - name: address_generators[0..1]
             estimator: Aladdin_table
       - name: eyeriss_168_top_level.weights_spad[1..168]
-        area: 29473.82
+        area: 14736.91
         primitive_estimations:
           - name: storage.storage[1..7168]
             estimator: Library
@@ -42,7 +42,7 @@ ART_summary:
           - name: address_generators[0..1]
             estimator: Aladdin_table
       - name: eyeriss_168_top_level.psum_spad[1..168]
-        area: 29473.82
+        area: 14736.91
         primitive_estimations:
           - name: storage.storage[1..7168]
             estimator: Library

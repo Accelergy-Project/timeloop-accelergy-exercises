@@ -8,6 +8,7 @@ architecture:
             technology: "SET ME"
             global_cycle_seconds: 1e-9
             has_power_gating: false
+            power_gated_at: null
         local:
           - name: DRAM[1..1]
             class: DRAM
@@ -24,12 +25,12 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
-                power_gated_at: "DRAM"
+                power_gated_at: null
             required_actions:
-              - write
-              - read
               - leak
               - update
+              - write
+              - read
             enabled: true
           - name: shared_glb[1..1]
             class: smartbuffer_SRAM
@@ -48,13 +49,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
+                power_gated_at: null
                 technology: "45nm"
-                power_gated_at: "shared_glb"
             required_actions:
-              - write
-              - read
               - leak
               - update
+              - write
+              - read
             enabled: true
           - name: inter_PE_spatial[1..1]
             class: dummy_storage
@@ -72,7 +73,7 @@ architecture:
                 allow_overbooking: false
                 meshX: 1
                 meshY: 1
-                power_gated_at: "inter_PE_spatial"
+                power_gated_at: null
             enabled: true
           - name: pe_spad[1..256]
             class: smartbuffer_SRAM
@@ -89,13 +90,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 16
                 meshY: 16
+                power_gated_at: null
                 technology: "45nm"
-                power_gated_at: "pe_spad"
             required_actions:
-              - write
-              - read
               - leak
               - update
+              - write
+              - read
             enabled: true
           - name: weight_reg[1..256]
             class: storage
@@ -113,13 +114,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 16
                 meshY: 16
+                power_gated_at: null
                 technology: "45nm"
-                power_gated_at: "weight_reg"
             required_actions:
-              - write
-              - read
               - leak
               - update
+              - write
+              - read
             enabled: true
           - name: input_activation_reg[1..256]
             class: storage
@@ -137,13 +138,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 16
                 meshY: 16
+                power_gated_at: null
                 technology: "45nm"
-                power_gated_at: "input_activation_reg"
             required_actions:
-              - write
-              - read
               - leak
               - update
+              - write
+              - read
             enabled: true
           - name: output_activation_reg[1..256]
             class: storage
@@ -161,13 +162,13 @@ architecture:
                 allow_overbooking: false
                 meshX: 16
                 meshY: 16
+                power_gated_at: null
                 technology: "45nm"
-                power_gated_at: "output_activation_reg"
             required_actions:
-              - write
-              - read
               - leak
               - update
+              - write
+              - read
             enabled: true
           - name: mac[1..256]
             class: intmac
@@ -177,8 +178,8 @@ architecture:
                 has_power_gating: false
                 meshX: 16
                 meshY: 16
+                power_gated_at: null
                 technology: "45nm"
-                power_gated_at: "mac"
             required_actions:
               - compute
             enabled: true
@@ -203,24 +204,24 @@ architecture_constraints:
           - Weights
           - Inputs
           - Outputs
-        type: dataspace
+        type: bypass
         target: inter_PE_spatial
       - bypass:
           - Inputs
           - Outputs
         keep:
           - Weights
-        type: dataspace
+        type: bypass
         target: pe_spad
       - permutation: NPQRS
         type: temporal
         target: pe_spad
       - keep:
           - Weights
-        type: dataspace
+        type: bypass
         bypass:
-          - Outputs
           - Inputs
+          - Outputs
         target: weight_reg
       - factors: R=1,S=1,M=1,C=1
         type: temporal
@@ -228,7 +229,7 @@ architecture_constraints:
         target: weight_reg
       - keep:
           - Inputs
-        type: dataspace
+        type: bypass
         bypass:
           - Weights
           - Outputs
@@ -239,10 +240,10 @@ architecture_constraints:
         target: input_activation_reg
       - keep:
           - Outputs
-        type: dataspace
+        type: bypass
         bypass:
-          - Weights
           - Inputs
+          - Weights
         target: output_activation_reg
       - factors: P=1,Q=1,M=1,N=1
         type: temporal
@@ -374,7 +375,7 @@ compound_components:
             class: intadder
             attributes:
                 technology: technology
-                datawidth: metadata_counter_width
+                width: metadata_counter_width
         actions:
           - name: read
             subcomponents:
@@ -508,7 +509,7 @@ compound_components:
             class: intadder
             attributes:
                 technology: technology
-                datawidth: metadata_counter_width
+                width: metadata_counter_width
         actions:
           - name: read
             subcomponents:
@@ -583,7 +584,7 @@ compound_components:
             attributes:
                 n_bits: max(1, ceil(log2(depth))) if depth >= 1 else 1
                 precision: max(1, ceil(log2(depth))) if depth >= 1 else 1
-                datawidth: max(1, ceil(log2(depth))) if depth >= 1 else 1
+                width: max(1, ceil(log2(depth))) if depth >= 1 else 1
                 global_cycle_seconds: global_cycle_seconds
         actions:
           - name: write
@@ -636,7 +637,7 @@ compound_components:
         subcomponents:
           - name: storage
             class: regfile
-            area_share: area_scale
+            area_scale: area_scale
             attributes:
                 width: memory_width
                 depth: memory_depth
@@ -648,8 +649,7 @@ compound_components:
                 n_bits: max(1, ceil(log2(real_depth))) if real_depth >= 1 else 1
                 precision: max(1, ceil(log2(real_depth))) if real_depth >= 1 else
                     1
-                datawidth: max(1, ceil(log2(real_depth))) if real_depth >= 1 else
-                    1
+                width: max(1, ceil(log2(real_depth))) if real_depth >= 1 else 1
                 global_cycle_seconds: global_cycle_seconds
         actions:
           - name: write
@@ -657,7 +657,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add
@@ -666,7 +666,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: read
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[1]
                 actions:
                   - name: add
@@ -675,7 +675,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: leak
-                    action_share: static_energy_scale
+                    energy_scale: static_energy_scale
               - name: address_generators[0..1]
                 actions:
                   - name: leak
@@ -684,7 +684,7 @@ compound_components:
               - name: storage
                 actions:
                   - name: write
-                    action_share: dynamic_energy_scale
+                    energy_scale: dynamic_energy_scale
               - name: address_generators[0]
                 actions:
                   - name: add
@@ -715,9 +715,10 @@ mapper:
     max_permutations_per_if_visit: 16
 mapspace:
     version: '0.4'
-    template: ruby
+    template: uber
 globals:
     version: '0.4'
     environment_variables:
         TIMELOOP_HIDE_INCONSEQUENTIAL_STATS: 1
     expression_custom_functions: []
+    accelergy_plug_ins: []

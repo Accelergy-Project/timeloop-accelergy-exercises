@@ -24,7 +24,7 @@ ART_summary:
           - name: metadata_counters[0..1]
             estimator: Aladdin_table
       - name: system_top_level.RF[1..4]
-        area: 134451.3825
+        area: 33612.845625
         primitive_estimations:
           - name: storage.storage[1..65536]
             estimator: Library
