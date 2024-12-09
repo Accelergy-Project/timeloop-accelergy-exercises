@@ -14,7 +14,7 @@ compound_components:
       attributes: {width: adder_width}
     
     - name: intmultiplier
-      class: aladdin_adder
+      class: aladdin_multiplier
       attributes: {width_a: multiplier_width, width_b: multiplier_width}
 
     actions:
