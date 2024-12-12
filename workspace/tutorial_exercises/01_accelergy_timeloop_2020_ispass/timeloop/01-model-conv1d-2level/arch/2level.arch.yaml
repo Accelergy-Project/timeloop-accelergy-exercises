@@ -2,7 +2,7 @@ architecture:
   version: 0.4
   nodes:
   - !Container
-    name: PE
+    name: System
     attributes:
       technology: "40nm"
       global_cycle_seconds: 1e-9

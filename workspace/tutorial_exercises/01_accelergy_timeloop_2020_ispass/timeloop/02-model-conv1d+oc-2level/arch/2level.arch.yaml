@@ -2,7 +2,7 @@ architecture:
   version: 0.4
   nodes:
   - !Container
-    name: PE
+    name: System
     attributes:
       technology: "40nm"
       global_cycle_seconds: 1e-9
@@ -14,6 +14,9 @@ architecture:
       depth: 32768
       width: 64
       datawidth: 8
+
+  - !Container
+    name: PE
 
   - !Component
     name: Buffer
