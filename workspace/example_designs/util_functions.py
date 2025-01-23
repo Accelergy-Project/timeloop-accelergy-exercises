@@ -1,5 +1,5 @@
 import argparse
-import timeloopfe.v4 as tl
+import pytimeloop.timeloopfe.v4 as tl
 
 
 def get_arguments():

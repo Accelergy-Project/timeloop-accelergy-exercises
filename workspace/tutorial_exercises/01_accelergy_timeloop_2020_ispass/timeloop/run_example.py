@@ -3,7 +3,7 @@ import inspect
 
 THIS_SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
-import timeloopfe.v4 as tl
+import pytimeloop.timeloopfe.v4 as tl
 
 
 def run_exercise_00(out_dir: str = "output"):

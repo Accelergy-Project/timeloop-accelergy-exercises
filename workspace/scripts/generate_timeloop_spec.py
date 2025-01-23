@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-    import timeloopfe.v4 as tl
+    import pytimeloop.timeloopfe.v4 as tl
     import os
 
     THIS_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))

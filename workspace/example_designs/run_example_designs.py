@@ -1,7 +1,7 @@
 from typing import Optional
 import os
 import threading
-import timeloopfe.v4 as tl
+import pytimeloop.timeloopfe.v4 as tl
 from util_functions import *
 import joblib
 
