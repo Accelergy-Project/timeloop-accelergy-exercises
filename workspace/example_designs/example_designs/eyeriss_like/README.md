@@ -5,11 +5,6 @@ This folder contains an architecture based on the Eyeriss design description pro
 
 Q&As:
 ----------------------------
-. Why is the technology different?
-
-   Since the open-sourced energy estimation plug-ins have the most flexible support
-    for the 45nm components, we changed the technology to 45nm.
-    
 1. What is the usage of the "DummyBuffer"?
 
    DummyBuffer is placeholder memory block that helps Timeloop to correctly model 
